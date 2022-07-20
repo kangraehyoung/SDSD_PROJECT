@@ -1,0 +1,241 @@
+/* 
+    쓰담쓰담 Common CSS Style Sheet
+*/
+
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0 !important;
+    font-family: 'GongGothicMedium';
+    scroll-behavior:smooth;
+}
+
+
+/* ********************************* */
+/*  쓰담쓰담 top menu 섹션 */
+
+.topMenu a {
+    text-decoration: none;
+    
+}
+.topMenu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    height: 4rem; /* 75px */
+    background-color: whitesmoke;
+
+}
+
+/* 로고 박스 */
+.topMenu .logoBox a {
+    line-height: 0;
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.topMenu .logoBox a span {
+    font-size: 0.6rem;
+    padding-left: 10px;
+    font-weight: 400;
+}
+.topMenu .logoBox a img {
+    width: 2rem; /* 135px */
+    vertical-align: middle;
+}
+
+/* 메뉴 버튼 */
+.topMenu .logoBox nav {
+    display: block;
+    width: 100%;
+}
+
+/* 메뉴 리스트 */
+nav ul.nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+}
+nav ul.nav_list li.nav_item {
+    margin-right: 2rem;
+    text-align: center;
+}
+nav ul.nav_list li.nav_item a {
+    font-size: 1.1rem; /* 18px */
+    font-weight: 500;
+    line-height: 1.4;
+    color: #1f1f1f;
+    position: relative;
+}
+nav ul.nav_list li.nav_item a:hover {
+    color: #75D8A8;
+}
+nav ul.nav_list li.nav_item a:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #75D8A8;
+}
+
+nav ul.nav_list li.nav_item ul.sub_item {
+    list-style: none;
+    text-align: left;
+    padding: 30px 0 10px 10px;
+    display: none;
+    height: auto;
+    border: 0px;
+    position: absolute;
+    /* width: 250px; */
+    z-index: 200;
+    /* top: 60px; */
+    background-color: rgba(245, 245, 245, 0.6);
+}
+
+nav ul.nav_list li.nav_item ul.menu_01,
+nav ul.nav_list li.nav_item ul.menu_02 {
+    width: 200px;
+}
+
+nav ul.nav_list li.nav_item ul.menu_03 {
+    width: 120px;
+}
+
+
+nav ul.nav_list li.nav_item ul.sub_item li a {
+    height: 80px;
+    line-height: 2;
+}
+
+nav ul.nav_list li.nav_item a:hover+ul{
+    display: block;
+}
+
+nav ul.nav_list li.nav_item ul.sub_item:hover{
+    display: block;
+}
+
+
+/* 로그인 버튼 */
+nav ul.nav_list li.loginBtn {}
+nav ul.nav_list li.loginBtn a {
+    font-size: 1.2rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: #ffffff;
+    padding: 0.6rem 2rem 0.6rem; /* 6px 12px 8px */
+    background-color: #75D8A8;
+    border-radius: 10px;
+    margin-left: 20px;
+     border: 1px solid #75D8A8;
+}
+
+nav ul.nav_list li.loginBtn a:hover {
+    background-color: #ffffff;
+    color: #75D8A8;
+    border: 1px solid #75D8A8;
+}
+
+
+/* ********************************* */
+/*  쓰담쓰담 Footer 섹션 */
+footer {
+    background-color: whitesmoke;
+    padding: 50px 150px;
+    margin: 0 auto;
+}
+
+footer div.footer_wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+footer .textbox {
+    /* display: inline-block; */
+}
+footer .textbox_1{
+    display: inline-block;
+}
+
+footer .textbox_1 h2 span img {
+    width: 2rem;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+footer .textbox_1 h2 {
+    margin: 0 auto;
+}
+
+footer .textbox_1 p {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: gray;
+}
+
+footer .textbox_1 a {
+    font-size: 0.8rem;
+    color: gray;
+    margin-right: 10px;
+}
+
+
+footer .textbox_2 {
+    float: right;
+}
+
+footer .textbox_2 h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+footer .textbox_2 div.iconBox {
+
+}
+
+footer .textbox_2 div.iconBox div.icon {
+    display: inline-block;
+}
+
+footer .textbox_2 div.iconBox div.icon.icon_01 {
+    float: left;
+}
+
+footer .textbox_2 div.iconBox div.icon.icon_02 {
+    float: right;
+}
+
+footer .textbox_2 div.iconBox div.icon img {
+    width: 2rem;
+}
+
+footer .textbox_2 div.iconBox div.icon_02 img {
+    transform: translateY(-3px);
+}
+
+footer .textbox_2 div.iconBox div.icon p {
+    margin:  0 auto;
+    text-align: center;
+}
+
+footer .textbox_2 div.iconBox div.icon p a {
+    text-decoration: none;
+    color: black;
+}
+
