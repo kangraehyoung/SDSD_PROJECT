@@ -1,0 +1,105 @@
+/* 
+    상단 메뉴 바
+*/
+
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0 !important;
+    font-family: 'GongGothicMedium';
+    scroll-behavior:smooth;
+}
+
+
+/* 메인 Section */
+.mainSection {
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 400px;
+}
+
+.mainSection .text1 {
+    padding: 150px 0 150px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/*
+    스크롤 다운 효과
+*/
+.scrollDown_new{
+    /* position: absolute; */
+    /* bottom: 1.8rem; */
+    /* left: 50%; */
+    transform: translate3d(-50%, 0, 0);
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+.srollDown_new a {}
+
+.srollDown_new a img {
+    margin: 0 auto;
+    width: 3.5rem;
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+}
+
+@-webkit-keyframes sdb {
+    0% {
+    -webkit-transform: translate(0, 0);
+    }
+    20% {
+    -webkit-transform: translate(0, 10px);
+    }
+    40% {
+    -webkit-transform: translate(0, 0);
+    }
+    }
+    @keyframes sdb {
+    0% {
+    transform: translate(0, 0);
+    }
+    20% {
+    transform: translate(0, 10px);
+    }
+    40% {
+    transform: translate(0, 0);
+    }
+}
+
+/* 다음 Section */
+.nextSection1 {
+    background-color: cornsilk;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+.nextSection1 .text1 {
+    padding: 150px 0 50px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+.nextSection2 {
+    background-color: lightblue;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+.nextSection2 .text1 {
+    padding: 150px 0 50px 0;
+    text-align: center;
+    font-size: 1rem;
+}
