@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>쓰담쓰담</title>
     <link rel="stylesheet" href="${ path }/resources/css/ssp_common.css" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/login.css" type="text/css">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
@@ -56,7 +57,7 @@
                         <li><a href="">FAQ</a></li>
                     </ul>
                 </li>
-                <li class="loginBtn"><a href="login.jsp">로그인</a></li>
+                <li class="loginBtn"><a href="${ path }/views/login.jsp">로그인</a></li>
             </ul>
         </nav>
     </section>
