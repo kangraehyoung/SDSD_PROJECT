@@ -1,0 +1,106 @@
+*{
+    font-family: sans-serif;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+div, form, input {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+h2 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+hr:first-of-type {
+    width: 70px;
+    border: 2px solid;
+    
+}
+
+hr:last-of-type {
+    width: 250px;
+    border: 2px solid;
+    margin-bottom: 20px;
+}
+
+#login_form_input>input{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+}
+
+#login_form_submit {
+    margin-top: 20px;
+}
+
+#login_form_submit>input {
+    width: 20%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #5bf16f, #06b0ff);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+#naver_login {
+    width: 25%;
+    padding: 10px 50px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: #4FC45D;
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+#kakao_login {
+    width: 25%;
+    padding: 10px 50px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: gold;
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+#login_link > a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 10px;
+}
+
+#kakao_login>img {
+    position: r
+}

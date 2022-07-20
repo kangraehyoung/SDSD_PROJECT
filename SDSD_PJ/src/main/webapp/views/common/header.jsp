@@ -56,7 +56,7 @@
                         <li><a href="">FAQ</a></li>
                     </ul>
                 </li>
-                <li class="loginBtn"><a href="#">로그인</a></li>
+                <li class="loginBtn"><a href="login.jsp">로그인</a></li>
             </ul>
         </nav>
     </section>
