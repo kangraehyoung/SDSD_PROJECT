@@ -20,7 +20,7 @@ public class Member {
 	
 	private String nickName;
 	
-	private String phone;
+	private int phone;
 	
 	private String gender;
 	

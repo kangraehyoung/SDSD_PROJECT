@@ -25,7 +25,7 @@ public class JDBCTemplate {
 			
 			connection = DriverManager.getConnection(
 					properties.getProperty("db.url"), 
-					properties.getProperty("db.email"), 
+					properties.getProperty("db.username"), 
 					properties.getProperty("db.password")
 			);
 			
