@@ -30,4 +30,6 @@ public class Member {
 	
 	private String introduce;
 	
+	private String status;
+	
 }

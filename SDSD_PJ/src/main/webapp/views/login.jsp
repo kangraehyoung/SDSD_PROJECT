@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="path" value="${ pageContext.request.contextPath }"/>
+ 
  <jsp:include page="/views/common/header.jsp" />
 
     <h2>로그인</h2>
@@ -8,11 +10,11 @@
     <br>
     
     <div id="login_wrap">
-        <form id="login_form">
+        <form action="${ path }/member/login" id="login_form" method="POST">
             <div id="login_form_input">
-                <input type="text" placeholder="아이디" size="40%" required>
+                <input name="email" type="text" placeholder="아이디" size="40%" required>
                 <br>
-                <input type="password" placeholder="비밀번호" size="40%" required>
+                <input name="password" type="password" placeholder="비밀번호" size="40%" required>
             </div>
             <div id="login_form_submit">
                 <input type="submit" value="LOGIN">
