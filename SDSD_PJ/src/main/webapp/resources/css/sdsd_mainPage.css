@@ -1,0 +1,86 @@
+/* 타이틀 Section */
+.titleSection {
+    background-color: #FCFCEF;
+    padding: 100px 0 50px 0;
+}
+.titleSection div {
+    margin: 0 auto;
+    text-align: center;
+}
+.titleSection div img {
+    width: 100px;
+}
+
+.titleSection div.mainIcon {
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.titleSection div.mainIcon h2 {
+    transform: translate(-250px, 80px);
+    color: #2E8627;
+}
+
+.titleSection div.mainIcon img {
+    width: 100px;
+}
+
+/*
+    스크롤 다운 효과
+*/
+.scrollDown_new{
+    /* position: absolute; */
+    /* bottom: 1.8rem; */
+    /* left: 50%; */
+    transform: translate3d(-50%, 0, 0);
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+.srollDown_new a {}
+
+.srollDown_new a img {
+    margin: 0 auto;
+    width: 10rem;
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+}
+
+@-webkit-keyframes sdb {
+    0% {
+    -webkit-transform: translate(0, 0);
+    }
+    20% {
+    -webkit-transform: translate(0, 10px);
+    }
+    40% {
+    -webkit-transform: translate(0, 0);
+    }
+    }
+    @keyframes sdb {
+    0% {
+    transform: translate(0, 0);
+    }
+    20% {
+    transform: translate(0, 10px);
+    }
+    40% {
+    transform: translate(0, 0);
+    }
+}
+
+
+/* mainSection 01 */
+.mainSection_01 {
+    background-color: cornsilk;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+.mainSection_01 .text1 {
+    padding: 150px 0 50px 0;
+    text-align: center;
+    font-size: 1rem;
+}
