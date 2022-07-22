@@ -20,11 +20,11 @@ public class Member {
 	
 	private String nickName;
 	
-	private int phone;
+	private String phone;
 	
 	private String gender;
 	
-	private Date bDay;
+	private Date BDay;
 	
 	private String address;
 	

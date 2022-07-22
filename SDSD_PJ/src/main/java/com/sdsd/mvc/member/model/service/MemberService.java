@@ -22,5 +22,15 @@ public class MemberService {
 		
 		
 	}
+
+	public int save(Member member) {
+		int result = 0;
+		
+		Connection connection = getConnection();
+		
+		result = new MemberDao().insertMember(connection, member);
+		
+		return result;
+	}
 	
 }
