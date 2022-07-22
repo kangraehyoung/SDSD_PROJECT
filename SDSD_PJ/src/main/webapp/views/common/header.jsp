@@ -63,7 +63,7 @@
                     <a href="${ path }/views/login.jsp">로그인</a>
                 </li>
                 <li class="logoutBtn">
-                    <a href="${ path }/views/logout.jsp">로그아웃</a>
+                    <a href="${ path }/logout">로그아웃</a>
                 </li>
             </ul>
         </nav>
