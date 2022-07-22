@@ -2,27 +2,24 @@
     쓰담쓰담 Common CSS Style Sheet
 */
 
-@font-face {
-    font-family: 'GongGothicMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/* ********************************* */
+/********  쓰담쓰담 COMMON CSS *********/
+/* ********************************* */
 
 * {
     scroll-behavior:smooth;
+    font-family: sans-serif;
 }
 
 body {
-    margin: 0 !important;
-    font-family: 'GongGothicMedium';
+    margin: 0 auto;
     scroll-behavior:smooth;
 }
 
 
 /* ********************************* */
-/*  쓰담쓰담 top menu 섹션 */
-
+/*******  쓰담쓰담 top menu 섹션 *******/
+/* ********************************* */
 .topMenu a {
     text-decoration: none;
     
@@ -142,7 +139,7 @@ nav ul.nav_list li.loginBtn a {
     background-color: #75D8A8;
     border-radius: 10px;
     margin-left: 20px;
-     border: 1px solid #75D8A8;
+    border: 1px solid #75D8A8;
 }
 
 nav ul.nav_list li.loginBtn a:hover {
@@ -162,7 +159,7 @@ nav ul.nav_list li.logoutBtn a {
     background-color: #D87B75;
     border-radius: 10px;
     margin-left: 20px;
-     border: 1px solid #D87B75;
+    border: 1px solid #D87B75;
 }
 
 nav ul.nav_list li.logoutBtn a:hover {
