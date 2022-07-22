@@ -149,8 +149,7 @@ nav ul.nav_list li.loginBtn a:hover {
 }
 
 /* 로그아웃 버튼 */
-nav ul.nav_list li.logoutBtn {}
-nav ul.nav_list li.logoutBtn a {
+nav ul.nav_list li.logoutBtn a{
     font-size: 1.2rem; /* 18px */
     font-weight: 400;
     line-height: 1.4;
@@ -172,13 +171,11 @@ nav ul.nav_list li.logoutBtn a:hover {
 /* ********************************* */
 /*  쓰담쓰담 Footer 섹션 */
 footer {
-    background-color: whitesmoke;
-    padding: 50px 150px;
-    margin: 0 auto;
 }
 
 footer div.footer_wrapper {
-    width: 70%;
+    background-color: whitesmoke;
+    padding: 50px 150px;
     margin: 0 auto;
 }
 footer .textbox {
@@ -213,6 +210,7 @@ footer .textbox_1 a {
 
 footer .textbox_2 {
     float: right;
+    text-align: left;
 }
 
 footer .textbox_2 h2 {
