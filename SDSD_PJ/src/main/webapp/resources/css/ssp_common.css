@@ -2,27 +2,24 @@
     쓰담쓰담 Common CSS Style Sheet
 */
 
-@font-face {
-    font-family: 'GongGothicMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/* ********************************* */
+/********  쓰담쓰담 COMMON CSS *********/
+/* ********************************* */
 
 * {
     scroll-behavior:smooth;
+    font-family: sans-serif;
 }
 
 body {
-    margin: 0 !important;
-    font-family: 'GongGothicMedium';
+    margin: 0 auto;
     scroll-behavior:smooth;
 }
 
 
 /* ********************************* */
-/*  쓰담쓰담 top menu 섹션 */
-
+/*******  쓰담쓰담 top menu 섹션 *******/
+/* ********************************* */
 .topMenu a {
     text-decoration: none;
     
@@ -142,7 +139,7 @@ nav ul.nav_list li.loginBtn a {
     background-color: #75D8A8;
     border-radius: 10px;
     margin-left: 20px;
-     border: 1px solid #75D8A8;
+    border: 1px solid #75D8A8;
 }
 
 nav ul.nav_list li.loginBtn a:hover {
@@ -151,17 +148,34 @@ nav ul.nav_list li.loginBtn a:hover {
     border: 1px solid #75D8A8;
 }
 
+/* 로그아웃 버튼 */
+nav ul.nav_list li.logoutBtn a{
+    font-size: 1.2rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: #ffffff;
+    padding: 0.6rem 2rem 0.6rem; /* 6px 12px 8px */
+    background-color: #D87B75;
+    border-radius: 10px;
+    margin-left: 20px;
+    border: 1px solid #D87B75;
+}
+
+nav ul.nav_list li.logoutBtn a:hover {
+    background-color: #ffffff;
+    color: #D87B75;
+    border: 1px solid #D87B75;
+}
+
 
 /* ********************************* */
 /*  쓰담쓰담 Footer 섹션 */
 footer {
-    background-color: whitesmoke;
-    padding: 50px 150px;
-    margin: 0 auto;
 }
 
 footer div.footer_wrapper {
-    width: 70%;
+    background-color: whitesmoke;
+    padding: 50px 150px;
     margin: 0 auto;
 }
 footer .textbox {
@@ -196,6 +210,7 @@ footer .textbox_1 a {
 
 footer .textbox_2 {
     float: right;
+    text-align: left;
 }
 
 footer .textbox_2 h2 {

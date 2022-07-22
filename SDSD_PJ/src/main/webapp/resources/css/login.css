@@ -1,19 +1,21 @@
-*{
-    font-family: sans-serif;
-}
+/* ********************************* */
+/*******  쓰담쓰담 LoginPage CSS *******/
+/* ********************************* */
 
-body {
+.loginPage {
     text-align: center;
     margin: auto;
     position: relative;
 }
 
-div, form, input {
+.loginPage div.loginWrap, 
+.loginPage form#login_form, 
+.loginPage input {
     box-sizing: border-box;
     /* border: 1px solid red; */
 }
 
-h2 {
+.loginPage h2 {
     display: block;
     font-size: 2em;
     margin-block-start: 0.67em;
@@ -23,19 +25,19 @@ h2 {
     font-weight: bold;
 }
 
-hr:first-of-type {
+.loginPage hr:first-of-type {
     width: 70px;
     border: 2px solid;
     
 }
 
-hr:last-of-type {
+.loginPage hr:last-of-type {
     width: 250px;
     border: 2px solid;
     margin-bottom: 20px;
 }
 
-#login_form_input>input{
+.loginPage #login_form_input>input{
     height: 50px;
     display: flex;
     flex-direction: column;
@@ -46,11 +48,11 @@ hr:last-of-type {
     margin: auto;
 }
 
-#login_form_submit {
+.loginPage #login_form_submit {
     margin-top: 20px;
 }
 
-#login_form_submit>input {
+.loginPage #login_form_submit>input {
     width: 20%;
     padding: 10px 30px;
     cursor: pointer;
@@ -65,7 +67,7 @@ hr:last-of-type {
     
 }
 
-#naver_login {
+.loginPage #naver_login {
     width: 25%;
     padding: 10px 50px;
     cursor: pointer;
@@ -79,7 +81,7 @@ hr:last-of-type {
     font-weight: bold;
 }
 
-#kakao_login {
+.loginPage #kakao_login {
     width: 25%;
     padding: 10px 50px;
     cursor: pointer;
@@ -93,7 +95,7 @@ hr:last-of-type {
     font-weight: bold;
 }
 
-#login_link > a {
+.loginPage #login_link > a {
     text-decoration: none;
     color: black;
     font-size: 10px;
@@ -101,6 +103,6 @@ hr:last-of-type {
     margin: 10px;
 }
 
-#kakao_login>img {
+.loginPage #kakao_login>img {
     position: r
 }
