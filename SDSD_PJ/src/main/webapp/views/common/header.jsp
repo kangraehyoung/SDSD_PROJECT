@@ -58,6 +58,7 @@
                     </ul>
                 </li>
                 <li class="loginBtn"><a href="${ path }/views/login.jsp">로그인</a></li>
+                <li class="logoutBtn"><a href="">로그아웃</a></li>
             </ul>
         </nav>
     </section>
