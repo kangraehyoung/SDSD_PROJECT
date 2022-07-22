@@ -1,115 +1,165 @@
-/* ********************************* */
-/*******  쓰담쓰담 LoginPage CSS *******/
-/* ********************************* */
+/*
+==============================================
+로그인 페이지 CSS StyleSheet
+==============================================
+*/
 
 .loginPage {
-    text-align: center;
-    margin: auto;
-    position: relative;
-}
-
-.loginPage div.loginWrap, 
-.loginPage form#login_form, 
-.loginPage input {
-    box-sizing: border-box;
-    /* border: 1px solid red; */
+text-align: center;
+margin: 80px 0;
 }
 
 .loginPage h2 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+font-size: 1.8rem;
+font-weight: 800;
+text-decoration: underline;
+text-underline-position: under;
+text-decoration-thickness: 4px;
+margin: 0 auto 30px auto;
 }
 
-.loginPage hr:first-of-type {
-    width: 70px;
-    border: 2px solid;
-    
-}
-
-.loginPage hr:last-of-type {
-    width: 250px;
-    border: 2px solid;
-    margin-bottom: 20px;
-}
-
-.loginPage #login_form_input>input{
-    height: 50px;
+.loginBox {
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     -webkit-box-align: center;
     align-items: center;
-    width: 30%;
-    margin: auto;
 }
 
-.loginPage #login_form_submit {
+.loginBox .inputBox {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.loginBox .inputBox input {
+    width: 350px;
+    height: 3rem;
+    padding: 1rem;
+    border: 1px solid gainsboro;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.loginPage button {
+    border: none;
+    background: transparent !important;
+}
+
+.loginBox #loginBtn .btnWrap_text {
+    /* background: black; */
+    background: linear-gradient(to right, #5bf16f, #06b0ff);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    width: 183px;
+    height: 3rem;
+    border: none;
+    color: #ffffff;
+    font-weight: 800;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
     margin-top: 20px;
 }
 
-.loginPage #login_form_submit>input {
-    width: 20%;
-    padding: 10px 30px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background: linear-gradient(to right, #5bf16f, #06b0ff);
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-    
+.loginLinkBox {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.loginPage #naver_login {
-    width: 25%;
-    padding: 10px 50px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background-color: #4FC45D;
-    border: 0;
-    outline: none;
-    border-radius: 15px;
-    color: white;
-    font-weight: bold;
-}
-
-.loginPage #kakao_login {
-    width: 25%;
-    padding: 10px 50px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background-color: gold;
-    border: 0;
-    outline: none;
-    border-radius: 15px;
-    color: black;
-    font-weight: bold;
-}
-
-.loginPage #login_link > a {
+.loginLinkBox a {
+    list-style: none;
+    margin: 0px 8px;
+    padding-right: 20px;
+    font-size: 13px;
     text-decoration: none;
     color: black;
-    font-size: 10px;
-    font-weight: normal;
-    margin: 10px;
 }
 
-.loginPage #kakao_login>img {
-    position: r
+.loginLinkBox .vLine {
+    list-style: none;
+    margin: 0px 8px;
+    padding-right: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #1f1f1f;
 }
 
-/* ********************************* */
-/****  쓰담쓰담 find id pw page CSS ****/
-/* ********************************* */
+.snsLoginBox {
+    margin-top: 20px;
+}
+.snsLoginBox h3 {
+    width: 50%;
+    height: 35px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 4px;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.snsLoginBox button {
+        border: none;
+    }
+
+.snsLoginBox #naverLogin {
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 10px auto 0 auto;
+    padding: 0px 15px;
+    background-color: rgb(3, 199, 90) !important;
+    font-size: 17px;
+    width: 350px;
+    height: 45px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+}
+
+.snsLoginBox #kakaoLogin {
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 10px auto 0 auto;
+    padding: 0px 15px;
+    background-color: rgb(254, 229, 0) !important;
+    font-size: 17px;
+    width: 350px;
+    height: 45px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.snsLoginBox #naverLogin .btnWrap_text,
+.snsLoginBox #kakaoLogin .btnWrap_text {
+    width: 290px;
+    text-align: center; 
+    font-weight: 600;
+}
+
+
+/*
+==============================================
+아이디 / 비밀번호 찾 CSS StyleSheet
+==============================================
+*/
 .find {
     width: 95%;
     margin: 100px auto;

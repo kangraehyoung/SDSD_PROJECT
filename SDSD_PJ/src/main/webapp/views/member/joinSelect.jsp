@@ -22,7 +22,7 @@
     <br>
     <div class="joinBox_02">
         <h3>또는 다른 SNS 계정으로 가입하기</h3>
-            <button id="naverIdLogin">
+            <button id="naverEnroll">
                 <div class="btnWrap_img">
                     <img src="https://rankingmarathon.com/images/Logo/naver-30.png" alt="네이버로그인">
                 </div>
@@ -30,7 +30,7 @@
                     <span>네이버로 시작하기</span>
                 </div>
             </button>
-            <button id="kakaoIdLogin">
+            <button id="kakaoEnroll">
                 <div class="btnWrap_img">
                     <img src="https://rankingmarathon.com/images/Logo/kakao25.png" alt="카카오로 시작하기">
                 </div>
