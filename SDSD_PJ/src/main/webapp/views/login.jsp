@@ -23,8 +23,8 @@
         </form>
         <br><br>
         <div id="login_link">
-            <a href="#">아이디 찾기</a>
-            <a href="#">비밀번호 찾기</a>
+            <a href="${ path }/views/member/findIDnPW.jsp">아이디 찾기</a>
+            <a href="${ path }/views/member/findIDnPW.jsp">비밀번호 찾기</a>
             <a href="#">회원가입</a>
         </div>
     </div>

@@ -106,3 +106,146 @@
 .loginPage #kakao_login>img {
     position: r
 }
+
+/* ********************************* */
+/****  쓰담쓰담 find id pw page CSS ****/
+/* ********************************* */
+.find {
+    width: 95%;
+    margin: 100px auto;
+    display: flex;
+    /* flex-direction: initial; */
+    border: 1px solid;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.findId1 {
+    width: 30%;
+    height: 200px;
+    margin-bottom: 20px;
+    /* padding: 20px 0px; */
+    padding: 20px 10% 0 0;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.findId1::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.findId1_1 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.findId1_2 {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    /* border: 1px solid grey; */
+    font-size: 12px;
+}
+
+.line {
+    display: none;
+    height: 250px;
+    /* border-right: 1px solid darkgray; */
+}
+
+.findPwd1 {
+    width: 35%;
+    height: 100%;
+    padding: 25px 0 0 10%;
+    /* border-top: 1px solid darkgray; */
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    border-left: 1px solid darkgray;
+
+}
+
+.findPwd1::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.findPwd1_1 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.findPwd1_2 {
+    height: 180px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.findPwd1_3,.findPwd1_4,.findPwd1_5 {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border: 1px solid grey;
+    font-size: 12px;
+}
+
+.findPwd1_2 button {
+    width: 29%;
+    height: 44px;
+    cursor: pointer;
+    border: 1px solid grey
+}
+
+
+.findId1_3,.findPwd1_6 {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
