@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css" type="text/css">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>

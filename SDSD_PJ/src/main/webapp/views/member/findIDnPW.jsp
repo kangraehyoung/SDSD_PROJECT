@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="path" value="${ pageContext.request.contextPath }"/>
 <jsp:include page="/views/common/header.jsp" />
 
 <div class="find">
@@ -25,3 +26,5 @@
         <button class="findPwd1_6">비밀번호 재설정</button>
     </div>
 </div>
+
+<jsp:include page="/views/common/footer.jsp" />

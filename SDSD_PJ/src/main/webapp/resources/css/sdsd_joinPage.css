@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*
+==============================================
+회원가입 페이지 관련 CSS StyleSheet
+==============================================
+*/
+.joinSelect {
+    text-align: center;
+    margin: 150px 0;
+}
+
+.joinSelect h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 4px;
+    margin: 0 auto 30px auto;
+}
+
+.joinSelect .joinBox_01 .btnBox_01 {
+    width: 50%;
+    margin: 0 auto;
+}
+.joinSelect .joinBox_01 .btnBox_01 .enrollBtn {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(185, 43, 39);
+    border: 1px solid rgb(185, 43, 39);
+    width: 350px;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.joinSelect .joinBox_01 .btnBox_02 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.joinSelect .joinBox_01 .btnBox_02 .loginBtn {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin-left: 5px;
+}
+
+.joinSelect .joinBox_02 {
+    margin-top: 30px;
+}
+
+.joinSelect .joinBox_02 h3 {
+    width: 50%;
+    height: 35px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 4px;
+    margin: 0 auto;
+}
+
+.joinSelect .joinBox_02 button {
+    border: none;
+}
+
+.joinSelect .joinBox_02 #naverIdLogin {
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 10px auto 0 auto;
+    padding: 0px 15px;
+    background-color: rgb(3, 199, 90);
+    font-size: 17px;
+    width: 350px;
+    height: 45px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+}
+
+.joinSelect .joinBox_02 #kakaoIdLogin {
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 10px auto 0 auto;
+    padding: 0px 15px;
+    background-color: rgb(254, 229, 0);
+    font-size: 17px;
+    width: 350px;
+    height: 45px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.joinSelect .joinBox_02 #naverIdLogin .btnWrap_text,
+.joinSelect .joinBox_02 #kakaoIdLogin .btnWrap_text {
+    width: 290px;
+    text-align: center; 
+    font-weight: 600;
+}
