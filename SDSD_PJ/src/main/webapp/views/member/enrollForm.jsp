@@ -18,7 +18,7 @@
         </ul>
     </div>
  	<div class="second_tool"> <!-- 오븐 기준 하늘색 배경 틀 -->
-            <form action="" class="join_form"> <!-- 폼 틀 -->
+            <form action="${ path }/member/enroll" method="POST" class="join_form"> <!-- 폼 틀 -->
                 <div class="senond_tool_1"> <!-- 필수 입력 정보 틀 -->
                     <div class="st_head"> <!-- 필수 정보 헤드 -->
                         <div><h4>필수 입력 정보</h4></div>
@@ -37,12 +37,14 @@
                                 <input type="password" name="password" placeholder="6자 이상의 비밀번호를 입력하세요." required value>
                             </div>
                         </div>
-                        <div class="st_pwd2"> <!-- 비밀번호 재!입력 박스-->
+                          	<!--  <div class="st_pwd2"> 비밀번호 재입력 박스
                             <div><label>비밀번호 재입력 *</label></div>
                             <div>
                                 <input type="password2" name="password2" placeholder="6자 이상의 비밀번호를 입력하세요." required value>
                             </div>
+                            -->
                         </div>
+                        	
                     </div>
                 </div>
                 <div class="second_tool_2"> <!-- 마이페이지 입력 정보 틀 -->
@@ -54,31 +56,32 @@
                         <div class="st_name"> <!-- 이름 입력 박스 -->
                             <div><label>이름</label></div>
                             <div>
-                                <input type="text" name="userName" value>
+                                <input type="text" name="name" value>
                             </div>
                         </div>
-                        <div class="st_birthDay"> <!-- 생년월일 입력 박스 -->
+                        <!--  <div class="st_birthDay"> 
                             <div><label>생년월일</label></div>
                             <div>
                                 <input type="date" name="birthDate" value>
-                            </div>
+                            </div> 
+                        -->
                         </div>
                         <div class="st_nickname"> <!-- 닉네임 입력 박스 -->
                             <div><label>닉네임</label></div>
                             <div>
-                                <input type="text" name="nickname" value>
+                                <input type="text" name="nickName" value>
                             </div>
                         </div>
                         <div class="st_phoneNumber"> <!-- 전화번호 입력 박스 -->
                             <div><label>전화번호</label></div>
                             <div>
-                                <input type="number" name="phoneNumber" placeholder="'-'없이 입력하세요." value>
+                                <input type="number" name="phone" placeholder="'-'없이 입력하세요." value>
                             </div>
                         </div>
                         <div class="st_area"> <!-- 활동지역 입력 박스 -->
                             <div><label for="area">활동지역</label></div>
                             <div class="st_select_area">
-                                <select name="area" id="area">
+                                <select name="address" id="area">
                                     <option selected>---</option>
                                     <optgroup label="특별시 및 광역시">
                                     <option value="seoul">서울특별시</option>
@@ -103,12 +106,12 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="st_gender"> <!-- 성별 입력 박스 -->
+                            <div class="st_gender"> <!-- 성별 입력 박스 -->
                             <div><label>성별</label></div>
                             <div>
-                                <div><label for="man">남</label></div>
-                                <div><label for="woman">여</label></div>
+                                <input type="gender" name="gender" placeholder="남자 or 여자 입력하세요" required value>
                             </div>
+                        
                         </div>
                     </div>
                 </div>

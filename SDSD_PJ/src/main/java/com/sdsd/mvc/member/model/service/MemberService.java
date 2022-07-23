@@ -30,6 +30,14 @@ public class MemberService {
 		
 		result = new MemberDao().insertMember(connection, member);
 		
+		System.out.println(result);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
 		return result;
 	}
 	

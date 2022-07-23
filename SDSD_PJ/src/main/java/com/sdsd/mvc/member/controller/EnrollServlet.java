@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.sdsd.mvc.member.model.service.MemberService;
 import com.sdsd.mvc.member.model.vo.Member;
 
-@WebServlet("/EnrollServlet")
+@WebServlet("/member/enroll")
 public class EnrollServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -19,7 +19,7 @@ public class EnrollServlet extends HttpServlet {
     
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	request.getRequestDispatcher("");
+    	request.getRequestDispatcher("/views/member/enrollForm.jsp").forward(request, response);
     }
     
     @Override
