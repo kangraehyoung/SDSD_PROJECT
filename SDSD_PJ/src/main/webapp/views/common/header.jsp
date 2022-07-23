@@ -60,12 +60,16 @@
                         <li><a href="">FAQ</a></li>
                     </ul>
                 </li>
+                <c:if test="${empty loginMember}">
                 <li class="loginBtn">
                     <a href="${ path }/views/login.jsp">로그인</a>
                 </li>
+                </c:if>
+                <c:if test="${not empty loginMember}">
                 <li class="logoutBtn">
                     <a href="${ path }/logout">로그아웃</a>
                 </li>
+                </c:if>
             </ul>
         </nav>
     </section>
