@@ -69,5 +69,31 @@ public class MemberDao {
 		return result;
 	}
 
+	public int updateMember(Connection connection, Member member) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE MEMBER SET MEM_NAME=?,MEM_NICKNAME=?,MEM_PHONE=?,MEM_LOCAL=?,MEM_GENDER=?,MEM_INTRODUCE=? WHERE MEM_NUMBER=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, member.getName());
+			pstmt.setString(2, member.getNickName());
+			pstmt.setString(3, member.getPhone());
+			pstmt.setString(4, member.getAddress());
+			pstmt.setString(5, member.getGender());
+			pstmt.setString(6, member.getIntroduce());
+			pstmt.setInt(7, member.getNo());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(connection);
+		}
+		
+		return result;
+	}
+
 
 }
