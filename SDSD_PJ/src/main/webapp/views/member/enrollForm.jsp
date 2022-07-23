@@ -35,15 +35,15 @@
                         <div class="st_pwd"> <!-- 비밀번호 입력 박스-->
                             <div><label>비밀번호 *</label></div>
                             <div>
-                                <input type="password" name="password" placeholder="6자 이상의 비밀번호를 입력하세요." required value>
+                                <input type="password" name="password" placeholder="6자 이상의 비밀번호를 입력하세요." required>
                             </div>
                         </div>
-                          	<!--  <div class="st_pwd2"> 비밀번호 재입력 박스
+                            <div class="st_pwd2"> <!--  비밀번호 재입력 박스 -->
                             <div><label>비밀번호 재입력 *</label></div>
                             <div>
-                                <input type="password2" name="password2" placeholder="6자 이상의 비밀번호를 입력하세요." required value>
+                                <input type="password" name="password2" placeholder="6자 이상의 비밀번호를 입력하세요." required>
                             </div>
-                            -->
+                            
                         </div>
                         	
                     </div>

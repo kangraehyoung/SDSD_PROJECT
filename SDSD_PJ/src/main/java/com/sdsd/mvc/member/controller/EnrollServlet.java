@@ -28,6 +28,7 @@ public class EnrollServlet extends HttpServlet {
     	
     	member.setEmail(request.getParameter("email"));
     	member.setPassword(request.getParameter("password"));
+    	member.setPassword2(request.getParameter("password2"));
     	member.setName(request.getParameter("name"));
     	member.setNickName(request.getParameter("nickName"));
     	member.setPhone(request.getParameter("phone"));
@@ -37,13 +38,17 @@ public class EnrollServlet extends HttpServlet {
     	System.out.println(member);
     	
     	int result = new MemberService().save(member);
-    	
-    	if(result > 0 ) {
-    		request.setAttribute("msg", "회원 가입 성공!");
-    		request.setAttribute("location", "/");
+    	if(member.getPassword().equals(member.getPassword2())) {
+    		if(result > 0 ) {
+    			request.setAttribute("msg", "회원 가입 성공!");
+    			request.setAttribute("location", "/");
+    		} else {
+    			request.setAttribute("msg", "회원 가입 실패");
+    			request.setAttribute("location", "/");
+    		}
     	} else {
-    		request.setAttribute("msg", "회원 가입 실패");
-			request.setAttribute("location", "/");
+    		request.setAttribute("msg", "비밀번호를 확인해 주세요");
+			request.setAttribute("location", "/views/member/enrollForm.jsp");
     	}
     	
     	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
