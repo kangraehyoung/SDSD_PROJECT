@@ -19,7 +19,7 @@
     </div>
  	<div class="second_tool"> <!-- 오븐 기준 하늘색 배경 틀 -->
             <form action="${ path }/member/enroll" method="POST" class="join_form"> <!-- 폼 틀 -->
-                <div class="senond_tool_1"> <!-- 필수 입력 정보 틀 -->
+                <div class="second_tool_1"> <!-- 필수 입력 정보 틀 -->
                     <div class="st_head"> <!-- 필수 정보 헤드 -->
                         <div><h4>필수 입력 정보</h4></div>
                         <div><p>쓰담쓰담 로그인 시 사용됩니다.</p></div>
@@ -27,21 +27,21 @@
                     <div class="st_input"> <!-- 필수 정보 input -->
                         <div class="st_id"> <!-- 아이디 입력 박스 -->
                             <div><label>아이디(이메일주소) *</label></div>
-                            <div>
-                                <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required value>
+                            <div class="id_input">
+                                <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required size="50px" value>
                                 <input type="button" id="checkDuplicate" value="중복검사">
                             </div>
                         </div>
                         <div class="st_pwd"> <!-- 비밀번호 입력 박스-->
                             <div><label>비밀번호 *</label></div>
-                            <div>
-                                <input type="password" name="password" placeholder="6자 이상의 비밀번호를 입력하세요." required>
+                            <div class="pwd_input">
+                                <input type="password" name="password" placeholder="6자 이상의 비밀번호를 입력하세요." required size="50px">
                             </div>
                         </div>
                             <div class="st_pwd2"> <!--  비밀번호 재입력 박스 -->
                             <div><label>비밀번호 재입력 *</label></div>
-                            <div>
-                                <input type="password" name="password2" placeholder="6자 이상의 비밀번호를 입력하세요." required>
+                            <div class="pwd_input2">
+                                <input type="password" name="password2" placeholder="6자 이상의 비밀번호를 입력하세요." size="50px" required>
                             </div>
                             
                         </div>
@@ -56,26 +56,27 @@
                     <div class="st_input2"> <!-- 회원 정보 input -->
                         <div class="st_name"> <!-- 이름 입력 박스 -->
                             <div><label>이름</label></div>
-                            <div>
+                            <div class="name_input">
                                 <input type="text" name="name" value>
                             </div>
                         </div>
-                        <!--  <div class="st_birthDay"> 
+                        
+                        <div class="st_birthDay"> 
                             <div><label>생년월일</label></div>
-                            <div>
+                            <div class="date_input">
                                 <input type="date" name="birthDate" value>
-                            </div> 
-                        -->
+                        </div> 
+                        
                         </div>
                         <div class="st_nickname"> <!-- 닉네임 입력 박스 -->
                             <div><label>닉네임</label></div>
-                            <div>
+                            <div class="nickname_input">
                                 <input type="text" name="nickName" value>
                             </div>
                         </div>
                         <div class="st_phoneNumber"> <!-- 전화번호 입력 박스 -->
                             <div><label>전화번호</label></div>
-                            <div>
+                            <div class="phoneNumber_input">
                                 <input type="number" name="phone" placeholder="'-'없이 입력하세요." value>
                             </div>
                         </div>
@@ -109,8 +110,11 @@
                         </div>
                             <div class="st_gender"> <!-- 성별 입력 박스 -->
                             <div><label>성별</label></div>
-                            <div>
+                            <div class="gender_input">
                                 <input type="gender" name="gender" placeholder="남자 or 여자 입력하세요" required value>
+                                <%-- 라디오버튼 타입 대신 text 입력으로 가는건가요?!! --%>
+                                <div><input type="radio"><label for="man">남</label></div>
+                                <div><input type="radio"><label for="woman">여</label></div>
                             </div>
                         
                         </div>

@@ -233,5 +233,177 @@ align-items: center;
 /*
 ==============================================
 회원가입 정보 입력 페이지 CSS StyleSheet
+서호정 - 작성 
 ==============================================
 */
+.first_tool {
+    background-color:  rgba(206, 206, 206, 0.362);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.first_tool h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 4px;
+    margin: 0 auto 30px auto;
+}
+
+.first_tool .ft_1 {
+    width: 55%;
+    height: 80px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: bolder;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.first_tool .ft_1 li {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.first_tool .ft_1 li img.earthIcon {
+    width: 30px;
+    height: 30px;
+    transform: translateY(-2px);
+    margin-right: 10px;
+}
+
+.first_tool .ft_1 li img.arrowIcon {
+    width: 70px;
+    height: 70px;
+}
+
+.second_tool {
+    background-color:  rgba(88, 170, 236, 0.362);
+    width: 100%;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 입력 박스 크기 조정 - 최송희  */
+.second_tool_1, .second_tool_2 {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.st_head {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    border-bottom: 1px solid silver;
+}
+
+.second_tool .st_head2 {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    border-bottom: 1px solid silver;
+}
+
+.second_tool_2 {
+    margin-top: 50px;
+}
+
+.second_tool h4 {
+    padding: 10px 0 0 20px;
+}
+
+.second_tool p {
+    padding: 0 0 5px 20px;
+    margin-top: -10px;
+    margin-bottom: -1px;
+    font-size: 15px;
+}
+
+
+.st_input, .st_input2 {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+
+
+.st_input > div, .st_input2 > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.id_input {
+    padding-left: 40px;
+}
+
+.pwd_input {
+    padding-left: 113px;
+}
+
+.pwd_input2 {
+    padding-left: 60px;
+}
+
+.st_pwd2 {
+    padding-bottom: 20px;
+}
+
+.name_input, .gender_input {
+    padding-left: 160px;
+}
+
+.date_input, .phoneNumber_input, .st_select_area {
+    padding-left: 128px;
+}
+
+.nickname_input {
+    padding-left: 144px;
+}
+
+.gender_input {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.gender_input label {
+    border: 1px solid white;
+    background-color: darkgrey;
+    color: white;
+}
+
+.st_btn {
+    margin-top: 30px;
+}
+
+.st_btn button {
+    width: 180px;
+    height: 40px;
+    font-weight: bold;
+    border: white;
+    background-color: rgb(158, 161, 173);;
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.st_btn button:last-child {
+    background-color: rgb(73, 119, 245);;
+    border: white;
+}
