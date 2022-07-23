@@ -40,6 +40,16 @@ public class MemberService {
 		
 		return result;
 	}
+
+	public Boolean isDuplicateEmail(String email) {
+		Connection connection = getConnection();
+		Member member = new MemberDao().findMemberById(connection, email);
+		
+		close(connection);
+		
+
+		return member != null;
+	}
 	
 	public int updateMember (Member member) {
 		int result = 0;

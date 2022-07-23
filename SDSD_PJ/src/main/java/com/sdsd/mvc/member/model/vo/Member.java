@@ -16,6 +16,8 @@ public class Member {
 	
 	private String password;
 	
+	private String password2;
+	
 	private String name;
 	
 	private String nickName;
