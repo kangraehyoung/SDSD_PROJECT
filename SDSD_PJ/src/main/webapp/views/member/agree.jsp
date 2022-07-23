@@ -18,7 +18,7 @@
             <li onclick="location.href='${ path }/views/member/enrollForm.jsp'" style="cursor: pointer; color: rgb(98, 98, 98);">2.정보입력</li>
         </ul>
     </div>
-
+	<form action="${path}/member/agree" class="checkbox_group">
     <div class="CheckTermBox"> <!-- 오븐 기준 하얀색 배경 틀 -->
         <!-- 이용약관 전체 틀 -->
         <!-- <p class="titleText">이용약관 필수</p> -->
@@ -102,9 +102,27 @@
             </div>
 
         <!-- 다음으로 버튼 -->
-        <button id="nextStep_enroll" onclick="location.href='${ path }/views/member/enrollForm.jsp'">다음으로&nbsp;&nbsp;></button>
+          <button id="nextStep_enroll" onclick="location.href='${ path }/views/member/enrollForm.jsp'">다음으로&nbsp;&nbsp;></button>
     </div>
 </div>
+</form>
 
+<script>
+//체크박스 전체 선택
+$(".checkbox_group").on("click", "#all", function () {
+    $(this).parents(".checkbox_group").find('input').prop("checked", $(this).is(":checked"));
+});
+
+// 체크박스 개별 선택
+$(".checkbox_group").on("click", ".checkBox", function() {
+    var is_checked = true;
+
+    $(".checkbox_group .checkBox").each(function(){
+        is_checked = is_checked && $(this).is(":checked");
+    });
+
+    $("#all").prop("checked", is_checked);
+});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />
