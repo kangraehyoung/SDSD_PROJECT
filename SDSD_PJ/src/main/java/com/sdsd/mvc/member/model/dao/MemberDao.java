@@ -57,7 +57,6 @@ public class MemberDao {
 			pstm.setString(6, member.getGender());
 			pstm.setString(7, member.getAddress());
 			
-			
 			result = pstm.executeUpdate();
 			
 		} catch (SQLException e) {
@@ -66,6 +65,26 @@ public class MemberDao {
 			close(pstm);
 		}
 		
+		return result;
+	}
+
+	public int updateMemberStatus(Connection connection, int no, String status) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "UPDATE MEMBER SET MEM_STATUS=? WHERE MEM_NUMBER=?";
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			
+			pstm.setString(1, status);
+			pstm.setInt(2, no);
+			
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
 		return result;
 	}
 

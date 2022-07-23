@@ -50,5 +50,19 @@ public class MemberService {
 
 		return member != null;
 	}
+
+	public int delete(int no) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = new MemberDao().updateMemberStatus(connection, no, "N");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		return result;
+	}
 	
 }
