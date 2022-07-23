@@ -28,7 +28,8 @@
                         <div class="st_id"> <!-- 아이디 입력 박스 -->
                             <div><label>아이디(이메일주소) *</label></div>
                             <div>
-                                <input type="email" name="email" placeholder="이메일 형식의 아이디를 입력하세요." required value>
+                                <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required value>
+                                <input type="button" id="checkDuplicate" value="중복검사">
                             </div>
                         </div>
                         <div class="st_pwd"> <!-- 비밀번호 입력 박스-->
@@ -122,6 +123,34 @@
             </form>
         </div>
     </div>
-
+<script>
+	$(document).ready(() => {
+		
+		$("#checkDuplicate").on("click", () => {
+			
+			let email = $("#newEmail").val().trim();
+			
+			$.ajax({
+				type: "POST",
+				url: "${path}/member/idCheck",
+				dataType: "json",
+				data: {
+					email
+				},
+				success: (obj) => {
+					console.log(obj);
+					if(obj.duplicate === true) {
+						alert("이미 사용중인 아이디 입니다.");
+					} else {
+						alert("사용 가능한 아이디 입니다.")
+					}
+				},
+				error: (error) => {
+					console.log(error);
+				}
+			});
+		});
+	});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />
