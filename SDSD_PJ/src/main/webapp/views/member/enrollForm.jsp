@@ -111,10 +111,8 @@
                             <div class="st_gender"> <!-- 성별 입력 박스 -->
                             <div><label>성별</label></div>
                             <div class="gender_input">
-                                <input type="gender" name="gender" placeholder="남자 or 여자 입력하세요" required value>
-                                <%-- 라디오버튼 타입 대신 text 입력으로 가는건가요?!! --%>
-                                <div><input type="radio" name="gender"><label for="man" >남</label></div>
-                                <div><input type="radio" name="gender"><label for="woman" >여</label></div>
+                                <div><input type="radio" name="gender" value="남자" checked><label for="man" >남</label></div>
+                                <div><input type="radio" name="gender" value="여자"><label for="woman" >여</label></div>
                             </div>
                         
                         </div>
