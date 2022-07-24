@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.sdsd.mvc.member.model.service.MemberService;
 import com.sdsd.mvc.member.model.vo.Member;
 
-@WebServlet("/member/enroll")
+@WebServlet(name="enroll", urlPatterns = "/member/enroll")
 public class EnrollServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
