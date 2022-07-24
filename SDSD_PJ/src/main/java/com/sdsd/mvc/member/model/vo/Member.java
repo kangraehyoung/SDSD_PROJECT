@@ -1,5 +1,6 @@
 package com.sdsd.mvc.member.model.vo;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -26,7 +27,7 @@ public class Member {
 	
 	private String gender;
 	
-	private Date BDay;
+	private String BDay;
 	
 	private String address;
 	

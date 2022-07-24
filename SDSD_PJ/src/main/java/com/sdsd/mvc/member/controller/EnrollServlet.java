@@ -1,6 +1,11 @@
 package com.sdsd.mvc.member.controller;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sdsd.mvc.member.model.service.MemberService;
 import com.sdsd.mvc.member.model.vo.Member;
+
+import oracle.sql.DATE;
 
 @WebServlet("/member/enroll")
 public class EnrollServlet extends HttpServlet {
@@ -25,6 +32,7 @@ public class EnrollServlet extends HttpServlet {
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	Member member = new Member();
+
     	
     	member.setEmail(request.getParameter("email"));
     	member.setPassword(request.getParameter("password"));
@@ -34,6 +42,7 @@ public class EnrollServlet extends HttpServlet {
     	member.setPhone(request.getParameter("phone"));
     	member.setAddress(request.getParameter("address"));
     	member.setGender(request.getParameter("gender"));
+    	member.setBDay(request.getParameter("birthDate"));
     	
     	System.out.println(member);
     	

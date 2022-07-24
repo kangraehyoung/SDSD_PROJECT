@@ -44,7 +44,7 @@ public class MemberDao {
 		int result = 0;
 		PreparedStatement pstm = null;
 		
-		String query = "INSERT INTO MEMBER VALUES (SEQ_MNO.NEXTVAL,?,?,?,?,?,?,DEFAULT,?,DEFAULT,DEFAULT)";
+		String query = "INSERT INTO MEMBER VALUES (SEQ_MNO.NEXTVAL,?,?,?,?,?,?,?,?,DEFAULT,DEFAULT)";
 		
 		try {
 			pstm = connection.prepareStatement(query);
@@ -55,7 +55,8 @@ public class MemberDao {
 			pstm.setString(4, member.getPassword());
 			pstm.setString(5, member.getPhone());
 			pstm.setString(6, member.getGender());
-			pstm.setString(7, member.getAddress());
+			pstm.setString(7, member.getBDay());
+			pstm.setString(8, member.getAddress());
 			
 			result = pstm.executeUpdate();
 			
