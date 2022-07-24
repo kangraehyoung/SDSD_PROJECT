@@ -15,13 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.sdsd.mvc.member.model.service.MemberService;
 import com.sdsd.mvc.member.model.vo.Member;
 
-<<<<<<< HEAD
 import oracle.sql.DATE;
 
-@WebServlet("/member/enroll")
-=======
 @WebServlet(name="enroll", urlPatterns = "/member/enroll")
->>>>>>> 61ed07990fca956f2ce869c91bab9a5784b5a106
 public class EnrollServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
