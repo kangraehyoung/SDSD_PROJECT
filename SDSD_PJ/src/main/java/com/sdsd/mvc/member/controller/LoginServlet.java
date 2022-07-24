@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.sdsd.mvc.member.model.service.MemberService;
 import com.sdsd.mvc.member.model.vo.Member;
 
-@WebServlet("/member/login")
+@WebServlet(name="login", urlPatterns = "/member/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -53,28 +53,5 @@ public class LoginServlet extends HttpServlet {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
