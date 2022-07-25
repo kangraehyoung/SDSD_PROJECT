@@ -26,20 +26,20 @@
                     </div>
                     <div class="st_input"> <!-- 필수 정보 input -->
                         <div class="st_id"> <!-- 아이디 입력 박스 -->
-                            <div><label>아이디(이메일주소) *</label></div>
+                            <div><label>아이디(이메일주소) <span>*</span></label></div>
                             <div class="id_input">
                                 <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required size="50px" value>
                                 <input type="button" id="checkDuplicate" value="중복검사">
                             </div>
                         </div>
                         <div class="st_pwd"> <!-- 비밀번호 입력 박스-->
-                            <div><label>비밀번호 *</label></div>
+                            <div><label>비밀번호 <span>*</span></label></div>
                             <div class="pwd_input">
                                 <input type="password" name="password" placeholder="6자 이상의 비밀번호를 입력하세요." required size="50px">
                             </div>
                         </div>
                             <div class="st_pwd2"> <!--  비밀번호 재입력 박스 -->
-                            <div><label>비밀번호 재입력 *</label></div>
+                            <div><label>비밀번호 재입력 <span>*</span></label></div>
                             <div class="pwd_input2">
                                 <input type="password" name="password2" placeholder="6자 이상의 비밀번호를 입력하세요." size="50px" required>
                             </div>
