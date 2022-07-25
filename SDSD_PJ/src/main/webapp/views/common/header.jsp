@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.1" type="text/css">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
     <script src="${ path }/resources/js/ssp_menu.js"></script>
+    <script src="${ path }/resources/js/FAQ_Accodion.js"></script>
     
 </head>
 <body>
@@ -57,7 +59,7 @@
                         <li><a href="">챌린지</a></li>
                         <li><a href="">쓰레기통 찾기</a></li>
                         <li><a href="">플로깅 코스</a></li>
-                        <li><a href="">FAQ</a></li>
+                        <li><a href="${ path }/views/footer/FAQ.jsp">FAQ</a></li>
                     </ul>
                 </li>
                 <c:if test="${empty loginMember}">

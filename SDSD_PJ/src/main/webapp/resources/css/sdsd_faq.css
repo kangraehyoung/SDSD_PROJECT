@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/*
+==============================================
+FAQ 페이지  CSS StyleSheet
+==============================================
+*/
+
+.faq_section {
+    padding: 5.8rem 0 !important; /* 87px */
+}
+.faq_section {
+    padding: 0;
+    
+}
+
+.faq_title section {
+    text-align: center;
+}
+.faq_title section h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+   	color: #1f1f1f;
+}
+.faq_title section p {
+    font-size: 1.4rem;
+    font-weight: 400;
+  	padding-bottom: 2rem;
+}
+
+/* ********** ********** ********** */
+
+.o_accordion_section {
+    padding: 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.o_accordion_section section {
+    /* 50px */
+    /* padding-top: 3.4rem; */
+    max-width: 80rem; /* 1200px */
+    margin: 0 auto;
+}
+.o_accordion_section section .inner_box {}
+.o_accordion_section section ul.o_accordion {
+    list-style: none;
+    padding: 0;
+}
+
+.o_accordion li {}
+
+/* Q */
+.o_accordion li a {
+    position: relative;
+    display: block;
+    font-size: 1.067rem; /* 16px */
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.933rem 1.4rem 0.933rem 3.4rem; /* 14px 20px 14px 50px */
+    /* border-top: 0.5px solid #1f1f1f; */
+    /* border-bottom: 0.5px solid #1f1f1f; */
+    background-color: rgb(73, 119, 245);
+    cursor: pointer;
+}
+
+/* .o_accordion li:nth-child(7) > a{
+    border-bottom: 0.5px solid #1f1f1f;
+} */
+
+.o_accordion li a span.title {
+    font-size: 1.4rem; /* 20px */
+    line-height: 1;
+    position: absolute;
+    top: 0.8rem; /* 12px */
+    left: 1.6rem; /* 24px */
+}
+
+/* A */
+.o_accordion li .textBox {
+    display: none;
+    /* border: 1px solid #E9E9E9;
+    background-color: #ffffff; */
+    padding: 1.6rem 3.4rem; /* 24px 50px */
+}
+.o_accordion li .textBox p {
+    font-size: 0.933rem; /* 14px */
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: #1f1f1f;
+    position: relative;
+}
+.o_accordion li .textBox p span.title {
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    left: -1.2rem;
+} 
+
+.o_accordion li .textBox p .o_accordion_text_sub {
+    display: block;
+    font-size: 0.8rem; /* 12px */
+    color: #B4B4B4;
+    padding-top: 0.667rem /* 10px */
+}
+
+.o_accordion li a::after, .o_accordion li a.active::after {
+    content: " ";
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 0.8rem; /* 12px */
+    height: 0.8rem; /* 12px */
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.o_accordion li a::after {
+    background-image: url('/FAQ/toggle_icon_down_white.png');
+}
+
+.o_accordion li a.active::after {
+    background-image: url('/FAQ/toggle_icon_up_white.png');
+}
