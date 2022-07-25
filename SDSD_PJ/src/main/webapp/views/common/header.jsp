@@ -12,11 +12,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>쓰담쓰담</title>
-    <link rel="stylesheet" href="${ path }/resources/css/animationLib.css" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/animationLib.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
