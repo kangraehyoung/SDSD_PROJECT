@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/*
+==============================================
+마이페이지 페이지 관련 CSS StyleSheet
+==============================================
+*/
+
+
+.ploggingPerson {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.ploggingPerson .titleBox {
+    margin: 0 auto;
+    padding: 100px 0 20px 0;
+    background-color: rgb(217, 242, 237);
+}
+
+.ploggingPerson .titleBox h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+
+.ploggingPerson .menuBox {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+
+.ploggingPerson .menuBox .menuList{
+    width: 20%;
+    display: inline-block;
+    /* text-align: center; */
+    align-items: center;
+}
+
+.ploggingPerson .menuBox .menuList a {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 1.3rem;
+}
+
+.ploggingPerson .menuBox .menuList span img {
+    width: 25px;
+    height: 25px;
+    transform: translate(-5px, 3px);
+}
+
+.ploggingPerson .personInfoBox_01 {
+    /* width: 70%; */
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.ploggingPerson .personInfoBox_01 .contentBox {
+    width: 70%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.ploggingPerson .personInfoBox_01 .contentBox .profileImgBox {
+    /* width: 30%; */
+    position: relative;
+    padding: 0;
+    text-align: center;
+}
+
+.ploggingPerson .personInfoBox_01 .contentBox .profileTextBox {
+    /* width: 32%; */
+    margin-top: 1.2rem;
+    position: relative;
+}
+
+.ploggingPerson .personInfoBox_01 .contentBox .profileImgBox img {
+    width: 50%;
+border: 1px solid;  
+}
+
+.ploggingPerson .personInfoBox_01 .btnBox {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.ploggingPerson .personInfoBox_01 .btnBox a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: green;
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid green;
+}
+
+.ploggingPerson .personInfoBox_01 .btnBox a:hover {
+    color: green;
+    background-color: #ffffff;
+    border: 1px solid green;
+}
+
+.ploggingPerson .personInfoBox_02 {
+    margin: 0 auto;
+    background-color: rgb(196, 222, 239);
+    padding: 50px 0;
+}
+
+.ploggingPerson .personInfoBox_02 table {
+    margin: 0 auto;
+}
+
+.ploggingPerson .personInfoBox_02 table th {
+    padding:0 10px; 
+    text-align: left;
+}
+
+.ploggingPerson .personInfoBox_02 table td {
+    padding:0 10px; 
+    text-align:left;
+}

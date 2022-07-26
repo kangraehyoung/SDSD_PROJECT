@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.1" type="text/css">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
@@ -30,7 +31,7 @@
     <section class="topMenu">
         <div class="logoBox">
             <a href="/">
-                <img src="${ path }/resources/imgFile/지구아이콘.png" alt="logoBox" />
+                <img src="${ path }/resources/imgFile/지구아이콘2.png" alt="logoBox" />
             쓰담쓰담<span>쓰레기를 담고 쓰레기를 담아!</span>
             </a>
         </div>
@@ -40,7 +41,7 @@
                 <li class="nav_item">
                     <a href="#">개인 플로깅</a>
                         <ul class="sub_item menu_01">
-                            <li><a href="">마이 페이지</a></li>
+                            <li><a href="${ path }/member/myPage">마이 페이지</a></li>
                             <li><a href="">나의 활동</a></li>
                             <li><a href="">개인 플로깅 인증 게시판</a></li>
                         </ul>

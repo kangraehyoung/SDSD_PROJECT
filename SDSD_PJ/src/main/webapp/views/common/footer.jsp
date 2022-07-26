@@ -5,7 +5,7 @@
 	<footer>
         <div class="footer_wrapper">
             <div class="textbox textbox_1">
-                <h2><span><img src="${ path }/resources/imgFile/지구아이콘.png" alt="logoBox" /></span>쓰담쓰담</h2>
+                <h2><span><img src="${ path }/resources/imgFile/지구아이콘2.png" alt="logoBox" /></span>쓰담쓰담</h2>
                 <p>Copyright @쓰담쓰담 All rights reserved</p>
                 <a href="">이용약관</a>
                 <a href="">개인정보처리방침</a>
