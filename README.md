@@ -68,6 +68,8 @@
 * UpdateServlet에 /views/member/myPage.jsp로 보내주는 doGet 추가 (최송희)
 * LoginServlet -/views/login.jsp로 보내주는 doGet 추가 (최송희)
 * FaqServlet - /views/footer/FAQ.jsp로 보내주는 doGet 추가 (최송희)
+* 회원 탈퇴 로직 테스트 완료 및 중복 체크, 로그인 오류 수정 (강래형)
+* 회원 수정 서블릿 오류 수정 작업 진행중 (박노경)
 
 ### 프론트앤드 작업 내용
 * 마이페이지 1차 프론트엔드 구현 (최송희)
