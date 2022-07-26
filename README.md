@@ -62,3 +62,15 @@
 * 회원가입 페이지 (가입 완료 부분) CSS 구현 최종 X (서호정)
 - 백엔드파트에게 전달할 부분 : 회원가입 페이지 (정보 입력 부분)에서 가입하기 버튼을 누를시 해당 폼 정보 데이터 베이스에 저장하고 축하
 페이지로 넘아가게끔 설정 해야 할 것 같습니다!
+
+## ※ 20220726 작업내용
+### 백앤드 작업 내용
+* UpdateServlet에 /views/member/myPage.jsp로 보내주는 doGet 추가 (최송희)
+* LoginServlet -/views/login.jsp로 보내주는 doGet 추가 (최송희)
+* FaqServlet - /views/footer/FAQ.jsp로 보내주는 doGet 추가 (최송희)
+
+### 프론트앤드 작업 내용
+* 마이페이지 1차 프론트엔드 구현
+* header와 footer에 로고 이미지 변경(오븐과 동일한 이미지)
+* header, footer FAQ 와 로그인 버튼 href 속성 변경
+
