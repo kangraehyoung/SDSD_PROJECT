@@ -19,19 +19,7 @@
     </div>
 
     <!-- c:if 사용해서 보여줄 버튼 나누기 -->
-    <!-- 1) 정보 수정 누르기 전 -->
-    <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 30px 0 0 0;">정보 수정 버튼 누르기 전 보이는 화면</p>
-    <div class="personInfoBox_01">
-        <div class="contentBox">
-            <div class="profileImgBox">
-                <img src="../resources/imgFile/recycling.png" alt="">
-            </div>
-            <div class="profileTextBox">
-                <p>이정후님</p>
-                <p>모임</p>
-                <p>모임 이름</p>
-            </div>
-        </div>
+  
 
    <!-- 2) 정보 수정 누르기 후 -->
    <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 30px 0 0 0;">정보 수정 버튼 누르면 보이는 화면</p>
@@ -48,54 +36,6 @@
             </div>
         </div>
         <!-- c:if 사용해서 보여줄 버튼 나누기 -->
-        <!-- 1) 정보 수정 누르기 전 -->
-      	
-	        <div class="btnBox">
-	            <a href="${path }/views/member/UpdateMyPage.jsp">정보 수정</a>
-	        </div>
-
-	        <div class="btnBox" id="btnDelete">
-	            <a>회원 탈퇴</a>
-	        </div>
-	   
-       
-        <!-- 2) 정보 수정 누르기 후 -->
-	   	<!-- 
-	        <div class="btnBox">
-	            <a href="javascript:">수정 완료</a>
-	        </div>
-	    -->
-    </div>
-    
-    <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르기 전 보이는 화면</p>
-    <div class="personInfoBox_02">
-        <table>
-            <tr>
-                <th>닉네임</th>
-                <td>${loginMember.nickName }</td>
-            </tr>
-            <tr>
-                <th>생년월일</th>
-                <td>${loginMember.BDay }</td>
-            </tr>
-            <tr>
-                <th>이메일</th>
-                <td>${loginMember.email }</td>
-            </tr>
-            <tr>
-                <th>전화번호</th>
-                <td>${loginMember.phone }</td>
-            </tr>
-            <tr>
-                <th>활동지역</th>
-                <td>${loginMember.address }</td>
-            </tr>
-            <tr>
-                <th>성별</th>
-                <td>${loginMember.gender }</td>
-            </tr>
-        </table>
-    </div>
 
 	<!-- 2) 정보 수정 누르기 후 -->
    <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르면 보이는 화면</p>
