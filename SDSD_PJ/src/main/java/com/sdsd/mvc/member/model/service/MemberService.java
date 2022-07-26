@@ -43,7 +43,7 @@ public class MemberService {
 
 	public Boolean isDuplicateEmail(String email) {
 		Connection connection = getConnection();
-		Member member = new MemberDao().findMemberById(connection, email);
+		Member member = new MemberDao().findDuplicatedId(connection, email);
 		
 		close(connection);
 		

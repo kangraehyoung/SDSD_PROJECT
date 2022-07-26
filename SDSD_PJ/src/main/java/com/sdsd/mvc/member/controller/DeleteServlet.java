@@ -27,7 +27,7 @@ public class DeleteServlet extends HttpServlet {
     		result = new MemberService().delete(loginMember.getNo());
     		if(result > 0) {
     			request.setAttribute("msg", "회원 탈퇴가 완료되었습니다");
-    			request.setAttribute("location", "/");
+    			request.setAttribute("location", "/logout");
     		} else {
     			request.setAttribute("msg", "회원 탈퇴에 실패했습니다. 다시 시도해주세요");
     			request.setAttribute("location", "/member/myPage");
