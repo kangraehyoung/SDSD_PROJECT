@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.1" type="text/css">
+=======
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_trashCan.css?v0.0.1" type="text/css">
+>>>>>>> map
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
@@ -59,7 +63,7 @@
                     <ul class="sub_item menu_03">
                         <li><a href="">랭킹</a></li>
                         <li><a href="">챌린지</a></li>
-                        <li><a href="">쓰레기통 찾기</a></li>
+                        <li><a href="${ path }/views/others/TrashCan.jsp">쓰레기통 찾기</a></li>
                         <li><a href="">플로깅 코스</a></li>
                         <li><a href="${ path }/faq">FAQ</a></li>
                     </ul>
