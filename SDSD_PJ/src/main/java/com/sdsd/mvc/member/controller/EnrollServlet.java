@@ -50,7 +50,7 @@ public class EnrollServlet extends HttpServlet {
     	if(member.getPassword().equals(member.getPassword2())) {
     		if(result > 0 ) {
     			request.setAttribute("msg", "회원 가입 성공!");
-    			request.setAttribute("location", "/");
+    			request.setAttribute("location", "/views/member/joinCelebrate.jsp");
     		} else {
     			request.setAttribute("msg", "회원 가입 실패");
     			request.setAttribute("location", "/");
