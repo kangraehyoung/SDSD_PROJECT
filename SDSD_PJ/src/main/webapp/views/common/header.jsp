@@ -61,12 +61,12 @@
                         <li><a href="">챌린지</a></li>
                         <li><a href="">쓰레기통 찾기</a></li>
                         <li><a href="">플로깅 코스</a></li>
-                        <li><a href="${ path }/views/footer/FAQ.jsp">FAQ</a></li>
+                        <li><a href="${ path }/faq">FAQ</a></li>
                     </ul>
                 </li>
                 <c:if test="${empty loginMember}">
                 <li class="loginBtn">
-                    <a href="${ path }/views/login.jsp">로그인</a>
+                    <a href="${ path }/member/login">로그인</a>
                 </li>
                 </c:if>
                 <c:if test="${not empty loginMember}">

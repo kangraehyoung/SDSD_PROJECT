@@ -20,7 +20,7 @@
                     </div>
                     <div class="icon icon_02">
                         <img src="${ path }/resources/imgFile/FAQ_icon.png" alt="FAQ Icon">
-                        <p><a href="">FAQ</a></p>
+                        <p><a href="${ path }/faq">FAQ</a></p>
                     </div>
                 </div>
             </div>
