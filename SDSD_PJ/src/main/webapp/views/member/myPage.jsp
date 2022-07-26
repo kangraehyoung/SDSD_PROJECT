@@ -52,6 +52,9 @@
         <div class="btnBox">
             <a href="javascript:">정보 수정</a>
         </div>
+        <div class="btnBox" id="btnDelete">
+            <a href="javascript:">회원 탈퇴</a>
+        </div>
         <!-- 2) 정보 수정 누르기 후 -->
         <div class="btnBox">
             <a href="javascript:">수정 완료</a>
@@ -145,6 +148,14 @@
         </table>
     </div>
 </section>
+<script>
+	$("#btnDelete").on("click", () => {
+		if(confirm("정말로 탈퇴하시겠습니까?")) {
+			location.replace("${ path }/member/delete");
+		}			
+	});
+</script>
+
 
 
 <jsp:include page="/views/common/footer.jsp" />
