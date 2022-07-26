@@ -116,7 +116,7 @@ public class MemberDao {
 		return result;
 	}
 
-
+	
 	public int updateMemberStatus(Connection connection, int no, String status) {
 		int result = 0;
 		PreparedStatement pstm = null;

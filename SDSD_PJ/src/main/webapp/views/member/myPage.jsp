@@ -42,7 +42,7 @@
                 <button>사진 변경</button>
             </div>
             <div class="profileTextBox">
-                <p>이정후님</ㅔ>
+                <p>이정후님</p>
                 <p>모임</p>
                 <p>모임 이름</p>
             </div>
@@ -51,7 +51,7 @@
         <!-- 1) 정보 수정 누르기 전 -->
       	
 	        <div class="btnBox">
-	            <a href="${path }/views/member/UpdateMyPage.jsp">정보 수정</a>
+	            <a href="${path}/views/member/UpdateMyPage.jsp">정보 수정</a>
 	        </div>
 
 	        <div class="btnBox" id="btnDelete">

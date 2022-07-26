@@ -25,20 +25,25 @@ public class MemberService {
 
 	public int save(Member member) {
 		int result = 0;
-		
-		Connection connection = getConnection();
-		
-		result = new MemberDao().insertMember(connection, member);
-		
-		System.out.println(result);
-		
-		if(result > 0) {
-			commit(connection);
-		} else {
-			rollback(connection);
-		}
-		
-		return result;
+        Connection connection = getConnection();
+     
+        if (member.getNo() != 0) {
+            // update 작업
+            result = new MemberDao().updateMember(connection, member);
+        } else {
+            // insert 작업
+            result = new MemberDao().insertMember(connection, member);
+        }
+
+        if(result > 0) {
+            commit(connection);
+        } else {
+            rollback(connection);
+        }
+
+        close(connection);
+
+        return result;
 	}
 
 	public Boolean isDuplicateEmail(String email) {

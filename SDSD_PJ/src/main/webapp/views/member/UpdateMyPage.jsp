@@ -26,25 +26,25 @@
     <div class="personInfoBox_01">
         <div class="contentBox">
             <div class="profileImgBox">
-                <img src="../resources/imgFile/recycling.png" alt="">
+                <img src="../resources/imgFile/board_icon.png" alt="">
                 <button>사진 변경</button>
             </div>
             <div class="profileTextBox">
-                <p>이정후님</ㅔ>
+                <p>이정후님</p>
                 <p>모임</p>
                 <p>모임 이름</p>
             </div>
         </div>
         <!-- c:if 사용해서 보여줄 버튼 나누기 -->
-
 	<!-- 2) 정보 수정 누르기 후 -->
    <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르면 보이는 화면</p>
     <div class="personInfoBox_02">
+		<input type="hidden" name="no" value="${loginMember.no }">
         <table>
             <tr>
                 <th>닉네임</th>
                 
-                <td><input type="text" placeholder="수정할 닉네임을 입력"></td>
+                <td><input type="text" name="nickname" placeholder="수정할 닉네임을 입력"></td>
             </tr>
             <tr>
                 <th>생년월일</th>
@@ -92,12 +92,17 @@
                 <td>남</td>
             </tr>
         </table>
+        	<form action="${path}/member/myPage" method="POST">
+			<div class="btnBox">
+	        <a href="" >수정 완료</a>
+	        </div>
+	        </form>
     </div>
 </section>
 <script>
 	$("#btnDelete").on("click", () => {
 		if(confirm("정말로 탈퇴하시겠습니까?")) {
-			location.replace("${ path }/member/delete");
+			location.replace("${path}/member/delete");
 		}			
 	});
 </script>
