@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.sdsd.mvc.member.model.service.MemberService;
 import com.sdsd.mvc.member.model.vo.Member;
 
-@WebServlet("/DeleteServket")
+@WebServlet("/member/delete")
 public class DeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

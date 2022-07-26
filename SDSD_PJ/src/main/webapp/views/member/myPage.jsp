@@ -58,6 +58,16 @@
 	            <a href="javascript:">수정 완료</a>
 	        </div>
       
+        <div class="btnBox">
+            <a href="javascript:">정보 수정</a>
+        </div>
+        <div class="btnBox" id="btnDelete">
+            <a href="javascript:">회원 탈퇴</a>
+        </div>
+        <!-- 2) 정보 수정 누르기 후 -->
+        <div class="btnBox">
+            <a href="javascript:">수정 완료</a>
+        </div>
     </div>
     
     <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르기 전 보이는 화면</p>
@@ -114,7 +124,7 @@
             <tr>
                 <th>활동지역</th>
                 <!-- 2) 정보 수정 누르기 후 -->
-                <td>
+                <td> 
                     <select name="address" id="area">
                         <option selected>---</option>
                         <optgroup label="특별시 및 광역시">
@@ -147,6 +157,14 @@
         </table>
     </div>
 </section>
+<script>
+	$("#btnDelete").on("click", () => {
+		if(confirm("정말로 탈퇴하시겠습니까?")) {
+			location.replace("${ path }/member/delete");
+		}			
+	});
+</script>
+
 
 
 <jsp:include page="/views/common/footer.jsp" />
