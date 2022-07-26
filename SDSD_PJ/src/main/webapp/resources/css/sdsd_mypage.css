@@ -89,16 +89,30 @@ border: 1px solid;
     padding-top: 30px;
 }
 
-.ploggingPerson .personInfoBox_01 .btnBox a {
+.ploggingPerson .personInfoBox_01 .btnBox button {
+	text-decoration: none;
+    color: #ffffff;
+    font-size : 16px;
+    background-color: green;
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid green;
+    -webkit-apperance : none;
+    -moz-appearance: none;
+    appearance : none;
+}
+
+/* .ploggingPerson .personInfoBox_01 .btnBox a {
     text-decoration: none;
     color: #ffffff;
     background-color: green;
     padding: 10px 50px;
     border-radius: 10px;
     border: 1px solid green;
-}
+} */
 
-.ploggingPerson .personInfoBox_01 .btnBox a:hover {
+/* .ploggingPerson .personInfoBox_01 .btnBox a:hover, */
+.ploggingPerson .personInfoBox_01 .btnBox button:hover {
     color: green;
     background-color: #ffffff;
     border: 1px solid green;
