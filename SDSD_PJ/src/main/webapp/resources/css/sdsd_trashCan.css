@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*
+==============================================
+쓰레기통 찾기 페이지 관련 CSS StyleSheet
+==============================================
+*/
+
+.first_tool, .second_tool {
+    font-family: sans-serif
+}
+
+.first_tool {
+    background-color:  rgba(88, 170, 236, 0.362);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    border-bottom: 1px solid silver;
+}
+
+.second_tool {
+    background-color:  rgba(63, 219, 159, 0.362);
+    width: 100%;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.mt_first, .ht_search, .ht_keyword, .st_loca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.mt_first img {
+    width: 40px;
+}
+
+.mt_first h2 {
+    position: relative;
+    bottom: -6px;
+    margin-left: 10px;
+    font-size: 1.8em;
+}
+
+.sub_text {
+    font-size: 0.8em;
+    margin-top: -20px;
+}
+
+.ht_search input {
+    margin-right: -15px;
+    width: 500px;
+    height: 30px;
+    border: 1px solid rgb(74, 165, 240);
+    border-radius: 8px;
+}
+
+.ht_search button {
+    width: 50px;
+    height: 34px;
+    border: 1px solid rgb(74, 165, 240);
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(74, 165, 240);
+    position: relative;
+    bottom: -4px;
+}
+
+.ht_search button img{
+    width: 20px;
+}
+
+.ht_keyword {
+    margin: 10px;
+}
+
+.ht_keyword > div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ht_keyword p, .stl_1 p {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(104, 103, 103);
+}
+
+.ht_hash {
+    background-color: white;
+    border-radius: 10px;
+    width: 80px;
+    height: 25px;
+}
+
+.ht_hash a {
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+    color: rgb(50, 157, 245);
+}
+
+.stm_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.stm_1 img {
+    margin-left: 10px;
+    width: 23px;
+}
+
+.st_loca div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stl_1 img {
+    width: 23px;
+    margin-right: 10px;
+}
+
