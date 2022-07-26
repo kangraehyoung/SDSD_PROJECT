@@ -49,7 +49,6 @@
         </div>
         <!-- c:if 사용해서 보여줄 버튼 나누기 -->
         <!-- 1) 정보 수정 누르기 전 -->
-<<<<<<< HEAD
       	
 	        <div class="btnBox">
 	            <a href="${path}/views/member/UpdateMyPage.jsp">정보 수정</a>
@@ -66,7 +65,6 @@
 	            <a href="javascript:">수정 완료</a>
 	        </div>
 	    -->
-=======
         <div class="btnBox">
             <button>정보 수정</button>
         </div>
@@ -74,7 +72,6 @@
         <div class="btnBox">
             <button>수정 완료</button>
         </div>
->>>>>>> mypage_FE
     </div>
     
     <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르기 전 보이는 화면</p>
