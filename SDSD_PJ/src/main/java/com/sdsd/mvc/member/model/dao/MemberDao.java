@@ -25,10 +25,18 @@ public class MemberDao {
 			
 			if(rs.next()) {
 				member = new Member();
+				
 				member.setNo(rs.getInt("MEM_NUMBER"));
-				member.setEmail(rs.getString("MEM_EMAIL"));
 				member.setName(rs.getString("MEM_NAME"));
+				member.setNickName(rs.getString("MEM_NICKNAME"));				
+				member.setEmail(rs.getString("MEM_EMAIL"));
 				member.setPassword(rs.getString("MEM_PWD"));
+				member.setPhone(rs.getString("MEM_PHONE"));
+				member.setGender(rs.getString("MEM_GENDER"));
+				member.setAddress(rs.getString("MEM_ADDRESS"));
+				member.setIntroduce(rs.getString("MEM_INTRODUCE"));
+				member.setStatus(rs.getString("MEM_STATUS"));
+				member.setBDay(rs.getString("MEM_BDAY"));
 			}
 
 		} catch (SQLException e) {

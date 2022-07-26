@@ -49,13 +49,15 @@
         </div>
         <!-- c:if 사용해서 보여줄 버튼 나누기 -->
         <!-- 1) 정보 수정 누르기 전 -->
-        <div class="btnBox">
-            <a href="javascript:">정보 수정</a>
-        </div>
-        <!-- 2) 정보 수정 누르기 후 -->
-        <div class="btnBox">
-            <a href="javascript:">수정 완료</a>
-        </div>
+	        <div class="btnBox">
+	            <a href="javascript:">정보 수정</a>
+	        </div>
+	    
+	        <!-- 2) 정보 수정 누르기 후 -->
+	        <div class="btnBox">
+	            <a href="javascript:">수정 완료</a>
+	        </div>
+      
     </div>
     
     <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르기 전 보이는 화면</p>
@@ -63,27 +65,27 @@
         <table>
             <tr>
                 <th>닉네임</th>
-                <td>이정후</td>
+                <td>${loginMember.nickName }</td>
             </tr>
             <tr>
                 <th>생년월일</th>
-                <td>1998.08.20</td>
+                <td>${loginMember.BDay }</td>
             </tr>
             <tr>
                 <th>이메일</th>
-                <td>zigoo@naver.com</td>
+                <td>${loginMember.email }</td>
             </tr>
             <tr>
                 <th>전화번호</th>
-                <td>010-0000-0000</td>
+                <td>${loginMember.phone }</td>
             </tr>
             <tr>
                 <th>활동지역</th>
-                <td>활동지역을 등록해주세요</td>
+                <td>${loginMember.address }</td>
             </tr>
             <tr>
                 <th>성별</th>
-                <td>남</td>
+                <td>${loginMember.gender }</td>
             </tr>
         </table>
     </div>
@@ -99,11 +101,11 @@
             </tr>
             <tr>
                 <th>생년월일</th>
-                <td>1998.08.20</td>
+                <td>${loginMember.BDay }</td>
             </tr>
             <tr>
                 <th>이메일</th>
-                <td>zigoo@naver.com</td>
+                <td>${loginMember.email }</td>
             </tr>
             <tr>
                 <th>전화번호</th>
