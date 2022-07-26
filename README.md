@@ -70,7 +70,7 @@
 * FaqServlet - /views/footer/FAQ.jsp로 보내주는 doGet 추가 (최송희)
 
 ### 프론트앤드 작업 내용
-* 마이페이지 1차 프론트엔드 구현
+* 마이페이지 1차 프론트엔드 구현 (최송희)
 * header와 footer에 로고 이미지 변경 (최송희)
 * header, footer FAQ 와 로그인 버튼 href 속성 변경 (최송희)
 
