@@ -19,12 +19,15 @@ public class SearchIdServlet extends HttpServlet {
     public SearchIdServlet() {
     }
 
-	protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String name = request.getParameter("name");
 		String phone = request.getParameter("phone");
 		
 		MemberService service = new MemberService();
 		Member member = service.searchId(name, phone);
+		
+		System.out.println(member);
 		
 		if(member != null) {
 			RequestDispatcher rd = request.getRequestDispatcher("/views/member/searchId.jsp");
@@ -39,7 +42,7 @@ public class SearchIdServlet extends HttpServlet {
 		}
 	}
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
 

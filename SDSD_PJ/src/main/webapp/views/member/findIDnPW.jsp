@@ -14,7 +14,7 @@
         <form action="${ path }/member/searchId" id="searchId" method="POST">
 	        <input type="text" class="findId1_2" name="name" id="name" placeholder="가입할 때 입력하신 이름을 입력해주세요." value>
 	        <input type="text" class="findId1_2" name="phone" id="phone" placeholder="가입할 때 입력하신 전화번호를 입력해주세요." value>
-	        <button class="findId1_3" onclick="location.href='${path}/views/member/searchId.jsp'">아이디 전송</button>
+	        <button class="findId1_3" onclick="searchId()">아이디 전송</button>
         </form>
     </div>
 
@@ -34,7 +34,32 @@
     </div>
 </div>
 <script>
-	
+function searchId(){
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    if(name == "" && email == "" && phone == ""){
+       alert("모든 정보를 입력해주세요.");
+       return;
+    }
+    
+    var url = "/searchId"; // 요청 서블릿 url
+    
+    var title ="searchId"; //윈도우 창 이름
+
+    var popup = window.open("",title,status); //빈창 오픈
+    
+    searchFrm.name.value=name;
+    searchFrm.email.value=email;
+    searchFrm.phone.value=phone;
+    
+    searchFrm.target = title;//popup창과 form태그를 연결
+    //action,method설정 후 form태그 submit
+    searchFrm.action = url;
+    searchFrm.method="post";
+    
+    searchFrm.submit();
+ }
 </script>
 
 <jsp:include page="/views/common/footer.jsp" />
