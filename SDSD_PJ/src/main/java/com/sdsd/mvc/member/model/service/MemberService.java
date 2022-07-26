@@ -26,10 +26,10 @@ public class MemberService {
 	public int save(Member member) {
 		int result = 0;
         Connection connection = getConnection();
-     
+        System.out.println(member.getAddress());
         if (member.getNo() != 0) {
             // update 작업
-            result = new MemberDao().updateMember(connection, member);
+            result = new MemberDao().updateMemberMyPage(connection, member);
         } else {
             // insert 작업
             result = new MemberDao().insertMember(connection, member);
@@ -85,4 +85,5 @@ public class MemberService {
 		  
 		return result;
 	}
+
 }

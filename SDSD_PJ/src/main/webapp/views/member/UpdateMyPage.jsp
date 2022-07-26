@@ -6,6 +6,7 @@
 <jsp:include page="/views/common/header.jsp" />
 
 <section class="ploggingPerson">
+<form action="${path }/member/myPage" method="post">
     <div class="titleBox">
         <h2>개인 플로깅</h2>
         <div class="menuBox">
@@ -39,7 +40,7 @@
 	<!-- 2) 정보 수정 누르기 후 -->
    <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르면 보이는 화면</p>
     <div class="personInfoBox_02">
-		<input type="hidden" name="no" value="${loginMember.no }">
+					<input type="hidden" name="no" value="${loginMember.no }">
         <table>
             <tr>
                 <th>닉네임</th>
@@ -92,12 +93,11 @@
                 <td>남</td>
             </tr>
         </table>
-        	<form action="${path}/member/myPage" method="POST">
 			<div class="btnBox">
-	        <a href="" >수정 완료</a>
+	        <button type="submit">수정 완료</button>
 	        </div>
-	        </form>
     </div>
+    </form>
 </section>
 <script>
 	$("#btnDelete").on("click", () => {
@@ -105,6 +105,7 @@
 			location.replace("${path}/member/delete");
 		}			
 	});
+	
 </script>
 
 

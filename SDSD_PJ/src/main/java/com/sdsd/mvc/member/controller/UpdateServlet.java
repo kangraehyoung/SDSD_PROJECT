@@ -35,7 +35,7 @@ public class UpdateServlet extends HttpServlet {
 	
     	// 회원 정보 수정내용들 ..
     	member.setNo(Integer.parseInt(request.getParameter("no")));
-    	member.setNickName(request.getParameter("nickName"));
+    	member.setNickName(request.getParameter("nickname"));
     	member.setPhone(request.getParameter("phone"));
     	member.setAddress(request.getParameter("address"));
     	
@@ -44,6 +44,7 @@ public class UpdateServlet extends HttpServlet {
         
 	    	if (result > 0) {
 	    		// 회원 정보 수정 성공시.
+	    		session.setAttribute("loginMember", new MemberService().login(loginMember.getEmail(), loginMember.getPassword()));
 	    		request.setAttribute("msg", "회원님의 정보를 수정했습니다 ><");
 	    		request.setAttribute("location", "/member/myPage");
 	    	} else {
