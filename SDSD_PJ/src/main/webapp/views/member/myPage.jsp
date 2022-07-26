@@ -42,7 +42,7 @@
                 <button>사진 변경</button>
             </div>
             <div class="profileTextBox">
-                <p>이정후님</ㅔ>
+                <p>이정후님</p>
                 <p>모임</p>
                 <p>모임 이름</p>
             </div>
@@ -50,11 +50,11 @@
         <!-- c:if 사용해서 보여줄 버튼 나누기 -->
         <!-- 1) 정보 수정 누르기 전 -->
         <div class="btnBox">
-            <a href="javascript:">정보 수정</a>
+            <button>정보 수정</button>
         </div>
         <!-- 2) 정보 수정 누르기 후 -->
         <div class="btnBox">
-            <a href="javascript:">수정 완료</a>
+            <button>수정 완료</button>
         </div>
     </div>
     
