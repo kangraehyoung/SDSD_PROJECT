@@ -5,6 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import javax.print.attribute.standard.PresentationDirection;
+
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 import com.sdsd.mvc.member.model.vo.Member;
 
@@ -188,6 +191,45 @@ public class MemberDao {
 		
 
 		return result;
+	}
+
+	public Member searchId(Connection connection, String name, String phone) {
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		String query = "SELECT * FROM MEMBER WHERE MEM_NAME=? AND MEM_PHONE=?";
+		Member member = null;
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, name);
+			pstm.setString(2, phone);
+			
+			rs = pstm.executeQuery();
+			if(rs.next()) {
+				member = new Member();
+				
+				member.setNo(rs.getInt("MEM_NUMBER"));
+				member.setName(rs.getString("MEM_NAME"));
+				member.setNickName(rs.getString("MEM_NICKNAME"));				
+				member.setEmail(rs.getString("MEM_EMAIL"));
+				member.setPassword(rs.getString("MEM_PWD"));
+				member.setPhone(rs.getString("MEM_PHONE"));
+				member.setGender(rs.getString("MEM_GENDER"));
+				member.setAddress(rs.getString("MEM_ADDRESS"));
+				member.setIntroduce(rs.getString("MEM_INTRODUCE"));
+				member.setStatus(rs.getString("MEM_STATUS"));
+				member.setBDay(rs.getString("MEM_BDAY"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+			close(rs);
+		}
+		
+		
+		return member;
 	}
 	
 }
