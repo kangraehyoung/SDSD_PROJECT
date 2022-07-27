@@ -26,7 +26,7 @@
                 <button>사진 변경</button>
             </div>
             <div class="profileTextBox">
-                <p>${loginMember.name }님</p>
+                <h3>${loginMember.name }님</h3> 
                 <p>모임</p>
                 <p>모임 이름</p>
             </div>
