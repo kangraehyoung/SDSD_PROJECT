@@ -23,7 +23,9 @@
         <div class="contentBox">
             <div class="profileImgBox">
                 <img src="${ path }/resources/imgFile/recycling.png" alt="">
-                <button>사진 변경</button>
+               	<div>
+	                <button>사진 변경</button>
+               	</div>
             </div>
             <div class="profileTextBox">
                 <h3>${loginMember.name }님</h3> 
