@@ -57,11 +57,11 @@
                 <script>
                     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
                     var options = { //지도를 생성할 때 필요한 기본 옵션
-<<<<<<< HEAD
+
 	                center: new kakao.maps.LatLng(37.499009, 127.032864), //지도의 중심좌표.
-=======
+
 	                center: new kakao.maps.LatLng(37.517547, 127.086363), //지도의 중심좌표.
->>>>>>> mapupdate
+
 	                level: 3 //지도의 레벨(확대, 축소 정도)
                     };
 
