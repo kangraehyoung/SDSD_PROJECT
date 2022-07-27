@@ -29,14 +29,16 @@ public class SearchIdServlet extends HttpServlet {
 		
 		System.out.println(member);
 		
-		if(member != null) {
-			RequestDispatcher rd = request.getRequestDispatcher("/views/member/searchId.jsp");
-			request.setAttribute("members", member);
+		if(member == null) {
+
+			request.setAttribute("msg", "아이디가 존재하지 않습니다!");
+			request.setAttribute("loc", "/");
+			RequestDispatcher rd = request.getRequestDispatcher("/views/common/msg.jsp");
 			rd.forward(request, response);
 			
 		}else {
-			request.setAttribute("msg", "정확한 정보를 입력해 주세요!");
-			request.setAttribute("loc", "/");
+			request.setAttribute("msg", member.getEmail() + "입니다");
+			request.setAttribute("loc", "/login");
 			RequestDispatcher rd = request.getRequestDispatcher("/views/common/msg.jsp");
 			rd.forward(request, response);
 		}

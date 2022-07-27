@@ -3,11 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="path" value="${ pageContext.request.contextPath }"/>
 <jsp:include page="/views/common/header.jsp" />
-	<form name="searchFrm">
-		<input type="hidden" name="name">
-		<input type="hidden" name="email">
-		<input type="hidden" name="phone">
-	</form>
 <div class="find">
     <div class="findId1">
         <div class="findId1_1">아이디 찾기</div>
@@ -33,33 +28,4 @@
         <button class="findPwd1_6">비밀번호 재설정</button>
     </div>
 </div>
-<script>
-function searchId(){
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    if(name == "" && email == "" && phone == ""){
-       alert("모든 정보를 입력해주세요.");
-       return;
-    }
-    
-    var url = "/searchId"; // 요청 서블릿 url
-    
-    var title ="searchId"; //윈도우 창 이름
-
-    var popup = window.open("",title,status); //빈창 오픈
-    
-    searchFrm.name.value=name;
-    searchFrm.email.value=email;
-    searchFrm.phone.value=phone;
-    
-    searchFrm.target = title;//popup창과 form태그를 연결
-    //action,method설정 후 form태그 submit
-    searchFrm.action = url;
-    searchFrm.method="post";
-    
-    searchFrm.submit();
- }
-</script>
-
 <jsp:include page="/views/common/footer.jsp" />
