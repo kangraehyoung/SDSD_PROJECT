@@ -74,6 +74,11 @@
      text-align: right;
 }
 
+.ploggingPerson .personInfoBox_01 .contentBox .profileImgBox img {
+    width: 50%;
+	border: 1px solid;  
+}
+
 .ploggingPerson .personInfoBox_01 .contentBox .profileTextBox {
 	width: 50%;
 	margin-left : 5%;
@@ -87,9 +92,14 @@
     font-size: 1.6rem;
 }
 
-.ploggingPerson .personInfoBox_01 .contentBox .profileImgBox img {
-    width: 50%;
-	border: 1px solid;  
+.ploggingPerson .personInfoBox_01 .contentBox .profileTextBox  p.crewInfo {
+	margin: 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.ploggingPerson .personInfoBox_01 .contentBox .profileTextBox  p.crewInfo img {
+	width: 15%;
 }
 
 .ploggingPerson .personInfoBox_01 .btnBox {
