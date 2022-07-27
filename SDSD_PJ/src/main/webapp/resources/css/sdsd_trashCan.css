@@ -27,13 +27,14 @@
 }
 
 
-.mt_first, .ht_search, .ht_keyword, .st_loca{
+.mt_first, .ht_search, .ht_keyword, .st_loca, .main_text{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     box-sizing: border-box;
 }
+
 
 .mt_first img {
     width: 40px;
@@ -123,8 +124,18 @@
     justify-content: center;
 }
 
+.st_loca {
+	margin-top: 20px;
+}
+
 .stl_1 img {
     width: 23px;
     margin-right: 10px;
 }
 
+#map {
+	text-align: center;
+	width: 700px;
+	height: 500px;
+	margin: auto;
+}

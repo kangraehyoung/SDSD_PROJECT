@@ -52,7 +52,7 @@
             <div class="stm_1">
                 <h2>지도<img src="${ path }/resources/imgFile/map.png" alt="map"></h2>
             </div>
-            <div id="map" style="width:500px;height:400px;"></div> <!-- 지도 -->
+            <div id="map"></div> <!-- 지도 -->
                <!--  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a"></script> -->
                 <script>
                     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
