@@ -52,8 +52,8 @@
             <div class="stm_1">
                 <h2>지도<img src="${ path }/resources/imgFile/map.png" alt="map"></h2>
             </div>
-            <div id="map" style="width:500px;height:400px;"> <!-- 지도 -->
-                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a"></script>
+            <div id="map" style="width:500px;height:400px;"></div> <!-- 지도 -->
+               <!--  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a"></script> -->
                 <script>
                     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
                     var options = { //지도를 생성할 때 필요한 기본 옵션
@@ -63,7 +63,7 @@
 
                     var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
                 </script>
-            </div>
+            
             <div class="st_loca">
                 <div class="stl_1">
                     <div>

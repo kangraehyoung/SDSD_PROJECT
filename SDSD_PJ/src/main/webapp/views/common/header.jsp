@@ -19,17 +19,15 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_trashCan.css?v0.0.1" type="text/css">
-=======
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
->>>>>>> mypage_FE
+    
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
     <script src="${ path }/resources/js/ssp_menu.js"></script>
     <script src="${ path }/resources/js/FAQ_Accodion.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a"></script>
     
 </head>
 <body>
