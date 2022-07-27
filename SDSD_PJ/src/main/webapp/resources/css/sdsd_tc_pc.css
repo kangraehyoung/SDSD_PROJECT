@@ -45,6 +45,7 @@
     bottom: -6px;
     margin-left: 10px;
     font-size: 1.8em;
+    transform: translateY(5px);
 }
 
 .sub_text {
@@ -69,7 +70,7 @@
     border-bottom-left-radius: 0;
     background-color: rgb(74, 165, 240);
     position: relative;
-    bottom: -4px;
+    transform: translateY(2px);
 }
 
 .ht_search button img{
