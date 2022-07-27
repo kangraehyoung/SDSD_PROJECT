@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_trashCan.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
     
 
@@ -63,7 +63,7 @@
                         <li><a href="">랭킹</a></li>
                         <li><a href="">챌린지</a></li>
                         <li><a href="${ path }/views/others/TrashCan.jsp">쓰레기통 찾기</a></li>
-                        <li><a href="">플로깅 코스</a></li>
+                        <li><a href="${ path }/views/others/PloggingCourse.jsp">플로깅 코스</a></li>
                         <li><a href="${ path }/faq">FAQ</a></li>
                     </ul>
                 </li>
