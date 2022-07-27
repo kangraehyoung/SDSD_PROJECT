@@ -62,6 +62,12 @@
                     };
 
                     var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+                    
+                	// 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+                    var mapTypeControl = new kakao.maps.MapTypeControl();
+
+                    // 지도 타입 컨트롤을 지도에 표시합니다
+                    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
                 </script>
             
             <div class="st_loca">
