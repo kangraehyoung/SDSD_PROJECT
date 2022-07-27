@@ -27,13 +27,14 @@
 }
 
 
-.mt_first, .ht_search, .ht_keyword, .st_loca{
+.mt_first, .ht_search, .ht_keyword, .st_loca, .main_text{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     box-sizing: border-box;
 }
+
 
 .mt_first img {
     width: 40px;
@@ -44,11 +45,12 @@
     bottom: -6px;
     margin-left: 10px;
     font-size: 1.8em;
+    transform: translateY(5px);
 }
 
 .sub_text {
     font-size: 0.8em;
-    margin-top: -20px;
+    margin-top: -5px;
 }
 
 .ht_search input {
@@ -61,14 +63,14 @@
 
 .ht_search button {
     width: 50px;
-    height: 34px;
+    height: 30px;
     border: 1px solid rgb(74, 165, 240);
     border-radius: 8px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: rgb(74, 165, 240);
     position: relative;
-    bottom: -4px;
+
 }
 
 .ht_search button img{
@@ -112,6 +114,10 @@
     box-sizing: border-box;
 }
 
+.stm_1 h2 {
+	font-weight: bold;
+}
+
 .stm_1 img {
     margin-left: 10px;
     width: 23px;
@@ -123,8 +129,18 @@
     justify-content: center;
 }
 
+.st_loca {
+	margin-top: 20px;
+}
+
 .stl_1 img {
     width: 23px;
     margin-right: 10px;
 }
 
+#map {
+	text-align: center;
+	width: 700px;
+	height: 500px;
+	margin: auto;
+}

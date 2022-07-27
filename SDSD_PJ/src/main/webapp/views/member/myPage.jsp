@@ -10,7 +10,7 @@
         <h2>개인 플로깅</h2>
         <div class="menuBox">
             <div class="menuList">
-                <span><img src="../resources/imgFile/board_icon.png" alt="Check Icon"></span>
+                <span><img src="${ path }/resources/imgFile/checkIcon_mypage.png" alt="Check Icon"></span>
                 <a href="javasript:">마이 페이지</a>
             </div>
             <div class="menuList"><a href="javasript:">나의 활동</a></div>
@@ -21,12 +21,15 @@
     <div class="personInfoBox_01">
         <div class="contentBox">
             <div class="profileImgBox">
-                <img src="../resources/imgFile/recycling.png" alt="">
+                <img src="${ path }/resources/imgFile/recycling.png" alt="">
             </div>
             <div class="profileTextBox">
-                <p>${loginMember.name }님</p>
-                <p>모임</p>
-                <p>모임 이름</p>
+                <h3>${loginMember.name }님</h3> 
+                
+                <p class="crewInfo">
+	                <img alt="groupIcon" src="${ path }/resources/imgFile/mypage_groupIcon.png">
+	                모임 이름
+                </p>
             </div>
         </div>
         <div class="btnBox">

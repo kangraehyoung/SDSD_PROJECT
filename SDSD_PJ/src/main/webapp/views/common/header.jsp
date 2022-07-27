@@ -12,16 +12,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>쓰담쓰담</title>
-    <link rel="stylesheet" href="${ path }/resources/css/animationLib.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_trashCan.css?v0.0.1" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.3" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.3" type="text/css">
     
+    <!-- 부트스트랩 및 라이브러리 -->
+    <link rel="stylesheet" href="${ path }/resources/css/animationLib.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/bootstrap.css?v0.0.1" type="text/css">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
@@ -63,7 +65,7 @@
                         <li><a href="">랭킹</a></li>
                         <li><a href="">챌린지</a></li>
                         <li><a href="${ path }/views/others/TrashCan.jsp">쓰레기통 찾기</a></li>
-                        <li><a href="">플로깅 코스</a></li>
+                        <li><a href="${ path }/views/others/PloggingCourse.jsp">플로깅 코스</a></li>
                         <li><a href="${ path }/faq">FAQ</a></li>
                     </ul>
                 </li>
