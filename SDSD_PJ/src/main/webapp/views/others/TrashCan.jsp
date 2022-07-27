@@ -57,7 +57,7 @@
                 <script>
                     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
                     var options = { //지도를 생성할 때 필요한 기본 옵션
-	                center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+	                center: new kakao.maps.LatLng(37.517547, 127.086363), //지도의 중심좌표.
 	                level: 3 //지도의 레벨(확대, 축소 정도)
                     };
 
@@ -68,6 +68,50 @@
 
                     // 지도 타입 컨트롤을 지도에 표시합니다
                     map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+                    
+                 	// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+                    var zoomControl = new kakao.maps.ZoomControl();
+                    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+                    
+                 // 마커를 표시할 위치와 title 객체 배열입니다 
+                    var positions = [
+                        {
+                            title: '잠실GS25쓰레기통1', 
+                            latlng: new kakao.maps.LatLng(37.519580, 127.093538)
+                        },
+                        {
+                            title: '잠실GS25쓰레기통2', 
+                            latlng: new kakao.maps.LatLng(37.518722, 127.089644)
+                        },
+                        {
+                            title: '잠실스케이트장쓰레기통', 
+                            latlng: new kakao.maps.LatLng(37.517753, 127.086164)
+                        },
+                        {
+                            title: '잠실선착장쓰레기통',
+                            latlng: new kakao.maps.LatLng(37.518323, 127.081430)
+                        }
+                    ];
+
+                    // 마커 이미지의 이미지 주소입니다
+                    var imageSrc = "${ path }/resources/imgFile/recycling-bag.png"; 
+                        
+                    for (var i = 0; i < positions.length; i ++) {
+                        
+                        // 마커 이미지의 이미지 크기 입니다
+                        var imageSize = new kakao.maps.Size(20, 20); 
+                        
+                        // 마커 이미지를 생성합니다    
+                        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
+                        
+                        // 마커를 생성합니다
+                        var marker = new kakao.maps.Marker({
+                            map: map, // 마커를 표시할 지도
+                            position: positions[i].latlng, // 마커를 표시할 위치
+                            title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                            image : markerImage // 마커 이미지 
+                        });
+                    }
                 </script>
             
             <div class="st_loca">

@@ -57,7 +57,7 @@
                 <script>
                     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
                     var options = { //지도를 생성할 때 필요한 기본 옵션
-	                center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+	                center: new kakao.maps.LatLng(37.499009, 127.032864), //지도의 중심좌표.
 	                level: 3 //지도의 레벨(확대, 축소 정도)
                     };
 
@@ -68,6 +68,10 @@
 
                     // 지도 타입 컨트롤을 지도에 표시합니다
                     map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+                 
+                    // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+                    var zoomControl = new kakao.maps.ZoomControl();
+                    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
                 </script>
             
             <div class="st_loca">
