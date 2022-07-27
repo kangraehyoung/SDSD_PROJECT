@@ -62,7 +62,6 @@
     		</div>
                <!--  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a"></script> -->
                 <script>
-<<<<<<< HEAD
                     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
                     var options = { //지도를 생성할 때 필요한 기본 옵션
 
@@ -70,13 +69,11 @@
 
 	                level: 3 //지도의 레벨(확대, 축소 정도)
                     };
-=======
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                 mapOption = {
                     center: new kakao.maps.LatLng(37.517547, 127.086363), // 지도의 중심좌표
                     level: 3 // 지도의 확대 레벨
                 };  
->>>>>>> mapupdate
 
             // 지도를 생성합니다    
             var map = new kakao.maps.Map(mapContainer, mapOption); 

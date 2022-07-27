@@ -81,6 +81,10 @@
     margin: 10px;
 }
 
+.ht_keyword p {
+	transform: translateY(7px);
+}
+
 .ht_keyword > div {
     margin-left: 10px;
     margin-right: 10px;
