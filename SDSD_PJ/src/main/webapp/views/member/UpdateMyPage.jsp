@@ -35,11 +35,11 @@
                 <p>모임 이름</p>
             </div>
         </div>
-   </div>
-        
         <div class="btnBox">
 	        <button type="submit">수정 완료</button>
 	    </div>
+   </div>
+        
         <!-- c:if 사용해서 보여줄 버튼 나누기 -->
 	<!-- 2) 정보 수정 누르기 후 -->
     <div class="personInfoBox_02">
