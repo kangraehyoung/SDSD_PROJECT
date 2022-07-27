@@ -19,14 +19,10 @@
         </div>
     </div>
 
-    <!-- c:if 사용해서 보여줄 버튼 나누기 -->
-  
-
-   <!-- 2) 정보 수정 누르기 후 -->
     <div class="personInfoBox_01">
         <div class="contentBox">
             <div class="profileImgBox">
-                <img src="../resources/imgFile/recycling.png" alt="">
+                <img src="${ path }/resources/imgFile/recycling.png" alt="">
                 <button>사진 변경</button>
             </div>
             <div class="profileTextBox">
@@ -39,11 +35,9 @@
 	        <button type="submit">수정 완료</button>
 	    </div>
    </div>
-        
-        <!-- c:if 사용해서 보여줄 버튼 나누기 -->
-	<!-- 2) 정보 수정 누르기 후 -->
+  
     <div class="personInfoBox_02">
-					<input type="hidden" name="no" value="${loginMember.no }">
+		<input type="hidden" name="no" value="${loginMember.no }">
         <table>
             <tr>
                 <th>닉네임</th>
@@ -64,7 +58,6 @@
             </tr>
             <tr>
                 <th>활동지역</th>
-                <!-- 2) 정보 수정 누르기 후 -->
                 <td> 
                     <select name="address" id="area">
                         <option selected>---</option>
