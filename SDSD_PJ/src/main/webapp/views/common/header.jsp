@@ -23,7 +23,7 @@
     
     <!-- 부트스트랩 및 라이브러리 -->
     <link rel="stylesheet" href="${ path }/resources/css/animationLib.css?v0.0.1" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/bootstrap.css?v0.0.1" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
