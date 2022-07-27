@@ -136,6 +136,26 @@
     appearance : none;
 }
 
+/* .ploggingPerson .personInfoBox_01 .btnBox a:hover, */
+.ploggingPerson .personInfoBox_01 .btnBox button:hover {
+    color: green;
+    background-color: #ffffff;
+    border: 1px solid green;
+}
+
+/* 탈퇴 버튼  */
+.ploggingPerson .personInfoBox_01 .btnBox button#btnDelete {
+	background-color: #E95050;
+	border: 1px solid #E95050;
+}
+
+.ploggingPerson .personInfoBox_01 .btnBox button#btnDelete:hover {
+    color: #E95050;
+    background-color: #ffffff;
+    border: 1px solid #E95050;
+}
+
+
 /* .ploggingPerson .personInfoBox_01 .btnBox a {
     text-decoration: none;
     color: #ffffff;
@@ -145,12 +165,6 @@
     border: 1px solid green;
 } */
 
-/* .ploggingPerson .personInfoBox_01 .btnBox a:hover, */
-.ploggingPerson .personInfoBox_01 .btnBox button:hover {
-    color: green;
-    background-color: #ffffff;
-    border: 1px solid green;
-}
 
 .ploggingPerson .personInfoBox_02 {
     margin: 0 auto;

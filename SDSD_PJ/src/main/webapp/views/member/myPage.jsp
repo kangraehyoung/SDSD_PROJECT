@@ -34,11 +34,12 @@
         </div>
         <div class="btnBox">
             <button onclick="location.href='${path}/views/member/UpdateMyPage.jsp'">정보 수정</button>
+	         <button id="btnDelete">회원 탈퇴</button>
         </div>
 
-		<div class="btnBox" id="btnDelete">
-	         <button>회원 탈퇴</button>
-	    </div>
+		<!-- <div class="btnBox" id="btnDelete">
+	         <button id="btnDelete">회원 탈퇴</button>
+	    </div> -->
 	</div>
 
     
