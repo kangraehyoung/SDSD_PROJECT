@@ -50,7 +50,7 @@
 
 .sub_text {
     font-size: 0.8em;
-    margin-top: -20px;
+    margin-top: -5px;
 }
 
 .ht_search input {
@@ -112,6 +112,10 @@
     justify-content: center;
     position: relative;
     box-sizing: border-box;
+}
+
+.stm_1 h2 {
+	font-weight: bold;
 }
 
 .stm_1 img {
