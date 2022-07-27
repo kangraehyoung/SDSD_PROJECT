@@ -24,7 +24,7 @@
                 <img src="../resources/imgFile/recycling.png" alt="">
             </div>
             <div class="profileTextBox">
-                <p>${loginMember.name }님</p>
+                <p>${loginMember.name }님</p> 
                 <p>모임</p>
                 <p>모임 이름</p>
             </div>
