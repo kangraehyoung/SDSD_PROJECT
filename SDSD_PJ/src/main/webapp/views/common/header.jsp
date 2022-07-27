@@ -27,7 +27,7 @@
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
     <script src="${ path }/resources/js/ssp_menu.js"></script>
     <script src="${ path }/resources/js/FAQ_Accodion.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a&libraries=services"></script>
     
 </head>
 <body>

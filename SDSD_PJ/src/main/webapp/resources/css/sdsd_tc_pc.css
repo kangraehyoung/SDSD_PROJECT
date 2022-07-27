@@ -27,7 +27,7 @@
 }
 
 
-.mt_first, .ht_search, .ht_keyword, .st_loca, .main_text{
+.mt_first, .ht_search, .ht_keyword, .st_loca, .main_text, .hAddr{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +129,7 @@
 	margin-top: 20px;
 }
 
-.stl_1 img {
+.hAddr img {
     width: 23px;
     margin-right: 10px;
 }
@@ -139,4 +139,17 @@
 	width: 700px;
 	height: 500px;
 	margin: auto;
+}
+
+.hAddr {
+	margin-top: 20px;
+	font-size: small;
+    font-weight: bold;
+}
+	
+.bAddr {
+	padding:5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
