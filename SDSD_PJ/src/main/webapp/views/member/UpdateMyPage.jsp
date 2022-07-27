@@ -23,22 +23,25 @@
   
 
    <!-- 2) 정보 수정 누르기 후 -->
-   <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 30px 0 0 0;">정보 수정 버튼 누르면 보이는 화면</p>
     <div class="personInfoBox_01">
         <div class="contentBox">
             <div class="profileImgBox">
-                <img src="../resources/imgFile/board_icon.png" alt="">
+                <img src="../resources/imgFile/recycling.png" alt="">
                 <button>사진 변경</button>
             </div>
             <div class="profileTextBox">
-                <p>이정후님</p>
+                <p>${loginMember.name }님</p>
                 <p>모임</p>
                 <p>모임 이름</p>
             </div>
         </div>
+   </div>
+        
+        <div class="btnBox">
+	        <button type="submit">수정 완료</button>
+	    </div>
         <!-- c:if 사용해서 보여줄 버튼 나누기 -->
 	<!-- 2) 정보 수정 누르기 후 -->
-   <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르면 보이는 화면</p>
     <div class="personInfoBox_02">
 					<input type="hidden" name="no" value="${loginMember.no }">
         <table>
@@ -93,9 +96,7 @@
                 <td>남</td>
             </tr>
         </table>
-			<div class="btnBox">
-	        <button type="submit">수정 완료</button>
-	        </div>
+
     </div>
     </form>
 </section>
