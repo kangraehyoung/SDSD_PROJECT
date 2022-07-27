@@ -29,8 +29,11 @@
             </div>
             <div class="profileTextBox">
                 <h3>${loginMember.name }님</h3> 
-                <p>모임</p>
-                <p>모임 이름</p>
+                
+                <p class="crewInfo">
+	                <img alt="groupIcon" src="${ path }/resources/imgFile/mypage_groupIcon.png">
+	                모임 이름
+                </p>
             </div>
         </div>
         <div class="btnBox">
