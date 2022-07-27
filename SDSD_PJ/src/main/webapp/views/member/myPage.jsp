@@ -32,12 +32,55 @@
                 <p>모임 이름</p>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+
+   <!-- 2) 정보 수정 누르기 후 -->
+   <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 30px 0 0 0;">정보 수정 버튼 누르면 보이는 화면</p>
+    <div class="personInfoBox_01">
+        <div class="contentBox">
+            <div class="profileImgBox">
+                <img src="../resources/imgFile/recycling.png" alt="">
+                <button>사진 변경</button>
+            </div>
+            <div class="profileTextBox">
+                <p>이정후님</p>
+                <p>모임</p>
+                <p>모임 이름</p>
+            </div>
+        </div>
+        <!-- c:if 사용해서 보여줄 버튼 나누기 -->
+        <!-- 1) 정보 수정 누르기 전 -->
+      	
+	        <div class="btnBox">
+	            <a href="${path}/views/member/UpdateMyPage.jsp">정보 수정</a>
+	        </div>
+
+	        <div class="btnBox" id="btnDelete">
+	            <a>회원 탈퇴</a>
+	        </div>
+	   
+       
+        <!-- 2) 정보 수정 누르기 후 -->
+	   	<!-- 
+	        <div class="btnBox">
+	            <a href="javascript:">수정 완료</a>
+	        </div>
+	    -->
+>>>>>>> bac9bdaecea1a707cd77268540cb0f1e4bd2295c
         <div class="btnBox">
             <button onclick="location.href='${path}/views/member/UpdateMyPage.jsp'">정보 수정</button>
         </div>
+<<<<<<< HEAD
 		<div class="btnBox" id="btnDelete">
 	         <button>회원 탈퇴</button>
 	    </div>
+=======
+        <!-- 2) 정보 수정 누르기 후 -->
+        <div class="btnBox">
+            <button>수정 완료</button>
+        </div>
+>>>>>>> bac9bdaecea1a707cd77268540cb0f1e4bd2295c
     </div>
     
     <p style="text-align: center; background-color: #1f1f1f; color: #ffffff; padding: 0; margin: 0;">정보 수정 버튼 누르기 전 보이는 화면</p>
