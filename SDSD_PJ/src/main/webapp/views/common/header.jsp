@@ -18,15 +18,12 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.3" type="text/css">
-     <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.1" type="text/css">
-=======
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.2" type="text/css">
->>>>>>> mapupdate
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.3" type="text/css">
     
     <!-- 부트스트랩 및 라이브러리 -->
     <link rel="stylesheet" href="${ path }/resources/css/animationLib.css?v0.0.1" type="text/css">
