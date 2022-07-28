@@ -81,10 +81,6 @@
     margin: 10px;
 }
 
-.ht_keyword p {
-	transform: translateY(7px);
-}
-
 .ht_keyword > div {
     margin-left: 10px;
     margin-right: 10px;
@@ -94,6 +90,10 @@
     font-size: 0.8em;
     font-weight: bold;
     color: rgb(104, 103, 103);
+}
+
+.ht_keyword p {
+	transform: translateY(7px);
 }
 
 .ht_hash {
