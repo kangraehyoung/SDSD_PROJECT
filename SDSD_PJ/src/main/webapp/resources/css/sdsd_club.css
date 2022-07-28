@@ -130,6 +130,7 @@
 /* 이미지 박스 */
 .contentBody .contentBox .imgBox {
     line-height: 0;
+    cursor: pointer;
 }
 
 .contentBody .contentBox .imgBox img {
