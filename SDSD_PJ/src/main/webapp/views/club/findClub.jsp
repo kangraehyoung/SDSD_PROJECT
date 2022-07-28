@@ -46,6 +46,11 @@
                 </div>
             </div>
         </div>
+        
+        <div class="buttonBox">
+            <button>모임 만들기</button>
+            <button>가입한 모임 바로가기</button>
+        </div>
     </div>
 
 
