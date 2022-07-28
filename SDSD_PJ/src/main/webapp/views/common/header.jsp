@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.2" type="text/css">
     
 
     <!-- jQuery 추가 -->
@@ -46,7 +47,7 @@
                         <ul class="sub_item menu_01">
                             <li><a href="${ path }/member/myPage">마이 페이지</a></li>
                             <li><a href="">나의 활동</a></li>
-                            <li><a href="">개인 플로깅 인증 게시판</a></li>
+                            <li><a href="${ path }/views/member/IindividualBoard.jsp">개인 플로깅 인증 게시판</a></li>
                         </ul>
                 </li>
                 <li class="nav_item">
