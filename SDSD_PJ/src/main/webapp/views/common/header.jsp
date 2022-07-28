@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.1" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.2" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.3" type="text/css">
@@ -24,6 +24,7 @@
     <!-- 부트스트랩 및 라이브러리 -->
     <link rel="stylesheet" href="${ path }/resources/css/animationLib.css?v0.0.1" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <!-- jQuery 추가 -->
     <script src="${ path }/resources/js/jquery-3.6.0.js"></script>
