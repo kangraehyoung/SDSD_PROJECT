@@ -17,7 +17,7 @@
 	
 	
     <div class="findPwd1">
-   <!--  <form action="${path }/SearchPwd" method="get">  -->
+   <form action="${path }/SearchPwd" method="get">
         <div class="findPwd1_1">비밀번호 찾기</div>
         <div class="findPwd1_2">
             <input type="text" class="findPwd1_3" name="email" placeholder="가입할 때 입력하신 이메일 주소를 입력해주세요.">
