@@ -81,14 +81,14 @@
 
 .ht_search2 button {
     width: 50px;
-    height: 34px;
+    height: 30px;
     border: 1px solid rgb(74, 165, 240);
     border-radius: 8px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: rgb(74, 165, 240);
     position: relative;
-    transform: translateY(4px);
+    transform: translateY(-1px);
 }
 
 .ht_search2 button img{
@@ -100,7 +100,7 @@
 }
 
 .ht_keyword2 p {
-	transform: translateY(-1px);
+	transform: translateY(7px);
 }
 
 .ht_keyword2 > div {
@@ -169,9 +169,6 @@
 
 /* picture */
 
-.picture {
-    
-}
 
 .picture img {
     width: 100%;

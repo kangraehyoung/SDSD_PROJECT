@@ -14,8 +14,8 @@
                 </div>
                 <div class="menuList"><a href="javasript:">나의 활동</a></div>
                 <div class="menuList">
-                    <span><img src="${ path }/resources/imgFile/흠.png"></span>
-                    <a href="javasript:">개인 플로깅 인증</a>
+                    <span><img src="${ path }/resources/imgFile/checkIcon_mypage.png"></span>
+                    <a href="javasript:" style="font-weight: bold;">개인 플로깅 인증</a>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                         <div class="ht_22">
                             <input type="text">
                             <button type="submit">
-                                <img src="${ path }/resources/imgFile/serachIcon_03.png" alt="search">
+                                <img src="${ path }/resources/imgFile/searchIcon_03.png" alt="search">
                             </button>
                         </div>
                     </form>
@@ -56,7 +56,7 @@
                         <button><a href="">인증 게시글 작성하기!</a></button>
                     </div>
                     <div class="col2">
-                        <img src="${ path }/resources/imgFile/flag.png" alt="">
+                        <img src="${ path }/resources/imgFile/layout.png" alt="">
                         <br>
                         <a href="">모임 플로깅 인증으로 가기!</a>
                     </div>
