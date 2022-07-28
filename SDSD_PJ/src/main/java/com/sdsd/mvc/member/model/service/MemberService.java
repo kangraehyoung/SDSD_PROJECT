@@ -96,6 +96,23 @@ public class MemberService {
 		return member;
 	}
 
+	public int findPwd(Member findPwd) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = new MemberDao().updatePwd(connection, findPwd);
+		System.out.println("Dao" + result);
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
+
 	
 
 }

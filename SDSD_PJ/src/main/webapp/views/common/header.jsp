@@ -40,7 +40,7 @@
 <body>
     <section class="topMenu">
         <div class="logoBox">
-            <a href="/">
+            <a href="${path }/index.jsp">
                 <img src="${ path }/resources/imgFile/지구아이콘2.png" alt="logoBox" />
             쓰담쓰담<span>쓰레기를 담고 쓰레기를 담아!</span>
             </a>

@@ -6,12 +6,30 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.print.attribute.standard.PresentationDirection;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 import com.sdsd.mvc.member.model.vo.Member;
 
 public class MemberDao {
+	// 비밀번호 난수 생성 메소드
+	public static String randomPassword(int length) {
+		int index = 0;
+		char[] charSet = new char[] {
+			'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+			'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+			'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+		};
+		StringBuffer sb = new StringBuffer();
+		
+		for (int i=0; i<length; i++) {
+			index = (int) (charSet.length * Math.random());
+			sb.append(charSet[index]);
+		}
+		
+		return sb.toString();
+	}
 
 	public Member findMemberById(Connection connection, String email) {
 		Member member = null;
@@ -230,6 +248,32 @@ public class MemberDao {
 		
 		
 		return member;
+	}
+
+	public int updatePwd(Connection connection, Member findPwd) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE MEMBER SET MEM_PWD=? WHERE MEM_EMAIL=? AND MEM_PHONE=?";
+		String rePassword = randomPassword(8);
+		findPwd.setPassword(rePassword);
+		System.out.println(rePassword + " " + findPwd.getEmail() + " " + findPwd.getPhone());
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, rePassword);
+			pstmt.setString(2, findPwd.getEmail());
+			pstmt.setString(3, findPwd.getPhone());
+	
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+			close(connection);
+		}
+		
+		return result;
 	}
 	
 }

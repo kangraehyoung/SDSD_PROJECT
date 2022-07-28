@@ -14,18 +14,22 @@
     </div>
 
     <div class="v_line"></div>
-
+	
+	
     <div class="findPwd1">
+   <!--  <form action="${path }/SearchPwd" method="get">  -->
         <div class="findPwd1_1">비밀번호 찾기</div>
         <div class="findPwd1_2">
-            <input type="text" class="findPwd1_3" name="email" placeholder="가입할 때 입력하신 이메일 주소를 입력해주세요." value>
+            <input type="text" class="findPwd1_3" name="email" placeholder="가입할 때 입력하신 이메일 주소를 입력해주세요.">
             <div style="display: flex; width: 100%;">
-                <input type="number" name="phone2" placeholder="가입할 때 입력하신 전화번호를 입력해주세요." value class="findPwd1_4">
-                <button>인증번호받기</button>
+                <input type="number" name="phone2" placeholder="가입할 때 입력하신 전화번호를 입력해주세요." class="findPwd1_4">
+                <button>인증번호받기</button>  
             </div>
-            <input name="certNumber" class="findPwd1_5" type="number" placeholder="인증번호를 입력해주세요." value>
+           <input name="certNumber" class="findPwd1_5" type="number" placeholder="인증번호를 입력해주세요.">
         </div>
-        <button class="findPwd1_6">비밀번호 재설정</button>
+        <button class="findPwd1_6" type="submit">비밀번호 재설정</button>
+    </form>
     </div>
+    
 </div>
 <jsp:include page="/views/common/footer.jsp" />
