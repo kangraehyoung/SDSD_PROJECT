@@ -81,19 +81,19 @@
          	// 마커를 표시할 위치와 title 객체 배열입니다 
             var positions = [
             	{
-                    title: '잠실GS25쓰레기통1', 
+                    title: '<div>GS25한강잠실1호점</div>', 
                     latlng: new kakao.maps.LatLng(37.519580, 127.093538)
                 },
                 {
-                    title: '잠실GS25쓰레기통2', 
+                    title: '<div>GS25한강잠실2호점</div>', 
                     latlng: new kakao.maps.LatLng(37.518722, 127.089644)
                 },
                 {
-                    title: '잠실스케이트장쓰레기통', 
+                    title: '<div>잠실한강공원수영장</div>', 
                     latlng: new kakao.maps.LatLng(37.517753, 127.086164)
                 },
                 {
-                    title: '잠실선착장쓰레기통',
+                    title: '<div>이랜드잠실선착장</div>',
                     latlng: new kakao.maps.LatLng(37.518323, 127.081430)
                 }
             ];
@@ -116,7 +116,33 @@
                     title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
                     image : markerImage // 마커 이미지 
                 });
+                
+                // 마커에 표시할 인포윈도우를 생성합니다 
+                var infowindow2 = new kakao.maps.InfoWindow({
+                    content: positions[i].title // 인포윈도우에 표시할 내용
+                });
+
+                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                kakao.maps.event.addListener(marker2, 'mouseover', makeOverListener(map, marker2, infowindow2));
+                kakao.maps.event.addListener(marker2, 'mouseout', makeOutListener(infowindow2));
             }
+
+            // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+            function makeOverListener(map, marker2, infowindow2) {
+                return function() {
+                    infowindow2.open(map, marker2);
+                };
+            }
+
+            // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+            function makeOutListener(infowindow2) {
+                return function() {
+                    infowindow2.close();
+                };
+            }
+           	 
             
             // 주소-좌표 변환 객체를 생성합니다
             var geocoder = new kakao.maps.services.Geocoder();
@@ -132,7 +158,7 @@
                 searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
                     if (status === kakao.maps.services.Status.OK) {
                         var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
-                        detailAddr += '<div>주소 : ' + result[0].address.address_name + '</div>';
+                        detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
                         
                         var content = '<div class="bAddr">' +
                                         detailAddr + 
