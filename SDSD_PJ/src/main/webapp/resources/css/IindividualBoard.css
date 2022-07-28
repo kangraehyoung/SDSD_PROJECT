@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/*
+개인 플로깅 인증 게시판
+*/
+
+.ploggingPerson {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.ploggingPerson .titleBox {
+    margin: 0 auto;
+    padding: 100px 0 20px 0;
+    background-color: rgba(88, 170, 236, 0.362);
+}
+
+.titleBox {
+    border-bottom: 1px solid silver;
+}
+
+.ploggingPerson .titleBox h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding-bottom: 50px;
+}
+
+.ploggingPerson .menuBox {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+
+.ploggingPerson .menuBox .menuList{
+    width: 20%;
+    display: inline-block;
+    /* text-align: center; */
+    align-items: center;
+}
+
+.ploggingPerson .menuBox .menuList a {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 1rem;
+
+}
+
+.ploggingPerson .menuBox .menuList span img {
+    width: 25px;
+    height: 25px;
+    transform: translate(-5px, -10%);
+}
+
+/* contentBox */
+
+.contentBox {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    font-family: sans-serif
+}
+
+
+.ht_search2, .ht_keyword2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+.ht_search2 input {
+    margin-right: -15px;
+    width: 500px;
+    height: 30px;
+    border: 1px solid rgb(74, 165, 240);
+    border-radius: 8px;
+}
+
+.ht_search2 button {
+    width: 50px;
+    height: 34px;
+    border: 1px solid rgb(74, 165, 240);
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(74, 165, 240);
+    position: relative;
+    transform: translateY(4px);
+}
+
+.ht_search2 button img{
+    width: 20px;
+}
+
+.ht_keyword2 {
+    margin: 10px;
+}
+
+.ht_keyword2 p {
+	transform: translateY(-1px);
+}
+
+.ht_keyword2 > div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ht_keyword2 p {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(104, 103, 103);
+}
+
+.ht_hash2 {
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    width: 80px;
+    height: 25px;
+}
+
+.ht_hash2 a {
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+    color: rgb(50, 157, 245);
+}
+
+.btns {
+    display: flex;
+    margin-top: 20px;
+}
+
+.btns > div {
+    width: 33%;
+}
+
+.col1 {
+    margin: 0 auto;
+}
+
+.btns button {
+    background-color: rgb(74, 165, 240); ;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+.btns button a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: small;
+}
+
+.col2 a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: small;
+}
+
+.col2 img {
+    width: 20px;
+}
+
+/* picture */
+
+.picture {
+    
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.p1, .p2 {
+    display: flex;
+    width: 100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.p1 > div, .p2 > div {
+    position: relative;
+}
+
+.blur
+{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+
+    position: absolute; /* 이미지와 겹치게 처리 */
+    top: 0; left: 0;
+
+    color: #fff; text-align: center;
+    line-height: 130px;
+    font-size: small;
+    font-weight: bold;
+
+    opacity: 0; /* 처음엔 안보이고 */
+
+    transition: 0.3s;
+}
+
+.blur:hover
+{
+    opacity: 1;
+}
