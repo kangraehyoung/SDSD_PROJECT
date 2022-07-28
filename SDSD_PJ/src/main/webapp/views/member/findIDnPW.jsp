@@ -22,7 +22,7 @@
         <div class="findPwd1_2">
             <input type="text" class="findPwd1_3" name="email" placeholder="가입할 때 입력하신 이메일 주소를 입력해주세요.">
             <div style="display: flex; width: 100%;">
-                <input type="number" name="phone2" placeholder="가입할 때 입력하신 전화번호를 입력해주세요." class="findPwd1_4">
+                <input type="text" name="phone2" placeholder="가입할 때 입력하신 전화번호를 입력해주세요." class="findPwd1_4">
                 <button>인증번호받기</button>  
             </div>
            <input name="certNumber" class="findPwd1_5" type="number" placeholder="인증번호를 입력해주세요.">
