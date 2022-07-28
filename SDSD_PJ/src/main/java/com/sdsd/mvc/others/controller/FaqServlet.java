@@ -1,4 +1,4 @@
-package com.sdsd.mvc.footer.controller;
+package com.sdsd.mvc.others.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ public class FaqServlet extends HttpServlet {
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/footer/FAQ.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/others/FAQ.jsp").forward(request, response);
 	}
 
 }

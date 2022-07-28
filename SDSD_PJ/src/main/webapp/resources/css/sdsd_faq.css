@@ -22,12 +22,12 @@ FAQ 페이지  CSS StyleSheet
     font-weight: 700;
     line-height: 1.2;
     padding-bottom: 1rem;
-   	color: #1f1f1f;
+    color: #1f1f1f;
 }
 .faq_title section p {
     font-size: 1.4rem;
     font-weight: 400;
-  	padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* ********** ********** ********** */
@@ -60,7 +60,7 @@ FAQ 페이지  CSS StyleSheet
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: -0.5px;
-    color: #ffffff;
+    color: #ffffff !important;
     text-decoration: none;
     padding: 0.933rem 1.4rem 0.933rem 3.4rem; /* 14px 20px 14px 50px */
     /* border-top: 0.5px solid #1f1f1f; */
@@ -131,4 +131,122 @@ FAQ 페이지  CSS StyleSheet
 
 .o_accordion li a.active::after {
     background-image: url('/FAQ/toggle_icon_up_white.png');
+}
+
+/* **** */
+@media screen and (max-width: 980px) {
+
+    .faq_section {
+        padding: 70px 0 !important;
+    }
+
+    .faq_title section h2 {
+        font-size: 42px;
+        padding-bottom: 30px;
+    }
+    .faq_title section p {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    /* ****** */
+    .o_accordion_section section {
+        padding-top: 50px;
+        max-width: 520px;
+    }
+
+    /* Q */
+    .o_accordion li a {
+        font-size: 16px;
+        padding: 14px 20px 14px 50px;
+    }
+    .o_accordion li a span.title {
+        font-size: 20px;
+        top: 12px;
+        left: 24px;
+    }
+
+    /* A */
+    .o_accordion li .textBox {
+        padding: 24px 50px;
+    }
+    .o_accordion li .textBox p {
+        font-size: 14px;
+    }
+    .o_accordion li .textBox p span.title {
+        font-size: 15px;
+        left: -18px;
+    }
+
+    .o_accordion li .textBox p .o_accordion_text_sub {
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    .o_accordion li a::after, .o_accordion li a.active::after {
+        width: 12px;
+        height: 12px;
+        right: 24px;
+    }
+}
+
+
+
+@media all and (max-width: 767px) {
+
+    .faq_section {
+        padding: 50px 0 !important;
+    }
+    .faq_section .et_pb_row {
+        width: 90%;
+    }
+
+    .faq_title section h2 {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    .faq_title section p {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    /* ****** */
+    .o_accordion_section section {
+        padding-top: 20px;
+        max-width: 100%;
+    }
+
+    /* Q */
+    .o_accordion li a {
+        font-size: 14px;
+        padding: 14px 10px 14px 30px;
+    }
+    .o_accordion li a span.title {
+        font-size: 16px;
+        top: 14px;
+        left: 10px;
+    }
+
+    /* A */
+    .o_accordion li .textBox {
+        padding: 20px 10px 20px 30px;
+    }
+    .o_accordion li .textBox p {
+        font-size: 13px;
+    }
+    .o_accordion li .textBox p span.title {
+        font-size: 14px;
+        left: -16px;
+    }
+
+    .o_accordion li .textBox p .o_accordion_text_sub {
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    .o_accordion li a::after, .o_accordion li a.active::after {
+        width: 10px;
+        height: 10px;
+        right: 10px;
+    }
 }
