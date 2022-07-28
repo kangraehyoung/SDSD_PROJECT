@@ -108,13 +108,18 @@
                                 </select>
                             </div>
                         </div>
-                            <div class="st_gender"> <!-- 성별 입력 박스 -->
+                        <div class="st_gender"> <!-- 성별 입력 박스 -->
                             <div><label>성별</label></div>
                             <div class="gender_input">
-                                <div><input type="radio" name="gender" value="남자" checked><label for="man" >남</label></div>
-                                <div><input type="radio" name="gender" value="여자"><label for="woman" >여</label></div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="man">
+                                    <label class="form-check-label" for="inlineRadio1">남</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="woman">
+                                    <label class="form-check-label" for="inlineRadio2">여</label>
+                                </div>
                             </div>
-                        
                         </div>
                     </div>
                 </div>

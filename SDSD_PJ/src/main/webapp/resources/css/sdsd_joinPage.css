@@ -296,7 +296,7 @@ align-items: center;
     text-align: center;
 }
 
-/* 입력 박스 크기 조정 - 최송희  */
+/* 입력 박스 크기 조정 - 최송희*/
 .second_tool_1, .second_tool_2 {
 	width: 60%;
 	margin: 0 auto;
@@ -349,6 +349,11 @@ align-items: center;
     padding-left: 20px;
 }
 
+.st_input input, .st_input2 input, #area {
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
 .st_input span {
     color: red;
 }
@@ -384,13 +389,13 @@ align-items: center;
 .gender_input {
     display: flex;
     padding-bottom: 20px;
+    padding-right: 10px;
 }
 
-.gender_input label {
-    border: 1px solid white;
-    background-color: darkgrey;
-    color: white;
+.form-check {
+    padding-right: 20px;
 }
+
 
 .st_btn {
     margin-top: 30px;
