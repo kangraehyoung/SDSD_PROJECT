@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/*
+==============================================
+플로깅 모임 관련 CSS StyleSheet
+==============================================
+*/
+.findClub_section {
+}
+
+
+.first_tool {
+    background-color:  rgba(88, 170, 236, 0.362);
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+.mt_first, .ht_search, .ht_keyword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.titleTextBox h2 img {
+    width: 40px;
+    transform: translate(-10px, -5px);
+}
+
+.titleTextBox h2 {
+    /* position: relative;
+    bottom: -6px; */
+    font-size: 1.8em;
+    text-decoration: none !important;
+}
+
+.sub_text {
+    font-size: 0.8em;
+    margin-top: -5px;
+}
+
+.ht_search input {
+    margin-right: -15px;
+    width: 500px;
+    height: 30px;
+    border: 1px solid rgb(74, 165, 240);
+    border-radius: 8px;
+}
+
+.ht_search button {
+    width: 50px;
+    height: 30px;
+    border: 1px solid rgb(74, 165, 240);
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(74, 165, 240);
+    position: relative;
+
+}
+
+.ht_search button img{
+    width: 20px;
+}
+
+.ht_keyword {
+    margin: 10px;
+}
+
+.ht_keyword > div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ht_keyword p, .stl_1 p {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(104, 103, 103);
+}
+
+.ht_keyword p {
+    transform: translateY(7px);
+}
+
+.ht_hash {
+    background-color: white;
+    border-radius: 10px;
+    width: 80px;
+    height: 25px;
+}
+
+.ht_hash a {
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+    color: rgb(50, 157, 245);
+}
+
+
+/* 
+============================================
+모임 검색 및 리스트 페이지 CSS
+============================================
+ */
+
+.contentWrap {
+    padding: 50px 0;
+}
+.contentBody{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2.8rem;
+    width: 1000px;
+    /* height: 350px; */
+    text-align: center;
+    padding: 0 0 30px 0;
+    margin: 0 auto;
+}
+
+
+.contentBody .contentBox {
+    width: 32%;
+    /* margin-top: 1.2rem; */
+    position: relative;
+}
+
+/* 이미지 박스 */
+.contentBody .contentBox .imgBox {
+    line-height: 0;
+}
+
+.contentBody .contentBox .imgBox img {
+    width: 100%;
+}
+
+.contentBody .contentBox .textBox {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: rgb(74, 165, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBody .contentBox .textBox h3.mainText {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    padding: 0;
+}
+
+/* 이미지에 호버기능 */
+.imgBox > img:hover {
+    width: auto;
+}
+
+.imgBox{
+    position: relative;
+    display:inline-block;
+}
+
+.imgBox img{
+    max-width: 100%;
+}
+
+.imgBox div.hoverBox{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: none;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.imgBox div.hoverBox p {
+    line-height: 1.5;
+    color: #fff;
+}
+
+.imgBox div.hoverBox a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgb(67, 145, 208);
+    border-radius: 10px;
+    cursor: pointer !important;
+}
+
+.imgBox div.hoverBox a:hover {
+    background-color: #ffffff;
+    color: rgb(67, 145, 208);
+}
+
+.imgBox::before, .imgBox::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    transform:translate(-50%,-50%);
+    transition:all .6s;
+}
+
+.imgBox::before{
+    /* background: #3B78F0; */
+    background-color: rgb(74, 165, 240);
+    opacity: .7;
+    filter: alpha(opacity=50);
+    width:0;
+}
+
+.imgBox::after{
+}
+
+.imgBox:hover div.hoverBox{
+    display: inline-block;
+}
+
+.imgBox:hover::before{
+    width:100%;
+}
+
+.imgBox:hover::after{
+    height:100%;
+}
+
+.contentBody .contentBox .iconBox {
+    text-align: left;
+}
+.contentBody .contentBox .iconBox span {
+    padding-left: 5px;
+}
