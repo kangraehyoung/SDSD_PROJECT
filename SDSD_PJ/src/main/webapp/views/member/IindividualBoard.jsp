@@ -69,7 +69,7 @@
                     <a href="">
                         <img src="https://cdn.pixabay.com/photo/2022/07/05/11/06/mountains-7302806__340.jpg" alt="">
                     </a>
-                    <div class="blur">자세히보기</div>
+                    <div class="blur"><a href="${ path }/views/member/individualBoardDetail.jsp">자세히보기</a></div>
                 </div>
                 <div class="p1_2">
                     <a href="">
