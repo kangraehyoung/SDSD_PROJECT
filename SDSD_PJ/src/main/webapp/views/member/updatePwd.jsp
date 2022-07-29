@@ -26,13 +26,13 @@
 				<tr>
 					<th>변경할 비밀번호</th>
 					<td>
-						<input type="password" name="password" id="pass1" required>
+						<input type="password" name="password" id="pass1" required minlength="8">
 					</td>
 				</tr>
 				<tr>
 					<th>비밀번호확인</th>
 					<td>
-						<input type="password" name="password2" id="pass2">
+						<input type="password" name="password2" id="pass2" required minlength="8">
 					</td>
 				</tr>
 				<tr>
