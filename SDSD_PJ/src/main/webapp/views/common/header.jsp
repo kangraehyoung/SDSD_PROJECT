@@ -59,7 +59,7 @@
                             <li><a href="${path }/member/login" id="logincheck">마이 페이지</a></li>
                             <li><a href="${path }/member/login" id="logincheck2">나의 활동</a></li>
                             </c:if>
-                            <li><a href="${ path }/views/member/IindividualBoard.jsp">개인 플로깅 인증 게시판</a></li>
+                            <li><a href="${ path }/indiboard/indiboard">개인 플로깅 인증 게시판</a></li>
                         </ul>
                 </li>
                 <li class="nav_item">

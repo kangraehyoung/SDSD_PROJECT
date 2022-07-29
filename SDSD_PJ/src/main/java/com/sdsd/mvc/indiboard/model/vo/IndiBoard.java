@@ -1,6 +1,5 @@
-package com.sdsd.mvc.ploboard.model.vo;
+package com.sdsd.mvc.indiboard.model.vo;
 
-import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,29 +8,31 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ploboard {
+public class IndiBoard {
 	private int borId;
 	
-	private int borWriterNo;
+	private int writerNo;
 	
-	private String borWriterName;
+	private String writerName;
 	
 	private String borTitle;
 	
 	private String borContent;
 	
-	private int borNumber;
+	private String createDate;
 	
-	private Date createDate;
-	
-	private Date correctDate;
+	private String updateDate;
 	
 	private int readCount;
 	
+	private String borFile;
+	
 	private String borStatus;
 	
-	private String originalFile;
+	private int maBorNo;
 	
-	private String renamedFile;
+	private int maBorId;
 	
+	private int maWriterNo;
+
 }
