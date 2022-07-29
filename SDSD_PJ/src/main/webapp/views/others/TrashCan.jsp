@@ -95,6 +95,10 @@
                 {
                     title: '<div>이랜드잠실선착장</div>',
                     latlng: new kakao.maps.LatLng(37.518323, 127.081430)
+                },
+                {
+                    title: '<div>올림픽공원1번출구</div>',
+                    latlng: new kakao.maps.LatLng(37.516561, 127.131514)
                 }
             ];
 
