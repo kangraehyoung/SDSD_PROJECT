@@ -21,7 +21,7 @@ public class AgreeServlet extends HttpServlet {
 		
 		if(service == null || personInfo==null) {
 			request.setAttribute("msg", "이용약관에 동의해주세요.");
-    		request.setAttribute("location", "/views/member/agree.jsp");
+    		request.setAttribute("location", "/member/agreePage");
     		request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 		} else {
 			request.getRequestDispatcher("/views/member/enrollForm.jsp").forward(request, response);

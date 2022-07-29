@@ -10,7 +10,7 @@
 
         <!-- 약관 동의 >> 정보 입력 -->
         <ul class="StepTerms">
-            <li onclick="location.href='${ path }/views/member/agree.jsp'" style="cursor: pointer; color: rgb(98, 98, 98);">1. 약관 동의</li>
+            <li onclick="location.href='${ path }/member/agreePage'" style="cursor: pointer; color: rgb(98, 98, 98);">1. 약관 동의</li>
             <li><img src="${ path }/resources/imgFile/right-arrow.png" class="arrowIcon" alt="arrow Icon"></li>
             <li>
             	<img src="${ path }/resources/imgFile/지구아이콘.png" class="earthIcon" alt="earth Icon">2.정보입력
@@ -112,11 +112,11 @@
                             <div><label>성별</label></div>
                             <div class="gender_input">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="man" checked>
+                                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="남자" checked>
                                     <label class="form-check-label" for="inlineRadio1">남</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="woman">
+                                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="여자">
                                     <label class="form-check-label" for="inlineRadio2">여</label>
                                 </div>
                             </div>
