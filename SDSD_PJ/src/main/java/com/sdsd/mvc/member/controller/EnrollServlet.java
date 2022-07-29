@@ -53,7 +53,7 @@ public class EnrollServlet extends HttpServlet {
     			request.setAttribute("location", "/views/member/joinCelebrate.jsp");
     		} else {
     			request.setAttribute("msg", "회원 가입 실패");
-    			request.setAttribute("location", "/");
+    			request.setAttribute("location", "/views/member/enrollForm.jsp");
     		}
     	} else {
     		request.setAttribute("msg", "비밀번호를 확인해 주세요");
