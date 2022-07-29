@@ -56,7 +56,7 @@
                             <li><a href="">나의 활동</a></li>
                             </c:if>
                             <c:if test="${empty loginMember }">
-                            <li><a href="${path }/views/login.jsp">마이 페이지</a></li>
+                            <li><a href="${path }/views/login.jsp" id="logincheck">마이 페이지</a></li>
                             <li><a href="${path }/views/login.jsp">나의 활동</a></li>
                             </c:if>
                             <li><a href="${ path }/views/member/IindividualBoard.jsp">개인 플로깅 인증 게시판</a></li>
@@ -93,3 +93,11 @@
             </ul>
         </nav>
     </section>
+<script>
+	// 마이페이지 클릭시 로그인 확인
+	$(document).ready(() => {
+		$("#logincheck").on("click", () => {
+			alert("로그인 시 이용 가능합니다.");
+		});
+	});
+</script>
