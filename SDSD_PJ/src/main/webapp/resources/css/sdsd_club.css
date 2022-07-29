@@ -99,6 +99,33 @@
 }
 
 
+.findClub_section .buttonBox button {
+	text-decoration: none;
+    color: #ffffff;
+    font-size : 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance : none;
+    -moz-appearance: none;
+    appearance : none;
+}
+
+.findClub_section .buttonBox button#viewJoinedClub {
+	padding: 10px 30px !important;
+    margin-left: 10px;
+}
+
+.findClub_section .buttonBox button:hover {
+    color: rgb(50, 157, 245);
+    background-color: #ffffff;
+    border: 1px solid rgb(50, 157, 245);
+}
+
+
+
+
 /* 
 ============================================
 모임 검색 및 리스트 페이지 CSS
