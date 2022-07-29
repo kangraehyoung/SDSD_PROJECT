@@ -51,8 +51,14 @@
                 <li class="nav_item">
                     <a href="#">개인 플로깅</a>
                         <ul class="sub_item menu_01">
+                            <c:if test="${not empty loginMember }">
                             <li><a href="${ path }/member/myPage">마이 페이지</a></li>
                             <li><a href="">나의 활동</a></li>
+                            </c:if>
+                            <c:if test="${empty loginMember }">
+                            <li><a href="${path }/views/login.jsp">마이 페이지</a></li>
+                            <li><a href="${path }/views/login.jsp">나의 활동</a></li>
+                            </c:if>
                             <li><a href="${ path }/views/member/IindividualBoard.jsp">개인 플로깅 인증 게시판</a></li>
                         </ul>
                 </li>
