@@ -16,7 +16,7 @@ public class IindividualBoard extends HttpServlet {
     
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/indiboard/IindividualBoard.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/ploboard/IindividualBoard.jsp").forward(request, response);
 	}
     
     @Override
