@@ -35,13 +35,13 @@
                         <div class="st_pwd"> <!-- 비밀번호 입력 박스-->
                             <div><label>비밀번호 <span>*</span></label></div>
                             <div class="pwd_input">
-                                <input type="password" name="password" placeholder="6자 이상의 비밀번호를 입력하세요." required size="50px">
+                                <input type="password" name="password" placeholder="9자 이상의 비밀번호를 입력하세요." required size="50px" minlength="8">
                             </div>
                         </div>
                             <div class="st_pwd2"> <!--  비밀번호 재입력 박스 -->
                             <div><label>비밀번호 재입력 <span>*</span></label></div>
                             <div class="pwd_input2">
-                                <input type="password" name="password2" placeholder="6자 이상의 비밀번호를 입력하세요." size="50px" required>
+                                <input type="password" name="password2" placeholder="9자 이상의 비밀번호를 입력하세요." size="50px" required minlength="8">
                             </div>
                             
                         </div>
@@ -112,11 +112,11 @@
                             <div><label>성별</label></div>
                             <div class="gender_input">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="man">
+                                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="man" checked>
                                     <label class="form-check-label" for="inlineRadio1">남</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="woman">
+                                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="woman">
                                     <label class="form-check-label" for="inlineRadio2">여</label>
                                 </div>
                             </div>
