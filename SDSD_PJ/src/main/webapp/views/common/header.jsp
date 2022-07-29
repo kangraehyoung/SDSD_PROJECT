@@ -75,7 +75,7 @@
                     <ul class="sub_item menu_03">
                         <li><a href="">랭킹</a></li>
                         <li><a href="">챌린지</a></li>
-                        <li><a href="${ path }/views/others/TrashCan.jsp">쓰레기통 찾기</a></li>
+                        <li><a href="${ path }/others/trash">쓰레기통 찾기</a></li>
                         <li><a href="${ path }/views/others/PloggingCourse.jsp">플로깅 코스</a></li>
                         <li><a href="${ path }/faq">FAQ</a></li>
                     </ul>
