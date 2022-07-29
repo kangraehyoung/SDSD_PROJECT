@@ -7,9 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class FindClub
- */
 @WebServlet("/club")
 public class FindClubServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -17,8 +14,9 @@ public class FindClubServlet extends HttpServlet {
     public FindClubServlet() {
     }
 
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/club/findClub.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/ploboard/findClub.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
