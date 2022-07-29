@@ -10,7 +10,7 @@
 
         <!-- 약관 동의 >> 정보 입력 -->
         <ul class="StepTerms">
-            <li onclick="location.href='${ path }/views/member/agree.jsp'" style="cursor: pointer; color: rgb(98, 98, 98);">1. 약관 동의</li>
+            <li onclick="location.href='${ path }/member/agreePage'" style="cursor: pointer; color: rgb(98, 98, 98);">1. 약관 동의</li>
             <li><img src="${ path }/resources/imgFile/right-arrow.png" class="arrowIcon" alt="arrow Icon"></li>
             <li>
             	<img src="${ path }/resources/imgFile/지구아이콘.png" class="earthIcon" alt="earth Icon">2.정보입력

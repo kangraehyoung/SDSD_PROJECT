@@ -30,7 +30,7 @@
            <div class="vLine">
                <span>|</span>
            </div>
-           <a href="${ path }/views/member/joinSelect.jsp">회원가입</a>
+           <a href="${ path }/member/joinSelect">회원가입</a>
        </div>
    </div>
 

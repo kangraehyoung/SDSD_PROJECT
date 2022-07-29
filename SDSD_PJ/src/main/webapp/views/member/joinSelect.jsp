@@ -10,10 +10,10 @@
     <h2>회원가입</h2>
     <div class="joinBox_01">
             <div class="btnBox_01">
-                <a href="${ path }/views/member/agree.jsp" class="enrollBtn">쓰담쓰담 회원가입 하기!</a>
+                <a href="${ path }/member/agreePage" class="enrollBtn">쓰담쓰담 회원가입 하기!</a>
                 <div class="btnBox_02">
                     <span>이미 쓰담쓰담 회원이신가요?</span>
-                <a href="${ path }/views/login.jsp" class="loginBtn">로그인하기</a>
+                <a href="${ path }/member/login" class="loginBtn">로그인하기</a>
                 </div>
             </div>
         <br><br>
