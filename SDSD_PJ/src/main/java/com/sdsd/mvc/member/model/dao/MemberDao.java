@@ -275,5 +275,25 @@ public class MemberDao {
 		
 		return result;
 	}
+
+	public int updateMemberPassword(Connection connection, int no, String password) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "UPDATE MEMBER SET MEM_PWD=? WHERE MEM_NUMBER=?";
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, password);
+			pstm.setInt(2, no);
+			
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		
+		return result;
+	}
 	
 }

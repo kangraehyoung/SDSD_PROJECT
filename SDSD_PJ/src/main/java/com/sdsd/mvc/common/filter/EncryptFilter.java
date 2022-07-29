@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.sdsd.mvc.common.wrapper.EncryptPasswordWrapper;
 
-@WebFilter(filterName = "encrypt", servletNames = {"enroll", "login"})
+@WebFilter(filterName = "encrypt", servletNames = {"enroll", "login", "updatePwd"})
 public class EncryptFilter implements Filter {
        
     public EncryptFilter() {

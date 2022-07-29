@@ -35,6 +35,7 @@
         <div class="btnBox">
             <button onclick="location.href='${path}/views/member/UpdateMyPage.jsp'">정보 수정</button>
 	         <button id="btnDelete">회원 탈퇴</button>
+	         <button id="btnUpdatePwd">비밀번호 변경</button>
         </div>
 
 		<!-- <div class="btnBox" id="btnDelete">
@@ -78,6 +79,15 @@
 		if(confirm("정말로 탈퇴하시겠습니까?")) {
 			location.replace("${ path }/member/delete");
 		}			
+	});
+	
+	$(document).ready(() => {
+		$("#btnUpdatePwd").on("click", () => {
+			let url = "${ path }/member/updatePwd";
+			let status = "left=500px,top=200px,width=400px,height=200px";
+			
+			open(url, "", status);
+		});
 	});
 </script>
 

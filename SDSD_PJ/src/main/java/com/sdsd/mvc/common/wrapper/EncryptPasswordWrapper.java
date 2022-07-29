@@ -19,6 +19,7 @@ public class EncryptPasswordWrapper extends HttpServletRequestWrapper {
 		// Client가 전달하는 값중에 userPwd 값만 암호화 처리하고 나머지는 정상적으로 반환하도록 구현
 		if(name.equals("password") && super.getParameter("password").length() != 8 ) {
 			// 암호화 처리 후 반환한다.
+			System.out.println("암호화");
 			value = EncryptUtil.oneWayEnc(super.getParameter(name), "SHA-256");
 		} else if(name.equals("password2")) {
 			value = EncryptUtil.oneWayEnc(super.getParameter(name), "SHA-256");
