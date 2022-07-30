@@ -2,13 +2,10 @@ package com.sdsd.mvc.indiboard.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-<<<<<<< HEAD
 import java.sql.SQLException;
-=======
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
->>>>>>> 57f7cae7c1693c5645e06c97b9f60ea8a0859c34
 import java.util.List;
 
 import com.sdsd.mvc.common.util.PageInfo;
