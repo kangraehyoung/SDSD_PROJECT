@@ -7,21 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/indiboard/indiboard")
-public class IindividualBoard extends HttpServlet {
+@WebServlet("/indiboard/detail")
+public class IndividualBoardDetailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public IindividualBoard() {
+    public IndividualBoardDetailServlet() {
     }
-    
+
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/ploboard/IindividualBoard.jsp").forward(request, response);
-	}
-    
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
+    	request.getRequestDispatcher("/views/ploboard/individualBoardDetail.jsp").forward(request, response);
     }
+
+    @Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
 
 }

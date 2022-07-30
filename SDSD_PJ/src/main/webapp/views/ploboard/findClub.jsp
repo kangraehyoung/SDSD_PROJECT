@@ -48,8 +48,19 @@
         </div>
         
         <div class="buttonBox">
-            <button id="createClub">모임 만들기</button>
-            <button id="viewJoinedClub">가입한 모임 바로가기</button>
+        	<c:if test="${not empty loginMember }">
+	            <button id="createClub">모임 만들기</button>
+        	</c:if>
+        	<c:if test="${ empty loginMember }">
+	            <button id="createClub2">모임 만들기</button>
+        	</c:if>
+        	
+        	<c:if test="${not empty loginMember }">
+            	<button id="viewJoinedClub">가입한 모임 바로가기</button>
+        	</c:if>
+        	<c:if test="${ empty loginMember }">
+            	<button id="viewJoinedClub2">가입한 모임 바로가기</button>
+        	</c:if>
         </div>
     </div>
 
@@ -242,5 +253,16 @@
     </div>
     
 </section>
+<script>
+	// 모임만들기 클릭시 로그인 확인
+	$(document).ready(() => {
+		$("#createClub2").on("click", () => {
+			alert("로그인 시 이용 가능합니다.");
+		});
+		$("#viewJoinedClub2").on("click", () => {
+			alert("로그인 시 이용 가능합니다.");
+		});
+	});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />
