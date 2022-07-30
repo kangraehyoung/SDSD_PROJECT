@@ -31,4 +31,20 @@ public class IndiBoardService {
 		return indiboardlist;
 	}
 
+	public int save(IndiBoard indiBoard) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = new BoardDao().insertIndiBoard(connection, indiBoard);
+		
+		if(result > 0) {
+            commit(connection);
+        } else {
+            rollback(connection);
+        }
+
+        close(connection);		
+		return result;
+	}
+
 }
