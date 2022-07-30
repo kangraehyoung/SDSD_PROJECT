@@ -26,7 +26,11 @@ public class IndiBoardList extends HttpServlet {
 	PageInfo pageInfo = null;
 	List<IndiBoard> list = null;
 	
-	page = Integer.parseInt(request.getParameter("page"));
+	try {
+		page = Integer.parseInt(request.getParameter("page"));
+	} catch (NumberFormatException e) {
+		page = 1;
+	}
 	
 	
 	listCount = new IndiBoardService().getBoardCount();

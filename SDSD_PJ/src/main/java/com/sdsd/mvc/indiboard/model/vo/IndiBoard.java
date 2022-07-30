@@ -13,6 +13,10 @@ public class IndiBoard {
 	
 	private int writerNo;
 	
+	private int rowNum;
+	
+	private String email;
+	
 	private String writerName;
 	
 	private String borTitle;
