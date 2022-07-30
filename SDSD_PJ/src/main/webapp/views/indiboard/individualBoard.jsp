@@ -53,7 +53,7 @@
                     <div>
                     </div>
                     <div class="col1">
-                        <button><a href="${ path }/views/indiboard/individualBoardPrepare.jsp">인증 게시글 작성하기!</a></button>
+                        <button><a href="${ path }/indiboard/indiwrite">인증 게시글 작성하기!</a></button>
                     </div>
                     <div class="col2">
                         <img src="${ path }/resources/imgFile/layout.png" alt="">

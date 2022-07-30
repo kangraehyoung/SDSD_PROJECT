@@ -105,7 +105,7 @@ public class BoardDao {
 		int result2 = 0;
 		PreparedStatement pstmt = null;
 		PreparedStatement pstmt2 = null;
-		String query_board = "INSERT INTO BOARD VALUES (1, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
+		String query_board = "INSERT INTO BOARD VALUES (2, ?, ?, '제목불필요', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
 		String query_indiBoard = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MY_BOR_NUM, 1, ?)";
 		
 		try {
@@ -114,9 +114,8 @@ public class BoardDao {
 			
 			pstmt.setInt(1, indiBoard.getWriterNo());
 			pstmt.setString(2, indiBoard.getWriterName());
-			pstmt.setString(3, indiBoard.getBorTitle());
-			pstmt.setString(4, indiBoard.getBorContent());
-			pstmt.setString(5, "파일넣어야함");
+			pstmt.setString(3, indiBoard.getBorContent());
+			pstmt.setString(4, "파일넣어야함");
 			
 			pstmt2.setInt(1, indiBoard.getWriterNo());
 			

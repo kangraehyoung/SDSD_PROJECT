@@ -51,31 +51,32 @@
             </div>
 		</div>
     </div>
-    
+    <form action="${path}/indiboard/indiwrite" method="post">
     <div class="boardBox_p"> <!-- 세번째 부분 게시글 -->
       <div class="bb_file"> <!-- 파일 -->
-        <form action="">
+        
           <div>
             <p>업로드할 사진을 선택해 주세요!</p>
             <label class="bbf1" for="bbf1">업로드</label>
             <input type="file" id="bbf1" style="display: none;">
           </div>
-        </form>
+      
       </div>
       <div class="bb_board_p"> <!-- 게시글 -->
         <div class="bbbp_1">
           <div class="bbbp_1_profile_img">
             <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MjJfNCAg%2FMDAxNjU4NDU4NjY0NjY2.1XkvhsTxYYo8SQkD56GhVIRpSHwBZZjyH6JJ4o-bWDYg.jQd-dN1ab388dGG9iA2yBxfH0w0vzBO4s_0XIIO_0Xgg.JPEG.ymtlfet%2FIMG_7509.jpg&type=a340" alt="">
           </div>
-          <div class="bbbp_nickName">
-            <p>plogging_is_god</p>
-          </div>
+<!--           <div class="bbbp_nickName" value="${loginMember.nickName }" name="nickName">
+            <p>${loginMember.nickName }</p>
+          </div> -->
+          <input class="bbbp_nickName" name="nickName" value="${loginMember.nickName }" readonly>
         </div>
         <div class="bbbp_2">
           <div class="bbbp_textBox">
-            <form class="was-validated">
+            <!--  <form class="was-validated">-->
               <div class="mb-3">
-                <textarea class="form-control" id="validationTextarea" placeholder="내용을 입력해 주세요!" required></textarea>
+                <textarea class="form-control" id="validationTextarea" name="content" placeholder="내용을 입력해 주세요!" required></textarea>
               </div>
               <div class="bbbp2_input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
@@ -86,11 +87,10 @@
                   <span>0/2000</span>
                 </div>
               </div>
-            </form>
+            <!-- </form> -->
           </div>
         </div>
         <div class="bbbp_3">
-          <form action="">
             <div class="bbbp3_input">
               <!-- 배경색 선택 -->
               <label for="exampleColorInput">배경색 선택</label>
@@ -101,16 +101,17 @@
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
               </div>
             </div>
-          </form>
         </div>
       </div>
     </div>
-    <!-- 마지막 버튼 -->
+    
     <div class="buttonBox_p">
       <div>
-        <button class="btnprev">공유하기</button>
+        <button class="btnprev" type=submit>공유하기</button>
       </div>
     </div>
+    </form>
+    <!-- 마지막 버튼 -->
 </section>
 
 <jsp:include page="/views/common/footer.jsp" />
