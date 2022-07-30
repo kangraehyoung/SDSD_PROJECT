@@ -130,6 +130,31 @@
             </div>
 
         </div>
+        <div id="pageBar">
+			<!-- 맨 처음으로 -->
+			<button onclick="location.href='${ path }/board/list?page=1'">&lt;&lt;</button>
+
+			<!-- 이전 페이지로 -->
+			<button onclick="location.href='${ path }/board/list?page=${ pageInfo.prevPage }'">&lt;</button>
+
+			<!--  10개 페이지 목록 -->
+			<c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
+				<c:if test="${ status.current == pageInfo.currentPage }">
+					<button disabled>${ status.current }</button>
+				</c:if>
+				<c:if test="${ status.current != pageInfo.currentPage }">
+					<button onclick="location.href='${ path }/board/list?page=${ status.current }'">${ status.current }</button>
+				</c:if>
+			</c:forEach>
+
+
+			<!-- 다음 페이지로 -->
+			<button onclick="location.href='${ path }/board/list?page=${ pageInfo.nextPage }'">&gt;</button>
+
+			<!-- 맨 끝으로 -->
+			<button onclick="location.href='${ path }/board/list?page=${ pageInfo.maxPage }'">&gt;&gt;</button>
+		</div>
+	</div>
     
     </section>
 

@@ -33,11 +33,11 @@ public class IndiBoardList extends HttpServlet {
 	pageInfo = new PageInfo(page, 10, listCount, 10);    
 	list = new IndiBoardService().getBoardList(pageInfo);
 	
-	
-	
+	request.setAttribute("pageInfo", pageInfo);
+	request.setAttribute("list", list);
+	request.getRequestDispatcher("/views/indiboard/individualBoard.jsp");
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
+	
 
 }
