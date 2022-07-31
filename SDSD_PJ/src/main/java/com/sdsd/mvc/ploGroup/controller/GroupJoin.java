@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sdsd.mvc.ploGroup.model.service.PloGroupService;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
 @WebServlet("/plo/groupjoin")
@@ -22,8 +23,22 @@ public class GroupJoin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PloGroup plogroup = new PloGroup();
 		
-		plogroup.setPloNum(request.getParameter("plo_num"));
+		plogroup.setPloLeader(request.getParameter("plo_leader"));
+		plogroup.setPloTitle(request.getParameter("plo_title"));
+		plogroup.setPloIntro(request.getParameter("plo_intro"));
+		plogroup.setPloMemNum(Integer.parseInt(request.getParameter("plo_memNum")));
 		
+		int result = new PloGroupService().groupJoin(plogroup);
+		
+		if (result > 0) {
+			request.setAttribute("msg", "모임 등록 성공");
+    		request.setAttribute("location", "/");
+		} else {
+			request.setAttribute("msg", "모임 등록 실패");
+    		request.setAttribute("location", "/");
+		}
+		
+		request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 	}
 
 }

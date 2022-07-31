@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class PloGroup {
 	private int ploNum;
 	
-	private String pploLeader;
+	private String ploLeader;
 	
 	private String ploTitle;
 	
