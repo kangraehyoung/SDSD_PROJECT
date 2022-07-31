@@ -14,6 +14,7 @@
 		<input name="plo_title">
 		<input name="plo_intro">
 		<input name="plo_memNum">
+		<button type="submit">등록하기</button>
 	</form>
 
 
