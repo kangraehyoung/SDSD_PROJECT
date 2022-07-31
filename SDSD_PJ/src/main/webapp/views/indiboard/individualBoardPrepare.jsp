@@ -51,14 +51,14 @@
             </div>
 		</div>
     </div>
-    <form action="${path}/indiboard/indiwrite" method="post">
+    <form action="${path}/indiboard/indiwrite" method="post" enctype="multipart/form-data">
     <div class="boardBox_p"> <!-- 세번째 부분 게시글 -->
       <div class="bb_file"> <!-- 파일 -->
         
           <div>
             <p>업로드할 사진을 선택해 주세요!</p>
             <label class="bbf1" for="bbf1">업로드</label>
-            <input type="file" id="bbf1" style="display: none;">
+            <input name="upfile" type="file" id="bbf1" style="display: none;">
           </div>
       
       </div>

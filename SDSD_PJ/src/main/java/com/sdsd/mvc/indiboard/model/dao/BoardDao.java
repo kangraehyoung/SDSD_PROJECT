@@ -116,7 +116,7 @@ public class BoardDao {
 			
 			pstmt.setInt(1, indiBoard.getWriterNo());
 			pstmt.setString(2, indiBoard.getWriterName());
-			pstmt.setString(3, "파일넣어야함");
+			pstmt.setString(3, indiBoard.getBorFile());
 			
 			//pstmt2.setInt(1, indiBoard.getWriterNo());
 			

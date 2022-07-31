@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.sdsd.mvc.common.util.FileRename;
 import com.sdsd.mvc.indiboard.model.service.IndiBoardService;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 import com.sdsd.mvc.member.model.vo.Member;
@@ -44,12 +46,14 @@ public class IndiBoardWriteServlet extends HttpServlet {
     	// 인코딩 설정
     	String encoding = "UTF-8";
     	
+    	MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding, new FileRename());
     	
     	// 폼 파라미터로 넘어온 값들 (파일에 대한 정보 X)
-//    	String title = request.getParameter("title");
-    	String writer = request.getParameter("nickName");
-    	String content = request.getParameter("content");
-//    	String title = request.getParameter("제목은 나중에 넣을것");
+    	String writer = mr.getParameter("nickName");
+    	String content = mr.getParameter("content");
+//    	String title = mr.getParameter("제목은 나중에 넣을것");
+    	
+    	String originalFileName = mr.getOriginalFileName("upfile");
     	
     	System.out.println(writer);
     	// 파일에 대한 정보를 가져올 때
@@ -63,10 +67,8 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		indiBoard.setWriterNo(loginMember.getNo());
     		indiBoard.setWriterName(writer);
     		indiBoard.setBorContent(content);
+    		indiBoard.setBorFile(originalFileName);
 //    		indiBoard.setBorTitle("위의 title 매개값 입력"); //게시글 set입니다
-    		
-    		System.out.println(indiBoard.getWriterNo());
-    		System.out.println(indiBoard.getBorContent());
     		
     		result = new IndiBoardService().save(indiBoard);
     		System.out.println("서블릿 result : " + result);
