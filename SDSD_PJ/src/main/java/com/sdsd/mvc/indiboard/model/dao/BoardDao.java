@@ -105,7 +105,7 @@ public class BoardDao {
 		//int result2 = 0;
 		PreparedStatement pstmt = null;
 //		PreparedStatement pstmt2 = null;
-		String query_board = "INSERT INTO BOARD VALUES (SEQ_BOARD_ID.NEXTVAL, ?, ?, '제목불필요', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
+		String query_board = "INSERT INTO BOARD VALUES (SEQ_ALL_BOR_NUMBER.NEXTVAL, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
 		//String query_indiBoard = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MY_BOR_NUM, 1, ?)";
 		
 		try {
@@ -114,8 +114,7 @@ public class BoardDao {
 			
 			pstmt.setInt(1, indiBoard.getWriterNo());
 			pstmt.setString(2, indiBoard.getWriterName());
-			pstmt.setString(3, indiBoard.getBorContent());
-			pstmt.setString(4, "파일넣어야함");
+			pstmt.setString(3, "파일넣어야함");
 			
 			//pstmt2.setInt(1, indiBoard.getWriterNo());
 			
@@ -134,10 +133,13 @@ public class BoardDao {
 	public int insertIndiBoard2(Connection connection, IndiBoard indiBoard) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String query = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MA_BOARD_NUMBER.NEXTVAL, 1, ?)";
+		String query = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MA_BOARD_NUMBER.NEXTVAL, 1, ?, '제목넣는공간', ?)";
+		// 제목은 jsp 파일 수정 후 넣어야합니다 
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setInt(1, indiBoard.getWriterNo());
+			pstm.setString(2, indiBoard.getBorContent());
+
 			result = pstm.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

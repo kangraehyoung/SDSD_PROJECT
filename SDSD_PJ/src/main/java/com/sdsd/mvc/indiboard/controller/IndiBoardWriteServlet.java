@@ -49,6 +49,7 @@ public class IndiBoardWriteServlet extends HttpServlet {
 //    	String title = request.getParameter("title");
     	String writer = request.getParameter("nickName");
     	String content = request.getParameter("content");
+//    	String title = request.getParameter("제목은 나중에 넣을것");
     	
     	System.out.println(writer);
     	// 파일에 대한 정보를 가져올 때
@@ -62,6 +63,7 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		indiBoard.setWriterNo(loginMember.getNo());
     		indiBoard.setWriterName(writer);
     		indiBoard.setBorContent(content);
+//    		indiBoard.setBorTitle("위의 title 매개값 입력"); //게시글 set입니다
     		
     		System.out.println(indiBoard.getWriterNo());
     		System.out.println(indiBoard.getBorContent());
