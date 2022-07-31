@@ -37,9 +37,14 @@ public class IndiBoardList extends HttpServlet {
 	pageInfo = new PageInfo(page, 10, listCount, 10);    
 	list = new IndiBoardService().getBoardList(pageInfo);
 	
+	System.out.println(listCount);
+	System.out.println(pageInfo);
+	System.out.println(list);
+	
 	request.setAttribute("pageInfo", pageInfo);
 	request.setAttribute("list", list);
 	request.getRequestDispatcher("/views/indiboard/individualBoard.jsp");
+	
 	}
 
 	

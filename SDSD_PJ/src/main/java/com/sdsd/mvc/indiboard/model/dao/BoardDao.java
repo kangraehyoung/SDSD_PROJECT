@@ -20,9 +20,12 @@ public class BoardDao {
 		int count = 0;
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
+//		String query = "SELECT COUNT(*) "
+//						+ "FROM MY_ACT_BOARD M JOIN BOARD B ON (M.MA_WRITER_NUMBER = B.BOR_WRITER_NO) "
+//						+ "WHERE B.BOR_STATUS = 'Y'";
 		String query = "SELECT COUNT(*) "
-						+ "FROM MY_ACT_BOARD M JOIN BOARD B ON (M.MA_WRITER_NUMBER = B.BOR_WRITER_NO) "
-						+ "WHERE B.BOR_STATUS = 'Y'";
+					+ "FROM MY_ACT_BOARD "
+					+ "WHERE MA_BOARD_ID = 1";
 		
 		try {
 			pstm = connection.prepareStatement(query);
@@ -31,6 +34,7 @@ public class BoardDao {
 			if(rs.next()) {
 				count = rs.getInt(1);
 			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -44,8 +48,8 @@ public class BoardDao {
 		List<IndiBoard> indiboardlist = new ArrayList<>();
 		PreparedStatement pstm = null;;
 		ResultSet rs = null;
-		String query = "SELECT RNUM, MA_BOARD_NUMBER, MA_BOARD_TITLE, MEM_EMAIL, BOR_WRITER_NAME, CREATE_DATE,BOR_FILE, READCOUNT, BOR_STATUS "
-				+ "FROM "
+		String query = "SELECT RNUM, MA_BOARD_NUMBER, MA_BOARD_TITLE, MEM_EMAIL, BOR_WRITER_NAME, CREATE_DATE, BOR_FILE, READCOUNT, BOR_STATUS "
+				+ " FROM ( "
 				+ "    SELECT ROWNUM AS RNUM, "
 				+ "       MA_BOARD_NUMBER, "
 				+ "       MA_BOARD_TITLE, "
@@ -55,7 +59,7 @@ public class BoardDao {
 				+ "       BOR_FILE, "
 				+ "       READCOUNT, "
 				+ "       BOR_STATUS "
-				+ "    FROM (\r\n"
+				+ "    FROM ( "
 				+ "        SELECT MA.MA_BOARD_NUMBER, "
 				+ "               MA.MA_BOARD_TITLE, "
 				+ "               M.MEM_EMAIL, "
@@ -68,7 +72,7 @@ public class BoardDao {
 				+ "         JOIN BOARD B ON (B.BOR_WRITER_NO = MA.MA_WRITER_NUMBER) "
 				+ "         JOIN MEMBER M ON (M.MEM_NUMBER = MA.MA_WRITER_NUMBER) "
 				+ "        ) "
-				+ ") WHERE RNUM BETWEEN 1 AND 1000;";
+				+ ") WHERE RNUM BETWEEN ? AND ?";
 		
 		try {
 			pstm = connection.prepareStatement(query);
@@ -82,8 +86,9 @@ public class BoardDao {
 				
 				indiBoard.setRowNum(rs.getInt("RNUM"));
 				indiBoard.setMaBorNo(rs.getInt("MA_BOARD_NUMBER"));
-				indiBoard.setBorTitle(rs.getString("BOR_TITLE"));
+				indiBoard.setBorTitle(rs.getString("MA_BOARD_TITLE"));
 				indiBoard.setEmail(rs.getString("MEM_EMAIL"));
+				indiBoard.setWriterName(rs.getString("BOR_WRITER_NAME"));
 				indiBoard.setCreateDate(rs.getString("CREATE_DATE"));
 				indiBoard.setBorFile(rs.getString("BOR_FILE"));
 				indiBoard.setReadCount(rs.getInt("READCOUNT"));
