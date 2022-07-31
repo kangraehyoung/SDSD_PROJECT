@@ -102,33 +102,50 @@ public class BoardDao {
 
 	public int insertIndiBoard(Connection connection, IndiBoard indiBoard) {
 		int result = 0;
-		int result2 = 0;
+		//int result2 = 0;
 		PreparedStatement pstmt = null;
-		PreparedStatement pstmt2 = null;
-		String query_board = "INSERT INTO BOARD VALUES (2, ?, ?, '제목불필요', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
-		String query_indiBoard = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MY_BOR_NUM, 1, ?)";
+//		PreparedStatement pstmt2 = null;
+		String query_board = "INSERT INTO BOARD VALUES (SEQ_BOARD_ID.NEXTVAL, ?, ?, '제목불필요', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
+		//String query_indiBoard = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MY_BOR_NUM, 1, ?)";
 		
 		try {
 			pstmt = connection.prepareStatement(query_board);
-			pstmt2 = connection.prepareStatement(query_indiBoard);
+			//pstmt2 = connection.prepareStatement(query_indiBoard);
 			
 			pstmt.setInt(1, indiBoard.getWriterNo());
 			pstmt.setString(2, indiBoard.getWriterName());
 			pstmt.setString(3, indiBoard.getBorContent());
 			pstmt.setString(4, "파일넣어야함");
 			
-			pstmt2.setInt(1, indiBoard.getWriterNo());
+			//pstmt2.setInt(1, indiBoard.getWriterNo());
 			
 			result = pstmt.executeUpdate();
-			result2 = pstmt2.executeUpdate();
+			//result2 = pstmt2.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			close(pstmt2);
+//			close(pstmt2);
 			close(pstmt);
 		}
 		
-		return result + result2;
+		return result;
+	}
+
+	public int insertIndiBoard2(Connection connection, IndiBoard indiBoard) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MA_BOARD_NUMBER.NEXTVAL, 1, ?)";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, indiBoard.getWriterNo());
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		return result;
+		
 	}
 
 }

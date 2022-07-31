@@ -33,15 +33,22 @@ public class IndiBoardService {
 
 	public int save(IndiBoard indiBoard) {
 		int result = 0;
+		int result2 = 0;
 		Connection connection = getConnection();
 		
 		result = new BoardDao().insertIndiBoard(connection, indiBoard);
+		result2 = new BoardDao().insertIndiBoard2(connection, indiBoard);
 		
-		if(result > 0) {
+		System.out.println("result" + result);
+		System.out.println("result2" + result2);
+		
+		if(result > 0 && result2 > 0) {
             commit(connection);
+            
         } else {
             rollback(connection);
         }
+		
 
         close(connection);		
 		return result;
