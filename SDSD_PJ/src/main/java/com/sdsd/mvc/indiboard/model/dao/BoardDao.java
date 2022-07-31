@@ -157,4 +157,25 @@ public class BoardDao {
 		
 	}
 
+	public int updateStatus(Connection connection, int maBorNo, String status) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String qurey = "UPDATE BOARD SET BOR_STATUS=? WHERE ALL_BOR_NUMBER=?";
+		try {
+			pstm = connection.prepareStatement(qurey);
+			
+			pstm.setString(1, status);
+			pstm.setInt(2, maBorNo);
+			
+			result = pstm.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+	
+		return result;
+	}
+
 }

@@ -57,4 +57,20 @@ public class IndiBoardService {
 		return result;
 	}
 
+	public int delete(int maBorNo) {
+		int result =0;
+		Connection connection =getConnection();
+		
+		result = new BoardDao().updateStatus(connection, maBorNo, "N");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
 }
