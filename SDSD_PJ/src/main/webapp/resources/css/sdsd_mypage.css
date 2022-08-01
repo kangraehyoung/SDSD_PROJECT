@@ -97,6 +97,7 @@
 .ploggingPerson .personInfoBox_01 .contentBox .profileTextBox {
 	width: 50%;
 	margin-left : 5%;
+	text-align: left;
      /* margin-top: 1.2rem;
      position: relative; */
 }
