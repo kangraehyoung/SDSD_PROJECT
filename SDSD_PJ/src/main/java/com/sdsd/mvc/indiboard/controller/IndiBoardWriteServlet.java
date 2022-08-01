@@ -74,10 +74,10 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		System.out.println("서블릿 result : " + result);
     		if(result > 0) {
         		request.setAttribute("msg", "게시글 등록 성공");
-        		request.setAttribute("location", "/indiboard/indiboard");
+        		request.setAttribute("location", "/indiboard/indilist");
     		} else {
     			request.setAttribute("msg", "게시글 등록 실패");
-    			request.setAttribute("location", "/indiboard/indiboard");
+    			request.setAttribute("location", "/indiboard/indilist");
     		}
     	} else {
     		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");

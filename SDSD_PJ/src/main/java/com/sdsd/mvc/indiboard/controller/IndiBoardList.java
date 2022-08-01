@@ -24,7 +24,7 @@ public class IndiBoardList extends HttpServlet {
 	int page = 0;
 	int listCount = 0;
 	PageInfo pageInfo = null;
-	List<IndiBoard> list = null;
+	List<IndiBoard> indiboardlist = null;
 	
 	try {
 		page = Integer.parseInt(request.getParameter("page"));
@@ -35,15 +35,15 @@ public class IndiBoardList extends HttpServlet {
 	
 	listCount = new IndiBoardService().getBoardCount();
 	pageInfo = new PageInfo(page, 10, listCount, 10);    
-	list = new IndiBoardService().getBoardList(pageInfo);
+	indiboardlist = new IndiBoardService().getBoardList(pageInfo);
 	
 	System.out.println(listCount);
 	System.out.println(pageInfo);
-	System.out.println(list);
+	System.out.println(indiboardlist);
 	
 	request.setAttribute("pageInfo", pageInfo);
-	request.setAttribute("list", list);
-	request.getRequestDispatcher("/views/indiboard/individualBoard.jsp");
+	request.setAttribute("indiboardlist", indiboardlist);
+	request.getRequestDispatcher("/views/indiboard/individualBoard.jsp").forward(request, response);
 	
 	}
 
