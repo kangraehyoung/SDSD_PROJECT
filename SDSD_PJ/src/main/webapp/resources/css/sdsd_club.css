@@ -542,5 +542,49 @@
 }
 
 .viewClub_section .clubNotice_infoBox_02 .scheduleInfo ol{
+}
 
+
+/* ======================================== */
+
+.viewClub_section .clubNotice_infoBox_03 {
+    background-color: #CAE5FC;
+    padding: 50px 0;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .buttonBox {
+    width: 70%;
+    margin: 0 auto 10px auto;
+    text-align: left;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .buttonBox button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .buttonBox button:hover {
+    background-color: #ffffff;
+    color: rgba(50, 157, 245);
+}
+
+.viewClub_section .clubNotice_infoBox_03 .tableWrap {
+    background-color: #ffffff;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .tableWrap tr:hover {
+    background-color: rgb(228, 243, 255);
+}
+.viewClub_section .clubNotice_infoBox_03 .page-link {
+    color: rgb(50, 157, 245);
 }
