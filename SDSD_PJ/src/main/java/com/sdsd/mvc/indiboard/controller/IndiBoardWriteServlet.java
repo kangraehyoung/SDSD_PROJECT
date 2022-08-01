@@ -46,7 +46,7 @@ public class IndiBoardWriteServlet extends HttpServlet {
     	// 인코딩 설정
     	String encoding = "UTF-8";
     	
-    	MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding, new FileRename());
+    	MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding);
     	
     	// 폼 파라미터로 넘어온 값들 (파일에 대한 정보 X)
     	String writer = mr.getParameter("nickName");
@@ -70,6 +70,7 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		indiBoard.setBorFile(originalFileName);
 //    		indiBoard.setBorTitle("위의 title 매개값 입력"); //게시글 set입니다
     		
+    		System.out.println(indiBoard.getBorFile());
     		result = new IndiBoardService().save(indiBoard);
     		System.out.println("서블릿 result : " + result);
     		if(result > 0) {

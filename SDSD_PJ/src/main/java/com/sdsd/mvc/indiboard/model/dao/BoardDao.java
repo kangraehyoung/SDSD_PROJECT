@@ -74,6 +74,7 @@ public class BoardDao {
 				+ "        ) "
 				+ ") WHERE RNUM BETWEEN ? AND ?";
 		
+		
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setInt(1, pageInfo.getStartList());
@@ -94,6 +95,9 @@ public class BoardDao {
 				indiBoard.setReadCount(rs.getInt("READCOUNT"));
 				indiBoard.setBorStatus(rs.getString("BOR_STATUS"));
 				
+				System.out.println(indiBoard.getEmail() + "에후");
+				System.out.println(indiBoard.getBorContent() + "에후후후");
+				System.out.println(indiBoard.getBorFile() + "에후");
 				indiboardlist.add(indiBoard);
 				
 			}
@@ -180,12 +184,50 @@ public class BoardDao {
 
 
 	public IndiBoard findBoardByNo(Connection connection, int maBorNo) {
-		IndiBoard board = null;
+		IndiBoard indiBoard = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String query = "";
+		String query = "SELECT MA.MA_BOARD_NUMBER, "
+				+ "       MA.MA_BOARD_TITLE, "
+				+ "       MA.MA_BOARD_CONTENT, "
+				+ "       M.MEM_NICKNAME, "
+				+ "       B.READCOUNT, "
+				+ "       B.BOR_FILE, "
+				+ "       B.CREATE_DATE, "
+				+ "       B.UPDATE_DATE "
+				+ "FROM MY_ACT_BOARD MA "
+				+ "JOIN MEMBER M ON(MA.MA_WRITER_NUMBER = M.MEM_NUMBER) "
+				+ "JOIN BOARD B ON(B.BOR_WRITER_NO = MA.MA_WRITER_NUMBER) "
+				+ "WHERE B.BOR_STATUS = 'Y' AND MA.MA_BOARD_NUMBER = ?";
 		
-		return null;
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setInt(1, maBorNo);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				indiBoard = new IndiBoard();
+				
+				indiBoard.setMaBorNo(rs.getInt("MA_BOARD_NUMBER"));
+				indiBoard.setBorTitle(rs.getString("MA_BOARD_TITLE"));
+				indiBoard.setBorContent(rs.getString("MA_BOARD_CONTENT"));
+				indiBoard.setWriterName(rs.getString("MEM_NICKNAME"));
+				indiBoard.setReadCount(rs.getInt("READCOUNT"));
+				indiBoard.setBorFile(rs.getString("BOR_FILE"));
+				indiBoard.setCreateDate(rs.getString("CREATE_DATE"));
+				indiBoard.setUpdateDate(rs.getString("UPDATE_DATE"));				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		
+		return indiBoard;
 	}
 
 	public int updateReadCount(Connection connection, IndiBoard indiBoard) {

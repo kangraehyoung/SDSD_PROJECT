@@ -58,6 +58,7 @@ public class IndividualBoardDetailServlet extends HttpServlet {
     	}
     	
     	indiBoard = new IndiBoardService().getBoardByNo(maBorNo, hasRead);
+    	System.out.println(indiBoard.getBorFile() + "나는 사진");
     	
     	request.setAttribute("indiBoard", indiBoard);
     	request.getRequestDispatcher("/views/indiboard/individualBoardDetail.jsp").forward(request, response);

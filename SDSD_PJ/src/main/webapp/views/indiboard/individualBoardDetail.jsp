@@ -61,7 +61,8 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://cdn.pixabay.com/photo/2018/11/09/11/03/han-river-3804298_960_720.jpg" class="d-block w-100" alt="...">
+            <!--   <img src="https://cdn.pixabay.com/photo/2018/11/09/11/03/han-river-3804298_960_720.jpg" class="d-block w-100" alt="..."> -->
+              <img src="${path }/resources/upload/board/${indiBoard.borFile}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
               <img src="https://cdn.pixabay.com/photo/2018/10/09/15/03/seongsan-bridge-3735179_960_720.jpg" class="d-block w-100" alt="...">
@@ -83,18 +84,16 @@
       <div class="bb_board"> <!-- 게시글 -->
         <div class="bbb_1">
           <div class="bbb_1_profile_img">
-            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MjJfNCAg%2FMDAxNjU4NDU4NjY0NjY2.1XkvhsTxYYo8SQkD56GhVIRpSHwBZZjyH6JJ4o-bWDYg.jQd-dN1ab388dGG9iA2yBxfH0w0vzBO4s_0XIIO_0Xgg.JPEG.ymtlfet%2FIMG_7509.jpg&type=a340" alt="">
+             <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MjJfNCAg%2FMDAxNjU4NDU4NjY0NjY2.1XkvhsTxYYo8SQkD56GhVIRpSHwBZZjyH6JJ4o-bWDYg.jQd-dN1ab388dGG9iA2yBxfH0w0vzBO4s_0XIIO_0Xgg.JPEG.ymtlfet%2FIMG_7509.jpg&type=a340" alt="">  
           </div>
           <div class="bbb_nickName">
-            <p>plogging_is_god</p>
+            <p>${indiBoard.writerName}</p>
           </div>
         </div>
         <div class="bbb_2">
           <div class="bbb_textBox">
-            낭만적이네요.. <br>
-            이 조명, <br>
-            온도, <br>
-            습도.. <br><br><br>
+            ${indiBoard.borContent }
+            <br>
             <span>#자수성가 #영앤리치 #내돈내산 #맞팔</span>
           </div>
         </div>

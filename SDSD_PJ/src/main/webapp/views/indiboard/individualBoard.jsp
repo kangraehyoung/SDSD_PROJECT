@@ -63,27 +63,43 @@
                 </div>
             </div>
         </div>
+        
+        <c:if test="${empty indiboardlist}">
         <div>
-        <h2>asdfsadfa</h2>
-        <c:forEach var="indiboard" items="${ indiboardlist }">
-            <c:out value=" ${ indiboard } " />
-        </c:forEach>
+        	<h2>조회된 글이 없습니다.</h2>
         </div>
-        <c:forEach var="indiboard" items="${ indiboardlist }">
+        </c:if>
+       
+        <c:if test="${not empty indiboardlist }">
         <div class="picture">
             <div class="p1">
-                <div class="p1_1">
+		        <c:forEach var="indiboard" items="${ indiboardlist }">
+				 <div class="p1_1">
                     <a href="${ path }/indiboard/detail?maBorNo=${indiboard.maBorNo}">
-                        <img src="https://cdn.pixabay.com/photo/2022/07/05/11/06/mountains-7302806__340.jpg" alt="">
+                      <!--  <img src="https://cdn.pixabay.com/photo/2022/07/05/11/06/mountains-7302806__340.jpg" alt="">  -->  
+                        <img src="${path }/resources/upload/board/${indiboard.borFile}" >
                     </a>
                     <div class="blur"><a href="${ path }/indiboard/detail?maBorNo=${indiboard.maBorNo}">자세히보기</a></div>
                 </div>
-                <div class="p1_2">
+            </c:forEach>
+            </div>
+	<!-- 
+                <div class="p1_1">
+                    <a href="${ path }/indiboard/detail?maBorNo=${indiboard.maBorNo}">
+                        <img src="https://cdn.pixabay.com/photo/2022/07/05/11/06/mountains-7302806__340.jpg" alt="">  
+                        <img src="${path }/resources/upload/board/${indiboard.borFile}" >
+                    </a>
+                    <div class="blur"><a href="${ path }/indiboard/detail?maBorNo=${indiboard.maBorNo}">자세히보기</a></div>
+                </div>
+     -->
+                <!-- <div class="p1_2">
                     <a href="">
                         <img src="https://cdn.pixabay.com/photo/2022/07/06/18/34/florence-7305768__340.jpg" alt="">
                     </a>
                     <div class="blur">자세히보기</div>
                 </div>
+                
+                
                 <div class="p1_3">
                     <a href="">
                         <img src="https://cdn.pixabay.com/photo/2022/07/24/14/12/path-7341731__340.jpg" alt="">
@@ -101,9 +117,9 @@
                         <img src="https://cdn.pixabay.com/photo/2022/07/07/07/24/clouds-7306684__340.jpg" alt="">
                     </a>
                     <div class="blur">자세히보기</div>
-                </div>
-            </div>
-            <div class="p2">
+                </div>  -->
+            
+            <!-- <div class="p2">
                 <div class="p2_1">
                     <a href="">
                         <img src="https://cdn.pixabay.com/photo/2022/07/07/07/24/clouds-7306684__340.jpg" alt="">
@@ -134,10 +150,11 @@
                     </a>
                     <div class="blur">자세히보기</div>
                 </div>
-            </div>
+            </div>  -->
 
+       
         </div>
-        </c:forEach>
+        </c:if>
         <div id="pageBar">
 			<!-- 맨 처음으로 -->
 			<button onclick="location.href='${ path }/indiboard/indilist?page=1'">&lt;&lt;</button>
