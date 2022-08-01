@@ -1,4 +1,31 @@
-let date = new Date();
+jQuery(document).ready(function() {
+    $('#ClubSchedule').click(function() {
+        if ($(this).hasClass('active') === false) {
+            // 비활성화
+            $('#ClubNotice').removeClass('active');
+            // 활성화
+            $(this).addClass('active');
+            $('.clubNotice_infoBox_01').show();
+            $('.clubNotice_infoBox_02').show();
+            $('.clubNotice_infoBox_03').hide();
+        }
+    });
+
+    $('#ClubNotice').click(function() {
+        if ($(this).hasClass('active') === false) {
+            $('#ClubSchedule').removeClass('active');
+            // 활성화
+            $(this).addClass('active');
+            $('.clubNotice_infoBox_01').hide();
+            $('.clubNotice_infoBox_02').hide();
+            $('.clubNotice_infoBox_03').show();
+        }
+    });
+    
+    
+    
+    
+    let date = new Date();
 
 const renderCalender = () => {
 const viewYear = date.getFullYear();
@@ -70,4 +97,4 @@ const goToday = () => {
     renderCalender();
 };
 
-
+});

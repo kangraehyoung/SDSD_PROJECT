@@ -282,7 +282,6 @@
 .viewClub_section .titleBox {
     background-color: #CAE5FC;
     padding: 60px 0;
-    border-bottom: none !important;
 }
 
 .viewClub_section .titleBox h2 {
@@ -406,15 +405,15 @@
     
 }
 
-.viewClub_section .clubNotice_buttonBox a.selected {
+.viewClub_section .clubNotice_buttonBox a.active {
     background-color: #CAE5FC;
-    margin-right: 50px;
 }
 
-/* 달력 CSS */
-
-.viewClub_section .clubNotice_infoBox_01 {
+.viewClub_section .clubInfo_Wrap {
     background-color: #CAE5FC;
+}
+/* 달력 CSS */
+.viewClub_section .clubInfo_Wrap .clubNotice_infoBox_01 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -542,9 +541,12 @@
 }
 
 .viewClub_section .clubNotice_infoBox_02 .scheduleInfo ol{
+
 }
 
-
+/* ======================================== */
+/* ======================================== */
+/* ======================================== */
 /* ======================================== */
 
 .viewClub_section .clubNotice_infoBox_03 {
