@@ -63,6 +63,12 @@
                 </div>
             </div>
         </div>
+        <div>
+        <h2>asdfsadfa</h2>
+        <c:forEach var="indiboard" items="${ indiboardlist }">
+            <c:out value=" ${ indiboard } " />
+        </c:forEach>
+        </div>
         <div class="picture">
             <div class="p1">
                 <div class="p1_1">
