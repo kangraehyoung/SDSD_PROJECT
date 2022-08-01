@@ -154,7 +154,8 @@
 
 ## ※ 20220801 작업내용
 ### 백앤드 작업 내용
-
+* 모임 생성 페이지 Servlet 수정 (GroupJoin.java)
 ### 프론트앤드 작업 내용
-* 모임 상세보기 페이지 구현 완료<br>http://localhost:8090/SDSD_PJ/views/ploboard/viewClub.jsp
+* 모임 상세보기 페이지 구현 완료 (최송희)<br>http://localhost:8090/SDSD_PJ/views/ploboard/viewClub.jsp
+* 모임 생성 페이지 구현 완료 (최송희)<br>http://localhost:8090/SDSD_PJ/plo/groupjoin
 
