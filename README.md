@@ -155,6 +155,8 @@
 ## ※ 20220801 작업내용
 ### 백앤드 작업 내용
 * 모임 생성 페이지 Servlet 수정 (GroupJoin.java)
+* 모임인증게시판 MVC패턴 : 리스트/ 삭제/ 작성 로직 구현 (쿼리문 수정 예정, 테스트전) (김지선, 김진명)
+
 ### 프론트앤드 작업 내용
 * 모임 상세보기 페이지 구현 완료 (최송희)<br>http://localhost:8090/SDSD_PJ/views/ploboard/viewClub.jsp
 * 모임 생성 페이지 구현 완료 (최송희)<br>http://localhost:8090/SDSD_PJ/plo/groupjoin
