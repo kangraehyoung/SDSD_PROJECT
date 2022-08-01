@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/groupboard/groupboard")
-public class GroupBoard extends HttpServlet {
+@WebServlet("/groupboard/groupboardlist")
+public class GroupBoardList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-    public GroupBoard() {
+    public GroupBoardList() {
     }
 
     @Override

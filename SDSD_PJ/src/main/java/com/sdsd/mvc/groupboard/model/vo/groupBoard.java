@@ -4,11 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+// 플로깅 모임 인증 게시판 vo
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-// 플로깅 모임 인증 게시판 vo
 public class groupBoard {
 	private int borId;
 	
