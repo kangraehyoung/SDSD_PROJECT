@@ -39,4 +39,6 @@ public class GroupBoard {
 	private int groupBorId;
 	
 	private int groupWriterNo;
+	
+//	private String groupName;  모임명 변수를 만들지 안만들지 아직 미정
 }

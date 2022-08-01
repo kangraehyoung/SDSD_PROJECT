@@ -6,6 +6,7 @@ import java.util.List;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.dao.GroupDao;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
+import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
@@ -29,6 +30,16 @@ public class GroupBoardService {
 		groupBoardList = new GroupDao().findAll(connection, pageInfo);
 		
 		return groupBoardList;
+	}
+
+	public int save(GroupBoard groupBoard) {
+		int result = 0;
+		
+		Connection connection = getConnection();
+		
+		result = new GroupDao().insertgroupBoard(connection, groupBoard);
+		
+		return result;
 	}
 
 

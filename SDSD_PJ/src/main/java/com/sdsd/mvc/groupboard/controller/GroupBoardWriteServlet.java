@@ -10,9 +10,12 @@ import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.sdsd.mvc.common.util.FileRename;
+import com.sdsd.mvc.groupboard.model.service.GroupBoardService;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 import com.sdsd.mvc.member.model.vo.Member;
+
+import oracle.net.aso.g;
 
 @WebServlet("/groupboard/groupwrite")
 public class GroupBoardWriteServlet extends HttpServlet {
@@ -54,7 +57,10 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	// 폼 파라미터로 넘어온 값들 (파일에 대한 정보 X)
     	String writer = mr.getParameter("nickName");
     	String content = mr.getParameter("content");
-//    	String title = mr.getParameter("제목은 나중에 넣을것");
+//    	String title = mr.getParameter("title");
+    	
+    	// 플로깅 모임명을 어떻게 할지 고민 중
+//    	String groupName = mr.getParameter("groupName");
     	
     	String originalFileName = mr.getOriginalFileName("upfile");
     	
@@ -63,6 +69,20 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	
        	HttpSession session = request.getSession(false);
     	Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
+    	
+    	if (loginMember != null) {
+    		groupBoard = new GroupBoard();
+    		
+    		groupBoard.setWriterNo(loginMember.getNo());
+    		groupBoard.setWriterName(writer);
+    		groupBoard.setBorContent(content);
+    		groupBoard.setBorFile(originalFileName);
+//    		groupBoard.setBorTitle(title); // 게시글 title
+//    		groupBoard.setGroupName(groupName); // 플로깅 모임명 아직 미정
+    		
+    		result = new GroupBoardService().save(groupBoard);
+    		
+    	}
 	}
 
 }

@@ -78,5 +78,26 @@ public class GroupDao {
 		return groupBoardList;
 	}
 
+	public int insertgroupBoard(Connection connection, GroupBoard groupBoard) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "INSERT INTO GROUPBOARD VALUES(SEQ_INDIBOR_NUMBER.NEXTVAL, ?, ?, '제목넣어야함', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return result;
+	}
+
 	
 }
