@@ -267,3 +267,324 @@
 .contentBody .contentBox .iconBox span {
     padding-left: 5px;
 }
+
+
+/*
+================================================
+모임 상세보기 페이지 CSS StyleSheet
+================================================
+*/
+
+.viewClub_section {
+    margin: 0 auto;
+}
+
+.viewClub_section .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
+    border-bottom: none !important;
+}
+
+.viewClub_section .titleBox h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.viewClub_section .clubInfo_container {
+    width: 70%;
+    margin: 60px auto;
+}
+
+.viewClub_section .clubInfo_container .carousel .carousel-indicators [data-bs-target] {
+    background-color: #82c2fa;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox {}
+
+.viewClub_section .clubInfo_container .clubInfoBox .titleText {
+    margin-bottom: 10px;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .titleText p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .titleText p a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .titleText p a.pressLike {
+    color: tomato;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .keywordText {
+    margin-bottom: 10px;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .keywordText a {
+    background-color: white ;
+    border-radius: 10px;
+    border: 1px solid rgb(88, 170, 236);
+    padding: 5px 10px;
+    text-decoration: none;
+    color: rgb(88, 170, 236);
+    font-size: 0.8em;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .clubInfoList {
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .clubInfoList ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .clubInfoList ul li {
+
+}
+
+.viewClub_section .clubInfo_container .clubInfoBox .clubInfoList ul li span {
+    font-weight: 600;
+}
+
+.viewClub_section .clubInfo_container .buttonBox {
+    margin-bottom: 5px;
+}
+
+.viewClub_section .clubInfo_container .buttonBox button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.viewClub_section .clubInfo_container .buttonBox button:hover {
+    background-color: #ffffff;
+    color: rgb(50, 157, 245);
+}
+
+/* 모임 삭제 버튼 색깔 */
+.viewClub_section .clubInfo_container .buttonBox button.deleteBtn {
+    background-color: tomato;
+    border: 1px solid tomato;
+}
+
+.viewClub_section .clubInfo_container .buttonBox button.deleteBtn:hover {
+    background-color: #ffffff;
+    color: tomato;
+}
+
+/* 모임 상세 정보 (모임 일정 / 공지사항) */
+.viewClub_section .clubNotice_buttonBox {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(-44%);
+}
+
+.viewClub_section .clubNotice_buttonBox a {
+    text-decoration: none;
+    padding: 20px 50px;
+    background-color: #f6f6f6;
+    color: #1f1f1f;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 20px 20px 0 0;
+    
+}
+
+.viewClub_section .clubNotice_buttonBox a.selected {
+    background-color: #CAE5FC;
+    margin-right: 50px;
+}
+
+/* 달력 CSS */
+
+.viewClub_section .clubNotice_infoBox_01 {
+    background-color: #CAE5FC;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewClub_section .clubNotice_infoBox_01 .calendar {
+    width: 600px;
+    margin: 50px;
+}
+
+.viewClub_section .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.viewClub_section .year-month {
+    font-size: 1.5rem;
+}
+
+.viewClub_section .nav {
+    display: flex;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+.viewClub_section .nav-btn {
+    width: 28px;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    line-height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+}  
+
+.viewClub_section .go-today {
+    width: 75px;
+    border-left: 1px solid #333333;
+    border-right: 1px solid #333333;
+}
+
+.viewClub_section .days {
+    display: flex;
+    margin: 25px 0 10px;
+}
+
+.viewClub_section .day {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.viewClub_section .dates {
+    display: flex;
+    flex-flow: row wrap;
+    height: 500px;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    background-color: #FFFFFF;
+}
+
+.viewClub_section .date {
+    width: calc(100% / 7);
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #333333;
+}
+
+.viewClub_section.day:nth-child(7n + 1),
+.viewClub_section .date:nth-child(7n + 1) {
+    color: #D13E3E;
+}
+
+.viewClub_section.day:nth-child(7n),
+.viewClub_section .date:nth-child(7n) {
+    color: #396EE2;
+}
+
+.viewClub_section .other {
+    opacity: 0.3;
+}
+
+.viewClub_section .today {
+    position: relative;
+    color: #ffffff;
+    padding: 5px 10px;
+    background-color: rgb(50, 157, 245);
+    border: 1px solid rgb(50, 157, 245); 
+    border-radius: 50%;
+    
+}
+
+.viewClub_section .today::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: #FF0000;
+    border-radius: 50%;
+    content: '';
+}
+
+.viewClub_section .clubNotice_infoBox_02 {
+    background-color: #CAE5FC;
+}
+
+.viewClub_section .clubNotice_infoBox_02 .scheduleInfo {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.viewClub_section .clubNotice_infoBox_02 .scheduleInfo .titleText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.viewClub_section .clubNotice_infoBox_02 .scheduleInfo ol{
+}
+
+
+/* ======================================== */
+
+.viewClub_section .clubNotice_infoBox_03 {
+    background-color: #CAE5FC;
+    padding: 50px 0;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .buttonBox {
+    width: 70%;
+    margin: 0 auto 10px auto;
+    text-align: left;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .buttonBox button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .buttonBox button:hover {
+    background-color: #ffffff;
+    color: rgba(50, 157, 245);
+}
+
+.viewClub_section .clubNotice_infoBox_03 .tableWrap {
+    background-color: #ffffff;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.viewClub_section .clubNotice_infoBox_03 .tableWrap tr:hover {
+    background-color: rgb(228, 243, 255);
+}
+.viewClub_section .clubNotice_infoBox_03 .page-link {
+    color: rgb(50, 157, 245);
+}

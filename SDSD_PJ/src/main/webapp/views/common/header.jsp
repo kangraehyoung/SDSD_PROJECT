@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.4" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.2" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.8" type="text/css">
@@ -66,7 +66,7 @@
                     <a href="#">모임 플로깅</a>
                         <ul class="sub_item menu_02">
                             <li><a href="${ path }/club">모임 찾기</a></li>
-                            <li><a href="">모임 생성</a></li>
+                            <li><a href="${ path }/plo/groupjoin">모임 생성</a></li>
                             <li><a href="">모임 플로깅 인증 게시판</a></li>
                         </ul>
                 </li>
