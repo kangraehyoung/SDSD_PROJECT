@@ -36,7 +36,7 @@ public class IndiBoardReplyServlet extends HttpServlet {
 			
 			int result = service.saveReply(reply);
 			
-			System.out.println(reply);
+			System.out.println();
 			if(result > 0) {
          		request.setAttribute("msg", "댓글 등록 성공!");
          		request.setAttribute("location", "/indiboard/detail?maBorNo=" + repboardNo);
