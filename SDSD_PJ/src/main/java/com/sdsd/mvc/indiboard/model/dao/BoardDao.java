@@ -10,6 +10,8 @@ import java.util.List;
 
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
+import com.sdsd.mvc.indiboard.model.vo.Reply;
+
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
@@ -94,10 +96,7 @@ public class BoardDao {
 				indiBoard.setBorFile(rs.getString("INDI_BOR_FILE"));
 				indiBoard.setReadCount(rs.getInt("INDI_READCOUNT"));
 				indiBoard.setBorStatus(rs.getString("INDI_BOR_STATUS"));
-				
-				System.out.println(indiBoard.getEmail() + "에후");
-				System.out.println(indiBoard.getBorContent() + "에후후후");
-				System.out.println(indiBoard.getBorFile() + "에후");
+
 				indiboardlist.add(indiBoard);
 				
 			}
@@ -242,6 +241,25 @@ public class BoardDao {
 			close(pstmt);
 		}
 		
+		return result;
+	}
+
+	public int insertReply(Connection connection, Reply reply) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "INSERT INTO REPLY VALUES(SEQ_IBREP_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
+		try {
+			pstm = connection.prepareStatement(query);
+			
+			pstm.setInt(1, reply.getRepboardNo());
+			pstm.setInt(2, reply.getRepwriterNo());
+			pstm.setString(3, reply.getRepcontent());
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
 		return result;
 	}
 

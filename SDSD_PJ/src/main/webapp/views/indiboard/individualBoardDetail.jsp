@@ -114,6 +114,8 @@
               </svg>
             </div>
           </div>
+         </div>
+          <!--  
           <div class="bbb_comentBox">
             <div class="bbb_1_profile_img">
               <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMTNfMjM5%2FMDAxNTg0MDI3NzE5MDQ2.cdElHY3jJ6sEsD9xvzEXAv59ojh0Ifsj8DVgmQIZuJwg.jGL9EsRQmRwO0tbO2XYKeSK-y9F0E4G6l4HXct99GT0g.JPEG.d_hye97%2F1.jpg&type=a340" alt="">
@@ -148,8 +150,8 @@
           </div>
           <div>
             <button class="bbb_cbtn">댓글 더보기</button>
-          </div>
-        </div>
+          </div> -->
+        
         <div class="bbb_4">
           <div class="bbb4_icon">
             <!-- 부트스트랩 하트 -->
