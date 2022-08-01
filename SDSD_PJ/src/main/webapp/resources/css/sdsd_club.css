@@ -282,6 +282,7 @@
 .viewClub_section .titleBox {
     background-color: #CAE5FC;
     padding: 60px 0;
+    border-bottom: none !important;
 }
 
 .viewClub_section .titleBox h2 {
