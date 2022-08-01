@@ -93,7 +93,7 @@
 
     <div class="clubNotice_buttonBox">
         <a href="javascript:" class="selected">모임 일정</a>
-        <a href="javascript:">공지사항</a>
+        <a href="/club/notice">공지사항</a>
     </div>
 
     <div class="clubNotice_infoBox_01">
