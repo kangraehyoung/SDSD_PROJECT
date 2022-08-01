@@ -247,7 +247,7 @@ public class BoardDao {
 	public int insertReply(Connection connection, Reply reply) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String query = "INSERT INTO REPLY VALUES(SEQ_IBREP_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
+		String query = "INSERT INTO IBREPLY VALUES(SEQ_IBREP_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
 		try {
 			pstm = connection.prepareStatement(query);
 			

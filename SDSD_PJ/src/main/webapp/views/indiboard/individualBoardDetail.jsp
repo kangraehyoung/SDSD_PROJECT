@@ -98,12 +98,14 @@
           </div>
         </div>
         <div class="bbb_3"> <!-- 댓글 -->
+        <c:forEach var="reply" items="${ indiBoard.replies }">
           <div class="bbb_comentBox">
             <div class="bbb_1_profile_img">
               <img src="https://search.pstatic.net/sunny/?src=http%3A%2F%2Ffile3.instiz.net%2Fdata%2Fcached_img%2Fupload%2F2019%2F11%2F05%2F19%2Fa154febe3a793e3e96c3bfd6dc9b7bfc.jpg&type=a340" alt="">
             </div>
             <div class="bbb_Nickname">
-              <p>qwer_1233</p>
+              <!--  <p>${ reply.repwriterId }</p> -->
+              <sub><c:out value="${ reply.repwriterId }"/></sub>
             </div>
             <div class="bbb_coment">
               <p>중고 3만 벤츠 e220d 500만원에 급매매 연락주세요~ </p>
@@ -114,6 +116,7 @@
               </svg>
             </div>
           </div>
+         </c:forEach>
          </div>
           <!--  
           <div class="bbb_comentBox">
@@ -189,8 +192,11 @@
               <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
             </svg>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">작성</button>
+            	<form action="${ path }/indiboard/indireply" method="post">
+              <input name="repcontent" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">작성</button>
+            	<input type="hidden" name="repboardNo" value="${ indiBoard.maBorNo }">
+            	</form>
             </div>
           </div>
         </div>

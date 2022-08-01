@@ -12,7 +12,7 @@ import com.sdsd.mvc.indiboard.model.service.IndiBoardService;
 import com.sdsd.mvc.indiboard.model.vo.Reply;
 import com.sdsd.mvc.member.model.vo.Member;
 
-@WebServlet("/IndiBoardReplyServlet")
+@WebServlet("/indiboard/indireply")
 public class IndiBoardReplyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private IndiBoardService service = new IndiBoardService();
@@ -36,12 +36,13 @@ public class IndiBoardReplyServlet extends HttpServlet {
 			
 			int result = service.saveReply(reply);
 			
+			System.out.println(reply);
 			if(result > 0) {
          		request.setAttribute("msg", "댓글 등록 성공!");
-         		request.setAttribute("location", "/indiboard/detail?maBorNo" + repboardNo);
+         		request.setAttribute("location", "/indiboard/detail?maBorNo=" + repboardNo);
 			} else {
 				request.setAttribute("msg", "댓글 등록 실패!");
-         		request.setAttribute("location", "//indiboard/detail?maBorNo" + repboardNo);
+         		request.setAttribute("location", "//indiboard/detail?maBorNo=" + repboardNo);
 			}
     	} else {
      		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
