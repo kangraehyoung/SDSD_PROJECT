@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class groupBoard {
+public class GroupBoard {
 	private int borId;
 	
 	private int writerNo;
