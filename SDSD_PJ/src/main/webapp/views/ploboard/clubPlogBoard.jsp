@@ -7,14 +7,14 @@
 
 <jsp:include page="/views/common/header.jsp" />
 
-<section class="findClub_section">
+<section class="clubPlogBoard_section">
 
     <div class="first_tool" style="padding: 80px 0 50px 0 !important; border-bottom: none !important;"> <!-- 첫번째 하늘색 틀-->
         <div class="head_title"> <!-- 요소 모음 div -->
             <div class="main_text"> <!-- 텍스트 div -->
                 <div class="titleTextBox">
-                    <h2><img src="${ path }/resources/imgFile/findTeam.png" alt="trashCan">플로깅 모임 찾기</h2>
-                    <p>지역, 모임 특징 등 키워드를 검색해 원하는 모임에 합류해보세요!</p>
+                    <h2><img src="${ path }/resources/imgFile/findTeam.png" alt="trashCan">플로깅 모임 인증</h2>
+                    <!-- <p>지역, 모임 특징 등 키워드를 검색해 원하는 모임에 합류해보세요!</p> -->
                 </div>
             </div>
             <div class="ht_search">
@@ -47,8 +47,14 @@
             </div>
         </div>
         
-        <div class="buttonBox">
-        	<button>모임 플로깅 인증하기 <i class="bi bi-chevron-right"></i></button>
+        <div class="row buttonBox">
+            <div class="col"></div>
+            <div class="col boardBtn">
+                <button>모임 플로깅 인증하기 <i class="bi bi-chevron-right"></i></button>
+            </div>
+            <div class="col indiBoard">
+                <p onclick="location.href='/'">개인 플로깅 인증 바로가기 <i class="bi bi-box-arrow-up-right"></i></p>
+            </div>
         </div>
     </div>
     
