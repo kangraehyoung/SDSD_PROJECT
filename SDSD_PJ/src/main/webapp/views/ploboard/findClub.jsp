@@ -69,7 +69,7 @@
         <div class="contentBody">
             <!-- 첫번째 줄  1번째 모임 -->
             <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
+                <div class="imgBox" onclick="location.href='${ path }/views/ploboard/viewClub.jsp'">
                     <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
                     <div class="hoverBox">
                         <p>리더 | </p>
