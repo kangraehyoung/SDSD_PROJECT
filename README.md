@@ -163,3 +163,11 @@
 * 모임 인증 게시판 페이지 구현 완료 (최송희)<br>http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoard.jsp<br>개인인증게시판도 위 레이아웃으로 수정할 예정
 * 개인플로깅_나의 활동 페이지 구현 완료(서호정)<br>http://localhost:8090/SDSD_PJ/views/member/My_Activity.jsp
 * 쓰레기통 좌표 추가(서호정)
+
+## ※ 20220802 작업내용
+### 백앤드 작업 내용
+
+### 프론트앤드 작업 내용
+* 모임 공지사항 등록 페이지
+* 모임 플로깅 인증 등록 페이지
+* 모임 플로깅 인증 상세 페이지
