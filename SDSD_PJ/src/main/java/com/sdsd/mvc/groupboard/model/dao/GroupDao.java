@@ -78,5 +78,26 @@ public class GroupDao {
 		return groupBoardList;
 	}
 
+	public int updateStatus(Connection connection, int groupBorNo, String status) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String qurey = "UPDATE BOARD SET BOR_STATUS=? WHERE ALL_BOR_NUMBER=?";
+		try {
+			pstmt = connection.prepareStatement(qurey);
+			
+			pstmt.setString(1, status);
+			pstmt.setInt(2, groupBorNo);
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+
 	
 }
