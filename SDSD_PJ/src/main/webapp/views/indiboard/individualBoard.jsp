@@ -69,13 +69,14 @@
             <c:out value=" ${ indiboard } " />
         </c:forEach>
         </div>
+        <c:forEach var="indiboard" items="${ indiboardlist }">
         <div class="picture">
             <div class="p1">
                 <div class="p1_1">
-                    <a href="">
+                    <a href="${ path }/indiboard/detail?maBorNo=${indiboard.maBorNo}">
                         <img src="https://cdn.pixabay.com/photo/2022/07/05/11/06/mountains-7302806__340.jpg" alt="">
                     </a>
-                    <div class="blur"><a href="${ path }/indiboard/detail">자세히보기</a></div>
+                    <div class="blur"><a href="${ path }/indiboard/detail?maBorNo=${indiboard.maBorNo}">자세히보기</a></div>
                 </div>
                 <div class="p1_2">
                     <a href="">
@@ -136,6 +137,7 @@
             </div>
 
         </div>
+        </c:forEach>
         <div id="pageBar">
 			<!-- 맨 처음으로 -->
 			<button onclick="location.href='${ path }/indiboard/indilist?page=1'">&lt;&lt;</button>
