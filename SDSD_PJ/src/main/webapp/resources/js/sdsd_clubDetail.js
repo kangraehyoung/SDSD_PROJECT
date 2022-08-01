@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+	 $('.clubNotice_infoBox_03').hide();
     $('#ClubSchedule').click(function() {
         if ($(this).hasClass('active') === false) {
             // 비활성화
