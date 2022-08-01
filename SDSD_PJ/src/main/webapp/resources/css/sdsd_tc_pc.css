@@ -15,11 +15,10 @@
     text-align: center;
     padding: 20px 0;
     margin: 0 auto;
-    border-bottom: 1px solid silver;
 }
 
-.second_tool {
-    background-color:  rgba(63, 219, 159, 0.362);
+.second_tool_m {
+	background-color : white;
     width: 100%;
     padding: 20px 0;
     margin: 0 auto;
@@ -116,6 +115,7 @@
     justify-content: center;
     position: relative;
     box-sizing: border-box;
+    margin: 20px;
 }
 
 .stm_1 h2 {

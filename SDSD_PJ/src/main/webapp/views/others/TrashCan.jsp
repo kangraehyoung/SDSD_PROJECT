@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="second_tool"> <!-- 두번째 민트색 틀 -->
+    <div class="second_tool_m"> <!-- 두번째 민트색 틀 -->
         <div class="st_map">
             <div class="stm_1">
                 <h2>지도<img src="${ path }/resources/imgFile/map.png" alt="map"></h2>
