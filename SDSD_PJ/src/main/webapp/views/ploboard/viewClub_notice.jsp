@@ -91,49 +91,72 @@
         </div>
     </div>
 
-    <div class="clubNotice_buttonBox">
-        <a href="javascript:" class="selected">모임 일정</a>
-        <a href="${ path }/views/ploboard/viewClub_notice.jsp">공지사항</a>
-    </div>
+	<div class="clubNotice_buttonBox">
+	    <a href="${ path }/views/ploboard/viewClub.jsp">모임 일정</a>
+	    <a href="javascript:" class="selected" style="margin: 0 0 0 50px !important;">공지사항</a>
+	</div>
 
-    <div class="clubNotice_infoBox_01">
-        <div class="calendarCotainer">
-            <div class="calendar">
-                <div class="header">
-                    <div class="year-month"></div>
-                    <div class="nav">
-                    <button class="nav-btn go-prev" onclick="prevMonth()"><i class="bi bi-chevron-left"></i></button>
-                    <button class="nav-btn go-today" onclick="goToday()">Today</button>
-                    <button class="nav-btn go-next" onclick="nextMonth()"><i class="bi bi-chevron-right"></i></button>
-                </div>
-                </div>
-                <div class="main">
-                    <div class="days">
-                        <div class="day">일</div>
-                        <div class="day">월</div>
-                        <div class="day">화</div>
-                        <div class="day">수</div>
-                        <div class="day">목</div>
-                        <div class="day">금</div>
-                        <div class="day">토</div>
-                    </div>
-                    <div class="dates"></div>
-                </div>
-            </div>
-        </div>  
-    </div>
-    
-    <div class="clubNotice_infoBox_02">
-
-        <div class="scheduleInfo">
-            <p class="titleText">모임 공지</p>
-            <ol>
-                <li><span>일시 : </span></li>
-                <li><span>장소 : </span></li>
-                <li><span>준비물 : </span></li>
-            </ol>
-        </div>
-    </div>
+	<!-- 공지사항 부분 -->
+	<div class="clubNotice_infoBox_03">
+	    <!-- 모임 리더에게만 보이는 버튼 -->
+	    <div class="buttonBox">
+	        <button>공지사항 작성</button>
+	    </div>
+	    
+	    <div class="tableWrap">
+	        <table class="table table-hover" >
+	            <thead class="table-light">
+	            <tr>
+	                <th scope="col">No.</th>
+	                <th scope="col">작성 일자</th>
+	                <th scope="col">제목</th>
+	                <th scope="col">작성자</th>
+	            </tr>
+	            </thead>
+	            <tbody>
+	            <tr>
+	                <th scope="row">1</th>
+	                <td>2020/08/20</td>
+	                <td>플로깅 모임 주의사항 숙지해주세요!</td>
+	                <td>모임 리더</td>
+	            </tr>
+	            <tr>
+	                <th scope="row">2</th>
+	                <td>2020/08/20</td>
+	                <td>북극곰 절대 지켜</td>
+	                <td>모임 리더</td>
+	            </tr>
+	            <tr>
+	                <th scope="row">3</th>
+	                <td>2020/08/20</td>
+	                <td>곰은 사람을 찢고 세미프로젝트는 내 멘탈을 찢어</td>
+	                <td>모임 리더</td>
+	            </tr>
+	            </tbody>
+	        </table>
+	    </div>
+	    
+	
+	    <!-- page 네비게이션 -->
+	    <nav aria-label="Page navigation example">
+	        <ul class="pagination justify-content-center">
+	            <li class="page-item">
+	                <a class="page-link" href="#" aria-label="Previous">
+	                    <span aria-hidden="true">&laquo;</span>
+	                </a>
+	            </li>
+	            <li class="page-item"><a class="page-link" href="#">1</a></li>
+	            <li class="page-item"><a class="page-link" href="#">2</a></li>
+	            <li class="page-item"><a class="page-link" href="#">3</a></li>
+	            <li class="page-item">
+	                <a class="page-link" href="#" aria-label="Next">
+	                    <span aria-hidden="true">&raquo;</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </nav>
+	
+	</div>
 </section>
 
 
