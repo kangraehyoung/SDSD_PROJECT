@@ -173,6 +173,7 @@
           <div class="bbb4_liketime">
             <div class="bbb4_like">
               <p>좋아요 <span>27</span>개</p>
+              <p>${indiBoard.readCount } </p>
             </div>
             <div class="bbb4_time">
               <p>2시간 전</p>
@@ -197,9 +198,19 @@
     <div class="buttonBox_D">
       <div>
         <button class="btnprev">이전</button>
+        <button class="btnprev" id="btnDelete">삭제</button>
         <button class="btnnext">다음</button>
       </div>
     </div>
 </section>
+
+<script type="text/javascript">
+	$(document).ready(() => {
+		$("#btnDelete").on("click", () => {
+			location.replace("${path}/indiboard/indidelete?maBorNo=${indiBoard.maBorNo}");
+		})
+	});
+</script>
+
 
 <jsp:include page="/views/common/footer.jsp" />

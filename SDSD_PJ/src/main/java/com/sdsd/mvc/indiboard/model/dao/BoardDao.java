@@ -72,7 +72,7 @@ public class BoardDao {
 				+ "            FROM INDIBOARD IB "
 				+ "            JOIN MEMBER M ON (M.MEM_NUMBER = IB.INDIBOR_WRITER_NO) "
 				+ "    ) "
-				+ ") WHERE RNUM BETWEEN ? AND ?";
+				+ ") WHERE (RNUM BETWEEN ? AND ?) AND INDI_BOR_STATUS = 'Y'";
 		
 		
 		try {
@@ -163,7 +163,7 @@ public class BoardDao {
 	public int updateStatus(Connection connection, int maBorNo, String status) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String qurey = "UPDATE BOARD SET BOR_STATUS=? WHERE ALL_BOR_NUMBER=?";
+		String qurey = "UPDATE INDIBOARD SET INDI_BOR_STATUS=? WHERE INDIBOR_NUMBER=?";
 		try {
 			pstm = connection.prepareStatement(qurey);
 			
@@ -222,8 +222,27 @@ public class BoardDao {
 	}
 
 	public int updateReadCount(Connection connection, IndiBoard indiBoard) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result =0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE INDIBOARD SET INDI_READCOUNT=? WHERE INDIBOR_NUMBER=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			indiBoard.setReadCount(indiBoard.getReadCount() + 1);
+			
+			pstmt.setInt(1, indiBoard.getReadCount());
+			pstmt.setInt(2, indiBoard.getMaBorNo());
+			
+			result = pstmt.executeUpdate();
+			System.out.println("몰라" + indiBoard.getReadCount());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
 	}
 
 }

@@ -26,7 +26,7 @@ public class IndiBoardDeleteServlet extends HttpServlet {
     	
     	if(result > 0) {
     		request.setAttribute("msg", "게시글 삭제 성공");
-    		request.setAttribute("location", "/indiboard/indiboard");
+    		request.setAttribute("location", "/indiboard/indilist");
 		} else {
 			request.setAttribute("msg", "게시글 삭제 실패");
 			request.setAttribute("location", "/indiboard/view?maBorNo=" + maBorNo);

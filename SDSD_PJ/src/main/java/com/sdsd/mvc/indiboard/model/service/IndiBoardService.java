@@ -84,7 +84,6 @@ public class IndiBoardService {
 		
 		if(indiBoard != null && !hasRead) {
 			result = new BoardDao().updateReadCount(connection, indiBoard);
-			
 			if(result > 0) {
 				commit(connection);
 			} else {
