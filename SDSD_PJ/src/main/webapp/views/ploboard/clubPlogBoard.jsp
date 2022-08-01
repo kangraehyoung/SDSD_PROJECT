@@ -7,7 +7,7 @@
 
 <jsp:include page="/views/common/header.jsp" />
 
-<section class="findClub_section">
+<section class="clubPlogBoard_section">
 
     <div class="first_tool" style="padding: 80px 0 50px 0 !important; border-bottom: none !important;"> <!-- 첫번째 하늘색 틀-->
         <div class="head_title"> <!-- 요소 모음 div -->
