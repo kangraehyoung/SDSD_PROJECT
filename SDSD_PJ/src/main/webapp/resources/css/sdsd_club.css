@@ -99,8 +99,7 @@
 }
 
 
-.findClub_section .buttonBox button,
-.clubPlogBoard_section .buttonBox button {
+.findClub_section .buttonBox button {
 	text-decoration: none;
     color: #ffffff;
     font-size : 16px;
@@ -113,14 +112,12 @@
     appearance : none;
 }
 
-.findClub_section .buttonBox button#viewJoinedClub,
-.clubPlogBoard_section .buttonBox button#viewJoinedClub {
+.findClub_section .buttonBox button#viewJoinedClub {
 	padding: 10px 30px !important;
     margin-left: 10px;
 }
 
-.findClub_section .buttonBox button:hover,
-.clubPlogBoard_section .buttonBox button:hover {
+.findClub_section .buttonBox button:hover{
     color: rgb(50, 157, 245);
     background-color: #ffffff;
     border: 1px solid rgb(50, 157, 245);
@@ -711,4 +708,47 @@
 .createClub_section .buttonBox input.resetBtn:hover {
     color: #1f1f1f;
     background-color: #ffffff;
+}
+
+
+/*
+================================================
+모임 인증 페이지 CSS StyleSheet
+================================================
+*/
+
+.clubPlogBoard_section{}
+
+.clubPlogBoard_section .buttonBox{}
+
+.clubPlogBoard_section .buttonBox .boardBtn {
+    text-align: center;
+}
+
+.clubPlogBoard_section .buttonBox .boardBtn button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size : 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance : none;
+    -moz-appearance: none;
+    appearance : none;
+}
+
+.clubPlogBoard_section .buttonBox .boardBtn button:hover {
+    background-color: #ffffff;
+    color: rgb(50, 157, 245);
+}
+
+.clubPlogBoard_section .buttonBox .indiBoard {}
+.clubPlogBoard_section .buttonBox .indiBoard p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: cornflowerblue;
+    font-weight: 600;
+    cursor: pointer;
 }

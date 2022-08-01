@@ -47,8 +47,14 @@
             </div>
         </div>
         
-        <div class="buttonBox">
-        	<button>모임 플로깅 인증하기 <i class="bi bi-chevron-right"></i></button>
+        <div class="row buttonBox">
+            <div class="col"></div>
+            <div class="col boardBtn">
+                <button>모임 플로깅 인증하기 <i class="bi bi-chevron-right"></i></button>
+            </div>
+            <div class="col indiBoard">
+                <p onclick="location.href='/'">개인 플로깅 인증 바로가기 <i class="bi bi-box-arrow-up-right"></i></p>
+            </div>
         </div>
     </div>
     
