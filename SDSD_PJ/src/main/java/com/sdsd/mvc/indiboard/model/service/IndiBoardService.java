@@ -6,6 +6,8 @@ import java.util.List;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
+import com.sdsd.mvc.indiboard.model.vo.Reply;
+
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
 public class IndiBoardService {
@@ -84,7 +86,6 @@ public class IndiBoardService {
 		
 		if(indiBoard != null && !hasRead) {
 			result = new BoardDao().updateReadCount(connection, indiBoard);
-			
 			if(result > 0) {
 				commit(connection);
 			} else {
@@ -94,5 +95,23 @@ public class IndiBoardService {
 		close(connection);
 		
 		return indiBoard;
+	}
+
+	public int saveReply(Reply reply) {
+		int result = 0;
+		
+		Connection connection = getConnection();
+		
+		result = new BoardDao().insertReply(connection, reply);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
 	}
 }

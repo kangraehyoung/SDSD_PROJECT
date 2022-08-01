@@ -1,6 +1,8 @@
 package com.sdsd.mvc.indiboard.model.vo;
 
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -38,5 +40,7 @@ public class IndiBoard {
 	private int maBorId;
 	
 	private int maWriterNo;
+	
+	private List<Reply> replies;
 
 }

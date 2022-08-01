@@ -38,6 +38,22 @@ public class GroupBoardService {
 		Connection connection = getConnection();
 		
 		result = new GroupDao().insertgroupBoard(connection, groupBoard);
+	
+		return result;
+	}
+		public int delete(int groupBorNo) {
+		int result =0;
+		Connection connection =getConnection();
+		
+		result = new GroupDao().updateStatus(connection, groupBorNo, "N");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
 		
 		return result;
 	}
