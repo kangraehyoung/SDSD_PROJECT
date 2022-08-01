@@ -73,4 +73,26 @@ public class IndiBoardService {
 		
 		return result;
 	}
+
+	public IndiBoard getBoardByNo(int maBorNo, boolean hasRead) {
+		int result = 0;
+		IndiBoard indiBoard = null;
+		
+		Connection connection = getConnection();
+		
+		indiBoard = new BoardDao().findBoardByNo(connection, maBorNo);
+		
+		if(indiBoard != null && !hasRead) {
+			result = new BoardDao().updateReadCount(connection, indiBoard);
+			
+			if(result > 0) {
+				commit(connection);
+			} else {
+				rollback(connection);
+			}
+		}
+		close(connection);
+		
+		return indiBoard;
+	}
 }

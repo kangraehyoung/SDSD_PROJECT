@@ -178,4 +178,19 @@ public class BoardDao {
 		return result;
 	}
 
+
+	public IndiBoard findBoardByNo(Connection connection, int maBorNo) {
+		IndiBoard board = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String query = "";
+		
+		return null;
+	}
+
+	public int updateReadCount(Connection connection, IndiBoard indiBoard) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
