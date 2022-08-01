@@ -195,7 +195,7 @@
       </div>
     </div>
     <!-- 마지막 버튼 -->
-    <div class="buttonBox">
+    <div class="buttonBox_D">
       <div>
         <button class="btnprev">이전</button>
         <button class="btnnext">다음</button>
