@@ -65,14 +65,14 @@
                     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
                     var options = { //지도를 생성할 때 필요한 기본 옵션
 
-	                center: new kakao.maps.LatLng(37.517547, 127.086363), //지도의 중심좌표.
+	                center: new kakao.maps.LatLng(37.520277, 127.122590), //지도의 중심좌표.
 
-	                level: 3 //지도의 레벨(확대, 축소 정도)
+	                level: 5 //지도의 레벨(확대, 축소 정도)
                     };
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                 mapOption = {
-                    center: new kakao.maps.LatLng(37.517547, 127.086363), // 지도의 중심좌표
-                    level: 3 // 지도의 확대 레벨
+                    center: new kakao.maps.LatLng(37.520277, 127.122590), // 지도의 중심좌표
+                    level: 5 // 지도의 확대 레벨
                 };  
 
             // 지도를 생성합니다    
@@ -80,6 +80,7 @@
 
          	// 마커를 표시할 위치와 title 객체 배열입니다 
             var positions = [
+            	// 송파구
             	{
                     title: '<div>GS25한강잠실1호점</div>', 
                     latlng: new kakao.maps.LatLng(37.519580, 127.093538)
@@ -99,6 +100,479 @@
                 {
                     title: '<div>올림픽공원1번출구</div>',
                     latlng: new kakao.maps.LatLng(37.516561, 127.131514)
+                },
+                {
+                    title: '<div>올림픽공원4번출구</div>',
+                    latlng: new kakao.maps.LatLng(37.516649, 127.130839)
+                },
+                {
+                    title: '<div>석촌호수동호</div>',
+                    latlng: new kakao.maps.LatLng(37.512013, 127.107796)
+                },
+                {
+                    title: '<div>올림픽공원테니스장</div>',
+                    latlng: new kakao.maps.LatLng(37.513240, 127.128620)
+                },
+                {
+                    title: '<div>올림픽공원테니스장</div>',
+                    latlng: new kakao.maps.LatLng(37.513240, 127.128620)
+                },
+                {
+                    title: '<div>올림픽공원장미광장</div>',
+                    latlng: new kakao.maps.LatLng(37.512745, 127.127314)
+                },
+                {
+                    title: '<div>올림픽회관</div>',
+                    latlng: new kakao.maps.LatLng(37.520955, 127.116130)
+                },
+                {
+                    title: '<div>올림픽선수촌아파트</div>',
+                    latlng: new kakao.maps.LatLng(37.515273, 127.134085)
+                },
+                {
+                    title: '<div>개룡근린공원</div>',
+                    latlng: new kakao.maps.LatLng(37.494524, 127.130494)
+                },
+                {
+                    title: '<div>롯데호텔공항버스</div>',
+                    latlng: new kakao.maps.LatLng(37.510681, 127.100553)
+                },
+                {
+                    title: '<div>종합운동장5번출구</div>',
+                    latlng: new kakao.maps.LatLng(37.511366, 127.072736)
+                },
+                {
+                    title: '<div>올림픽홀1-3</div>',
+                    latlng: new kakao.maps.LatLng(37.51478, 127.12699)
+                },
+                {
+                    title: '<div>올림픽홀1-1</div>',
+                    latlng: new kakao.maps.LatLng(37.5150613, 127.1271355)
+                },
+                {
+                    title: '<div>올림픽홀티켓박스</div>',
+                    latlng: new kakao.maps.LatLng(37.5153881, 127.1271355)
+                },
+                {
+                    title: '<div>올림픽테니스장</div>',
+                    latlng: new kakao.maps.LatLng(37.5147028, 127.1284129)
+                },
+                {
+                    title: '<div>실내테니스장</div>',
+                    latlng: new kakao.maps.LatLng(37.5140784, 127.1276414)
+                },
+                {
+                    title: '<div>우리금융아트홀</div>',
+                    latlng: new kakao.maps.LatLng(37.5174393, 127.1249653)
+                },
+                {
+                    title: '<div>벨로드롬</div>',
+                    latlng: new kakao.maps.LatLng(37.5174981, 127.1238605)
+                },
+                {
+                    title: '<div>88마당</div>',
+                    latlng: new kakao.maps.LatLng(37.5179469, 127.1237261)
+                },
+                {
+                    title: '<div>시니어복합시설</div>',
+                    latlng: new kakao.maps.LatLng(37.5182341, 127.1234428)
+                },
+                {
+                    title: '<div>핸드볼경기장2-2</div>',
+                    latlng: new kakao.maps.LatLng(37.5177339, 127.1257116)
+                },
+                {
+                    title: '<div>핸드볼경기장티켓부스</div>',
+                    latlng: new kakao.maps.LatLng(37.517822, 127.1259315)
+                },
+                {
+                    title: '<div>핸드볼경기장2-3</div>',
+                    latlng: new kakao.maps.LatLng(37.5178977, 127.1263379)
+                },
+                {
+                    title: '<div>핸드볼경기장티켓박스</div>',
+                    latlng: new kakao.maps.LatLng(37.5179799, 127.1265458)
+                },
+                {
+                    title: '<div>핸드볼경기장2-4</div>',
+                    latlng: new kakao.maps.LatLng(37.5178108, 127.1267271)
+                },
+                {
+                    title: '<div>핸드볼경기장2-5</div>',
+                    latlng: new kakao.maps.LatLng(37.517647, 127.126935)
+                },
+                {
+                    title: '<div>조각공원</div>',
+                    latlng: new kakao.maps.LatLng(37.516695, 127.1208994)
+                },
+                {
+                    title: '<div>소마미술관</div>',
+                    latlng: new kakao.maps.LatLng(37.5163341, 127.1192773)
+                },
+                {
+                    title: '<div>소마미술관산책로</div>',
+                    latlng: new kakao.maps.LatLng(37.5168984, 127.1194319)
+                },
+                {
+                    title: '<div>소마미술관1관입구</div>',
+                    latlng: new kakao.maps.LatLng(37.5174135, 127.1177823)
+                },
+                {
+                    title: '<div>소마미술관공원</div>',
+                    latlng: new kakao.maps.LatLng(37.5165567, 127.1174648)
+                },
+                {
+                    title: '<div>평화의광장1</div>',
+                    latlng: new kakao.maps.LatLng(37.5178916, 127.1171765)
+                },
+                {
+                    title: '<div>평화의광장2</div>',
+                    latlng: new kakao.maps.LatLng(37.5179531, 127.1169297)
+                },
+                {
+                    title: '<div>수변무대1</div>',
+                    latlng: new kakao.maps.LatLng(37.5181812, 127.1176435)
+                },
+                {
+                    title: '<div>수변무대2</div>',
+                    latlng: new kakao.maps.LatLng(37.517781, 127.1178071)
+                },
+                {
+                    title: '<div>88마당1</div>',
+                    latlng: new kakao.maps.LatLng(37.5179414, 127.1252197)
+                },
+                {
+                    title: '<div>88마당2</div>',
+                    latlng: new kakao.maps.LatLng(37.5183908, 127.1259594)
+                },
+                {
+                    title: '<div>88마당3</div>',
+                    latlng: new kakao.maps.LatLng(37.5187104, 127.1261723)
+                },
+                {
+                    title: '<div>88마당4</div>',
+                    latlng: new kakao.maps.LatLng(37.5189825, 127.1262702)
+                },
+                {
+                    title: '<div>88마당5</div>',
+                    latlng: new kakao.maps.LatLng(37.51902, 127.1262698)
+                },
+                {
+                    title: '<div>88마당6</div>',
+                    latlng: new kakao.maps.LatLng(37.5196308, 127.1261444)
+                },
+                {
+                    title: '<div>88마당7</div>',
+                    latlng: new kakao.maps.LatLng(37.5200557, 127.1256009)
+                },
+                {
+                    title: '<div>88마당8</div>',
+                    latlng: new kakao.maps.LatLng(37.5190479, 127.1245576)
+                },
+                {
+                    title: '<div>88마당9</div>',
+                    latlng: new kakao.maps.LatLng(37.5184115, 127.1237439)
+                },
+                {
+                    title: '<div>88마당10</div>',
+                    latlng: new kakao.maps.LatLng(37.5178844, 127.1244027)
+                },
+                {
+                    title: '<div>88마당11</div>',
+                    latlng: new kakao.maps.LatLng(37.5176935, 127.1247641)
+                },
+                {
+                    title: '<div>올림픽수영장1</div>',
+                    latlng: new kakao.maps.LatLng(37.519968, 127.126092)
+                },
+                {
+                    title: '<div>올림픽체조경기장1</div>',
+                    latlng: new kakao.maps.LatLng(37.5185463, 127.1270634)
+                },
+                {
+                    title: '<div>올림픽체조경기장2</div>',
+                    latlng: new kakao.maps.LatLng(37.5187875, 127.1266182)
+                },
+                {
+                    title: '<div>올림픽체조경기장3</div>',
+                    latlng: new kakao.maps.LatLng(37.5192018, 127.126537)
+                },
+                {
+                    title: '<div>올림픽체조경기장4</div>',
+                    latlng: new kakao.maps.LatLng(37.51961, 127.1266775)
+                },
+                {
+                    title: '<div>올림픽체조경기장5</div>',
+                    latlng: new kakao.maps.LatLng(37.519855, 127.1277997)
+                },
+                {
+                    title: '<div>올림픽수영장2</div>',
+                    latlng: new kakao.maps.LatLng(37.5206703, 127.1272689)
+                },
+                {
+                    title: '<div>올림픽수영장3</div>',
+                    latlng: new kakao.maps.LatLng(37.5211261, 127.1272582)
+                },
+                {
+                    title: '<div>88호수수변무대</div>',
+                    latlng: new kakao.maps.LatLng(37.5206064, 127.1255678)
+                },
+                {
+                    title: '<div>88마당12</div>',
+                    latlng: new kakao.maps.LatLng(37.5204964, 127.1254283)
+                },
+                {
+                    title: '<div>88마당13</div>',
+                    latlng: new kakao.maps.LatLng(37.5206237, 127.1256583)
+                },
+                {
+                    title: '<div>서울역사편찬원1</div>',
+                    latlng: new kakao.maps.LatLng(37.5218291, 127.124523)
+                },
+                {
+                    title: '<div>서울역사편찬원2</div>',
+                    latlng: new kakao.maps.LatLng(37.522466, 127.1245643)
+                },
+                {
+                    title: '<div>몽촌정 팔각정</div>',
+                    latlng: new kakao.maps.LatLng(37.5228356, 127.1253656)
+                },
+                {
+                    title: '<div>까치다리1</div>',
+                    latlng: new kakao.maps.LatLng(37.5228843, 127.1264847)
+                },
+                {
+                    title: '<div>까치다리2</div>',
+                    latlng: new kakao.maps.LatLng(37.5225617, 127.1267791)
+                },
+                {
+                    title: '<div>백제전시관1</div>',
+                    latlng: new kakao.maps.LatLng(37.520705, 127.123188)
+                },
+                {
+                    title: '<div>백제전시관2</div>',
+                    latlng: new kakao.maps.LatLng(37.5208423, 127.1234897)
+                },
+                {
+                    title: '<div>백제전시관3</div>',
+                    latlng: new kakao.maps.LatLng(37.5210939, 127.124339)
+                },
+                {
+                    title: '<div>백제전시관4</div>',
+                    latlng: new kakao.maps.LatLng(37.5207155, 127.1253049)
+                },
+                {
+                    title: '<div>백제전시관5</div>',
+                    latlng: new kakao.maps.LatLng(37.5207766, 127.1255889)
+                },
+                {
+                    title: '<div>88마당14</div>',
+                    latlng: new kakao.maps.LatLng(37.5202725, 127.1261166)
+                },
+                {
+                    title: '<div>올림픽테니스장2</div>',
+                    latlng: new kakao.maps.LatLng(37.515208, 127.128882)
+                },
+                {
+                    title: '<div>실내테니스장2</div>',
+                    latlng: new kakao.maps.LatLng(37.51437, 127.127653)
+                },
+                {
+                    title: '<div>한얼광장1</div>',
+                    latlng: new kakao.maps.LatLng(37.517597, 127.1277249)
+                },
+                {
+                    title: '<div>한얼광장2</div>',
+                    latlng: new kakao.maps.LatLng(37.579041, 127.1279529)
+                },
+                {
+                    title: '<div>한얼광장3</div>',
+                    latlng: new kakao.maps.LatLng(37.5182817, 127.1278336)
+                },
+                {
+                    title: '<div>국민체력인증센터</div>',
+                    latlng: new kakao.maps.LatLng(37.5171874, 127.1284535)
+                },
+                {
+                    title: '<div>만남의광장1</div>',
+                    latlng: new kakao.maps.LatLng(37.5172768, 127.1285561)
+                },
+                {
+                    title: '<div>만남의광장2</div>',
+                    latlng: new kakao.maps.LatLng(37.5172768, 127.1285561)
+                },
+                {
+                    title: '<div>만남의광장3</div>',
+                    latlng: new kakao.maps.LatLng(37.5173151, 127.1293664)
+                },
+                {
+                    title: '<div>만남의광장4</div>',
+                    latlng: new kakao.maps.LatLng(37.5170351, 127.1290855)
+                },
+                {
+                    title: '<div>3대3농구장</div>',
+                    latlng: new kakao.maps.LatLng(37.5160969, 127.1283462)
+                },
+                {
+                    title: '<div>만남의광장5</div>',
+                    latlng: new kakao.maps.LatLng(37.5167585, 127.1297426)
+                },
+                {
+                    title: '<div>만남의광장6</div>',
+                    latlng: new kakao.maps.LatLng(37.5165817, 127.1301771)
+                },
+                {
+                    title: '<div>만남의광장7</div>',
+                    latlng: new kakao.maps.LatLng(37.5165059, 127.1303589)
+                },
+                {
+                    title: '<div>만남의광장8</div>',
+                    latlng: new kakao.maps.LatLng(37.5167617, 127.1306448)
+                },
+                {
+                    title: '<div>가족놀이동산1</div>',
+                    latlng: new kakao.maps.LatLng(37.5209402, 127.123255)
+                },
+                {
+                    title: '<div>가족놀이동산2</div>',
+                    latlng: new kakao.maps.LatLng(37.5230441, 127.1223323)
+                },
+                {
+                    title: '<div>가족놀이동산3</div>',
+                    latlng: new kakao.maps.LatLng(37.5234828, 127.122956)
+                },
+                {
+                    title: '<div>가족놀이동산4</div>',
+                    latlng: new kakao.maps.LatLng(37.5236514, 127.123316)
+                },
+                {
+                    title: '<div>가족놀이동산5</div>',
+                    latlng: new kakao.maps.LatLng(37.5244882, 127.1227917)
+                },
+                {
+                    title: '<div>나홀로나무1</div>',
+                    latlng: new kakao.maps.LatLng(37.5234448, 127.1222415)
+                },
+                {
+                    title: '<div>몽촌역사관</div>',
+                    latlng: new kakao.maps.LatLng(37.5241598, 127.1244067)
+                },
+                {
+                    title: '<div>피크닉장1</div>',
+                    latlng: new kakao.maps.LatLng(37.5237958, 127.1220698)
+                },
+                {
+                    title: '<div>피크닉장2</div>',
+                    latlng: new kakao.maps.LatLng(37.5241457, 127.1218935)
+                },
+                {
+                    title: '<div>나홀로나무2</div>',
+                    latlng: new kakao.maps.LatLng(37.5232842, 127.1189893)
+                },
+                {
+                    title: '<div>나홀로나무3</div>',
+                    latlng: new kakao.maps.LatLng(37.5216632, 127.1191958)
+                },
+                {
+                    title: '<div>나홀로나무4</div>',
+                    latlng: new kakao.maps.LatLng(37.521535, 127.119851)
+                },
+                {
+                    title: '<div>나홀로나무5</div>',
+                    latlng: new kakao.maps.LatLng(37.5213231, 127.1172217)
+                },
+                {
+                    title: '<div>곰말다리1</div>',
+                    latlng: new kakao.maps.LatLng(37.5213242, 127.1179141)
+                },
+                {
+                    title: '<div>곰말다리2</div>',
+                    latlng: new kakao.maps.LatLng(37.5213231, 127.1172217)
+                },
+                {
+                    title: '<div>지구촌공원</div>',
+                    latlng: new kakao.maps.LatLng(37.5170922, 127.121414)
+                },
+                {
+                    title: '<div>야생화학습장1</div>',
+                    latlng: new kakao.maps.LatLng(37.5177456, 127.1216276)
+                },
+                {
+                    title: '<div>야생화학습장2</div>',
+                    latlng: new kakao.maps.LatLng(37.5180703, 127.1219555)
+                },
+                {
+                    title: '<div>야생화학습장3</div>',
+                    latlng: new kakao.maps.LatLng(37.5185923, 127.1211763)
+                },
+                {
+                    title: '<div>곰말다리3</div>',
+                    latlng: new kakao.maps.LatLng(37.5211774, 127.1177729)
+                },
+                {
+                    title: '<div>음악분수1</div>',
+                    latlng: new kakao.maps.LatLng(37.5204402, 127.1178142)
+                },
+                {
+                    title: '<div>음악분수2</div>',
+                    latlng: new kakao.maps.LatLng(37.5199935, 127.1185793)
+                },
+                {
+                    title: '<div>음악분수3</div>',
+                    latlng: new kakao.maps.LatLng(37.5191814, 127.1188243)
+                },
+                {
+                    title: '<div>음악분수4</div>',
+                    latlng: new kakao.maps.LatLng(37.5179733, 127.118944)
+                },
+                {
+                    title: '<div>물레방아</div>',
+                    latlng: new kakao.maps.LatLng(37.5172595, 127.1196699)
+                },
+                {
+                    title: '<div>평화의광장3</div>',
+                    latlng: new kakao.maps.LatLng(37.5188471, 127.1163051)
+                },
+                {
+                    title: '<div>평화의광장4</div>',
+                    latlng: new kakao.maps.LatLng(37.5187264, 127.1156362)
+                },
+                {
+                    title: '<div>평화의광장5</div>',
+                    latlng: new kakao.maps.LatLng(37.5180156, 127.1158136)
+                },
+                {
+                    title: '<div>평화의광장6</div>',
+                    latlng: new kakao.maps.LatLng(37.5181884, 127.116518)
+                },
+                {
+                    title: '<div>평화의광장7</div>',
+                    latlng: new kakao.maps.LatLng(37.5193465, 127.1163108)
+                },
+                {
+                    title: '<div>평화의광장8</div>',
+                    latlng: new kakao.maps.LatLng(37.5195321, 127.1163949)
+                },
+                {
+                    title: '<div>몽촌해자</div>',
+                    latlng: new kakao.maps.LatLng(37.5198127, 127.1166712)
+                },
+                {
+                    title: '<div>들꽃마루</div>',
+                    latlng: new kakao.maps.LatLng(37.5129723, 127.1267228)
+                },
+                // 성동구
+                {
+                    title: '<div>서울숲푸르지오</div>',
+                    latlng: new kakao.maps.LatLng(37.543585, 127.022833)
+                },
+                {
+                    title: '<div>서울숲역3번출구</div>',
+                    latlng: new kakao.maps.LatLng(37.542910, 127.044397)
+                },
+                {
+                    title: '<div>서울숲역2번출구</div>',
+                    latlng: new kakao.maps.LatLng(37.542974, 127.044674)
                 }
             ];
 

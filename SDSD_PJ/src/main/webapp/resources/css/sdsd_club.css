@@ -591,3 +591,121 @@
 .viewClub_section .clubNotice_infoBox_03 .page-link {
     color: rgb(50, 157, 245);
 }
+
+
+/*
+================================================
+모임 생성하기 페이지 CSS StyleSheet
+================================================
+*/
+
+.createClub_section {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.createClub_section .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
+}
+
+.createClub_section .titleBox h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.createClub_section .createForm_Wrap {
+    width: 70%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.createClub_section .createForm_Wrap .fileUploadBox {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.createClub_section .createForm_Wrap .fileUploadBox .fileboxBtn label {
+    display: inline-block;
+    padding: .5em 1.5em;
+    color: #ffffff;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: rgb(50, 157, 245);
+    cursor: pointer;
+    border: 1px solid rgb(50, 157, 245);
+    /* border-bottom-color: #e2e2e2; */
+    border-radius: .25em;
+}
+
+.createClub_section .createForm_Wrap .fileUploadBox .fileboxBtn label:hover {
+    background-color: #ffffff;
+    color: rgb(50, 157, 245);
+}
+
+/* 파일 필드 숨기기 */
+.createClub_section .createForm_Wrap .fileUploadBox .fileboxBtn input[type="file"] {  
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+
+.createClub_section .createForm_Wrap .fileUploadBox .subText {
+    margin: 0 auto;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.createClub_section .createForm_Wrap .clubInfoForm label.col-form-label {
+    font-weight: 600;
+}
+
+.createClub_section .buttonBox{
+    text-align: center;
+    margin: 0 auto;
+}
+.createClub_section .buttonBox input.submitBtn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.createClub_section .buttonBox input.submitBtn:hover {
+    color: rgb(50, 157, 245);
+    background-color: #ffffff;
+}
+
+.createClub_section .buttonBox input.resetBtn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: #a9a9a9;
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: 1px solid #a9a9a9;
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.createClub_section .buttonBox input.resetBtn:hover {
+    color: #1f1f1f;
+    background-color: #ffffff;
+}
