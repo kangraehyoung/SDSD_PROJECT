@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+/*
+==============================================
+나의 활동 페이지 관련 CSS StyleSheet
+==============================================
+*/
+
+.ploggingPerson {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.ploggingPerson .titleBox {
+    margin: 0 auto;
+    padding: 100px 0 20px 0;
+    background-color: rgba(88, 170, 236, 0.362);
+}
+
+.ploggingPerson .titleBox h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding-bottom: 50px;
+}
+
+.ploggingPerson .menuBox {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+
+.ploggingPerson .menuBox .menuList{
+    width: 20%;
+    display: inline-block;
+    /* text-align: center; */
+    align-items: center;
+}
+
+.ploggingPerson .menuBox .menuList a {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 1rem;
+
+}
+
+.ploggingPerson .menuBox .menuList span img {
+    width: 25px;
+    height: 25px;
+    transform: translate(-5px, -10%);
+}
+
+/* section calendar */
+
+.sec_cal {
+    width: 360px;
+    margin: 0 auto;
+    font-family: "NotoSansR";
+}
+
+.ma_calendar1 .cal_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 78px;
+}
+
+.ma_calendar1 .cal_nav .year-month {
+    width: 300px;
+    text-align: center;
+    line-height: 1;
+}
+
+.ma_calendar1 .cal_nav .nav {
+    display: flex;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+.ma_calendar1 .cal_nav .go-prev,
+.ma_calendar1 .cal_nav .go-next {
+    display: block;
+    width: 20px;
+    height: 15px;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ma_calendar1 .cal_nav .go-prev::before,
+.ma_calendar1 .cal_nav .go-next::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #000;
+    border-width: 3px 3px 0 0;
+    transition: border 0.1s;
+}
+
+.ma_calendar1 .cal_nav .go-prev:hover::before,
+.ma_calendar1 .cal_nav .go-next:hover::before {
+    border-color: #ed2a61;
+}
+
+.ma_calendar1 .cal_nav .go-prev::before {
+    transform: rotate(-135deg);
+}
+
+.ma_calendar1 .cal_nav .go-next::before {
+    transform: rotate(45deg);
+}
+
+.sec_cal .cal_wrap {
+    padding-top: 40px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.sec_cal .cal_wrap .days {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.sec_cal .cal_wrap::after {
+    top: 368px;
+}
+
+.sec_cal .cal_wrap .day {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 7);
+    text-align: left;
+    color: rgb(20, 20, 20);
+    font-size: 12px;
+    text-align: center;
+    border-radius:5px
+}
+
+.current.today {background: rgba(88, 170, 236, 0.302);}
+
+.sec_cal .cal_wrap .dates {
+    display: flex;
+    flex-flow: wrap;
+    height: 200px;
+}
+
+.sec_cal .cal_wrap .day:nth-child(7n -1) {
+    color: #3c6ffa;
+}
+
+.sec_cal .cal_wrap .day:nth-child(7n) {
+    color: #ed2a61;
+}
+
+.sec_cal .cal_wrap .day.disable {
+    color: #ddd;
+}
+
+.ma_calendar1 .mc_img img {
+    width: 50px;
+    height: 50px;
+}
+
+/* 세번째 전체 틀 */ 
+
+.ploggingPerson .ma_Content  {
+    width: 100%;
+}
+
+.ploggingPerson .ma_Content .mc_1, .mc_2, .mc_3 {
+    width: 100%;
+    display: flex;
+}
+
+
+.ploggingPerson .ma_Content .mc_1 .mc_1_1,
+.ploggingPerson .ma_Content .mc_2 .mc_2_1,
+.ploggingPerson .ma_Content .mc_3 .mc_3_1 {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-right: 2px solid rgba(100, 148, 237, 0.158);
+}
+
+.ploggingPerson .ma_Content .mc_1 .mc_1_2,
+.ploggingPerson .ma_Content .mc_2 .mc_2_2,
+.ploggingPerson .ma_Content .mc_3 .mc_3_2 {
+    width: 80%;
+}
+
+.ploggingPerson .ma_Content .mc_1 .mc_1_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.ploggingPerson .ma_Content .mc_1 .mc_1_2 .ma_calendar1, .ma_calendar2 {
+    width: 40%;
+}
+
+.ploggingPerson .ma_Content .mc_1 .mc_1_2 .ma_calendar1 {
+    margin-left: -60px;
+    margin-right: 30px;
+}
+
+.ploggingPerson .ma_Content .mc_1 .mc_1_2 .ma_calendar2 .sec_cal {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ploggingPerson .ma_Content .mc_1 .mc_1_2 .ma_calendar1 .mc_img{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ploggingPerson .ma_Content .mc_2 .mc_2_2 .mc22_1 select, .mc_32_1 select {
+    width: 30%;
+    margin: 20px auto;
+    background-color: rgba(183, 227, 241, 0);
+    border: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ploggingPerson .ma_Content .mc_2 .mc_2_2 .mc22_2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.ploggingPerson .ma_Content .mc_2 .mc_2_2 .mc22_2 .mc22_21, .mc22_22 {
+    width: 40%;
+    align-items: center;
+}
+
+.ploggingPerson .ma_Content .mc_2 .mc_2_2 .mc22_2 .mc22_21 .list-group .list-group-item,
+.mc22_22 .list-group .list-group-item {
+    background-color: rgba(167, 219, 236, 0);
+    font-weight: bolder;
+    position: relative;
+}
+
+.ploggingPerson .ma_Content .mc_2 .mc_2_2 .mc22_2 .mc22_21 .list-group .list-group-item span, 
+.mc22_22 .list-group .list-group-item span {
+    position: absolute;
+    right: 15px;
+}
+
+
+.ploggingPerson .ma_Content .mc_3 .mc_3_2 .mc_32_2 .progress {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.ploggingPerson .ma_Content .mc_3 .mc_3_2 .mc_32_1 {
+    margin: 30px auto;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.ploggingPerson .ma_Content .mc_3 .mc_3_2 .mc_32_1 input {
+    background-color: rgba(19, 109, 243, 0);
+    border: 0.5px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ploggingPerson .ma_Content .mc_3 .mc_3_2 .mc_32_2 .percent {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+.ploggingPerson .ma_Content .mc_1 {
+    height: 300px;
+}
+
+.ploggingPerson .ma_Content .mc_2 {
+    height: 300px;
+    background-color: rgba(88, 170, 236, 0.302);
+}
+
+.ploggingPerson .ma_Content .mc_3 {
+    height: 200px;
+}
