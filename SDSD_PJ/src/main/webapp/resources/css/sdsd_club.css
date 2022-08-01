@@ -719,7 +719,9 @@
 
 .clubPlogBoard_section{}
 
-.clubPlogBoard_section .buttonBox{}
+.clubPlogBoard_section .buttonBox{
+	padding-bottom: 30px;
+}
 
 .clubPlogBoard_section .buttonBox .boardBtn {
     text-align: center;
@@ -751,4 +753,99 @@
     color: cornflowerblue;
     font-weight: 600;
     cursor: pointer;
+}
+
+.clubPlogBoard_section .plogBoard_Container {
+    overflow: hidden;
+}
+
+.clubPlogBoard_section .plogBoard_Container .col-md-3 {
+    /* height: 25%; */
+    padding: 0 !important;
+}
+
+.clubPlogBoard_section .plogBoard_Container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 이미지에 호버기능 */
+.clubPlogBoard_section .plogBoard_Container .boardImgBox > img:hover {
+    width: auto;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox{
+    position: relative;
+    display:inline-block;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox img{
+    max-width: 100%;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: none;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox p {
+    line-height: 1.5;
+    color: #fff;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgb(67, 145, 208);
+    border-radius: 10px;
+    cursor: pointer !important;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox a:hover {
+    background-color: #ffffff;
+    color: rgb(67, 145, 208);
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox::before, .clubPlogBoard_section .plogBoard_Container .boardImgBox::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    transform:translate(-50%,-50%);
+    transition:all .6s;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox::before{
+    /* background: #3B78F0; */
+    background-color: rgb(74, 165, 240);
+    opacity: .7;
+    filter: alpha(opacity=50);
+    width:0;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox::after{
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox:hover div.hoverBox{
+    display: inline-block;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox:hover::before{
+    width:100%;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox:hover::after{
+    height:100%;
 }

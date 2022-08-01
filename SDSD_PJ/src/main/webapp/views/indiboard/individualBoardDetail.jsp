@@ -108,7 +108,7 @@
               <sub><c:out value="${ reply.repwriterId }"/></sub>
             </div>
             <div class="bbb_coment">
-              <p>중고 3만 벤츠 e220d 500만원에 급매매 연락주세요~ </p>
+              <sub><c:out value="${ reply.repcontent }"/></sub>
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
