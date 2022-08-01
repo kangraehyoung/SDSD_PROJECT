@@ -197,7 +197,7 @@ public class BoardDao {
 			
 			rs = pstmt.executeQuery();
 			
-			while(rs.next()) {
+			if(rs.next()) {
 				indiBoard = new IndiBoard();
 				
 				indiBoard.setMaBorNo(rs.getInt("INDIBOR_NUMBER"));
@@ -207,7 +207,9 @@ public class BoardDao {
 				indiBoard.setReadCount(rs.getInt("INDI_READCOUNT"));
 				indiBoard.setBorFile(rs.getString("INDI_BOR_FILE"));
 				indiBoard.setCreateDate(rs.getString("INDI_CREATE_DATE"));
-				indiBoard.setUpdateDate(rs.getString("INDI_UPDATE_DATE"));				
+				indiBoard.setUpdateDate(rs.getString("INDI_UPDATE_DATE"));
+				
+				indiBoard.setReplies(this.getRepliesByNo(connection, maBorNo));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -218,6 +220,45 @@ public class BoardDao {
 		
 		
 		return indiBoard;
+	}
+
+	private List<Reply> getRepliesByNo(Connection connection, int repboardNo) {
+		List<Reply> replies = new ArrayList<>();
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		String query = null;
+		try {
+			query = "SELECT * "
+					+ "FROM IBREPLY IBR "
+					+ "JOIN MEMBER M ON(IBR.IBREP_WRITER_NUMBER = M.MEM_NUMBER) "
+					+ "WHERE IBR.IBREP_STATUS = 'Y' AND IBR.IBREP_BOR_NUMBER = ? "
+					+ "ORDER BY IBR.IBREP_NUMBER DESC";
+			
+			
+			pstm = connection.prepareStatement(query);
+			
+			pstm.setInt(1, repboardNo);
+			rs = pstm.executeQuery();
+			
+			while(rs.next()) {
+				Reply reply = new Reply();
+				reply.setNo(rs.getInt("IBREP_NUMBER"));
+				reply.setRepboardNo(rs.getInt("IBREP_BOR_NUMBER"));
+				reply.setRepcontent(rs.getString("IBREP_CONTENT"));
+				reply.setRepwriterId(rs.getString("MEM_NICKNAME"));
+				reply.setRepcreateDate(rs.getDate("IBREP_CREATE_DATE"));
+				reply.setRepmodifyDate(rs.getDate("IBREP_MODIFY_DATE"));
+				
+				replies.add(reply);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		
+		return replies;
 	}
 
 	public int updateReadCount(Connection connection, IndiBoard indiBoard) {
