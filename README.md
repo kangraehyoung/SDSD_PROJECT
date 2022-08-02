@@ -172,4 +172,9 @@
 * 모임 플로깅 인증 상세 페이지 구현 완료 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoardDetail.jsp
 * 모임 플로깅 인증 등록 페이지 구현 완료 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoardWrite.jsp
 * 08/03 작업 예정 목록 (최송희)<br>모임 등록 후 랜딩 될 완료페이지<br>메인or소개페이지(호정이랑 나눠서 할 예정) <br>메인 메뉴바 수정
+* 개인 플로깅 인증 게시판 수정 (서호정) <br>
+** (모임 플로깅과 같게. hover 효과 및 상세 아이콘 수정)
+* 랭킹 페이지 구현 완료 (서호정) <br> 
+** (랭킹 페이지 fixed 부분 더 고민해야 할 필요 있음.. 일단 sticky로..!) <br>
+http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp
 
