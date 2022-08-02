@@ -168,6 +168,6 @@
 ### 백앤드 작업 내용
 
 ### 프론트앤드 작업 내용
-* 모임 공지사항 등록 페이지
+* 모임 공지사항 등록 페이지<br>http://localhost:8090/SDSD_PJ/views/ploboard/uploadClubNotice.jsp
 * 모임 플로깅 인증 등록 페이지
 * 모임 플로깅 인증 상세 페이지
