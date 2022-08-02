@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     
-
+					<input type="hidden" value="${loginMember.no }" name="no">
                     <!-- 모임 소개 -->
                     <div class="mb-3 row">
                         <label for="clubText" class="col-md-3 col-form-label">모임 소개</label>

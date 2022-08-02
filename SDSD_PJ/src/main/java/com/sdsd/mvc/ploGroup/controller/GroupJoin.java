@@ -37,6 +37,7 @@ public class GroupJoin extends HttpServlet {
 
         MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding);
 		
+        plogroup.setPloMemNum(Integer.parseInt(mr.getParameter("no")));
 		plogroup.setPloLeader(mr.getParameter("ploLeader"));
 		plogroup.setPloTitle(mr.getParameter("ploTitle"));
 		plogroup.setPloIntro(mr.getParameter("ploIntro"));
