@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.4" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.6" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.7" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.8" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.9" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_My_Activity.css?v0.0.2" type="text/css">
     
     <!-- 부트스트랩 및 라이브러리 -->
@@ -68,7 +68,7 @@
                         <ul class="sub_item menu_02">
                             <li><a href="${ path }/club">모임 찾기</a></li>
                             <li><a href="${ path }/plo/groupjoin">모임 생성</a></li>
-                            <li><a href="">모임 플로깅 인증 게시판</a></li>
+                            <li><a href="${ path }/groupboard/groupboardlist">모임 플로깅 인증 게시판</a></li>
                         </ul>
                 </li>
                 <li class="nav_item">

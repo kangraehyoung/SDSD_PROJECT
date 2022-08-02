@@ -720,7 +720,7 @@
 .clubPlogBoard_section{}
 
 .clubPlogBoard_section .buttonBox{
-	padding-bottom: 30px;
+	/* padding-bottom: 30px; */
 }
 
 .clubPlogBoard_section .buttonBox .boardBtn {
@@ -803,12 +803,13 @@
 }
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox a {
-    color: #fff;
+    color: rgb(102, 99, 99);
     text-decoration: none;
     padding: 10px 20px;
-    background-color: rgb(67, 145, 208);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     cursor: pointer !important;
+    font-weight: bold;
 }
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox a:hover {
@@ -826,17 +827,14 @@
     transform:translate(-50%,-50%);
     transition:all .6s;
 }
-
 .clubPlogBoard_section .plogBoard_Container .boardImgBox::before{
     /* background: #3B78F0; */
-    background-color: rgb(74, 165, 240);
+    background-color: rgb(190, 201, 212);
     opacity: .7;
     filter: alpha(opacity=50);
     width:0;
 }
 
-.clubPlogBoard_section .plogBoard_Container .boardImgBox::after{
-}
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox:hover div.hoverBox{
     display: inline-block;
@@ -848,4 +846,141 @@
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox:hover::after{
     height:100%;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .hb_like,
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .hb_coment {
+    padding: 0 0 5px 5px;
+    /* transform: translateY(-5px); */
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .bi-chat {
+    /* transform: translateY(-1.5px); */
+    margin-left: 8px;
+}
+
+
+/*
+================================================
+모임 공지 등록 페이지 CSS StyleSheet
+================================================
+*/
+
+.uploadClubNotice_section {
+    margin: 0 auto;
+}
+
+.uploadClubNotice_section .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
+}
+
+.uploadClubNotice_section .titleBox h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.uploadClubNotice_section .formContainer {
+    padding: 60px 0;
+}
+.uploadClubNotice_section .formContainer .formWrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.uploadClubNotice_section .formContainer .formWrap .noticeLabel {
+    text-align: right;
+}
+
+.uploadClubNotice_section .formContainer .buttonBox{
+    text-align: center;
+    margin: 0 auto;
+}
+.uploadClubNotice_section .formContainer .buttonBox input.submitBtn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.uploadClubNotice_section .formContainer .buttonBox input.submitBtn:hover {
+    color: rgb(50, 157, 245);
+    background-color: #ffffff;
+}
+
+.uploadClubNotice_section .formContainer .buttonBox input.resetBtn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: #a9a9a9;
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: 1px solid #a9a9a9;
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.uploadClubNotice_section .formContainer .buttonBox input.resetBtn:hover {
+    color: #1f1f1f;
+    background-color: #ffffff;
+}
+
+/*
+================================================
+모임 인증 상세보기 페이지 CSS StyleSheet
+================================================
+*/
+
+.clubPlogBoardDetail_section{}
+
+.clubPlogBoardDetail_section .buttonBox{
+	/* padding-bottom: 30px; */
+}
+
+.clubPlogBoardDetail_section .buttonBox .boardBtn {
+    text-align: center;
+}
+
+.clubPlogBoardDetail_section .buttonBox .boardBtn button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size : 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance : none;
+    -moz-appearance: none;
+    appearance : none;
+}
+
+.clubPlogBoardDetail_section .buttonBox .boardBtn button:hover {
+    background-color: #ffffff;
+    color: rgb(50, 157, 245);
+}
+
+.clubPlogBoardDetail_section .buttonBox .indiBoard {}
+.clubPlogBoardDetail_section .buttonBox .indiBoard p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: cornflowerblue;
+    font-weight: 600;
+    cursor: pointer;
 }

@@ -166,50 +166,151 @@
 
 /* picture */
 
+.ploggingPerson .buttonBox{
+	padding-bottom: 30px;
+}
 
-.picture img {
+.ploggingPerson .buttonBox .boardBtn {
+    text-align: center;
+}
+
+.ploggingPerson .buttonBox .boardBtn button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size : 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance : none;
+    -moz-appearance: none;
+    appearance : none;
+}
+
+.ploggingPerson .buttonBox .boardBtn button:hover {
+    background-color: #ffffff;
+    color: rgb(50, 157, 245);
+}
+
+.ploggingPerson_section .buttonBox .indiBoard p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: cornflowerblue;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ploggingPerson .plogBoard_Container {
+    overflow: hidden;
+}
+
+.ploggingPerson .plogBoard_Container .col-md-3 {
+    /* height: 25%; */
+    padding: 0 !important;
+}
+
+.ploggingPerson .plogBoard_Container img {
+    display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
-.p1, .p2 {
-    display: flex;
-    width: 100%;
-    position:relative;
-    overflow:hidden;
+
+/* 이미지에 호버기능 */
+.ploggingPerson .plogBoard_Container .boardImgBox > img:hover {
+    width: auto;
 }
 
-.p1 > div, .p2 > div {
+.ploggingPerson .plogBoard_Container .boardImgBox{
     position: relative;
+    display: inline-block;
 }
 
-.blur
-{
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.4);
-
-    position: absolute; /* 이미지와 겹치게 처리 */
-    top: 0; left: 0;
-
-    color: #fff; text-align: center;
-    line-height: 130px;
-    font-size: small;
-    font-weight: bold;
-
-    opacity: 0; /* 처음엔 안보이고 */
-
-    transition: 0.3s;
+.ploggingPerson .plogBoard_Container .boardImgBox img{
+    max-width: 100%;
 }
 
-.blur:hover
-{
-    opacity: 1;
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: none;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
 }
 
-.blur a {
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox p {
+    line-height: 1.5;
+    color: #fff;
+}
+
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox a {
+    color: rgb(102, 99, 99);
     text-decoration: none;
-    color: white;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer !important;
+    font-weight: bold;
 }
+
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox a:hover {
+    background-color: #ffffff;
+    color: rgb(67, 145, 208);
+}
+
+.ploggingPerson .plogBoard_Container .boardImgBox::before, .clubPlogBoard_section .plogBoard_Container .boardImgBox::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    transform:translate(-50%,-50%);
+    transition:all .6s;
+}
+.ploggingPerson .plogBoard_Container .boardImgBox::before{
+    /* background: #3B78F0; */
+    background-color: rgb(190, 201, 212);
+    opacity: .7;
+    filter: alpha(opacity=50);
+    width:0;
+}
+
+
+.ploggingPerson .plogBoard_Container .boardImgBox:hover div.hoverBox{
+    display: inline-block;
+}
+
+.ploggingPerson .plogBoard_Container .boardImgBox:hover::before{
+    width:100%;
+}
+
+.ploggingPerson .plogBoard_Container .boardImgBox:hover::after{
+    height:100%;
+}
+
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox .hb_lc {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .hb_like,
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .hb_coment {
+    padding: 0 0 5px 5px;
+    transform: translateY(-5px);
+}
+
+.ploggingPerson .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .bi-chat {
+    transform: translateY(-1.5px);
+    margin-left: 8px;
+}
+
 
 /*
 개인플로깅 인증 게시판 상세보기 css
