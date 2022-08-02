@@ -139,7 +139,7 @@
             <div id="ClubNotice_Info" class="clubNotice_infoBox_03">
                 <!-- 모임 리더에게만 보이는 버튼 -->
                 <div class="buttonBox">
-                    <button>공지사항 작성</button>
+                    <button onclick="location.href='${ path }/views/ploboard/uploadClubNotice.jsp'">공지사항 작성</button>
                 </div>
                 
                 <div class="tableWrap">
