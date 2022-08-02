@@ -207,6 +207,7 @@
       <div>
         <button class="btnprev">이전</button>
         <button class="btnprev" id="btnDelete">삭제</button>
+        <button class="btnprev" id="btnUpdate">수정</button>
         <button class="btnnext">다음</button>
       </div>
     </div>
@@ -216,6 +217,10 @@
 	$(document).ready(() => {
 		$("#btnDelete").on("click", () => {
 			location.replace("${path}/indiboard/indidelete?maBorNo=${indiBoard.maBorNo}");
+		})
+		
+		$("#btnUpdate").on("click", () => {
+			location.replace("${path}/indiboard/indiUpdate?maBorNo=${indiBoard.maBorNo}");
 		})
 	});
 </script>

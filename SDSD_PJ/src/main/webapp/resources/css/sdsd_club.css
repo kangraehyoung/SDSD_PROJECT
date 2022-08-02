@@ -198,6 +198,7 @@
 }
 
 .imgBox div.hoverBox{
+	z-index: 999;
     position: absolute;
     top: 50%;
     left: 0;
@@ -787,6 +788,7 @@
 }
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox{
+	z-index: 999;
     position: absolute;
     top: 50%;
     left: 0;
