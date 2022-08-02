@@ -949,43 +949,26 @@
 ================================================
 */
 
-.clubPlogBoardDetail_section{}
-
-.clubPlogBoardDetail_section .buttonBox{
-	/* padding-bottom: 30px; */
+.clubPlogBoardDetail_section {
+    margin: 0 auto;
 }
 
-.clubPlogBoardDetail_section .buttonBox .boardBtn {
-    text-align: center;
+.clubPlogBoardDetail_section .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
 }
 
-.clubPlogBoardDetail_section .buttonBox .boardBtn button {
-    text-decoration: none;
-    color: #ffffff;
-    font-size : 16px;
-    background-color: rgb(50, 157, 245);
-    padding: 10px 50px;
-    border-radius: 10px;
-    border: 1px solid rgb(50, 157, 245);
-    -webkit-apperance : none;
-    -moz-appearance: none;
-    appearance : none;
-}
-
-.clubPlogBoardDetail_section .buttonBox .boardBtn button:hover {
-    background-color: #ffffff;
-    color: rgb(50, 157, 245);
-}
-
-.clubPlogBoardDetail_section .buttonBox .indiBoard {}
-.clubPlogBoardDetail_section .buttonBox .indiBoard p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-    text-align: center;
-    color: cornflowerblue;
+.clubPlogBoardDetail_section .titleBox h2 {
+    font-size: 2em;
     font-weight: 600;
-    cursor: pointer;
+    text-align: center;
 }
+
+.clubPlogBoardDetail_section .titleBox h2 img {
+    width: 40px;
+    transform: translate(-10px, -5px);
+}
+
 
 .clubPlogBoardDetail_section .plogBoardWrap{
     padding: 60px 0;
@@ -1084,7 +1067,7 @@
 .clubPlogBoardDetail_section .plogBoardButtonWrap {
     width: 70%;
     margin: 0 auto;
-    padding-bottom: 60px;
+	padding-bottom: 60px;
 }
 
 .clubPlogBoardDetail_section .plogBoardButtonWrap button {
