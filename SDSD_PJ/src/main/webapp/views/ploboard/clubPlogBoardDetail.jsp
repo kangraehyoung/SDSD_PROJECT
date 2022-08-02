@@ -58,7 +58,8 @@
                     <!-- 인증 내용 -->
                     <div class="textWrap">
                         <p>게시글 내용 들어갈 자리<br>두번째 줄</p>
-                        <span>#키워드 들어갈 자리</span>
+                        <span class="keyword">#키워드 들어갈 자리</span><br>
+                        <span class="clubName">모임 이름 :  </span>
                     </div>
 
                     <!-- 댓글 내용  c:if로 묶어서 처리하면 됨-->
