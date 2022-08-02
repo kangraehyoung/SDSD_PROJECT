@@ -37,7 +37,7 @@ public class IndiBoardUpdate extends HttpServlet {
 	    	
 	    	request.setAttribute("indiBoard", indiBoard);
 	    	System.out.println("수정페이지로 이동");
-			request.getRequestDispatcher("/views/indiboard/testUpdateBoard.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/indiboard/individualBoardUpdate.jsp").forward(request, response);
 		} 
 			
 	}
