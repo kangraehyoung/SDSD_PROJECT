@@ -168,6 +168,8 @@
 ### 백앤드 작업 내용
 
 ### 프론트앤드 작업 내용
-* 모임 공지사항 등록 페이지 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/uploadClubNotice.jsp
-* 모임 플로깅 인증 상세 페이지 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoardDetail.jsp
-* 모임 플로깅 인증 등록 페이지 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoardWrite.jsp
+* 모임 공지사항 등록 페이지 구현 완료 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/uploadClubNotice.jsp
+* 모임 플로깅 인증 상세 페이지 구현 완료 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoardDetail.jsp
+* 모임 플로깅 인증 등록 페이지 구현 완료 (최송희) <br>http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoardWrite.jsp
+* 08/03 작업 예정 목록 (최송희)<br>모임 등록 후 랜딩 될 완료페이지<br>메인or소개페이지(호정이랑 나눠서 할 예정) <br>메인 메뉴바 수정
+
