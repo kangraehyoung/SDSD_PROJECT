@@ -35,7 +35,7 @@ public class GroupBoardList extends HttpServlet {
     	
     	request.setAttribute("pageInfo", pageInfo);
     	request.setAttribute("groupBoardList", groupBoardList);
-    	request.getRequestDispatcher("").forward(request, response);
+    	request.getRequestDispatcher("http://localhost:8090/SDSD_PJ/views/ploboard/clubPlogBoard.jsp").forward(request, response);
     }
 
     @Override
