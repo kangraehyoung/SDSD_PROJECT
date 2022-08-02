@@ -1109,3 +1109,177 @@
 .clubPlogBoardDetail_section .plogBoardButtonWrap .nextBtnBox {
     text-align: right;
 }
+
+/*
+================================================
+모임 인증 등록 페이지 CSS StyleSheet
+================================================
+*/
+.clubPlogBoardWrite_section {
+    margin: 0 auto;
+}
+
+.clubPlogBoardWrite_section .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
+}
+
+.clubPlogBoardWrite_section .titleBox h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.clubPlogBoardWrite_section .titleBox h2 img {
+    width: 40px;
+    transform: translate(-10px, -5px);
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .fileboxBtn {
+    margin-top: 10px;
+    /* top: 50%;
+    width: 50%;
+    position: absolute; */
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .fileboxBtn label {
+    display: inline-block;
+    padding: .5em 1.5em;
+    color: #ffffff;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: rgb(50, 157, 245);
+    cursor: pointer;
+    border: 1px solid rgb(50, 157, 245);
+    /* border-bottom-color: #e2e2e2; */
+    border-radius: .25em;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .fileboxBtn label:hover {
+    background-color: #ffffff;
+    color: rgb(50, 157, 245);
+}
+
+/* 파일 필드 숨기기 */
+.clubPlogBoardWrite_section .plogBoardWrap .fileboxBtn input[type="file"] {  
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .subText {
+    margin: 0 auto;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap{
+    padding: 60px 0;
+}
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .col.nameCol {
+    padding: 0;
+    border-left: 1px solid darkgray;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .nameContainer {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 10px;
+}
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .nameContainer .profileImgBox,
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .commentWrap .profileImgBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 0px 20px 0px 20px;
+    float: left;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .nameContainer .profileImgBox img,
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .commentWrap .profileImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid darkgray;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap p {
+    text-align: right;
+    font-size: 0.9rem;
+    color: rgb(50, 157, 245);
+    font-weight: 600;
+    padding: 5px 10px 0 0;
+    margin-bottom: 0;
+}
+
+.clubPlogBoardWrite_section .extraWrap .inputBox {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+.clubPlogBoardWrite_section .extraWrap .inputBox div {
+    margin-right: 10px;
+}
+
+.clubPlogBoardWrite_section .extraWrap .inputBox label {
+    margin-right: 20px;
+    margin-left: 8px;
+    font-size: small;
+    font-weight: bold;
+}
+
+.clubPlogBoardWrite_section .extraWrap .inputBox #plogBoardColorPick {
+    margin-right: 30px;
+}
+
+
+.clubPlogBoardWrite_section .plogBoardButtonWrap {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.clubPlogBoardWrite_section .plogBoardButtonWrap button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.clubPlogBoardWrite_section .plogBoardButtonWrap button:hover {
+    color: rgb(50, 157, 245);
+    background: #ffffff;
+}
+.clubPlogBoardWrite_section .plogBoardButtonWrap .boardBtnBox {
+    text-align: center;
+}
+
