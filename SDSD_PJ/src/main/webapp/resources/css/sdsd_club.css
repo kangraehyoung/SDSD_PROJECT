@@ -949,40 +949,163 @@
 ================================================
 */
 
-.clubPlogBoardDetail_section{}
-
-.clubPlogBoardDetail_section .buttonBox{
-	/* padding-bottom: 30px; */
+.clubPlogBoardDetail_section {
+    margin: 0 auto;
 }
 
-.clubPlogBoardDetail_section .buttonBox .boardBtn {
+.clubPlogBoardDetail_section .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
+}
+
+.clubPlogBoardDetail_section .titleBox h2 {
+    font-size: 2em;
+    font-weight: 600;
     text-align: center;
 }
 
-.clubPlogBoardDetail_section .buttonBox .boardBtn button {
+.clubPlogBoardDetail_section .titleBox h2 img {
+    width: 40px;
+    transform: translate(-10px, -5px);
+}
+
+
+.clubPlogBoardDetail_section .plogBoardWrap{
+    padding: 60px 0;
+}
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .col.nameCol {
+    padding: 0;
+    border-left: 1px solid darkgray;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .nameContainer {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 10px;
+}
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .nameContainer .profileImgBox,
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .profileImgBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 0px 20px 0px 20px;
+    float: left;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .nameContainer .profileImgBox img,
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .profileImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid darkgray;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap span.keyword {
+    font-size: 0.9rem;
+    color: rgb(50, 157, 245);
+    font-weight: 500;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap span.clubName {
+    font-size: 0.9rem;
+    color: #1f1f1f;
+    font-weight: 500;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap {
+    padding: 10px 0 20px 0;
+    /* border-bottom: 1px solid darkgray; */
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox p {
+    margin: 5px 0 0 0;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox p .commentName {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox p .commentLike {}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer {
+    padding: 10px 0 10px 20px;
+    border-top: 1px solid darkgray;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer .iconBox {
+    font-size: 1.2rem;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer .textBox {
+    font-size: 0.9rem;
+    padding-top: 5px;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer .textBox p {
+    margin-bottom: 0;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer .textBox .likeCount {
+    margin-right: 5px;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .inputCommentWrap {
+    padding-left: 10px;
+}
+
+.clubPlogBoardDetail_section .plogBoardButtonWrap {
+    width: 70%;
+    margin: 0 auto;
+	padding-bottom: 60px;
+}
+
+.clubPlogBoardDetail_section .plogBoardButtonWrap button {
     text-decoration: none;
     color: #ffffff;
-    font-size : 16px;
+    font-size: 16px;
     background-color: rgb(50, 157, 245);
-    padding: 10px 50px;
+    padding: 5px 30px;
     border-radius: 10px;
     border: 1px solid rgb(50, 157, 245);
-    -webkit-apperance : none;
+    -webkit-apperance: none;
     -moz-appearance: none;
-    appearance : none;
+    appearance: none;
 }
 
-.clubPlogBoardDetail_section .buttonBox .boardBtn button:hover {
-    background-color: #ffffff;
+.clubPlogBoardDetail_section .plogBoardButtonWrap button:hover {
     color: rgb(50, 157, 245);
+    background: #ffffff;
 }
 
-.clubPlogBoardDetail_section .buttonBox .indiBoard {}
-.clubPlogBoardDetail_section .buttonBox .indiBoard p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
+.clubPlogBoardDetail_section .plogBoardButtonWrap button.delete:hover {
+    color: #ffffff;
+    border-color: tomato;
+    background: tomato;
+}
+
+.clubPlogBoardDetail_section .plogBoardButtonWrap .prevBtnBox {
+    
+}
+.clubPlogBoardDetail_section .plogBoardButtonWrap .boardBtnBox {
     text-align: center;
-    color: cornflowerblue;
-    font-weight: 600;
-    cursor: pointer;
+}
+.clubPlogBoardDetail_section .plogBoardButtonWrap .nextBtnBox {
+    text-align: right;
 }
