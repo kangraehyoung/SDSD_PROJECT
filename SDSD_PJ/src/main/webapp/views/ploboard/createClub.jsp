@@ -88,11 +88,11 @@
                         <div class="col-sm-7" style="transform: translateY(20%);">
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label" for="inlineCheckbox1">남</label>
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="남자" name="gender">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="남" name="gender">
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label" for="inlineCheckbox2">여</label>
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="여자" name="gender">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="여" name="gender">
                             </div>
                         </div>
                     </div>

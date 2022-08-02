@@ -50,7 +50,7 @@ public class GroupJoin extends HttpServlet {
 		
 		if (result > 0) {
 			request.setAttribute("msg", "모임 등록 성공");
-    		request.setAttribute("location", "${ path }/club");
+    		request.setAttribute("location", "/club");
 		} else {
 			request.setAttribute("msg", "모임 등록 실패");
     		request.setAttribute("location", "/");
