@@ -118,5 +118,69 @@ public class GroupDao {
 		return result;
 	}
 
+	public GroupBoard findBoardByNo(Connection connection, int groupBorNo) {
+		GroupBoard groupBoard = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String query = "SELECT * "
+					+ "FROM GROUPBOARD IB "
+					+ "JOIN MEMBER M ON(IB.GROUPBOR_WRITER_NO = M.MEM_NUMBER) "
+					+ "WHERE IB.GROUP_BOR_STATUS = 'Y' AND GROUPBOR_NUMBER = ?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setInt(1, groupBorNo);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				groupBoard = new GroupBoard();
+				
+				groupBoard.setGroupBorNo(rs.getInt("GROUPBOR_NUMBER"));
+				groupBoard.setBorTitle(rs.getString("GROUPBOR_TITLE"));
+				groupBoard.setBorContent(rs.getString("GROUPBOR_CONTENT"));
+				groupBoard.setWriterName(rs.getString("GROUPBOR_WRITER_NAME"));
+				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
+				groupBoard.setBorFile(rs.getString("GROUP_BOR_FILE"));
+				groupBoard.setCreateDate(rs.getString("GROUP_CREATE_DATE"));
+				groupBoard.setUpdateDate(rs.getString("GROUP_UPDATE_DATE"));
+				
+//				groupBoard.setReplies(this.getRepliesByNo(connection, groupBorNo));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		
+		return groupBoard;
+	}
+
+	public int updateReadCount(Connection connection, GroupBoard groupBoard) {
+		int result =0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE GROUPBOARD SET GROUP_READCOUNT=? WHERE GROUPBOR_NUMBER=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			groupBoard.setReadCount(groupBoard.getReadCount() + 1);
+			
+			pstmt.setInt(1, groupBoard.getReadCount());
+			pstmt.setInt(2, groupBoard.getGroupBorNo());
+			
+			result = pstmt.executeUpdate();
+			System.out.println("몰라" + groupBoard.getReadCount());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
 	
 }
