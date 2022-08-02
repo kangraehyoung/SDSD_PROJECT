@@ -100,7 +100,7 @@ public class GroupDao {
 	public int updateStatus(Connection connection, int groupBorNo, String status) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String qurey = "UPDATE BOARD SET BOR_STATUS=? WHERE ALL_BOR_NUMBER=?";
+		String qurey = "UPDATE GROUPBOARD SET GROUP_BOR_STATUS=? WHERE GROUPBOR_NUMBER=?";
 		try {
 			pstmt = connection.prepareStatement(qurey);
 			
