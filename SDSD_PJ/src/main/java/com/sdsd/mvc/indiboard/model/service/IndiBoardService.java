@@ -39,8 +39,11 @@ public class IndiBoardService {
 		Connection connection = getConnection();
 		
 		// 쿼리문 여러개 실행할때는 메소드 두개 만드는게 간편합니다!! service에서 result1,2 두개 받아서 처리만 하면 됩니다
-		
-		result = new BoardDao().insertIndiBoard(connection, indiBoard);
+		if(indiBoard.getMaBorNo() != 0) {
+			result = new BoardDao().updateBoard(connection, indiBoard);
+		} else {
+			result = new BoardDao().insertIndiBoard(connection, indiBoard);
+		}
 //		result2 = new BoardDao().insertIndiBoard2(connection, indiBoard);
 		
 		System.out.println("result" + result); // 참고용

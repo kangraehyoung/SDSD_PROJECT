@@ -304,4 +304,28 @@ public class BoardDao {
 		return result;
 	}
 
+	public int updateBoard(Connection connection, IndiBoard indiBoard) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE INDIBOARD SET INDIBOR_TITLE=?, INDIBOR_CONTENT=?, INDI_BOR_FILE=?, INDI_UPDATE_DATE=SYSDATE WHERE INDIBOR_NUMBER=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, indiBoard.getBorTitle());
+			pstmt.setString(2, indiBoard.getBorContent());
+			pstmt.setString(3, indiBoard.getBorFile());
+			pstmt.setInt(4, indiBoard.getMaBorNo());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+
 }
