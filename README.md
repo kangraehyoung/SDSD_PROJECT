@@ -195,7 +195,7 @@
 http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp <br>
 * 개인 플로깅 인증 게시판 게시글 작성 textarea 글자 수 세기 script 추가!
 
-## ※ 20220802 작업내용
+## ※ 20220803 작업내용
 ### 백앤드 작업 내용
 
 ### 프론트앤드 작업 내용
