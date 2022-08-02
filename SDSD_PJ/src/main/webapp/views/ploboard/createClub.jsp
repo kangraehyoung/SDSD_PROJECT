@@ -8,6 +8,9 @@
 <jsp:include page="/views/common/header.jsp" />
 
 <section class="createClub_section">
+	<form action="${ path }/plo/groupjoin" method="POST" enctype="multipart/form-data">
+	<input type="hidden" value="${ PloGroup }" name="">
+	<input type="hidden" value="${ loginMember.name }" name="ploLeader">
     <div class="titleBox">
         <h2>모임 생성하기</h2>
     </div>
@@ -24,7 +27,7 @@
                     <div class="fileUploadBox">
                         <div class="fileboxBtn">
                             <label for="uploadImages">사진 등록</label>
-                            <input type="file" id="uploadImages" multiple> 
+                            <input type="file" id="uploadImages" multiple name="groupBoardFile"> 
                         </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
@@ -37,7 +40,7 @@
                     <div class="mb-3 row">
                         <label for="clubName" class="col-sm-3 col-form-label">모임 이름</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="clubName" value="쓰레깅">
+                            <input type="text" class="form-control" id="clubName" value="쓰레깅" name="ploTitle">
                         </div>
                     </div>
 
@@ -45,7 +48,7 @@
                     <div class="mb-3 row">
                         <label for="clubMember" class="col-md-3 col-form-label">최대 인원 수</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" min="3" id="clubMember" value="3">
+                            <input type="number" class="form-control" min="3" max="100" id="clubMember" value="3" name="ploNop">
                         </div>
                     </div>
 
@@ -53,7 +56,7 @@
                     <div class="mb-3 row">
                         <label for="clubLocation" class="col-md-3 col-form-label">주 활동 지역</label>
                         <div class="col-sm-8">
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="local">
                                 <option selected>---</option>
                                 <optgroup label="특별시 및 광역시">
                                 <option value="seoul">서울특별시</option>
@@ -85,11 +88,11 @@
                         <div class="col-sm-7" style="transform: translateY(20%);">
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label" for="inlineCheckbox1">남</label>
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="남자" name="gender">
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label" for="inlineCheckbox2">여</label>
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="여자" name="gender">
                             </div>
                         </div>
                     </div>
@@ -99,7 +102,7 @@
                     <div class="mb-3 row">
                         <label for="clubText" class="col-md-3 col-form-label">모임 소개</label>
                         <div>
-                            <textarea class="form-control" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 150px; resize: none;"></textarea>
+                            <textarea class="form-control" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 150px; resize: none;" name="ploIntro"></textarea>
                         </div>
                     </div>
 
@@ -154,6 +157,7 @@
         <input class="submitBtn" type="submit" value="모임 생성">
         <input class="resetBtn" type="reset" value="취소">
     </div>
+	</form>
 </section>
 
 
