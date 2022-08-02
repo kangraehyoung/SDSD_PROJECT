@@ -56,7 +56,7 @@
                 <p onclick="location.href='/'">개인 플로깅 인증 바로가기 <i class="bi bi-box-arrow-up-right"></i></p>
             </div>
         </div>
-            
+       </div>
         <!-- 
             모임 플로깅 인증 게시판 섬네일 나열 
             - 한 줄에 4장의 사진 정렬되도록 세팅
