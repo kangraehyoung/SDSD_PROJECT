@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sdsd.mvc.groupboard.model.service.GroupBoardService;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
-import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 
 
 @WebServlet("/groupboard/detail")
@@ -23,7 +22,7 @@ public class GroupBoardDetailServlet extends HttpServlet {
     
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	IndiBoard groupBoard = null;
+    	GroupBoard groupBoard = null;
     	int groupBorNo = Integer.parseInt(request.getParameter("groupBorNo"));
     	
     	// 새로 고침 시 조회 수가 증가하는 것을 방치하는 로직

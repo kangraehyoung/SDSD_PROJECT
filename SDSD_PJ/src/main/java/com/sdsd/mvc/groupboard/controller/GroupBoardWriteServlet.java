@@ -12,10 +12,7 @@ import com.oreilly.servlet.MultipartRequest;
 import com.sdsd.mvc.common.util.FileRename;
 import com.sdsd.mvc.groupboard.model.service.GroupBoardService;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
-import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 import com.sdsd.mvc.member.model.vo.Member;
-
-import oracle.net.aso.g;
 
 @WebServlet("/groupboard/groupwrite")
 public class GroupBoardWriteServlet extends HttpServlet {

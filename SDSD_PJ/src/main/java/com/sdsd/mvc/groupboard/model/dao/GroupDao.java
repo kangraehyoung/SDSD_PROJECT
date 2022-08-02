@@ -11,6 +11,7 @@ import java.util.List;
 
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
+import com.sdsd.mvc.groupboard.model.vo.GroupReply;
 
 // 플로깅 모임 게시판 인증 Dao
 public class GroupDao {
@@ -180,6 +181,43 @@ public class GroupDao {
 			close(pstmt);
 		}
 		
+		return result;
+	}
+
+	public int insertGroupReply(Connection connection, GroupReply groupreply) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "INSERT INTO GBREPLY VALUES(SEQ_GBREP_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
+		try {
+			pstm = connection.prepareStatement(query);
+			
+			pstm.setInt(1, groupreply.getRepboardNo());
+			pstm.setInt(2, groupreply.getRepwriterNo());
+			pstm.setString(3, groupreply.getRepcontent());
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		return result;
+	}
+
+	public int updateGroupReplyStatus(Connection connection, int groupBorNo, int no) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "UPDATE GBREPLY SET IBREP_STATUS ='N' WHERE GBREP_NUMBER=? AND GBREP_BOR_NUMBER=?";
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, no);
+			pstm.setInt(2, groupBorNo);
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
 		return result;
 	}
 	

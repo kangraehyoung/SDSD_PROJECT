@@ -11,6 +11,9 @@ import java.util.List;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.dao.GroupDao;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
+import com.sdsd.mvc.groupboard.model.vo.GroupReply;
+
+
 
 public class GroupBoardService {
 
@@ -67,7 +70,44 @@ public class GroupBoardService {
 		return result;
 	}
 
-	public GroupBoard getBoardByNo(int groupBorNo, boolean hasRead) {
+
+
+	public int saveGroupReply(GroupReply groupreply) {
+		int result = 0;
+		
+		Connection connection = getConnection();
+		
+		result = new GroupDao().insertGroupReply(connection, groupreply);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
+
+	public int groupreplydelete(int groupBorNo, int no) {
+		int result =0;
+		Connection connection =getConnection();
+		
+		result = new GroupDao().updateGroupReplyStatus(connection, groupBorNo, no);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
+
+	public GroupBoard getGroupBoardByNo(int groupBorNo, boolean hasRead) {
 		int result = 0;
 		GroupBoard groupBoard = null;
 		
@@ -84,9 +124,8 @@ public class GroupBoardService {
 			}
 		}
 		close(connection);
-		
+			
 		return groupBoard;
 	}
+	
 }
-
-
