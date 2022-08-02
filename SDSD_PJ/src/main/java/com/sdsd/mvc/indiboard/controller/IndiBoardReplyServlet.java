@@ -42,11 +42,11 @@ public class IndiBoardReplyServlet extends HttpServlet {
          		request.setAttribute("location", "/indiboard/detail?maBorNo=" + repboardNo);
 			} else {
 				request.setAttribute("msg", "댓글 등록 실패!");
-         		request.setAttribute("location", "//indiboard/detail?maBorNo=" + repboardNo);
+         		request.setAttribute("location", "/indiboard/detail?maBorNo=" + repboardNo);
 			}
     	} else {
      		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
-     		request.setAttribute("location", "/login");
+     		request.setAttribute("location", "/member/login");
     	}
     	
     	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);

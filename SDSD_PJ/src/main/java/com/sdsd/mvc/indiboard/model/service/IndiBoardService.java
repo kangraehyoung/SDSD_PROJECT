@@ -117,4 +117,21 @@ public class IndiBoardService {
 		
 		return result;
 	}
+
+	public int replydelete(int maBorNo, int no) {
+		int result =0;
+		Connection connection =getConnection();
+		
+		result = new BoardDao().updateReplyStatus(connection, maBorNo, no);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
 }

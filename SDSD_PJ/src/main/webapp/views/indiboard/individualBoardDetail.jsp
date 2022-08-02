@@ -97,8 +97,15 @@
             <span>#자수성가 #영앤리치 #내돈내산 #맞팔</span>
           </div>
         </div>
+
         <div class="bbb_3"> <!-- 댓글 -->
+        <form action="${ path }/indiboard/indireplydelete" method="get">
+        
+   
+        
         <c:forEach var="reply" items="${ indiBoard.replies }">
+        <input type="hidden" value="${ indiBoard.maBorNo }" name="maBorNo">
+        <input type="hidden" value="${ reply.no }" name="no">
           <div class="bbb_comentBox">
             <div class="bbb_1_profile_img">
               <img src="https://search.pstatic.net/sunny/?src=http%3A%2F%2Ffile3.instiz.net%2Fdata%2Fcached_img%2Fupload%2F2019%2F11%2F05%2F19%2Fa154febe3a793e3e96c3bfd6dc9b7bfc.jpg&type=a340" alt="">
@@ -109,6 +116,9 @@
             </div>
             <div class="bbb_coment">
               <sub><c:out value="${ reply.repcontent }"/></sub>
+              
+              	<button id="btnReplyDelete" type="submit">삭제</button>
+              
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -117,44 +127,9 @@
             </div>
           </div>
          </c:forEach>
+         </form>
          </div>
-          <!--  
-          <div class="bbb_comentBox">
-            <div class="bbb_1_profile_img">
-              <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMTNfMjM5%2FMDAxNTg0MDI3NzE5MDQ2.cdElHY3jJ6sEsD9xvzEXAv59ojh0Ifsj8DVgmQIZuJwg.jGL9EsRQmRwO0tbO2XYKeSK-y9F0E4G6l4HXct99GT0g.JPEG.d_hye97%2F1.jpg&type=a340" alt="">
-            </div>
-            <div class="bbb_Nickname">
-              <p>asdf_7894</p>
-            </div>
-            <div class="bbb_coment">
-              <p>가입만해도 10,000원 바로지급 !! 첫30% 매15% 페이백10% 승인전화 X</p>
-            </div>
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="bbb_comentBox">
-            <div class="bbb_1_profile_img">
-              <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MjRfMTEz%2FMDAxNjI5Nzg3Mjg5MTk5.2byB9LEHabTlm0zw8f99eaTASkNfOKWa28g7j_lKZs8g.PMp-KE7IrgI1aWSr11FHk9_-FzntaU6BMEWOtibusqAg.JPEG.wenice777%2F37.jpg&type=l340_165" alt="">
-            </div>
-            <div class="bbb_Nickname">
-              <p>zxcv812</p>
-            </div>
-            <div class="bbb_coment">
-              <p>@@@전국에서 제일 싸다!@@@ 보조금 최대 지원 ★</p>
-            </div>
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-              </svg>
-            </div>
-          </div>
-          <div>
-            <button class="bbb_cbtn">댓글 더보기</button>
-          </div> -->
-        
+     
         <div class="bbb_4">
           <div class="bbb4_icon">
             <!-- 부트스트랩 하트 -->
@@ -222,6 +197,7 @@
 		$("#btnUpdate").on("click", () => {
 			location.replace("${path}/indiboard/indiUpdate?maBorNo=${indiBoard.maBorNo}");
 		})
+		
 	});
 </script>
 

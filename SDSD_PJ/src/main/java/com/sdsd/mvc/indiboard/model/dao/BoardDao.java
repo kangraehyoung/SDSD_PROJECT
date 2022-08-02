@@ -328,4 +328,22 @@ public class BoardDao {
 		return result;
 	}
 
+	public int updateReplyStatus(Connection connection, int maBorNo, int no) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "UPDATE IBREPLY SET IBREP_STATUS ='N' WHERE IBREP_NUMBER=? AND IBREP_BOR_NUMBER=?";
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, no);
+			pstm.setInt(2, maBorNo);
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		return result;
+	}
+
 }

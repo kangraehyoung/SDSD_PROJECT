@@ -23,4 +23,6 @@ public class Reply {
 	private Date repcreateDate;
 	
 	private Date repmodifyDate;
+	
+	private int replyCount;
 }
