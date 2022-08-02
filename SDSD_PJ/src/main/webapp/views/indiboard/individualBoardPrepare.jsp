@@ -84,7 +84,7 @@
                   <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
                 </svg>
                 <div class="bbbp2_textCount">
-                  <span>0/2000</span>
+                  <span id="bbcount">0</span>/<span id="bbmaxLength">2000</span>
                 </div>
               </div>
             <!-- </form> -->
@@ -113,5 +113,23 @@
     </form>
     <!-- 마지막 버튼 -->
 </section>
+<script>
+    // 글자수 세기 스크립트
+    $('#validationTextarea').on('keyup', (event) => {
+    let target = $(event.target);
+    let counter = $('#bbcount');
+    let currentLength = target.val().length;
+    let maxLength = parseInt($('#bbmaxLength').text());
+
+    // 입력한 값의 글자수 세기
+    console.log(currentLength);
+    counter.text(currentLength);
+
+    // 최대 글자 이상 입력 불가하게 설정
+    if(currentLength > maxLength) {
+        target.val(target.val().substr(0, maxLength));
+    }
+});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />
