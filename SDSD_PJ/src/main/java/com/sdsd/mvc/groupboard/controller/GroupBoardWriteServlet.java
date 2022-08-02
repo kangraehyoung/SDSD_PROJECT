@@ -81,8 +81,20 @@ public class GroupBoardWriteServlet extends HttpServlet {
 //    		groupBoard.setGroupName(groupName); // 플로깅 모임명 아직 미정
     		
     		result = new GroupBoardService().save(groupBoard);
-    		
+    		if(result > 0) {
+        		request.setAttribute("msg", "게시글 등록 성공");
+        		request.setAttribute("location", "/groupboard/groupboardlist");
+    		} else {
+    			request.setAttribute("msg", "게시글 등록 실패");
+    			request.setAttribute("location", "/groupboard/groupboardlist");
+    		}
+    	} else {
+    		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
+    		request.setAttribute("location", "/");
     	}
+
+    	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
+		
 	}
 
 }
