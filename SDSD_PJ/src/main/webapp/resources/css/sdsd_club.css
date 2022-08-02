@@ -803,12 +803,13 @@
 }
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox a {
-    color: #fff;
+    color: rgb(102, 99, 99);
     text-decoration: none;
     padding: 10px 20px;
-    background-color: rgb(67, 145, 208);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     cursor: pointer !important;
+    font-weight: bold;
 }
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox a:hover {
@@ -826,17 +827,14 @@
     transform:translate(-50%,-50%);
     transition:all .6s;
 }
-
 .clubPlogBoard_section .plogBoard_Container .boardImgBox::before{
     /* background: #3B78F0; */
-    background-color: rgb(74, 165, 240);
+    background-color: rgb(190, 201, 212);
     opacity: .7;
     filter: alpha(opacity=50);
     width:0;
 }
 
-.clubPlogBoard_section .plogBoard_Container .boardImgBox::after{
-}
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox:hover div.hoverBox{
     display: inline-block;
@@ -848,6 +846,23 @@
 
 .clubPlogBoard_section .plogBoard_Container .boardImgBox:hover::after{
     height:100%;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .hb_like,
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .hb_coment {
+    padding: 0 0 5px 5px;
+    /* transform: translateY(-5px); */
+}
+
+.clubPlogBoard_section .plogBoard_Container .boardImgBox div.hoverBox .hb_lc .bi-chat {
+    /* transform: translateY(-1.5px); */
+    margin-left: 8px;
 }
 
 
