@@ -720,7 +720,7 @@
 .clubPlogBoard_section{}
 
 .clubPlogBoard_section .buttonBox{
-	padding-bottom: 30px;
+	/* padding-bottom: 30px; */
 }
 
 .clubPlogBoard_section .buttonBox .boardBtn {
@@ -924,4 +924,48 @@
 .uploadClubNotice_section .formContainer .buttonBox input.resetBtn:hover {
     color: #1f1f1f;
     background-color: #ffffff;
+}
+
+/*
+================================================
+모임 인증 상세보기 페이지 CSS StyleSheet
+================================================
+*/
+
+.clubPlogBoardDetail_section{}
+
+.clubPlogBoardDetail_section .buttonBox{
+	/* padding-bottom: 30px; */
+}
+
+.clubPlogBoardDetail_section .buttonBox .boardBtn {
+    text-align: center;
+}
+
+.clubPlogBoardDetail_section .buttonBox .boardBtn button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size : 16px;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance : none;
+    -moz-appearance: none;
+    appearance : none;
+}
+
+.clubPlogBoardDetail_section .buttonBox .boardBtn button:hover {
+    background-color: #ffffff;
+    color: rgb(50, 157, 245);
+}
+
+.clubPlogBoardDetail_section .buttonBox .indiBoard {}
+.clubPlogBoardDetail_section .buttonBox .indiBoard p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: cornflowerblue;
+    font-weight: 600;
+    cursor: pointer;
 }
