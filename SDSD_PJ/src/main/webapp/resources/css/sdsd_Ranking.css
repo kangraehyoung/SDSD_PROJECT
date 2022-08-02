@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.Ranking .first_tool, .second_tool {
+    font-family: sans-serif
+}
+
+.Ranking .first_tool {
+    background-color:  rgba(88, 170, 236, 0.362);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.Ranking .first_tool .r_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Ranking .first_tool .r_head .r_title,
+.Ranking .second_tool .r_body .rb_1 {
+    margin-right: 300px;
+}
+
+.Ranking .first_tool .r_head .r_title .rt_1 {
+    margin-bottom: 50px;
+    font-size: larger;
+}
+
+.Ranking .first_tool .r_head .r_title .rt_2 {
+    font-size: large;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 30px;
+}
+
+.Ranking .first_tool .r_head .r_emoji img {
+    width: 200px;
+}
+
+.Ranking .second_tool {
+	height: 700px;
+	background-color: white;
+}
+
+.Ranking .second_tool .r_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+    height: 700px;
+    background-color: white;
+}
+
+.Ranking .second_tool .r_body .rb_1 .rb_1_list .rbl1 img, .rbl2 img,
+.Ranking .second_tool .r_body .rb_2 .rb_2_list .rbl1 img, .rbl2 img {
+    width: 50px;
+}
+
+.Ranking .second_tool .r_body .rb_1 .rb_1_list .rbl1,
+.Ranking .second_tool .r_body .rb_2 .rb_2_list .rbl1 {
+    display: flex;
+    width: 400px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.Ranking .second_tool .r_body .rb_1,
+.Ranking .second_tool .r_body .rb_2 {
+    margin-top: -150px;
+    position: sticky;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+
+.Ranking .second_tool .r_body .rb_1 h2,
+.Ranking .second_tool .r_body .rb_2 h2 {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+.Ranking .second_tool .r_body .rb_1 .rb_1_list .rbl2, .rbl3,
+.Ranking .second_tool .r_body .rb_2 .rb_2_list .rbl2, .rbl3 {
+    display: flex;
+    width: 400px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 1px solid;
+}
+
+.Ranking .second_tool .r_body .rb_1 .rb_1_list .rbl3,
+.Ranking .second_tool .r_body .rb_2 .rb_2_list .rbl3  {
+    font-weight: normal;
+    height: 50px;
+}
+
+.Ranking .second_tool .r_body .rb_1 .rb_1_list .rbl1 div, .rbl2 div, .rbl3 div,
+.Ranking .second_tool .r_body .rb_2 .rb_2_list .rbl1 div, .rbl2 div, .rbl3 div {
+    width: 33%;
+}
+
+.Ranking .second_tool .r_body .rb_1 .rb_1_list details summary,
+.Ranking .second_tool .r_body .rb_2 .rb_2_list details summary {
+    cursor: pointer;
+    background-color: rgba(88, 170, 236, 0.362);
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(68, 66, 66);
+}
