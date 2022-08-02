@@ -176,5 +176,6 @@
 ** (모임 플로깅과 같게. hover 효과 및 상세 아이콘 수정)
 * 랭킹 페이지 구현 완료 (서호정) <br> 
 ** (랭킹 페이지 fixed 부분 더 고민해야 할 필요 있음.. 일단 sticky로..!) <br>
-http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp
+http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp <br>
+* 개인 플로깅 인증 게시판 게시글 작성 textarea 글자 수 세기 script 추가!
 
