@@ -14,7 +14,7 @@ public class PloGroupDao {
 		
 		PreparedStatement pstmt = null;
 		
-		String query = "INSERT INTO PLOG_GROUP VALUES(PLO_GR_NM.NEXTVAL, ?, ?, ?, ?)";
+		String query = "INSERT INTO PLO_GR_BOARD VALUES(PLO_GR_NUMBER.NEXTVAL, ?, ?, ?, 1)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -23,7 +23,7 @@ public class PloGroupDao {
 			pstmt.setString(1, plogroup.getPloLeader());
 			pstmt.setString(2, plogroup.getPloTitle());
 			pstmt.setString(3, plogroup.getPloIntro());
-			pstmt.setInt(4, plogroup.getPloMemNum());
+//			pstmt.setInt(4, plogroup.getPloMemNum());
 			
 			
 			result = pstmt.executeUpdate();
