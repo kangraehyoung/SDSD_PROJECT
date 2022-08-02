@@ -849,3 +849,79 @@
 .clubPlogBoard_section .plogBoard_Container .boardImgBox:hover::after{
     height:100%;
 }
+
+
+/*
+================================================
+모임 공지 등록 페이지 CSS StyleSheet
+================================================
+*/
+
+.uploadClubNotice_section {
+    margin: 0 auto;
+}
+
+.uploadClubNotice_section .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
+}
+
+.uploadClubNotice_section .titleBox h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.uploadClubNotice_section .formContainer {
+    padding: 60px 0;
+}
+.uploadClubNotice_section .formContainer .formWrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.uploadClubNotice_section .formContainer .formWrap .noticeLabel {
+    text-align: right;
+}
+
+.uploadClubNotice_section .formContainer .buttonBox{
+    text-align: center;
+    margin: 0 auto;
+}
+.uploadClubNotice_section .formContainer .buttonBox input.submitBtn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.uploadClubNotice_section .formContainer .buttonBox input.submitBtn:hover {
+    color: rgb(50, 157, 245);
+    background-color: #ffffff;
+}
+
+.uploadClubNotice_section .formContainer .buttonBox input.resetBtn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: #a9a9a9;
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: 1px solid #a9a9a9;
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.uploadClubNotice_section .formContainer .buttonBox input.resetBtn:hover {
+    color: #1f1f1f;
+    background-color: #ffffff;
+}
