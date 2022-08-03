@@ -29,7 +29,7 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
     	
     	if (loginMember != null) {    		
-    		request.getRequestDispatcher("/views/groupboard/").forward(request, response);    		
+    		request.getRequestDispatcher("/views/ploboard/clubPlogBoardWrite.jsp").forward(request, response);    		
     	} else {
     		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
     		request.setAttribute("location", "/views/login.jsp");
