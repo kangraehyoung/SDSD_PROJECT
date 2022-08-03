@@ -209,6 +209,9 @@ public class BoardDao {
 			if(rs.next()) {
 				indiBoard = new IndiBoard();
 				
+				String[] arr = new String[3];
+				List<String> list = indiBoard.getBorFileList();
+				
 				indiBoard.setMaBorNo(rs.getInt("INDIBOR_NUMBER"));
 				indiBoard.setBorTitle(rs.getString("INDIBOR_TITLE"));
 				indiBoard.setBorContent(rs.getString("INDIBOR_CONTENT"));
@@ -217,6 +220,11 @@ public class BoardDao {
 				indiBoard.setBorFile(rs.getString("INDI_BOR_FILE"));
 				indiBoard.setCreateDate(rs.getString("INDI_CREATE_DATE"));
 				indiBoard.setUpdateDate(rs.getString("INDI_UPDATE_DATE"));
+				
+				arr= indiBoard.getBorFile().split(", ");
+				list = Arrays.asList(arr);
+				
+				indiBoard.setBorFileList(list);
 				
 				indiBoard.setReplies(this.getRepliesByNo(connection, maBorNo));
 			}

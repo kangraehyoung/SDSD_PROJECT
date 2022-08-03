@@ -17,7 +17,7 @@
         <form action="${path}/groupboard/groupwrite" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="${GroupBoard.groupBorNo }" name="no">
             <input type="hidden" value="${GroupBoard.borTitle}"  name="title">
-            <input type="hidden" value="노경모임" name="groupName">
+            <input type="hidden" value="${PloGroup.ploTitle }" name="groupName">
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">

@@ -1,3 +1,5 @@
+<%@page import="com.sdsd.mvc.indiboard.model.vo.IndiBoard"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -51,6 +53,11 @@
             </div>
 		</div>
     </div>
+    
+     <%
+     	IndiBoard indiBoard = (IndiBoard)request.getAttribute("indiBoard");
+        System.out.println("st!!!! : " + indiBoard);
+        %>
     <div class="boardBox"> <!-- 세번째 부분 게시글 -->
       <div class="bb_imgs"> <!-- 사진 -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -61,14 +68,13 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-            <!--   <img src="https://cdn.pixabay.com/photo/2018/11/09/11/03/han-river-3804298_960_720.jpg" class="d-block w-100" alt="..."> -->
-              <img src="${path }/resources/upload/board/${indiBoard.borFile}" class="d-block w-100" alt="...">
+              <img src="${path }/resources/upload/board/${indiBoard.borFileList[0]}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="https://cdn.pixabay.com/photo/2018/10/09/15/03/seongsan-bridge-3735179_960_720.jpg" class="d-block w-100" alt="...">
+              <img src="${path }/resources/upload/board/${indiBoard.borFileList[1]}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="https://cdn.pixabay.com/photo/2015/05/12/19/33/night-view-764533__340.jpg" class="d-block w-100" alt="...">
+              <img src="${path }/resources/upload/board/${indiBoard.borFileList[2]}" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
