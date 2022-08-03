@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        
+    
         <div class="row plogBoard_Container">
 			<c:forEach var="indiboard" items="${ indiboardlist }">
             <!-- 인증 게시글 1개 당 한 div -->
