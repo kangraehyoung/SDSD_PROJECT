@@ -1,6 +1,7 @@
 package com.sdsd.mvc.indiboard.controller;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -32,10 +33,13 @@ public class IndiBoardList extends HttpServlet {
 		page = 1;
 	}
 	
+
 	
 	listCount = new IndiBoardService().getBoardCount();
 	pageInfo = new PageInfo(page, 10, listCount, 8);    
 	indiboardlist = new IndiBoardService().getBoardList(pageInfo);
+	
+	
 	
 	System.out.println(listCount);
 	System.out.println(pageInfo);

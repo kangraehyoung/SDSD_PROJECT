@@ -40,8 +40,7 @@ public class IndiBoardWriteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int result = 0;
     	IndiBoard indiBoard = null;
-    	String[] arr = null;
-    	List<String> borFileList = null;
+
     	
     	// 파일이 저장될 경로
     	String path = getServletContext().getRealPath("/resources/upload/board");
@@ -59,13 +58,9 @@ public class IndiBoardWriteServlet extends HttpServlet {
     	String content = mr.getParameter("content");
 //    	String title = mr.getParameter("제목은 나중에 넣을것");
     	
+//    	String originalFileName = mr.getOriginalFileName("upfile1");
     	String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
     	
-    	arr = originalFileName.split(",");
-    	
-    	borFileList = Arrays.asList(arr);
-    	
-    	System.out.println(Arrays.toString(arr));
     	
     	System.out.println(writer);
     	// 파일에 대한 정보를 가져올 때
@@ -97,7 +92,6 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		request.setAttribute("location", "/");
     	}
     	
-    	request.setAttribute("borFileList", borFileList);
     	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 		
 	}

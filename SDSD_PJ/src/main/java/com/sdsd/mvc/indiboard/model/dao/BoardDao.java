@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.sdsd.mvc.common.util.PageInfo;
@@ -86,6 +87,9 @@ public class BoardDao {
 			
 			while(rs.next()) {
 				IndiBoard indiBoard = new IndiBoard();
+				String[] arr = new String[3];
+				List<String> list = indiBoard.getBorFileList();
+				
 				
 				indiBoard.setRowNum(rs.getInt("RNUM"));
 				indiBoard.setMaBorNo(rs.getInt("INDIBOR_NUMBER"));
@@ -96,7 +100,12 @@ public class BoardDao {
 				indiBoard.setBorFile(rs.getString("INDI_BOR_FILE"));
 				indiBoard.setReadCount(rs.getInt("INDI_READCOUNT"));
 				indiBoard.setBorStatus(rs.getString("INDI_BOR_STATUS"));
-
+				
+				arr= indiBoard.getBorFile().split(", ");
+				list = Arrays.asList(arr);
+				
+				indiBoard.setBorFileList(list);
+				
 				indiboardlist.add(indiBoard);
 				
 			}
