@@ -69,7 +69,7 @@
                     <a href="#">모임 플로깅</a>
                         <ul class="sub_item menu_02">
                             <li><a href="${ path }/club">모임 찾기</a></li>
-                            <li><a href="${ path }/plo/groupjoin">모임 생성</a></li>
+                            <li><a href="${ path }/plogroup/createPloGroup">모임 생성</a></li>
                             <li><a href="${ path }/groupboard/groupboardlist">모임 플로깅 인증 게시판</a></li>
                         </ul>
                 </li>
