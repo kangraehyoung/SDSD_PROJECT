@@ -9,7 +9,7 @@
 
 <section class="clubPlogBoardDetail_section">
     <div class="titleBox">
-        <h2><img src="${ path }/resources/imgFile/findTeam.png" alt="trashCan">모임 플로깅 인증 등록</h2>
+        <h2><img src="${ path }/resources/imgFile/findTeam.png" alt="trashCan">플로깅 모임 인증</h2>
     </div>
 
     <div class="plogBoardWrap">
