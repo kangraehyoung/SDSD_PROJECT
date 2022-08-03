@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.1" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.4" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.10" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.11" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.9" type="text/css">

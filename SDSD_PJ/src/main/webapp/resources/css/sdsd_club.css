@@ -1283,3 +1283,52 @@
     text-align: center;
 }
 
+/*
+================================================
+모임 생성 완료 페이지 CSS StyleSheet
+================================================
+*/
+.createClubThxU_section {
+    padding: 150px 0;
+    background-color: #CAE5FC;
+}
+
+.createClubThxU_section .mainTextContainer {
+    width: 70%;
+    margin: 0 auto 40px auto;
+}
+
+.createClubThxU_section .mainTextContainer .iconBox {
+    text-align: right;
+}
+.createClubThxU_section .mainTextContainer .iconBox img {
+    width: 150px;
+}
+
+.createClubThxU_section .mainTextContainer .textBox p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 2;
+    margin-bottom: 0;
+    padding-top: 5%;
+}
+
+.createClubThxU_section .mainTextContainer .textBox p span img {
+    width: 30px;
+    transform: translateY(-10%);
+}
+
+.createClubThxU_section .buttonContainer {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.createClubThxU_section .buttonContainer p {
+    font-size: 1.5rem;
+    font-size: 500;
+}
+
+.createClubThxU_section .buttonContainer .buttonBox img {
+    width: 30%;
+}
