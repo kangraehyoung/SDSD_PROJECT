@@ -32,6 +32,8 @@ public class IndiBoard {
 	private int readCount;
 	
 	private String borFile;
+
+	private List<String> borFileList;
 	
 	private String borStatus;
 	

@@ -58,7 +58,11 @@
           <div>
             <p>업로드할 사진을 선택해 주세요!</p>
             <label class="bbf1" for="bbf1">업로드</label>
-            <input name="upfile" type="file" id="bbf1" style="display: none;">
+            <label class="bbf1" for="bbf2">업로드</label>
+            <label class="bbf1" for="bbf3">업로드</label>
+            <input name="upfile1" type="file" id="bbf1" style="display: none;">
+            <input name="upfile2" type="file" id="bbf2" style="display: none;">
+            <input name="upfile3" type="file" id="bbf3" style="display: none;">
           </div>
       
       </div>

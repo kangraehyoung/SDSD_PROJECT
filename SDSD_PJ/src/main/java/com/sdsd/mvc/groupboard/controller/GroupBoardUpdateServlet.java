@@ -31,7 +31,7 @@ public class GroupBoardUpdateServlet extends HttpServlet {
 			GroupBoard groupBoard = null;
 			int no = Integer.parseInt(request.getParameter("groupBorNo"));
 			
-			groupBoard = new GroupBoardService().getBoardByNo(no, true);
+			groupBoard = new GroupBoardService().getGroupBoardByNo(no, true);
 	    	
 	    	System.out.println(groupBoard);
 	    	

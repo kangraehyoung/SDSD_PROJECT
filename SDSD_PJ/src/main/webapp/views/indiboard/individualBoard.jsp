@@ -1,3 +1,5 @@
+<%@page import="com.sdsd.mvc.indiboard.model.vo.IndiBoard"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -63,12 +65,15 @@
                 </div>
             </div>
         </div>
-        
+        <%
+        List<IndiBoard> list = (List<IndiBoard>)request.getAttribute("indiboardlist"); 
+        System.out.println("List!!!! : " + list);
+        %>
         <div class="row plogBoard_Container">
 			<c:forEach var="indiboard" items="${ indiboardlist }">
             <!-- 인증 게시글 1개 당 한 div -->
             <div class="col-md-3 boardImgBox" onclick="location.href='/'">
-                <img src="${path }/resources/upload/board/${indiboard.borFile}">
+                <img src="${path }/resources/upload/board/${indiboard.borFileList[0]}">
                 <div class="hoverBox">
                     <div class="hb_lc">
                         <!-- 부트스트랩 하트 -->

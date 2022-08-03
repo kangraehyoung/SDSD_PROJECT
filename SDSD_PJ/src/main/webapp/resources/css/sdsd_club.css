@@ -1329,6 +1329,24 @@
     font-size: 500;
 }
 
-.createClubThxU_section .buttonContainer .buttonBox img {
-    width: 30%;
+.createClubThxU_section .buttonContainer .buttonBox button{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.createClubThxU_section .buttonContainer .buttonBox button.gotoMain {
+    margin-right: 10px;
+}
+
+.createClubThxU_section .buttonContainer .buttonBox button:hover {
+    color: rgb(50, 157, 245);
+    background-color: #ffffff;
 }
