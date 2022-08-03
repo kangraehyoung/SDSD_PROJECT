@@ -46,7 +46,7 @@ public class IndiBoardService {
 		}
 //		result2 = new BoardDao().insertIndiBoard2(connection, indiBoard);
 		
-		System.out.println("result" + result); // 참고용
+		//System.out.println("result" + result); // 참고용
 //		System.out.println("result2" + result2); // 참고용
 		
 		// if문 처리
@@ -133,5 +133,23 @@ public class IndiBoardService {
 		close(connection);
 		
 		return result;
+	}
+
+
+	public List<IndiBoard> getSearchList(PageInfo pageInfo, String indiketword) {
+//		List<IndiBoard> keysearchlist = null;
+//		Connection connection = getConnection();
+//		
+//		keysearchlist = new BoardDao().keySearch(connection, pageInfo);
+//		
+//		close(connection);
+//		return keysearchlist;
+		List<IndiBoard> indiboardlist = null;
+		Connection connection = getConnection();
+		
+		indiboardlist = new BoardDao().keySearch(connection, pageInfo, indiketword);
+		
+		close(connection);
+		return indiboardlist;
 	}
 }

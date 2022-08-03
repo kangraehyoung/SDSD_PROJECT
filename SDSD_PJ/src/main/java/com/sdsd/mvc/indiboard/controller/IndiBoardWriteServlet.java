@@ -51,11 +51,12 @@ public class IndiBoardWriteServlet extends HttpServlet {
     	// 폼 파라미터로 넘어온 값들 (파일에 대한 정보 X)
     	String writer = mr.getParameter("nickName");
     	String content = mr.getParameter("content");
+    	String indikeyword = mr.getParameter("indikeyword");
 //    	String title = mr.getParameter("제목은 나중에 넣을것");
     	
     	String originalFileName = mr.getOriginalFileName("upfile");
     	
-    	System.out.println(writer);
+    	//System.out.println(writer);
     	// 파일에 대한 정보를 가져올 때
     	
        	HttpSession session = request.getSession(false);
@@ -69,10 +70,11 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		indiBoard.setBorContent(content);
     		indiBoard.setBorFile(originalFileName);
 //    		indiBoard.setBorTitle("위의 title 매개값 입력"); //게시글 set입니다
+    		indiBoard.setIndikeyword(indikeyword);
     		
-    		System.out.println(indiBoard.getBorFile());
+    		//System.out.println(indiBoard.getBorFile());
     		result = new IndiBoardService().save(indiBoard);
-    		System.out.println("서블릿 result : " + result);
+    		//System.out.println("서블릿 result : " + result);
     		if(result > 0) {
         		request.setAttribute("msg", "게시글 등록 성공");
         		request.setAttribute("location", "/indiboard/indilist");
@@ -84,7 +86,7 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
     		request.setAttribute("location", "/");
     	}
-
+    	System.out.println(indiBoard);
     	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 		
 	}

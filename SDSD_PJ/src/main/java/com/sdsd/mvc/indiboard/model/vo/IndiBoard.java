@@ -42,5 +42,7 @@ public class IndiBoard {
 	private int maWriterNo;
 	
 	private List<Reply> replies;
+	
+	private String indikeyword;
 
 }

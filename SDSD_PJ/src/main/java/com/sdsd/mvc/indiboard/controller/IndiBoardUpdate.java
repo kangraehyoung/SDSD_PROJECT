@@ -33,10 +33,10 @@ public class IndiBoardUpdate extends HttpServlet {
 			
 			indiBoard = new IndiBoardService().getBoardByNo(no, true);
 	    	
-	    	System.out.println(indiBoard);
+	    	//System.out.println(indiBoard);
 	    	
 	    	request.setAttribute("indiBoard", indiBoard);
-	    	System.out.println("수정페이지로 이동");
+	    	//System.out.println("수정페이지로 이동");
 			request.getRequestDispatcher("/views/indiboard/individualBoardUpdate.jsp").forward(request, response);
 		} 
 			
@@ -59,7 +59,7 @@ public class IndiBoardUpdate extends HttpServlet {
     	MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding);
     	
     	// update.jsp에는 no값이 없어 input을 hidden으로 숨기고 가져옴
-    	System.out.println(mr.getParameter("no"));
+    	//System.out.println(mr.getParameter("no"));
     	
     	indiBoard = new IndiBoard();
     	
@@ -82,11 +82,11 @@ public class IndiBoardUpdate extends HttpServlet {
     		indiBoard.setBorFile(mr.getParameter("upfile"));
     	}
     	
-    	System.out.println(indiBoard.getBorFile() + "에휴 제발제발");
+    	//System.out.println(indiBoard.getBorFile() + "에휴 제발제발");
     	
     	result = new IndiBoardService().save(indiBoard);
     	
-    	System.out.println("제발 제발 : " + result);
+    	//System.out.println("제발 제발 : " + result);
     	if(result > 0) {
     		request.setAttribute("msg", "게시글 수정 성공");
     	} else {

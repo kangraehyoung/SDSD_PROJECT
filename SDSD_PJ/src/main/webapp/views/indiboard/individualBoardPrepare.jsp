@@ -77,6 +77,7 @@
             <!--  <form class="was-validated">-->
               <div class="mb-3">
                 <textarea class="form-control" id="validationTextarea" name="content" placeholder="내용을 입력해 주세요!" required></textarea>
+                <input type="text" name="indikeyword" placeholder="키워드를 입력해주세요!">
               </div>
               <div class="bbbp2_input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
