@@ -21,7 +21,8 @@ public class GroupDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
-		String query = "SELECT COUNT(*) FROM GROUP_ACT_BOARD WHERE GROUP_BOARD_ID = 1";
+		String query = "SELECT COUNT(*) "
+				+ "FROM GROUPBOARD ";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -44,7 +45,33 @@ public class GroupDao {
 		List<GroupBoard> groupBoardList = new ArrayList<>();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String query = "";
+		String query = "SELECT *  "
+				+ "FROM ( "
+				+ "    SELECT ROWNUM AS RNUM, "
+				+ "           GROUPBOR_NUMBER, "
+				+ "           GROUPBOR_TITLE, "
+				+ "           MEM_EMAIL, "
+				+ "           GROUPBOR_WRITER_NAME, "
+				+ "           GROUP_CREATE_DATE, "
+				+ "           GROUP_UPDATE_DATE, "
+				+ "           GROUP_BOR_FILE, "
+				+ "           GROUP_READCOUNT, "
+				+ "           GROUP_BOR_STATUS "
+				+ "    FROM ( "
+				+ "            SELECT GB.GROUPBOR_NUMBER, "
+				+ "                   GB.GROUPBOR_TITLE, "
+				+ "                   M.MEM_EMAIL, "
+				+ "                   GB.GROUPBOR_WRITER_NAME, "
+				+ "                   GB.GROUP_CREATE_DATE, "
+				+ "                   GB.GROUP_UPDATE_DATE, "
+				+ "                   GB.GROUP_BOR_FILE, "
+				+ "                   GB.GROUP_READCOUNT, "
+				+ "                   GB.GROUP_BOR_STATUS "
+				+ "            FROM GROUPBOARD GB "
+				+ "            JOIN MEMBER M ON (M.MEM_NUMBER = GB.GROUPBOR_WRITER_NO) "
+				+ "    ) "
+				+ ") WHERE (RNUM BETWEEN ? AND ?) AND GROUP_BOR_STATUS = 'Y'";
+		
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -82,16 +109,24 @@ public class GroupDao {
 	public int insertgroupBoard(Connection connection, GroupBoard groupBoard) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String query = "INSERT INTO GROUPBOARD VALUES(SEQ_INDIBOR_NUMBER.NEXTVAL, ?, ?, '제목넣어야함', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
+		String query = "INSERT INTO GROUPBOARD VALUES(SEQ_GROUPBOR_NUMBER.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
 			
+			pstmt.setInt(1, groupBoard.getWriterNo());
+			pstmt.setString(2, groupBoard.getWriterName());
+			pstmt.setString(3, groupBoard.getGroupName());
+			pstmt.setString(4, groupBoard.getBorTitle());
+			pstmt.setString(5, groupBoard.getBorContent());
+			pstmt.setString(6, groupBoard.getBorFile());
 			
-			
+			result = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			close(pstmt);
 		}
 		
 		return result;

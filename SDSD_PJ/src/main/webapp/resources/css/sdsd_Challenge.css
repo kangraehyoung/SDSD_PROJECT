@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/*
+	챌린지 페이지 css
+*/
+
+.Challenge .first_tool, .second_tool {
+    font-family: sans-serif
+}
+
+.Challenge .first_tool {
+    background-color:  rgba(88, 170, 236, 0.362);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.Challenge .first_tool .c_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 30px 0;
+}
+
+.Challenge .first_tool .c_head .c_title {
+    margin-right: 500px;
+}
+
+.Challenge .first_tool .c_head .c_title .ct_1 {
+    margin-bottom: 70px;
+    font-size: larger;
+}
+
+.Challenge .first_tool .c_head .c_title .ct_2 {
+    font-size: large;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 110px;
+}
+
+.Challenge .first_tool .c_head .c_emoji img {
+    width: 200px;
+}
+
+.Challenge .second_tool {
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.Challenge .second_tool .c_content .c_maincard {
+    margin-top: 30px;
+}
+
+.Challenge .second_tool .c_content .c_subcard {
+    margin-bottom: 50px;
+}
+
+.Challenge .second_tool .c_content .c_maincard .carousel h5,
+.Challenge .second_tool .c_content .c_maincard .carousel p {
+    font-weight: bold;
+    text-align: start;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.Challenge .second_tool .c_content .c_maincard .carousel .carousel-caption {
+    margin-left: -80px;
+}
+
+.Challenge .second_tool .c_content .c_maincard .carousel p {
+	margin-left: -19px;
+}
+
+.Challenge .second_tool .c_content .c_maincard .carousel, .c_subcard .cs_1 .row, .cs_2 .row {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+.Challenge .second_tool .c_content .c_subcard .cs_1 .row .col , .cs_2 .row .col {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+.Challenge .second_tool .c_content .c_maincard .carousel img{
+    width: 200px;
+    height: 500px;
+}
+
+.Challenge .second_tool .c_content .c_subcard .cs_1 img, .cs_2 img {
+    height: 350px;
+}
+
+.Challenge .second_tool .c_content .c_subcard .cs_2 .card-body, .cs_1 .card-body,
+.Challenge .second_tool .c_content .c_subcard .cs_2 .card-body h6, .cs_1 .card-body h6 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.Challenge .second_tool .c_content .c_subcard .cs_2 .card-body a, .cs_1 .card-body a {
+    background-color: rgba(44, 148, 233, 0.788);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}

@@ -16,7 +16,7 @@
     <h2></h2>
 </section>
 
-<section class="mainSection_01">
+<section class="mainSection_01" id="nextSection">
     <div class="text1">다음화면</div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/7XrxTrejx8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>

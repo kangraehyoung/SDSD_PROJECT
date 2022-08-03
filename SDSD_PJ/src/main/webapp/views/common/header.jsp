@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.9" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_My_Activity.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_Ranking.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_Challenge.css?v0.0.2" type="text/css">
     
     <!-- 부트스트랩 및 라이브러리 -->
     <link rel="stylesheet" href="${ path }/resources/css/animationLib.css?v0.0.1" type="text/css">
@@ -76,7 +77,7 @@
                     <a href="#">OTHERS</a>
                     <ul class="sub_item menu_03">
                         <li><a href="${ path }/views/others/Ranking.jsp">랭킹</a></li>
-                        <li><a href="">챌린지</a></li>
+                        <li><a href="${ path }/views/others/Challenge.jsp">챌린지</a></li>
                         <li><a href="${ path }/others/trash">쓰레기통 찾기</a></li>
                         <li><a href="${ path }/others/course">플로깅 코스</a></li>
                         <li><a href="${ path }/faq">FAQ</a></li>
