@@ -82,16 +82,24 @@ public class GroupDao {
 	public int insertgroupBoard(Connection connection, GroupBoard groupBoard) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String query = "INSERT INTO GROUPBOARD VALUES(SEQ_INDIBOR_NUMBER.NEXTVAL, ?, ?, '제목넣어야함', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
+		String query = "INSERT INTO GROUPBOARD VALUES(SEQ_GROUPBOR_NUMBER.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT);";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
 			
+			pstmt.setInt(1, groupBoard.getWriterNo());
+			pstmt.setString(2, groupBoard.getBorTitle());
+			pstmt.setString(3, groupBoard.getGroupName());
+			pstmt.setString(4, groupBoard.getBorTitle());
+			pstmt.setString(5, groupBoard.getBorContent());
+			pstmt.setString(6, groupBoard.getBorFile());
 			
-			
+			result = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			close(pstmt);
 		}
 		
 		return result;
