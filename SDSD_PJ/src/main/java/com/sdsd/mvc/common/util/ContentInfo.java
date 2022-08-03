@@ -6,18 +6,18 @@ public class ContentInfo {
 	public ContentInfo(int currentContent) {
 		this.currentContent = currentContent;
 	}
-	public int getCurrentPage() {
+	public int getCurrentContent() {
 		return this.currentContent;
 	}
 	
 	public int getPrevContent() {
-		int prevContent = this.getCurrentPage() - 1;
+		int prevContent = this.getCurrentContent() - 1;
 		
 		return prevContent < 1 ? 1 : prevContent;
 	}
 	
 	public int getNextContent() {
-		int nextContent = this.getCurrentPage() + 1;
+		int nextContent = this.getCurrentContent() + 1;
 		
 		return nextContent > 1000 ? 1000 : nextContent;
 	}

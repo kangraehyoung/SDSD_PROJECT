@@ -3,6 +3,7 @@ package com.sdsd.mvc.indiboard.model.service;
 import java.sql.Connection;
 import java.util.List;
 
+import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
@@ -148,6 +149,16 @@ public class IndiBoardService {
 		Connection connection = getConnection();
 		
 		indiboardlist = new BoardDao().keySearch(connection, pageInfo, indiketword);
+		
+		close(connection);
+		return indiboardlist;
+	}
+
+	public List<IndiBoard> getBoardContent(ContentInfo contentInfo) {
+		List<IndiBoard> indiboardlist = null;
+		Connection connection = getConnection();
+		
+		indiboardlist = new BoardDao().findNextContent(connection, contentInfo);
 		
 		close(connection);
 		return indiboardlist;
