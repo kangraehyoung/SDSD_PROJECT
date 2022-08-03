@@ -68,7 +68,7 @@ public class IndiBoardUpdate extends HttpServlet {
     	indiBoard.setWriterName(mr.getParameter("writer"));
     	indiBoard.setBorContent(mr.getParameter("content"));
     	
-    	String fileName = mr.getOriginalFileName("upfile");
+    	String fileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
     	
     	if(fileName != null && !fileName.equals("")) {
     		File file = new File(path + "/" + mr.getParameter("fileName"));
@@ -79,7 +79,7 @@ public class IndiBoardUpdate extends HttpServlet {
     		
     		indiBoard.setBorFile(fileName);
     	} else {
-    		indiBoard.setBorFile(mr.getParameter("upfile"));
+    		indiBoard.setBorFile(fileName);
     	}
     	
     	//System.out.println(indiBoard.getBorFile() + "에휴 제발제발");
