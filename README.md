@@ -199,3 +199,5 @@ http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp <br>
 ### 백앤드 작업 내용
 
 ### 프론트앤드 작업 내용
+* 모임 등록 후 랜딩 될 완료페이지 구현 완료 (최송희)
+* 메인 페이지 틀 잡기 (최송희)
