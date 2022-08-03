@@ -8,9 +8,7 @@
 <jsp:include page="/views/common/header.jsp" />
 
 <section class="createClub_section">
-	<form action="${ path }/plo/groupjoin" method="POST" enctype="multipart/form-data">
-	<input type="hidden" value="${ PloGroup }" name="">
-	<input type="hidden" value="${ loginMember.name }" name="ploLeader">
+	<form action="${ path }/plogroup/createPloGroup" method="POST" enctype="multipart/form-data">
     <div class="titleBox">
         <h2>모임 생성하기</h2>
     </div>
@@ -27,7 +25,7 @@
                     <div class="fileUploadBox">
                         <div class="fileboxBtn">
                             <label for="uploadImages">사진 등록</label>
-                            <input type="file" id="uploadImages" multiple name="groupBoardFile"> 
+                            <input type="file" id="uploadImages" multiple name="spbBorFile"> 
                         </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
@@ -45,14 +43,17 @@
                     </div>
 
                     <!-- 최대 인원 수 -->
+                    <!-- 
                     <div class="mb-3 row">
                         <label for="clubMember" class="col-md-3 col-form-label">최대 인원 수</label>
                         <div class="col-sm-4">
                             <input type="number" class="form-control" min="3" max="100" id="clubMember" value="3" name="ploNop">
                         </div>
                     </div>
+                     -->
 
                     <!-- 주 활동 지역 -->
+                    <!-- 
                     <div class="mb-3 row">
                         <label for="clubLocation" class="col-md-3 col-form-label">주 활동 지역</label>
                         <div class="col-sm-8">
@@ -81,8 +82,10 @@
                             </select>
                         </div>
                     </div>
-
+					 -->
+					 
                     <!-- 선호 성별 -->
+                    <!-- 
                     <div class="mb-3 row">
                         <label for="clubGender" class="col-md-3 col-form-label">선호 성별</label>
                         <div class="col-sm-7" style="transform: translateY(20%);">
@@ -96,8 +99,12 @@
                             </div>
                         </div>
                     </div>
-                    
-					<input type="hidden" value="${loginMember.no }" name="no">
+					 -->
+					 <!-- 모임장이 누구인지 가져오기위한 것 -->
+					 <input type="hidden" name="leader" value="${loginMember.nickName }">
+					 <!-- 멤버에 업데이트를 위한 모임장 넘버 -->
+					 <input type="hidden" name="leaderNo" value="${loginMember.no }">
+					 
                     <!-- 모임 소개 -->
                     <div class="mb-3 row">
                         <label for="clubText" class="col-md-3 col-form-label">모임 소개</label>

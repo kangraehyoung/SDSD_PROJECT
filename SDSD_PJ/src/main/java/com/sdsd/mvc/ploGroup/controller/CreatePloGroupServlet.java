@@ -37,21 +37,20 @@ public class CreatePloGroupServlet extends HttpServlet {
 
         MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding);
 		
-        plogroup.setPloMemNum(Integer.parseInt(mr.getParameter("no")));
-		plogroup.setPloLeader(mr.getParameter("ploLeader"));
-		plogroup.setPloTitle(mr.getParameter("ploTitle"));
-		plogroup.setPloIntro(mr.getParameter("ploIntro"));
-//		plogroup.setPloMemNum(Integer.parseInt(request.getParameter("plo_memNum")));
-		plogroup.setGroupBoardFile(mr.getParameter("groupBoardFile"));
-		plogroup.setLocal(mr.getParameter("local"));
-		plogroup.setGender(mr.getParameter("gender"));
-//		plogroup.setPloNop(Integer.parseInt(request.getParameter("ploNop")));
+		plogroup.setSpbWriterNum(Integer.parseInt(mr.getParameter("leaderNo")));
+		plogroup.setSpbWriterName(mr.getParameter("leader"));
+		plogroup.setPlogGroupName(mr.getParameter("ploTitle"));
+		plogroup.setSpbTitle(mr.getParameter("ploTitle"));
+		plogroup.setSpbContent(mr.getParameter("ploIntro"));
+		plogroup.setSpbBorFile(mr.getParameter("spbBorFile"));
+//		plogroup.setLocal(mr.getParameter("local"));
+//		plogroup.setGender(mr.getParameter("gender"));
 		
 		int result = new PloGroupService().groupJoin(plogroup);
 		
 		if (result > 0) {
 			request.setAttribute("msg", "모임 등록 성공");
-    		request.setAttribute("location", "/ploboard/celebrate");
+    		request.setAttribute("location", "/views/ploboard/createClubCelebrate.jsp");
 		} else {
 			request.setAttribute("msg", "모임 등록 실패");
     		request.setAttribute("location", "/");
