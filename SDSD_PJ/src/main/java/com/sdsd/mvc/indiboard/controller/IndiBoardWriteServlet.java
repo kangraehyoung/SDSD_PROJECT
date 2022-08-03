@@ -93,11 +93,7 @@ public class IndiBoardWriteServlet extends HttpServlet {
     		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
     		request.setAttribute("location", "/");
     	}
-<<<<<<< HEAD
-    	System.out.println(indiBoard);
-=======
-    	
->>>>>>> bf055e9f64223e5a10e739b5cc26c28d81f1dc2a
+
     	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 		
 	}
