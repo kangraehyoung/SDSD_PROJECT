@@ -59,7 +59,7 @@ public class GroupBoardDetailServlet extends HttpServlet {
         	response.addCookie(cookie);
     	}
     	
-    	groupBorNo = new GroupBoardService().getBoardByNo(groupBorNo, hasRead);
+    	groupBoard = new GroupBoardService().getGroupBoardByNo(groupBorNo, hasRead);
     	
     	request.setAttribute("groupBoard", groupBoard);
     	request.getRequestDispatcher("/views/ploboard/clubPlogBoardDetail.jsp").forward(request, response);
