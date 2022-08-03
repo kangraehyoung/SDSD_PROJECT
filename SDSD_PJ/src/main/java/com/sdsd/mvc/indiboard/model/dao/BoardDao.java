@@ -124,7 +124,7 @@ public class BoardDao {
 		//int result2 = 0;
 		PreparedStatement pstmt = null;
 //		PreparedStatement pstmt2 = null;
-		String query_board = "INSERT INTO INDIBOARD VALUES(SEQ_INDIBOR_NUMBER.NEXTVAL, ?, ?, '제목넣어야함', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT)";
+		String query_board = "INSERT INTO INDIBOARD VALUES(SEQ_INDIBOR_NUMBER.NEXTVAL, ?, ?, '제목넣어야함', ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT, ?)";
 		//String query_indiBoard = "INSERT INTO MY_ACT_BOARD VALUES(SEQ_MY_BOR_NUM, 1, ?)";
 		
 		try {
@@ -135,6 +135,7 @@ public class BoardDao {
 			pstmt.setString(2, indiBoard.getWriterName());
 			pstmt.setString(3, indiBoard.getBorContent());
 			pstmt.setString(4, indiBoard.getBorFile());
+			pstmt.setString(5, indiBoard.getIndikeyword());
 
 			result = pstmt.executeUpdate();
 			//result2 = pstmt2.executeUpdate();
@@ -220,6 +221,7 @@ public class BoardDao {
 				indiBoard.setBorFile(rs.getString("INDI_BOR_FILE"));
 				indiBoard.setCreateDate(rs.getString("INDI_CREATE_DATE"));
 				indiBoard.setUpdateDate(rs.getString("INDI_UPDATE_DATE"));
+				indiBoard.setIndikeyword(rs.getString("INDI_BOR_KEYWORD"));
 				
 				arr= indiBoard.getBorFile().split(", ");
 				list = Arrays.asList(arr);
@@ -361,6 +363,41 @@ public class BoardDao {
 			close(pstm);
 		}
 		return result;
+	}
+
+	public List<IndiBoard> keySearch(Connection connection, PageInfo pageInfo, String indiketword) {
+		List<IndiBoard> indiboardlist = new ArrayList<>();
+		PreparedStatement pstm = null;;
+		ResultSet rs = null;
+		String query = "SELECT * "
+				+ "FROM INDIBOARD "
+				+ "WHERE INDI_BOR_KEYWORD = ?";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, indiketword);
+			rs = pstm.executeQuery();
+			while(rs.next()) {
+				IndiBoard indiBoard = new IndiBoard();
+				
+				indiBoard.setMaBorNo(rs.getInt("INDIBOR_NUMBER"));
+				indiBoard.setBorTitle(rs.getString("INDIBOR_TITLE"));
+				indiBoard.setWriterName(rs.getString("INDIBOR_WRITER_NAME"));
+				indiBoard.setCreateDate(rs.getString("INDI_CREATE_DATE"));
+				indiBoard.setBorFile(rs.getString("INDI_BOR_FILE"));
+				indiBoard.setReadCount(rs.getInt("INDI_READCOUNT"));
+				indiBoard.setBorStatus(rs.getString("INDI_BOR_STATUS"));
+				indiBoard.setIndikeyword("INDI_BOR_KEYWORD");
+				
+				indiboardlist.add(indiBoard);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		
+		return indiboardlist;
 	}
 
 }

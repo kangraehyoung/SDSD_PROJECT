@@ -98,9 +98,9 @@
         </div>
         <div class="bbb_2">
           <div class="bbb_textBox">
-            ${indiBoard.borContent }
+            ${indiBoard.borContent } 
             <br>
-            <span>#자수성가 #영앤리치 #내돈내산 #맞팔</span>
+            <span>#${indiBoard.indikeyword }</span>
           </div>
         </div>
 

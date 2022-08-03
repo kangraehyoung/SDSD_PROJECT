@@ -39,11 +39,7 @@ public class IndiBoardList extends HttpServlet {
 	pageInfo = new PageInfo(page, 10, listCount, 8);    
 	indiboardlist = new IndiBoardService().getBoardList(pageInfo);
 	
-	
-	
-	System.out.println(listCount);
-	System.out.println(pageInfo);
-	System.out.println(indiboardlist);
+
 	
 	request.setAttribute("pageInfo", pageInfo);
 	request.setAttribute("indiboardlist", indiboardlist);
