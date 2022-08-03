@@ -58,6 +58,7 @@ public class MemberDao {
 				member.setIntroduce(rs.getString("MEM_INTRODUCE"));
 				member.setStatus(rs.getString("MEM_STATUS"));
 				member.setBDay(rs.getString("MEM_BDAY"));
+				member.setMyPloging(rs.getString("MEM_MY_PLOGING"));
 			}
 
 		} catch (SQLException e) {
@@ -96,6 +97,7 @@ public class MemberDao {
 				member.setIntroduce(rs.getString("MEM_INTRODUCE"));
 				member.setStatus(rs.getString("MEM_STATUS"));
 				member.setBDay(rs.getString("MEM_BDAY"));
+				member.setMyPloging(rs.getString("MEM_MY_PLOGING"));
 			}
 
 		} catch (SQLException e) {
@@ -112,7 +114,7 @@ public class MemberDao {
 		int result = 0;
 		PreparedStatement pstm = null;
 		
-		String query = "INSERT INTO MEMBER VALUES (SEQ_MNO.NEXTVAL,?,?,?,?,?,?,?,?,DEFAULT,DEFAULT)";
+		String query = "INSERT INTO MEMBER VALUES (SEQ_MNO.NEXTVAL,?,?,?,?,?,?,?,?,DEFAULT,DEFAULT,DEFAULT)";
 		
 		try {
 			pstm = connection.prepareStatement(query);
@@ -237,6 +239,7 @@ public class MemberDao {
 				member.setIntroduce(rs.getString("MEM_INTRODUCE"));
 				member.setStatus(rs.getString("MEM_STATUS"));
 				member.setBDay(rs.getString("MEM_BDAY"));
+				member.setMyPloging(rs.getString("MEM_MY_PLOGING"));
 			}
 			
 		} catch (SQLException e) {

@@ -28,7 +28,7 @@
                 
                 <p class="crewInfo">
 	                <img alt="groupIcon" src="${ path }/resources/imgFile/mypage_groupIcon.png">
-	                모임 이름
+	                ${loginMember.myPloging }
                 </p>
             </div>
         </div>

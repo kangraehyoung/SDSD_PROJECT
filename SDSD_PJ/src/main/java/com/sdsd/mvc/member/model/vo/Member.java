@@ -35,4 +35,6 @@ public class Member {
 	
 	private String status;
 	
+	private String myPloging;
+	
 }
