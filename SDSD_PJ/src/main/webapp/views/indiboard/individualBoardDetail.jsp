@@ -186,10 +186,10 @@
     <!-- 마지막 버튼 -->
     <div class="buttonBox_D">
       <div>
-        <button class="btnprev">이전</button>
+        <button class="btnprev" id="btnBeforePage">이전</button>
         <button class="btnprev" id="btnDelete">삭제</button>
         <button class="btnprev" id="btnUpdate">수정</button>
-        <button class="btnnext">다음</button>
+        <button class="btnnext" id="btnNextPage">다음</button>
       </div>
     </div>
 </section>
