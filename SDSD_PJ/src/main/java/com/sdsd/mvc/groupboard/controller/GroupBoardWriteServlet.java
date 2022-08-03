@@ -52,7 +52,7 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding, new FileRename());
     	
     	// 폼 파라미터로 넘어온 값들 (파일에 대한 정보 X)
-    	String writer = mr.getParameter("nickName");
+    	String writer = mr.getParameter("writer");
     	String content = mr.getParameter("content");
 //    	String title = mr.getParameter("title");
     	

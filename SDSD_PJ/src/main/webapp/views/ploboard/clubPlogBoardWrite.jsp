@@ -15,9 +15,9 @@
 
     <div class="plogBoardWrap">
         <div class="container-fluid contentContainer">
-        <form action="${path}/groupboard/groupUpdate" method="POST" enctype="multipart/form-data">
+        <form action="${path}/groupboard/groupwrite" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="${GroupBoard.groupBorNo }" name="no">
-            <input type="hidden" name="{groupBoard.borTitle}"  name="title" value="생기면 넣음">
+            <input type="hidden" name="${groupBoard.borTitle}"  name="title" value="생기면 넣음">
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">
