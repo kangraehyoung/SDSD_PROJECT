@@ -13,11 +13,11 @@ import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
 import oracle.net.aso.p;
 
-@WebServlet("/plo/groupjoin")
-public class GroupJoin extends HttpServlet {
+@WebServlet("/plogroup/createPloGroup")
+public class CreatePloGroupServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public GroupJoin() {
+    public CreatePloGroupServlet() {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
