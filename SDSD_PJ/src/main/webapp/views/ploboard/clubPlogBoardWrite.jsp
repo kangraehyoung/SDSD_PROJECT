@@ -12,13 +12,12 @@
     <div class="titleBox">
         <h2><img src="${ path }/resources/imgFile/findTeam.png" alt="clubIcon">플로깅 모임 인증 등록</h2>
     </div>
-
     <div class="plogBoardWrap">
         <div class="container-fluid contentContainer">
         <form action="${path}/groupboard/groupwrite" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="${GroupBoard.groupBorNo }" name="no">
             <input type="hidden" value="${GroupBoard.borTitle}"  name="title">
-            <input type="hidden" value="${GroupBoard.groupName }" name="groupName">
+            <input type="hidden" value="노경모임" name="groupName">
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">

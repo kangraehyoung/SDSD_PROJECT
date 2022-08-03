@@ -121,6 +121,9 @@ public class GroupDao {
 			pstmt.setString(5, groupBoard.getBorContent());
 			pstmt.setString(6, groupBoard.getBorFile());
 			
+			System.out.println("널이다아아아 : " + groupBoard.getGroupName());
+			System.out.println("널이아니다아아 : " + groupBoard.getWriterName());
+			
 			result = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
