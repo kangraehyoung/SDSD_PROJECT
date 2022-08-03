@@ -8,11 +8,11 @@ import static com.sdsd.mvc.common.jdbc.JDBCTemplate.rollback;
 import java.sql.Connection;
 import java.util.List;
 
+import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.dao.GroupDao;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 import com.sdsd.mvc.groupboard.model.vo.GroupReply;
-
 
 
 public class GroupBoardService {
@@ -42,8 +42,15 @@ public class GroupBoardService {
 		
 		Connection connection = getConnection();
 		
-		result = new GroupDao().insertgroupBoard(connection, groupBoard);
+//		result = new GroupDao().insertgroupBoard(connection, groupBoard);
+// 쿼리문 여러개 실행할때는 메소드 두개 만드는게 간편합니다!! service에서 result1,2 두개 받아서 처리만 하면 됩니다
+		if(groupBoard.getGroupBorNo() != 0) {
+			result = new GroupDao().updateBoard(connection, groupBoard);
+		} else {
+			result = new GroupDao().insertGroupBoard(connection, groupBoard);
+		}		
 	
+		// if문 처리
 		if(result > 0) {
 			commit(connection);
 		} else {
@@ -126,6 +133,16 @@ public class GroupBoardService {
 		close(connection);
 			
 		return groupBoard;
+	}
+
+	public List<GroupBoard> getBoardContent(ContentInfo contentInfo) {
+		List<GroupBoard> groupboardlist = null;
+		Connection connection = getConnection();
+		
+		groupboardlist = new GroupDao().findNextContent(connection, contentInfo);
+		
+		close(connection);
+		return groupboardlist;
 	}
 
 

@@ -26,7 +26,7 @@ public class GroupBoardDeleteServlet extends HttpServlet {
     	
     	if(result > 0) {
     		request.setAttribute("msg", "게시글 삭제 성공");
-    		request.setAttribute("location", "/groupboard/groupboard");
+    		request.setAttribute("location", "/groupboard/grouplist");
 		} else {
 			request.setAttribute("msg", "게시글 삭제 실패");
 			request.setAttribute("location", "/groupboard/view?groupBorNo=" + groupBorNo);

@@ -52,19 +52,17 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding, new FileRename());
     	
     	// 폼 파라미터로 넘어온 값들 (파일에 대한 정보 X)
-    	String writer = mr.getParameter("writer");
+    	String writer = mr.getParameter("nickName");
     	String content = mr.getParameter("content");
-    	String title = mr.getParameter("title");
+    	String groupkeyword = mr.getParameter("groupkeyword");
+//    	String originalFileName = mr.getOriginalFileName("upfile1");
+    	String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
     	
-    	// 플로깅 모임명을 어떻게 할지 고민 중
+    	// 플로깅 모임명 조인해오기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     	String groupName = mr.getParameter("groupName");
     	
-    	String originalFileName = mr.getOriginalFileName("upfile");
-    	
-    	System.out.println(writer);
     	// 파일에 대한 정보를 가져올 때
-    	
-       	HttpSession session = request.getSession(false);
+    	       	HttpSession session = request.getSession(false);
     	Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
     	
     	if (loginMember != null) {
@@ -74,20 +72,20 @@ public class GroupBoardWriteServlet extends HttpServlet {
     		groupBoard.setWriterName(writer);
     		groupBoard.setBorContent(content);
     		groupBoard.setBorFile(originalFileName);
-			groupBoard.setBorTitle(title); // 게시글 title
-    		groupBoard.setGroupName(groupName); // 플로깅 모임명 
+    		groupBoard.setGroupkeyword(groupkeyword);
+    		groupBoard.setGroupName(groupName); // 플로깅 모임명!!!!!!!!!!!!!!! 
     		
     		result = new GroupBoardService().save(groupBoard);
     		if(result > 0) {
         		request.setAttribute("msg", "게시글 등록 성공");
-        		request.setAttribute("location", "/groupboard/groupboardlist");
+        		request.setAttribute("location", "/groupboard/grouplist");
     		} else {
     			request.setAttribute("msg", "게시글 등록 실패");
-    			request.setAttribute("location", "/groupboard/groupboardlist");
+    			request.setAttribute("location", "/groupboard/grouplist");
     		}
     	} else {
     		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
-    		request.setAttribute("location", "/");
+    		request.setAttribute("location", "/member/login");
     	}
 
     	request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);

@@ -13,7 +13,7 @@ import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.service.GroupBoardService;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 
-@WebServlet("/groupboard/groupboardlist")
+@WebServlet("/groupboard/grouplist")
 public class GroupBoardList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
