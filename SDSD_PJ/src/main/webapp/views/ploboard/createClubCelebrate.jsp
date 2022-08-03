@@ -27,8 +27,8 @@
         <p>주변에 모임을 홍보해보세요!</p>
 
         <div class="buttonBox">
-            <a href="#"><img src="${ path }/resources/imgFile/kakaoTalkShareBtn.png" alt="" style="margin-right: 5px;"></a>
-            <a href="#"><img src="${ path }/resources/imgFile/copyLinkBtn.png" alt="" style="margin-left: 5px;"></a>
+                <button class="gotoMain">메인페이지 바로가기 <i class="bi bi-house-door"></i></button>
+                <button>내 모임 바로가기 <i class="bi bi-people"></i></button>
         </div>
     </div>
 
