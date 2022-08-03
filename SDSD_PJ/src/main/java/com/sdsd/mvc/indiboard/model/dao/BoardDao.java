@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 import com.sdsd.mvc.indiboard.model.vo.Reply;
@@ -389,6 +390,79 @@ public class BoardDao {
 				indiBoard.setIndikeyword("INDI_BOR_KEYWORD");
 				
 				indiboardlist.add(indiBoard);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		
+		return indiboardlist;
+	}
+
+	public List<IndiBoard> findNextContent(Connection connection, ContentInfo contentInfo) {
+		List<IndiBoard> indiboardlist = new ArrayList<>();
+		PreparedStatement pstm = null;;
+		ResultSet rs = null;
+		String query = "SELECT *  "
+				+ "FROM ( "
+				+ "    SELECT ROWNUM AS RNUM, "
+				+ "           INDIBOR_NUMBER, "
+				+ "           INDIBOR_TITLE, "
+				+ "           MEM_EMAIL, "
+				+ "           INDIBOR_WRITER_NAME, "
+				+ "           INDI_CREATE_DATE, "
+				+ "           INDI_UPDATE_DATE, "
+				+ "           INDI_BOR_FILE, "
+				+ "           INDI_READCOUNT, "
+				+ "           INDI_BOR_STATUS "
+				+ "    FROM ( "
+				+ "            SELECT IB.INDIBOR_NUMBER, "
+				+ "                   IB.INDIBOR_TITLE, "
+				+ "                   M.MEM_EMAIL, "
+				+ "                   IB.INDIBOR_WRITER_NAME, "
+				+ "                   IB.INDI_CREATE_DATE, "
+				+ "                   IB.INDI_UPDATE_DATE, "
+				+ "                   IB.INDI_BOR_FILE, "
+				+ "                   IB.INDI_READCOUNT, "
+				+ "                   IB.INDI_BOR_STATUS "
+				+ "            FROM INDIBOARD IB "
+				+ "            JOIN MEMBER M ON (M.MEM_NUMBER = IB.INDIBOR_WRITER_NO) "
+				+ "    ) "
+				+ ") WHERE (RNUM BETWEEN ? AND ?) AND INDI_BOR_STATUS = 'Y'";
+		
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, contentInfo.getPrevContent());
+			pstm.setInt(2, contentInfo.getNextContent());
+			
+			rs = pstm.executeQuery();
+			
+			while(rs.next()) {
+				IndiBoard indiBoard = new IndiBoard();
+				String[] arr = new String[3];
+				List<String> list = indiBoard.getBorFileList();
+				
+				
+				indiBoard.setRowNum(rs.getInt("RNUM"));
+				indiBoard.setMaBorNo(rs.getInt("INDIBOR_NUMBER"));
+				indiBoard.setBorTitle(rs.getString("INDIBOR_TITLE"));
+				indiBoard.setEmail(rs.getString("MEM_EMAIL"));
+				indiBoard.setWriterName(rs.getString("INDIBOR_WRITER_NAME"));
+				indiBoard.setCreateDate(rs.getString("INDI_CREATE_DATE"));
+				indiBoard.setBorFile(rs.getString("INDI_BOR_FILE"));
+				indiBoard.setReadCount(rs.getInt("INDI_READCOUNT"));
+				indiBoard.setBorStatus(rs.getString("INDI_BOR_STATUS"));
+				
+				arr= indiBoard.getBorFile().split(", ");
+				list = Arrays.asList(arr);
+				
+				indiBoard.setBorFileList(list);
+				
+				indiboardlist.add(indiBoard);
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

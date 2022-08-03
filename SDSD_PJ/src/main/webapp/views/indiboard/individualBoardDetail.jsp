@@ -203,7 +203,12 @@
 		$("#btnUpdate").on("click", () => {
 			location.replace("${path}/indiboard/indiUpdate?maBorNo=${indiBoard.maBorNo}");
 		})
-		
+		$("#btnBeforePage").on("click", () => {
+			location.replace("${path}/indiboard/detail?maBorNo=${contentInfo.prevContent}");
+		})
+		$("#btnNextPage").on("click", () => {
+			location.replace("${path}/indiboard/detail?maBorNo=${contentInfo.nextContent}");
+		})
 	});
 </script>
 
