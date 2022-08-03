@@ -16,7 +16,7 @@
             </div>
             <div class="col-md-7 textBox">
                 <p>
-                    (모임 생성자)님!<br>
+                    ${loginMember.name }님!<br>
                     모임을 생성 해주셔서 감사합니다! <span><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/winking-face_1f609.png" alt=""></span>
                 </p>
                 </div>
