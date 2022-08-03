@@ -27,4 +27,30 @@ public class PloGroup {
 	
 	private int ploNop; // 인원 수
 	
+	///////////////////////////////
+	///////////////////////////////
+	
+	private int spBorNum; // 플로깅 모임 번호
+	
+	private int spbWriterNum; // 플로깅 작성자 번호
+	
+	private String spbWriterName; // 플로깅 작성자 이름 or 닉네임..?
+	
+	private String plogGroupName; // 멤버테이블의 플로깅 모임명
+	
+	private String spbTitle; // 플로깅 모임명
+	
+	private String spbContent; // 플로깅 내용
+	
+	private String spbCreateDate; // 모임 생성 날짜
+	
+	private String spbUpdateDate; // 모임 수정 날짜
+	
+	private int spbReadCount; // 조회수
+	
+	private String spbBorFile; // 첨부파일
+	
+	private String spbBorStatus; // 모임 존재 여부
+	
+	private String spbKeyword; // 키워드
 }
