@@ -54,10 +54,10 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	// 폼 파라미터로 넘어온 값들 (파일에 대한 정보 X)
     	String writer = mr.getParameter("writer");
     	String content = mr.getParameter("content");
-//    	String title = mr.getParameter("title");
+    	String title = mr.getParameter("title");
     	
     	// 플로깅 모임명을 어떻게 할지 고민 중
-//    	String groupName = mr.getParameter("groupName");
+    	String groupName = mr.getParameter("groupName");
     	
     	String originalFileName = mr.getOriginalFileName("upfile");
     	
@@ -74,8 +74,8 @@ public class GroupBoardWriteServlet extends HttpServlet {
     		groupBoard.setWriterName(writer);
     		groupBoard.setBorContent(content);
     		groupBoard.setBorFile(originalFileName);
-//    		groupBoard.setBorTitle(title); // 게시글 title
-//    		groupBoard.setGroupName(groupName); // 플로깅 모임명 아직 미정
+			groupBoard.setBorTitle(title); // 게시글 title
+    		groupBoard.setGroupName(groupName); // 플로깅 모임명 
     		
     		result = new GroupBoardService().save(groupBoard);
     		if(result > 0) {
