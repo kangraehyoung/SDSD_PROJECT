@@ -15,8 +15,6 @@ import com.sdsd.mvc.indiboard.model.vo.Reply;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
-import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
-
 public class BoardDao {
 
 	public int getBoardCount(Connection connection) {
