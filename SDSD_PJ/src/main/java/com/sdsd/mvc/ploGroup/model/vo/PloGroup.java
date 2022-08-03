@@ -27,8 +27,7 @@ public class PloGroup {
 	
 	private int ploNop; // 인원 수
 	
-	///////////////////////////////
-	///////////////////////////////
+
 	
 	private int spBorNum; // 플로깅 모임 번호
 	
