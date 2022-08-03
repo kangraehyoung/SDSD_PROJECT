@@ -14,19 +14,18 @@ public class PloGroupDao {
 		
 		PreparedStatement pstmt = null;
 		
-		String query = "INSERT INTO PLO_GR_BOARD VALUES(SEQ_PLO_GR_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT,  DEFAULT, DEFAULT, ?, DEFAULT, ?, ?, ?)";
+		String query = "INSERT INTO SEARCH_PLOG_BOARD VALUES(SEQ_SPBOR_NUMBER.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT, DEFAULT)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
 			
 
-			pstmt.setString(1, plogroup.getPloLeader());
-			pstmt.setString(2, plogroup.getPloTitle());
-			pstmt.setString(3, plogroup.getPloIntro());
-			pstmt.setString(4, plogroup.getGroupBoardFile());
-			pstmt.setString(5, plogroup.getGender());
-			pstmt.setString(6, plogroup.getLocal());
-			pstmt.setInt(7, plogroup.getPloMemNum());
+			pstmt.setInt(1, plogroup.getSpbWriterNum());
+			pstmt.setString(2, plogroup.getSpbWriterName());
+			pstmt.setString(3, plogroup.getPlogGroupName());
+			pstmt.setString(4, plogroup.getSpbTitle());
+			pstmt.setString(5, plogroup.getSpbContent());
+			pstmt.setString(6, plogroup.getSpbBorFile());
 //			pstmt.setInt(4, plogroup.getPloMemNum());
 			
 			
@@ -40,5 +39,27 @@ public class PloGroupDao {
 		
 		return result;
 	}
+
+	public int memberGroupUpdate(Connection connection, PloGroup plogroup) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String qurey = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER = ?";
+		try {
+			pstm = connection.prepareStatement(qurey);
+			
+			pstm.setString(1, plogroup.getPlogGroupName());
+			pstm.setInt(2, plogroup.getSpbWriterNum());
+			
+			result = pstm.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+	
+		return result ;
+	}
+
 
 }

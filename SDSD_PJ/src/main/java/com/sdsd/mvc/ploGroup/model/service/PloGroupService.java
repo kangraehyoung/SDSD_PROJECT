@@ -11,18 +11,21 @@ public class PloGroupService {
 
 	public int groupJoin(PloGroup plogroup) {
 		int result = 0;
+		int result2 = 0;
 		
 		Connection connection = getConnection();
 		
 		result = new PloGroupDao().save(connection, plogroup);
-		System.out.println("result : " + result);
-		if(result > 0) {
+		System.out.println("result" + result);
+		result2 = new PloGroupDao().memberGroupUpdate(connection, plogroup);
+		System.out.println("result2 : " + result);
+		if(result > 0 && result2 > 0) {
 			commit(connection);
 		} else {
 			rollback(connection);
 		}
 		
-		return result;
+		return result + result2;
 	}
 
 }
