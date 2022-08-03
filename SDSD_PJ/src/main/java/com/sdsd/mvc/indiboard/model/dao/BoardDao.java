@@ -2,7 +2,6 @@ package com.sdsd.mvc.indiboard.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,8 +12,6 @@ import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 import com.sdsd.mvc.indiboard.model.vo.Reply;
-
-import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
