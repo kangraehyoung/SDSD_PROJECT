@@ -48,6 +48,9 @@
                     <div class="textWrap">
                         <textarea class="form-control" name="content" placeholder="내용을 입력해 주세요!" id="clubText" style="height: 300px; resize: none;"></textarea>
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
+                    <br><br>
+                    <!-- 키워드 입력 -->    
+                    <input type="text" name="groupkeyword" placeholder="키워드를 입력해주세요!">
                     </div>
 
                     <div class="extraWrap">

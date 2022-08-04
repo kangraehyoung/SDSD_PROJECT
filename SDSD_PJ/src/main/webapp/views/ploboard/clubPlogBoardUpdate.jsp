@@ -14,7 +14,7 @@
     </div>
     <div class="plogBoardWrap">
         <div class="container-fluid contentContainer">
-        <form action="${path}/groupboard/groupwrite" method="POST" enctype="multipart/form-data">
+        <form action="${path}/groupboard/groupUpdate" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="${GroupBoard.groupBorNo }" name="no">
             <input type="hidden" value="${GroupBoard.borTitle}"  name="title">
             <input type="hidden" value="${PloGroup.ploTitle }" name="groupName">
@@ -39,14 +39,17 @@
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="profileName">
-                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ loginMember.name }" style="width: 50% !important;">
+                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ groupBoard.writerName }" style="width: 50% !important;">
                         </div>
                     </div>
 
                     <!-- 인증 내용 -->
                     <div class="textWrap">
-                        <textarea class="form-control" name="content" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 300px; resize: none;"></textarea>
+                        <textarea class="form-control" name="content" id="clubText" style="height: 300px; resize: none;"> ${groupBoard.borContent } </textarea>
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
+                    <br><br>
+                    <!-- 키워드 입력 --> 
+            		<input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" >
                     </div>
 
                     <div class="extraWrap">
