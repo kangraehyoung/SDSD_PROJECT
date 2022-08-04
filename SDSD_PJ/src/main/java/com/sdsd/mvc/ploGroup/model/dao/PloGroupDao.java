@@ -5,8 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
@@ -199,6 +201,147 @@ public class PloGroupDao {
 			e.printStackTrace();
 		} finally {
 			close(pstm);
+		}
+		return result ;
+	}
+	
+	public List<PloGroup> findNextContent(Connection connection, ContentInfo contentInfo) {
+		List<PloGroup> ploGroupList = new ArrayList<>();
+		PreparedStatement pstm = null;;
+		ResultSet rs = null;
+		String query = "SELECT *   "
+				+ "				FROM ( "
+				+ "				    SELECT ROWNUM AS RNUM, "
+				+ "                           SPBOR_NUMBER, "
+				+ "				           SPB_WRITER_NO, "
+				+ "				           SPB_WRITER_NAME, "
+				+ "				           PLOG_GROUP_NAME, "
+				+ "				           SPB_TITLE, "
+				+ "				           SPB_CONTENT, "
+				+ "                           SPB_CREATE_DATE, "
+				+ "                           SPB_UPDATE_DATE, "
+				+ "                           SPB_READCOUNT, "
+				+ "                           SPB_BOR_FILE, "
+				+ "                           SPB_BOR_STATUS, "
+				+ "                           SPB_BOR_KEYWORD "
+				+ "				    FROM ( "
+				+ "                         SELECT SP.SPBOR_NUMBER, "
+				+ "                               SP.SPB_WRITER_NO, "
+				+ "                               SP.SPB_WRITER_NAME, "
+				+ "                               SP.PLOG_GROUP_NAME, "
+				+ "                               SP.SPB_TITLE, "
+				+ "                               SP.SPB_CONTENT, "
+				+ "                               SP.SPB_CREATE_DATE, "
+				+ "                               SP.SPB_UPDATE_DATE, "
+				+ "                               SP.SPB_READCOUNT, "
+				+ "                               SP.SPB_BOR_FILE, "
+				+ "                               SP.SPB_BOR_STATUS, "
+				+ "                               SP.SPB_BOR_KEYWORD "
+				+ "				          FROM SEARCH_PLOG_BOARD SP "
+				+ "				            JOIN MEMBER M ON (M.MEM_NUMBER = SP.SPB_WRITER_NO) "
+				+ "				    )  "
+				+ "				) WHERE (RNUM BETWEEN ? AND ?) AND SPB_BOR_STATUS = 'Y'";
+		
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, contentInfo.getPrevContent());
+			pstm.setInt(2, contentInfo.getNextContent());
+			
+			rs = pstm.executeQuery();
+			
+			while(rs.next()) {
+				PloGroup ploGroup = new PloGroup();
+				
+				ploGroup.setSpbRowNum(rs.getInt("RNUM"));
+				ploGroup.setSpBorNum(rs.getInt("SPBOR_NUMBER"));
+				ploGroup.setSpbWriterNum(rs.getInt("SPB_WRITER_NO"));
+				ploGroup.setSpbWriterName(rs.getString("SPB_WRITER_NAME"));
+				ploGroup.setPlogGroupName(rs.getString("PLOG_GROUP_NAME"));
+				ploGroup.setSpbTitle(rs.getString("SPB_TITLE"));
+				ploGroup.setSpbContent(rs.getString("SPB_CONTENT"));
+				ploGroup.setSpbCreateDate(rs.getString("SPB_CREATE_DATE"));
+				ploGroup.setSpbUpdateDate(rs.getString("SPB_UPDATE_DATE"));
+				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
+				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
+				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				ploGroup.setSpbKeyword(rs.getString("SPB_BOR_KEYWORD"));
+				
+				ploGroupList.add(ploGroup);
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		
+		return ploGroupList;
+	}
+
+	public PloGroup findGroupByNo(Connection connection, int ploGrNo) {
+		PloGroup ploGroup = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String query = "SELECT *  "
+				+ "    FROM SEARCH_PLOG_BOARD SPB  "
+				+ "    JOIN MEMBER M ON(SPB.SPB_WRITER_NO = M.MEM_NUMBER)  "
+				+ "    WHERE SPB_BOR_STATUS = 'Y' AND SPBOR_NUMBER = ?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setInt(1, ploGrNo);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				ploGroup = new PloGroup();
+				
+				ploGroup.setSpBorNum(rs.getInt("SPBOR_NUMBER"));;
+				ploGroup.setSpbWriterNum(rs.getInt("SPB_WRITER_NO"));
+				ploGroup.setSpbWriterName(rs.getString("SPB_WRITER_NAME"));
+				ploGroup.setPlogGroupName(rs.getString("PLOG_GROUP_NAME"));
+				ploGroup.setSpbTitle(rs.getString("SPB_TITLE"));
+				ploGroup.setSpbContent(rs.getString("SPB_CONTENT"));
+				ploGroup.setSpbCreateDate(rs.getString("SPB_CREATE_DATE"));
+				ploGroup.setSpbUpdateDate(rs.getString("SPB_UPDATE_DATE"));
+				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
+				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
+				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				ploGroup.setSpbKeyword(rs.getString("SPB_BOR_KEYWORD"));
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		
+		return ploGroup;
+	}
+
+	public int updateReadCount(Connection connection, PloGroup ploGroup) {
+		int result =0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE SEARCH_PLOG_BOARD SET SPB_READCOUNT=? WHERE SPBOR_NUMBER=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			ploGroup.setSpbReadCount(ploGroup.getSpbReadCount() + 1);
+			
+			pstmt.setInt(1, ploGroup.getSpbReadCount());
+			pstmt.setInt(2, ploGroup.getSpBorNum());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
 		}
 		return result;
 	}

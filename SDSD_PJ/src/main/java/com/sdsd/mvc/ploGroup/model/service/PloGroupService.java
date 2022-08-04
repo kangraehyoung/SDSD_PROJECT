@@ -1,5 +1,6 @@
 package com.sdsd.mvc.ploGroup.model.service;
 
+import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
@@ -71,5 +72,36 @@ public class PloGroupService {
 		return result;
 	}
 	
+	public List<PloGroup> getGroupContent(ContentInfo contentInfo) {
+		List<PloGroup> ploGroupList = null;
+		Connection connection = getConnection();
+		
+		ploGroupList = new PloGroupDao().findNextContent(connection, contentInfo);
+		
+		close(connection);
+		return ploGroupList;
+	}
+
+
+	public PloGroup getGroupByNo(int ploGrNo, boolean hasRead) {
+		int result = 0;
+		PloGroup ploGroup = null;
+		
+		Connection connection = getConnection();
+		
+		ploGroup = new PloGroupDao().findGroupByNo(connection, ploGrNo);
+		
+		if(ploGroup != null && !hasRead) {
+			result = new PloGroupDao().updateReadCount(connection, ploGroup);
+			if(result > 0) {
+				commit(connection);
+			} else {
+				rollback(connection);
+			}
+		}
+		close(connection);
+		
+		return ploGroup;
+	}
 
 }

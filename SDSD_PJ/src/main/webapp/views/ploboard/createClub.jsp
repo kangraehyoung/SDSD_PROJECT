@@ -101,7 +101,7 @@
                     </div>
 					 -->
 					 <!-- 모임장이 누구인지 가져오기위한 것 -->
-					 <input type="hidden" name="leader" value="${loginMember.nickName }">
+					 <input type="hidden" name="nickName" value="${loginMember.nickName }">
 					 <!-- 멤버에 업데이트를 위한 모임장 넘버 -->
 					 <input type="hidden" name="leaderNo" value="${loginMember.no }">
 					 
@@ -109,7 +109,7 @@
                     <div class="mb-3 row">
                         <label for="clubText" class="col-md-3 col-form-label">모임 소개</label>
                         <div>
-                            <textarea class="form-control" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 150px; resize: none;" name="ploIntro"></textarea>
+                            <textarea class="form-control" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 150px; resize: none;" name="content"></textarea>
                         </div>
                     </div>
 
