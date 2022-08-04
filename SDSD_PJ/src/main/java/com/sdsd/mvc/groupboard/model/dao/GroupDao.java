@@ -198,45 +198,44 @@ public class GroupDao {
 	}
 
 
-// ??????????
-//	private List<GroupReply> getRepliesByNo(Connection connection, int groupRepboardNo) {
-//		List<GroupReply> replies = new ArrayList<>();
-//		PreparedStatement pstm = null;
-//		ResultSet rs = null;
-//		String query = null;
-//		try {
-//			query = "SELECT * "
-//					+ "FROM GBREPLY IBR "
-//					+ "JOIN MEMBER M ON(GBR.GBREP_WRITER_NUMBER = M.MEM_NUMBER) "
-//					+ "WHERE GBR.GBREP_STATUS = 'Y' AND GBR.IBREP_BOR_NUMBER = ? "
-//					+ "ORDER BY GBR.GBREP_NUMBER DESC";
-//			
-//			
-//			pstm = connection.prepareStatement(query);
-//			
-//			pstm.setInt(1, groupRepboardNo);
-//			rs = pstm.executeQuery();
-//			
-//			while(rs.next()) {
-//				GroupReply groupReply = new GroupReply();
-//				groupReply.setNo(rs.getInt("GBREP_NUMBER"));
-//				groupReply.setRepboardNo(rs.getInt("GBREP_BOR_NUMBER"));
-//				groupReply.setRepcontent(rs.getString("GBREP_CONTENT"));
-//				groupReply.setRepwriterId(rs.getString("MEM_NICKNAME"));
-//				groupReply.setRepcreateDate(rs.getDate("GBREP_CREATE_DATE"));
-//				groupReply.setRepmodifyDate(rs.getDate("GBREP_MODIFY_DATE"));
-//				
-//				replies.add(groupReply);
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		} finally {
-//			close(rs);
-//			close(pstm);
-//		}
-//		
-//		return replies;
-//	}
+	private List<GroupReply> getRepliesByNo(Connection connection, int groupRepboardNo) {
+		List<GroupReply> replies = new ArrayList<>();
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		String query = null;
+		try {
+			query = "SELECT * "
+					+ "FROM GBREPLY GBR "
+					+ "JOIN MEMBER M ON(GBR.GBREP_WRITER_NUMBER = M.MEM_NUMBER) "
+					+ "WHERE GBR.GBREP_STATUS = 'Y' AND GBR.GBREP_BOR_NUMBER = ? "
+					+ "ORDER BY GBR.GBREP_NUMBER DESC";
+			
+			
+			pstm = connection.prepareStatement(query);
+			
+			pstm.setInt(1, groupRepboardNo);
+			rs = pstm.executeQuery();
+			
+			while(rs.next()) {
+				GroupReply groupReply = new GroupReply();
+				groupReply.setNo(rs.getInt("GBREP_NUMBER"));
+				groupReply.setRepboardNo(rs.getInt("GBREP_BOR_NUMBER"));
+				groupReply.setRepcontent(rs.getString("GBREP_CONTENT"));
+				groupReply.setRepwriterId(rs.getString("MEM_NICKNAME"));
+				groupReply.setRepcreateDate(rs.getDate("GBREP_CREATE_DATE"));
+				groupReply.setRepmodifyDate(rs.getDate("GBREP_MODIFY_DATE"));
+				
+				replies.add(groupReply);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		
+		return replies;
+	}
 	
 	public int updateReadCount(Connection connection, GroupBoard groupBoard) {
 		int result =0;
