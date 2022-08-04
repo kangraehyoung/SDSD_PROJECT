@@ -71,9 +71,9 @@
             <c:forEach var="ploGroup" items="${ ploGroupList }">
             <div class="contentBox">
                 <div class="imgBox" onclick="location.href='${ path }/ploboard/findDetail?ploGrNo=${ploGroup.spBorNum }'">
-                    <img src="${path }/resources/upload/board/${PloGroup.spbBorFile}" alt="img">
+                    <img src="${path }/resources/upload/board/${ploGroup.spbBorFile}" alt="img">
                     <div class="hoverBox">
-                        <p>${ploGroup.spbTitle } </p>
+                        <p>리더 | ${ PloGroup.spbWriterName }</p>
                         <p>활동 지역 | </p>
                         <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
                         <a>모임 상세보기</a>

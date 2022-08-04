@@ -15,9 +15,10 @@
     <div class="plogBoardWrap">
         <div class="container-fluid contentContainer">
         <form action="${path}/groupboard/groupwrite" method="POST" enctype="multipart/form-data">
+        	<input type="hidden" value="${loginMember.myPloging }" name="groupName">
+        	<input type="hidden" value="${loginMember.nickName}" name="nickName">
             <input type="hidden" value="${GroupBoard.groupBorNo }" name="no">
             <input type="hidden" value="${GroupBoard.borTitle}"  name="title">
-            <input type="hidden" value="${PloGroup.ploTitle }" name="groupName">
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">
@@ -26,7 +27,7 @@
                     </div>
                     <div class="fileboxBtn">
                         <label for="uploadImages">사진 등록</label>
-                        <input name="upfile" type="file" id="uploadImages" multiple> 
+                        <input name="upfile1" type="file" id="uploadImages" multiple> 
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
                 </div>
@@ -39,13 +40,13 @@
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="profileName">
-                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ loginMember.name }" style="width: 50% !important;">
+                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ loginMember.nickName }" style="width: 50% !important;">
                         </div>
                     </div>
 
                     <!-- 인증 내용 -->
                     <div class="textWrap">
-                        <textarea class="form-control" name="content" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 300px; resize: none;"></textarea>
+                        <textarea class="form-control" name="content" placeholder="내용을 입력해 주세요!" id="clubText" style="height: 300px; resize: none;"></textarea>
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
                     </div>
 

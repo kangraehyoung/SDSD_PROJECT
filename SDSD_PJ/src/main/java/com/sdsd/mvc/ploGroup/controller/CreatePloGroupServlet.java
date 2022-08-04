@@ -6,8 +6,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
+import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.service.PloGroupService;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
@@ -25,6 +27,7 @@ public class CreatePloGroupServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int result = 0;
 		PloGroup plogroup = new PloGroup();
 		
 		String path = getServletContext().getRealPath("/resources/upload/board");
@@ -36,26 +39,40 @@ public class CreatePloGroupServlet extends HttpServlet {
         String encoding = "UTF-8";
 
         MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding);
-		
-		plogroup.setSpbWriterNum(Integer.parseInt(mr.getParameter("leaderNo")));
-		plogroup.setSpbWriterName(mr.getParameter("leader"));
-		plogroup.setPlogGroupName(mr.getParameter("ploTitle"));
-		plogroup.setSpbTitle(mr.getParameter("ploTitle"));
-		plogroup.setSpbContent(mr.getParameter("ploIntro"));
-		plogroup.setSpbBorFile(mr.getParameter("spbBorFile"));
-//		plogroup.setLocal(mr.getParameter("local"));
-//		plogroup.setGender(mr.getParameter("gender"));
-		
-		int result = new PloGroupService().groupJoin(plogroup);
-		
-		if (result > 0) {
-			request.setAttribute("msg", "모임 등록 성공");
-    		request.setAttribute("location", "/views/ploboard/createClubCelebrate.jsp");
-		} else {
-			request.setAttribute("msg", "모임 등록 실패");
-    		request.setAttribute("location", "/");
-		}
-		
+        
+        String writer = mr.getParameter("nickName");
+    	String content = mr.getParameter("content");
+    	String pgName = mr.getParameter("pgName");
+    	String spbKeyword = mr.getParameter("spbKeyword");
+        String originalFileName = mr.getOriginalFileName("upfile1");
+        //String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
+        
+        HttpSession session = request.getSession(false);
+    	Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
+        
+        if (loginMember != null) {   
+        	
+			plogroup.setSpbWriterNum(loginMember.getNo());
+			plogroup.setSpbWriterName(writer);
+			plogroup.setPlogGroupName(pgName);
+			plogroup.setSpbContent(content);
+			plogroup.setSpbBorFile(originalFileName);
+			plogroup.setSpbKeyword(spbKeyword);
+			
+			result = new PloGroupService().groupJoin(plogroup);
+			
+			if (result > 0) {
+				request.setAttribute("msg", "모임 등록 성공");
+	    		request.setAttribute("location", "/views/ploboard/createClubCelebrate.jsp");
+			} else {
+				request.setAttribute("msg", "모임 등록 실패");
+	    		request.setAttribute("location", "/");
+			}
+        } else {
+    		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
+    		request.setAttribute("location", "/member/login");
+    	}
+		System.out.println("플로깅모임생성" + plogroup);
 		request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 	}
 

@@ -55,8 +55,8 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	String writer = mr.getParameter("nickName");
     	String content = mr.getParameter("content");
     	String groupkeyword = mr.getParameter("groupkeyword");
-//    	String originalFileName = mr.getOriginalFileName("upfile1");
-    	String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
+    	String originalFileName = mr.getOriginalFileName("upfile1");
+//    	String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
     	
     	// 플로깅 모임명 조인해오기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     	String groupName = mr.getParameter("groupName");
