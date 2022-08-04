@@ -372,6 +372,27 @@ public class PloGroupDao {
 		return result;
 	}
 
+	public int updateStatus(Connection connection, int spBorNum, String status) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String qurey = "UPDATE SEARCH_PLOG_BOARD SET SPB_BOR_STATUS=? WHERE SPBOR_NUMBER=?";
+		try {
+			pstm = connection.prepareStatement(qurey);
+			
+			pstm.setString(1, status);
+			pstm.setInt(2, spBorNum);
+			
+			result = pstm.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+	
+		return result;
+	}
+
 	
 	
 	
