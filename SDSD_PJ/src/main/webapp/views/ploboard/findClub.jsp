@@ -68,12 +68,12 @@
     <div class="contentWrap">
         <div class="contentBody">
             <!-- 첫번째 줄  1번째 모임 -->
-            <c:forEach var="PloGroup" items="${ ploGroupList }">
+            <c:forEach var="ploGroup" items="${ ploGroupList }">
             <div class="contentBox">
-                <div class="imgBox" onclick="location.href='${ path }/views/ploboard/viewClub.jsp'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
+                <div class="imgBox" onclick="location.href='${ path }/ploboard/findDetail?ploGrNo=${ploGroup.spBorNum }'">
+                    <img src="${path }/resources/upload/board/${ploGroup.spbBorFile}" alt="img">
                     <div class="hoverBox">
-                        <p>리더 | </p>
+                        <p>리더 | ${ PloGroup.spbWriterName }</p>
                         <p>활동 지역 | </p>
                         <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
                         <a>모임 상세보기</a>
