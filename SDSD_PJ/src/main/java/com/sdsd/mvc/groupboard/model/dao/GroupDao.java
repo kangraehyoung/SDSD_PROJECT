@@ -86,14 +86,14 @@ public class GroupDao {
 				GroupBoard groupBoard = new GroupBoard();
 				
 				groupBoard.setRowNum(rs.getInt("RNUM"));
-				groupBoard.setGroupBorNo(rs.getInt("GROUP_BOARD_NUMBER"));
-				groupBoard.setBorTitle(rs.getString("GROUP_BOARD_TITLE"));
+				groupBoard.setGroupBorNo(rs.getInt("GROUPBOR_NUMBER"));
+				groupBoard.setBorTitle(rs.getString("GROUPBOR_TITLE"));
 				groupBoard.setEmail(rs.getString("MEM_EMAIL"));
-				groupBoard.setWriterName(rs.getString("BOR_WRITER_NAME"));
-				groupBoard.setCreateDate(rs.getString("CREATE_DATE"));
-				groupBoard.setBorFile(rs.getString("BOR_FILE"));
-				groupBoard.setReadCount(rs.getInt("READCOUNT"));
-				groupBoard.setBorStatus(rs.getString("BOR_STATUS"));
+				groupBoard.setWriterName(rs.getString("GROUPBOR_WRITER_NAME"));
+				groupBoard.setCreateDate(rs.getString("GROUP_CREATE_DATE"));
+				groupBoard.setBorFile(rs.getString("GROUP_BOR_FILE"));
+				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
+				groupBoard.setBorStatus(rs.getString("GROUP_BOR_STATUS"));
 				
 				groupBoardList.add(groupBoard);
 			}
@@ -325,8 +325,8 @@ public class GroupDao {
 				+ "                   GB.GROUP_BOR_FILE, "
 				+ "                   GB.GROUP_READCOUNT, "
 				+ "                   GB.GROUP_BOR_STATUS "
-				+ "            FROM GROUPBOARD IB "
-				+ "            JOIN MEMBER M ON (M.MEM_NUMBER = GB.INDIBOR_WRITER_NO) "
+				+ "            FROM GROUPBOARD GB "
+				+ "            JOIN MEMBER M ON (M.MEM_NUMBER = GB.GROUPBOR_WRITER_NO) "
 				+ "    ) "
 				+ ") WHERE (RNUM BETWEEN ? AND ?) AND GROUP_BOR_STATUS = 'Y'";
 		
