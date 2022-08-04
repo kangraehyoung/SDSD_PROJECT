@@ -138,23 +138,6 @@ public class GroupBoardService {
 		return groupBoard;
 	}
 
-	public List<GroupBoard> getBoardContent(ContentInfo contentInfo) {
-		List<PloGroup> ploGroupList = null;
-		Connection connection = getConnection();
-		
-		groupboardlist = new GroupDao().findNextContent(connection, contentInfo);
-		
-		close(connection);
-		return groupboardlist;
-	}
-
-	public List<PloGroup> getGroupContent(ContentInfo contentInfo) {
-		List<IndiBoard> indiboardlist = null;
-		Connection connection = getConnection();
-		indiboardlist = new BoardDao().findNextContent(connection, contentInfo);
-		close(connection);
-		return indiboardlist;
-	}
 
 
 	

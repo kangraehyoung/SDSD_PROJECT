@@ -52,7 +52,7 @@
             <div class="col-6 clubInfoBox">
                 <div class="titleText">
                     <p>
-                        모임명
+                        ${ploGroup.spbTitle }
                         <!-- 좋아요 누르기 전 하트 모양 -->
                         <a href=""><i class="bi bi-heart"></i></a>
                         <!-- 좋아요 누른 후 하트 모양 -->
@@ -67,10 +67,10 @@
 
                 <div class="clubInfoList">
                     <ul>
-                        <li><span>모임 리더 :</span> </li>
+                        <li><span>모임 리더 : ${ploGroup.spbWriterName }</span> </li>
                         <li><span>멤버 수 : </span> </li>
                         <li><span>활동 지역 : </span> </li>
-                        <li><span>소개 : </span> </li>
+                        <li><span>소개 : ${ploGroup.spbContent } </span> </li>
                     </ul>
                 </div>
 

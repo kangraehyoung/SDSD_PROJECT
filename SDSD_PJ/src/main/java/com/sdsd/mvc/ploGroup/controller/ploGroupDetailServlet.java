@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.groupboard.model.service.GroupBoardService;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
+import com.sdsd.mvc.ploGroup.model.service.PloGroupService;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
 
@@ -38,7 +39,7 @@ public class ploGroupDetailServlet extends HttpServlet {
 	    	}
 	    	
     	contentInfo = new ContentInfo(ploGrNo);
-    	ploGroupList = new GroupBoardService().getGroupContent(contentInfo);
+    	ploGroupList = new PloGroupService().getGroupContent(contentInfo);
     	
     	
     	request.setAttribute("contentInfo", contentInfo);
@@ -78,10 +79,10 @@ public class ploGroupDetailServlet extends HttpServlet {
         	response.addCookie(cookie);
     	}
     	
-    	ploGroup = new GroupBoardService().getGroupBoardByNo(ploGrNo, hasRead);
+    	ploGroup = new PloGroupService().getGroupByNo(ploGrNo, hasRead);
     	
     	request.setAttribute("ploGroup", ploGroup);
-    	request.getRequestDispatcher("/views/ploboard/viewClup.jsp").forward(request, response);
+    	request.getRequestDispatcher("/views/ploboard/viewClub.jsp").forward(request, response);
     }
 
 }
