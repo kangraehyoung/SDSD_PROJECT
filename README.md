@@ -216,6 +216,6 @@ http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp <br>
 * 
 
 ### 프론트앤드 작업 내용
-* 소개페이지 구현 예정 (최송희)
+* 소개페이지 구현 완료 (최송희)<br>http://localhost:8090/SDSD_PJ/views/others/IntroPage.jsp
 * FAQ 내용 수정 예정 (최송희)
 
