@@ -55,11 +55,11 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	String writer = mr.getParameter("nickName");
     	String content = mr.getParameter("content");
     	String groupkeyword = mr.getParameter("groupkeyword");
-//    	String originalFileName = mr.getOriginalFileName("upfile1");
-    	String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
+    	String originalFileName = mr.getOriginalFileName("upfile1");
+//    	String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
     	
     	// 플로깅 모임명 조인해오기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//    	String groupName = mr.getParameter("groupName");
+    	String groupName = mr.getParameter("groupName");
     	
     	// 파일에 대한 정보를 가져올 때
     	       	HttpSession session = request.getSession(false);
@@ -73,7 +73,7 @@ public class GroupBoardWriteServlet extends HttpServlet {
     		groupBoard.setBorContent(content);
     		groupBoard.setBorFile(originalFileName);
     		groupBoard.setGroupkeyword(groupkeyword);
-//    		groupBoard.setGroupName(groupName); // 플로깅 모임명!!!!!!!!!!!!!!! 
+    		groupBoard.setGroupName(groupName); // 플로깅 모임명!!!!!!!!!!!!!!! 
     		
     		result = new GroupBoardService().save(groupBoard);
     		if(result > 0) {
