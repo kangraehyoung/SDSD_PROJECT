@@ -5,6 +5,7 @@
 
 <jsp:include page="/views/common/header.jsp" />
 
+<section class="joincelb">
     <div class="first_tool"> <!-- 첫번째 민트색 틀-->
         <div class="icon"> <!-- 아이콘 -->
             <img src="${ path }/resources/imgFile/축하2.gif" class="celebrate" alt="celebrate">
@@ -51,5 +52,5 @@
             </div>
         </div>
     </div>
-
+</section>
 <jsp:include page="/views/common/footer.jsp" />

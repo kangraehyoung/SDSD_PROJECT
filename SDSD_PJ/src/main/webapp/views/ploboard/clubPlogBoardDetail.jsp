@@ -1,3 +1,5 @@
+<%@page import="com.sdsd.mvc.groupboard.model.vo.GroupBoard"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -51,18 +53,41 @@
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="profileName">
-                            <input type="text" id="WriterName" class="form-control md-2" value="닉네임 가져올 칸" style="width: 50% !important;">
+                            <input type="text" id="WriterName" class="form-control md-2" value="${ groupBoard.writerName }" style="width: 50% !important;" readonly>
                         </div>
                     </div>
 
                     <!-- 인증 내용 -->
                     <div class="textWrap">
-                        <p>게시글 내용 들어갈 자리<br>두번째 줄</p>
-                        <span class="keyword">#키워드 들어갈 자리</span><br>
-                        <span class="clubName">모임 이름 :  </span>
+                        <span class="clubName">모임 이름 : ${ groupBoard.groupName } </span>
+                  <!--  <span class="clubName">모임 이름 : ${ member.myPloging } </span>  -->
+                        <br>
+                        <br>
+                        <p>${groupBoard.borContent }</p>
+                        <span class="keyword">#${groupBoard.groupkeyword }</span><br>
                     </div>
+
+
 
                     <!-- 댓글 내용  c:if로 묶어서 처리하면 됨-->
+                <div class="commentWrap">
+                        <div class="profileImgBox">
+                            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
+                        </div>
+                        <div class="commentBox">
+                            <p>
+                                <span class="commentName">닉네임</span>
+                                댓글 들어갈 자리
+                                <span class="commentLike">
+                                    <!-- 하트 누르기 전 -->
+                                    <i class="bi bi-heart"></i>
+                                    <!-- 하트 누른 후 -->
+                                    <i class="bi bi-heart-fill"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    
                     <div class="commentWrap">
                         <div class="profileImgBox">
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
@@ -80,24 +105,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="commentWrap">
-                        <div class="profileImgBox">
-                            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
-                        </div>
-                        <div class="commentBox">
-                            <p>
-                                <span class="commentName">닉네임</span>
-                                댓글 들어갈 자리
-                                <span class="commentLike">
-                                    <!-- 하트 누르기 전 -->
-                                    <i class="bi bi-heart"></i>
-                                    <!-- 하트 누른 후 -->
-                                    <i class="bi bi-heart-fill"></i>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-
+								
                     <!-- 좋댓공저 아이콘 -->
                     <div class="iconContainer">
                         <div class="iconBox">
@@ -110,15 +118,18 @@
                         <div class="textBox">
                             <p>
                                 <span class="likeCount">좋아요 27개</span>
-                                <span class="timeInfo">작성 시간</span>
+                                <span class="timeInfo">작성 시간 ${ groupReply.repcreateDate }</span>
                             </p>
                         </div>
                     </div>
 
                     <!-- 댓글 입력창 -->
                     <div class="inputCommentWrap input-group mb-3">
-                        <input type="text" class="form-control" placeholder="댓글을 입력해주세요">
-                        <button class="btn btn-outline-primary" type="button" id="button-addon2">작성</button>
+                    <form action="${ path }/groupboard/groupreply" method="post">
+                        <input name="repcontent" type="text" class="form-control" placeholder="댓글을 입력해주세요">
+                        <button class="btn btn-outline-primary" type="submit" id="button-addon2">작성</button>
+                    	<input type="hidden" name="repboardNo" value="${ groupBoard.groupBorNo }">
+                    	</form>
                     </div>
                 </div>
             </div>

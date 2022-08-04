@@ -213,7 +213,9 @@ http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp <br>
 
 ## ※ 20220804 작업내용
 ### 백앤드 작업 내용
-* 
+* 모임 플로깅 인증 게시판 등록 구현 완료 (김지선 김진명)
+* 플로깅 인증 게시판 등록시 화면 리스트에 출력 완료 (김진명 김지선)
+* 인증 게시판 상세페이지 내부 구현 완료 (김지선 김진명)
 
 ### 프론트앤드 작업 내용
 * 소개페이지 구현 완료 (최송희)<br>http://localhost:8090/SDSD_PJ/views/others/IntroPage.jsp

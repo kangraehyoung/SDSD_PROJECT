@@ -20,7 +20,7 @@ public class GroupBoard {
 	
 	private String email;
 	
-	private String writerName;
+	private String writerName; // 닉네임
 	
 	private String borTitle;
 	

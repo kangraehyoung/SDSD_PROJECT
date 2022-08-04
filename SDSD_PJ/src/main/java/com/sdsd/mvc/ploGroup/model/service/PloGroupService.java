@@ -21,6 +21,7 @@ public class PloGroupService {
 		int result2 = 0;
 		
 		Connection connection = getConnection();
+		System.out.println("모임넘버가 이상해 : " + plogroup.getSpBorNum());
 		
 		if(plogroup.getSpBorNum() != 0) {
 			result = new PloGroupDao().updateGroup(connection, plogroup);
@@ -114,6 +115,22 @@ public class PloGroupService {
 	}
 
 
+	public int deleteGroup(int spBorNum) {
+		int result =0;
+		Connection connection =getConnection();
+		
+		result = new PloGroupDao().updateStatus(connection, spBorNum, "N");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
 
 	
 	
