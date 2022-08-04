@@ -21,10 +21,18 @@ public class PloGroupService {
 		
 		Connection connection = getConnection();
 		
-		result = new PloGroupDao().save(connection, plogroup);
-		System.out.println("result" + result);
-		result2 = new PloGroupDao().memberGroupUpdate(connection, plogroup);
-		System.out.println("result2 : " + result);
+		if(plogroup.getSpBorNum() != 0) {
+			result = new PloGroupDao().updateGroup(connection, plogroup);
+			result2 = new PloGroupDao().memberGroupUpdate(connection, plogroup);
+		} else {
+			result = new PloGroupDao().save(connection, plogroup);
+			result2 = new PloGroupDao().memberGroupUpdate(connection, plogroup);
+		}
+		
+//		result = new PloGroupDao().save(connection, plogroup);
+//		System.out.println("result" + result);
+//		result2 = new PloGroupDao().memberGroupUpdate(connection, plogroup);
+//		System.out.println("result2 : " + result);
 		if(result > 0 && result2 > 0) {
 			commit(connection);
 		} else {

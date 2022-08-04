@@ -347,6 +347,31 @@ public class PloGroupDao {
 	}
 
 	
+	public int updateGroup(Connection connection, PloGroup plogroup) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE SEARCH_PLOG_BOARD SET PLOG_GROUP_NAME=?, SPB_TITLE=?, SPB_CONTENT=?, SPB_UPDATE_DATE=SYSDATE WHERE SPBOR_NUMBER=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, plogroup.getPlogGroupName());
+			pstmt.setString(2, plogroup.getSpbTitle());
+			pstmt.setString(3, plogroup.getSpbContent());
+			pstmt.setInt(4, plogroup.getSpBorNum());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+
+	
 	
 	
 	
