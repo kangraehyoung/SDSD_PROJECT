@@ -65,11 +65,11 @@ public class PloGroupService {
 	}
 
 
-	public int joinGroup(PloGroup plogroup, Member member) {
+	public int joinGroup(PloGroup plogroup, Member loginMember) {
 		int result = 0;
 		Connection connection = getConnection();
 		
-		result = new PloGroupDao().join(connection, plogroup, member);
+		result = new PloGroupDao().join(connection, plogroup, loginMember);
 		
 		if(result > 0) {
 			commit(connection);

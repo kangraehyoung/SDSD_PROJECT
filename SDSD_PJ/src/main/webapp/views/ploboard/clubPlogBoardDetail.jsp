@@ -128,19 +128,37 @@
     <div class="row plogBoardButtonWrap">
         <!-- 이전 게시글 버튼 -->
         <div class="col prevBtnBox">
-            <button><i class="bi bi-chevron-left"> </i>이전</i></button>
+            <button id="btnBeforePage"><i class="bi bi-chevron-left"> </i>이전</i></button>
         </div>
         <!-- 게시글 수정/삭제 버튼 -->
         <div class="col boardBtnBox">
-            <button>수정 <i class="bi bi-pencil-square"></i></button>
-            <button class="delete">삭제 <i class="bi bi-trash3"></i></button>
+            <button id="btnUpdate">수정 <i class="bi bi-pencil-square"></i></button>
+            <button id="btnDelete" class="delete">삭제 <i class="bi bi-trash3"></i></button>
         </div>
         <!-- 다음 게시글 버튼 -->
         <div class="col nextBtnBox">
-            <button>다음 <i class="bi bi-chevron-right"></i></button>
+            <button id="btnNextPage">다음 <i class="bi bi-chevron-right"></i></button>
         </div>
     </div>
 </section>
 
+<!-- 상세페이지 스크립트 구현 -->
+<script type="text/javascript">
+	$(document).ready(() => {
+		$("#btnDelete").on("click", () => {
+			location.replace("${path}//groupboard/groupDelete?groupBorNo=${groupBoard.groupBorNo}");
+		})
+		
+		$("#btnUpdate").on("click", () => {
+			location.replace("${path}/groupboard/groupUpdate?groupBorNo=${groupBoard.groupBorNo}");
+		})
+		$("#btnBeforePage").on("click", () => {
+			location.replace("${path}/groupboard/detail?groupBorNo=${contentInfo.prevContent}");
+		})
+		$("#btnNextPage").on("click", () => {
+			location.replace("${path}/groupboard/detail?groupBorNo=${contentInfo.nextContent}");
+		})
+	});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />

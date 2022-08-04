@@ -61,14 +61,14 @@
        </div>
        <!-- 플로깅 모임 인증 게시판 등록시 1개의 div를 반복적으로 생성  -->
         <%
-        List<GroupBoard> list = (List<GroupBoard>)request.getAttribute("Groupboardlist"); 
+        List<GroupBoard> list = (List<GroupBoard>)request.getAttribute("groupBoardList"); 
         System.out.println("List!!!! : " + list);
         %>
         <div class="row plogBoard_Container">
-			<c:forEach var="indiboard" items="${ Groupboardlist }">
+			<c:forEach var="groupBoard" items="${ groupBoardList }">
             <!-- 인증 게시글 1개 당 한 div -->
             <div class="col-md-3 boardImgBox" onclick="location.href='/'">
-                <img src="${path }/resources/upload/board/${Groupboard.borFileList[0]}">
+                <img src="${path }/resources/upload/board/${groupBoard.borFile}">
                 <div class="hoverBox">
                     <div class="hb_lc">
                         <!-- 부트스트랩 하트 -->
@@ -82,7 +82,7 @@
                         </svg>
                         <div class="hb_coment">15</div>
                     </div>
-                    <a href="${ path }/groupboard/detail?groupBorNo=${GroupBoard.groupBorNo}">자세히 보기</a>
+                    <a href="${ path }/groupboard/detail?groupBorNo=${groupBoard.groupBorNo}">자세히 보기</a>
                 </div>
             </div>
 			</c:forEach>

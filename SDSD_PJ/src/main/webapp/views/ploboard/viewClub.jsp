@@ -75,9 +75,13 @@
                 </div>
 
                 <!-- 모임 가입 안한 일반 USER가 보는 버튼 -->
+                <form action="${ path }/plogroup/joinPloGroup" method="POST">
+                <input type="hidden" value="${ ploGroup.plogGroupName }" name="pgName">
+                <input type="hidden" value="${ loginMember.no }">
                 <div class="buttonBox">
                     <button>모임 가입하기</button>
                 </div>
+                </form>
                 <!-- 모임 가입한 일반 USER가 보는 버튼 -->
                 <div class="buttonBox">
                     <button>모임 탈퇴하기</button>

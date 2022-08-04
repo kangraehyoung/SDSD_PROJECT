@@ -187,14 +187,14 @@ public class PloGroupDao {
 		return result ;
 	}
 
-	public int join(Connection connection, PloGroup plogroup, Member member) {
+	public int join(Connection connection, PloGroup plogroup, Member loginMember) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String query = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER = ?";
+		String query = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER =?";
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setString(1, plogroup.getPlogGroupName());
-			pstm.setInt(2, member.getNo());
+			pstm.setInt(2, loginMember.getNo());
 			
 			result = pstm.executeUpdate();
 		} catch (SQLException e) {
@@ -202,6 +202,7 @@ public class PloGroupDao {
 		} finally {
 			close(pstm);
 		}
+		System.out.println("조인다오 결과 " + result);
 		return result ;
 	}
 	
