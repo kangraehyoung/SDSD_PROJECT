@@ -89,7 +89,7 @@
                 <!-- 모임장이 보는 버튼 -->
                 <div class="buttonBox">
                     <button id="updateBtn">모임 정보 수정</button>
-                    <button class="deleteBtn" id="deleteBtn">모임 삭제하기</button>
+                    <button class="deleteBtn" id="deleteBtn1">모임 삭제하기</button>
                 </div>
             </div>
         </div>
@@ -208,7 +208,7 @@ $(document).ready(() => {
 		$("#updateBtn").on("click", () => {
 			location.replace("${path}/ploboard/GroupUpdate?spBorNum=${ploGroup.spBorNum}");
 		});
-		$("#deleteBtn").on("click", () => {
+		$("#deleteBtn1").on("click", () => {
 			location.replace("${path}/ploboard/deleteGroup?spBorNum=${ploGroup.spBorNum}");
 		});
 		
