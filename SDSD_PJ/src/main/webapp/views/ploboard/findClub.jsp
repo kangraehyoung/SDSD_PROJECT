@@ -68,6 +68,7 @@
     <div class="contentWrap">
         <div class="contentBody">
             <!-- 첫번째 줄  1번째 모임 -->
+            <c:forEach var="PloGroup" items="${ ploGroupList }">
             <div class="contentBox">
                 <div class="imgBox" onclick="location.href='${ path }/views/ploboard/viewClub.jsp'">
                     <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
@@ -86,171 +87,10 @@
                     <i class="bi bi-people-fill"></i><span>51</span>
                 </div>
             </div>
-    
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
-    
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
-        </div>
-        <div class="contentBody">
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
-    
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
-    
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
-        </div>
-    
-        <div class="contentBody">
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
-    
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
-    
-            <!-- 첫번째 줄  1번째 모임 -->
-            <div class="contentBox">
-                <div class="imgBox" onclick="location.href='/'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
-                    <div class="hoverBox">
-                        <p>리더 | </p>
-                        <p>활동 지역 | </p>
-                        <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
-                        <a>모임 상세보기</a>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
-                </div>
-                <div class="iconBox">
-                    <i class="bi bi-heart-fill"></i><span>999</span>
-                    <i class="bi bi-people-fill"></i><span>51</span>
-                </div>
-            </div>
+        </c:forEach>
         </div>
     </div>
+    
     <!-- page 네비게이션 -->
         <div style="margin-top: 10px;">
             <nav aria-label="Page navigation example">
@@ -281,6 +121,9 @@
 		});
 		$("#viewJoinedClub2").on("click", () => {
 			alert("로그인 시 이용 가능합니다.");
+		});
+		$("#createClub").on("click", () => {
+			location.replace("${path}/plogroup/createPloGroup");
 		});
 	});
 </script>

@@ -150,6 +150,8 @@ public class PloGroupDao {
 				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
 				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
 				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				
+				ploGroupList.add(ploGroup);
 			}
 			
 		} catch (SQLException e) {

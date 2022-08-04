@@ -35,7 +35,7 @@ public class PloGroupListServlet extends HttpServlet {
 
 		
 		listCount = new PloGroupService().getBoardCount();
-		pageInfo = new PageInfo(page, 10, listCount, 8);    
+		pageInfo = new PageInfo(page, 10, listCount, 9);    
 		ploGroupList = new PloGroupService().getBoardList(pageInfo);
 		
 		
