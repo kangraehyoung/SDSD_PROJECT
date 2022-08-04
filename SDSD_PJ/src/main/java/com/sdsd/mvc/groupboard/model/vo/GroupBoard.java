@@ -1,10 +1,12 @@
 package com.sdsd.mvc.groupboard.model.vo;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// 플로깅 모임 인증 게시판 vo
+// 플로깅 모임 인증 게시판
 
 @Data
 @NoArgsConstructor
@@ -32,6 +34,8 @@ public class GroupBoard {
 	
 	private String borFile;
 	
+	private List<String> borFileList; // ?
+	
 	private String borStatus;
 	
 	private int groupBorNo;
@@ -40,5 +44,10 @@ public class GroupBoard {
 	
 	private int groupWriterNo;
 	
-	private String groupName; // 모임명 변수를 만들지 안만들지 아직 미정
+	private List<GroupReply> replies; // ?
+	
+	private String groupkeyword;
+	
+	private String groupName; // 모임명
+
 }

@@ -70,7 +70,7 @@
                         <ul class="sub_item menu_02">
                             <li><a href="${ path }/ploboard/ploGroupList">모임 찾기</a></li>
                             <li><a href="${ path }/plogroup/createPloGroup">모임 생성</a></li>
-                            <li><a href="${ path }/groupboard/groupboardlist">모임 플로깅 인증 게시판</a></li>
+                            <li><a href="${ path }/groupboard/grouplist">모임 플로깅 인증 게시판</a></li>
                         </ul>
                 </li>
                 <li class="nav_item">

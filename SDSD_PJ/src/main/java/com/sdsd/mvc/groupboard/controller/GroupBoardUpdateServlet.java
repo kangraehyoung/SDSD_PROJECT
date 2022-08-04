@@ -32,12 +32,9 @@ public class GroupBoardUpdateServlet extends HttpServlet {
 			int no = Integer.parseInt(request.getParameter("groupBorNo"));
 			
 			groupBoard = new GroupBoardService().getGroupBoardByNo(no, true);
-	    	
-	    	System.out.println(groupBoard);
-	    	
+	    	  	
 	    	request.setAttribute("groupBoard", groupBoard);
-	    	System.out.println("수정페이지로 이동");
-//			request.getRequestDispatcher("/views/groupboard/입력Update.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/ploboard/clubPlogBoardUpdate.jsp").forward(request, response);
 		} 
 			
 	}
@@ -59,7 +56,7 @@ public class GroupBoardUpdateServlet extends HttpServlet {
     	MultipartRequest mr = new MultipartRequest(request, path, maxSize, encoding);
     	
     	// update.jsp에는 no값이 없어 input을 hidden으로 숨기고 가져옴
-    	System.out.println(mr.getParameter("no"));
+    	// System.out.println(mr.getParameter("no"));
     	
     	groupBoard = new GroupBoard();
     	
@@ -79,14 +76,14 @@ public class GroupBoardUpdateServlet extends HttpServlet {
     		
     		groupBoard.setBorFile(fileName);
     	} else {
-    		groupBoard.setBorFile(mr.getParameter("upfile"));
+    		groupBoard.setBorFile(fileName);
     	}
     	
-    	System.out.println(groupBoard.getBorFile() + "비 많이 온다..");
+    	//System.out.println(groupBoard.getBorFile() + "비 많이 온다..");
     	
     	result = new GroupBoardService().save(groupBoard);
     	
-    	System.out.println("추적 추적 : " + result);
+    	//System.out.println("추적 추적 : " + result);
     	if(result > 0) {
     		request.setAttribute("msg", "게시글 수정 성공");
     	} else {

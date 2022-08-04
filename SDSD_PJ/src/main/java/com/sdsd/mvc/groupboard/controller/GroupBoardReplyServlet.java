@@ -22,8 +22,8 @@ public class GroupBoardReplyServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int repboardNo = Integer.parseInt(request.getParameter("repboardNo"));
-		String repcontent = request.getParameter("repcontent");
+		int grouprepboardNo = Integer.parseInt(request.getParameter("grouprepboardNo"));
+		String grouprepcontent = request.getParameter("grouprepcontent");
 		
 		HttpSession session = request.getSession(false);
     	Member loginMember = session != null ? (Member)session.getAttribute("loginMember") : null;
@@ -31,20 +31,20 @@ public class GroupBoardReplyServlet extends HttpServlet {
     	if(loginMember != null) {
 			GroupReply groupreply = new GroupReply();
 			
-			groupreply.setRepboardNo(repboardNo);
+			groupreply.setRepboardNo(grouprepboardNo);
 			groupreply.setRepwriterNo(loginMember.getNo());
 			groupreply.setRepwriterId(loginMember.getEmail());
-			groupreply.setRepcontent(repcontent);
+			groupreply.setRepcontent(grouprepcontent);
 			
 			int result = service.saveGroupReply(groupreply);
 			
 			System.out.println();
 			if(result > 0) {
          		request.setAttribute("msg", "댓글 등록 성공!");
-         		request.setAttribute("location", "/indiboard/detail?maBorNo=" + repboardNo);
+         		request.setAttribute("location", "/groupboard/detail?groupBorNo=" + grouprepboardNo);
 			} else {
 				request.setAttribute("msg", "댓글 등록 실패!");
-         		request.setAttribute("location", "/indiboard/detail?maBorNo=" + repboardNo);
+         		request.setAttribute("location", "/groupboard/detail?groupBorNo=" + grouprepboardNo);
 			}
     	} else {
      		request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
