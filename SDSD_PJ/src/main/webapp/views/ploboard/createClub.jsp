@@ -12,7 +12,7 @@
     <div class="titleBox">
         <h2>모임 생성하기</h2>
     </div>
-
+	<input type="hidden" value="${ loginMember.nickName }" name="nickName">
     <div class="createForm_Wrap">
         <div class="container-fluid">
             <div class="row">
@@ -25,7 +25,7 @@
                     <div class="fileUploadBox">
                         <div class="fileboxBtn">
                             <label for="uploadImages">사진 등록</label>
-                            <input type="file" id="uploadImages" multiple name="spbBorFile"> 
+                            <input type="file" id="uploadImages" multiple name="upfile1"> 
                         </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
@@ -38,7 +38,7 @@
                     <div class="mb-3 row">
                         <label for="clubName" class="col-sm-3 col-form-label">모임 이름</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="clubName" value="쓰레깅" name="ploTitle">
+                            <input type="text" class="form-control" id="clubName" value="쓰레깅" name="pgName">
                         </div>
                     </div>
 
