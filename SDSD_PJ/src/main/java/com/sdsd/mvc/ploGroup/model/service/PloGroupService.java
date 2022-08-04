@@ -6,6 +6,7 @@ import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.dao.PloGroupDao;
+import com.sdsd.mvc.ploGroup.model.vo.Notice;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
@@ -112,6 +113,8 @@ public class PloGroupService {
 		return ploGroup;
 	}
 
+
+
 	
 	
 	
@@ -244,6 +247,23 @@ public class PloGroupService {
 	
 	
 	
+	public int saveNotice(Notice notice) {
+		int result = 0;
+		
+		Connection connection = getConnection();
+		
+		result = new PloGroupDao().insertNotice(connection, notice);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
 	
 	
 	
