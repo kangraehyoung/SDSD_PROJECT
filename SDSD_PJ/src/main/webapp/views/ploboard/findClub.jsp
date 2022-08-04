@@ -71,7 +71,7 @@
             <c:forEach var="ploGroup" items="${ ploGroupList }">
             <div class="contentBox">
                 <div class="imgBox" onclick="location.href='${ path }/ploboard/findDetail?ploGrNo=${ploGroup.spBorNum }'">
-                    <img src="https://www.fastfive.co.kr/wp-content/uploads/2021/05/3_interior_1.png" alt="img">
+                    <img src="${path }/resources/upload/board/${PloGroup.spbBorFile}" alt="img">
                     <div class="hoverBox">
                         <p>${ploGroup.spbTitle } </p>
                         <p>활동 지역 | </p>
