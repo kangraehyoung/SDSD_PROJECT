@@ -13,6 +13,9 @@ import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.dao.GroupDao;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 import com.sdsd.mvc.groupboard.model.vo.GroupReply;
+import com.sdsd.mvc.indiboard.model.dao.BoardDao;
+import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
+import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
 
 public class GroupBoardService {
@@ -136,13 +139,21 @@ public class GroupBoardService {
 	}
 
 	public List<GroupBoard> getBoardContent(ContentInfo contentInfo) {
-		List<GroupBoard> groupboardlist = null;
+		List<PloGroup> ploGroupList = null;
 		Connection connection = getConnection();
 		
 		groupboardlist = new GroupDao().findNextContent(connection, contentInfo);
 		
 		close(connection);
 		return groupboardlist;
+	}
+
+	public List<PloGroup> getGroupContent(ContentInfo contentInfo) {
+		List<IndiBoard> indiboardlist = null;
+		Connection connection = getConnection();
+		indiboardlist = new BoardDao().findNextContent(connection, contentInfo);
+		close(connection);
+		return indiboardlist;
 	}
 
 
