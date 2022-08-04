@@ -187,14 +187,14 @@ public class PloGroupDao {
 		return result ;
 	}
 
-	public int join(Connection connection, PloGroup plogroup, Member member) {
+	public int join(Connection connection, PloGroup plogroup, Member loginMember) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String query = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER = ?";
+		String query = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER =?";
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setString(1, plogroup.getPlogGroupName());
-			pstm.setInt(2, member.getNo());
+			pstm.setInt(2, loginMember.getNo());
 			
 			result = pstm.executeUpdate();
 		} catch (SQLException e) {
@@ -202,6 +202,7 @@ public class PloGroupDao {
 		} finally {
 			close(pstm);
 		}
+		System.out.println("조인다오 결과 " + result);
 		return result ;
 	}
 	
@@ -343,6 +344,31 @@ public class PloGroupDao {
 		} finally {
 			close(pstmt);
 		}
+		return result;
+	}
+
+	
+	public int updateGroup(Connection connection, PloGroup plogroup) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String query = "UPDATE SEARCH_PLOG_BOARD SET PLOG_GROUP_NAME=?, SPB_TITLE=?, SPB_CONTENT=?, SPB_UPDATE_DATE=SYSDATE WHERE SPBOR_NUMBER=?";
+		
+		try {
+			pstmt = connection.prepareStatement(query);
+			
+			pstmt.setString(1, plogroup.getPlogGroupName());
+			pstmt.setString(2, plogroup.getSpbTitle());
+			pstmt.setString(3, plogroup.getSpbContent());
+			pstmt.setInt(4, plogroup.getSpBorNum());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
 		return result;
 	}
 

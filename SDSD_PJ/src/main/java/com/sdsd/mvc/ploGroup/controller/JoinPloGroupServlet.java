@@ -12,7 +12,7 @@ import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.service.PloGroupService;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
-@WebServlet("/JoinPloGroupServlet")
+@WebServlet("/plogroup/joinPloGroup")
 public class JoinPloGroupServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,15 +26,13 @@ public class JoinPloGroupServlet extends HttpServlet {
 		int result = 0;
 		String pgName = request.getParameter("pgName");
 		PloGroup plogroup = new PloGroup();
-		Member member = new Member();
 		
 		HttpSession session = request.getSession(false);
 	    Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
 	    
 	    if (loginMember != null) {
 	    	plogroup.setPlogGroupName(pgName);
-	    	
-	    	result = new PloGroupService().joinGroup(plogroup, member);
+	    	result = new PloGroupService().joinGroup(plogroup, loginMember);
 	    	
 	    	if (result > 0) {
 				request.setAttribute("msg", "모임 가입 성공");
@@ -47,6 +45,7 @@ public class JoinPloGroupServlet extends HttpServlet {
 	    	request.setAttribute("msg", "로그인 후 사용할 수 있습니다.");
     		request.setAttribute("location", "/member/login");
 	    }
+	    System.out.println("조인서블릿 결과" + pgName);
 	    request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 	}
 
