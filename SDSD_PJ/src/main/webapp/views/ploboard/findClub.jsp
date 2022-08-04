@@ -73,7 +73,7 @@
                 <div class="imgBox" onclick="location.href='${ path }/ploboard/findDetail?ploGrNo=${ploGroup.spBorNum }'">
                     <img src="${path }/resources/upload/board/${ploGroup.spbBorFile}" alt="img">
                     <div class="hoverBox">
-                        <p>리더 | ${ PloGroup.spbWriterName }</p>
+                        <p>리더 | ${ ploGroup.spbWriterName }</p>
                         <p>활동 지역 | </p>
                         <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
                         <a>모임 상세보기</a>
@@ -87,7 +87,7 @@
                     <i class="bi bi-people-fill"></i><span>51</span>
                 </div>
             </div>
-        </c:forEach>
+        	</c:forEach>
         </div>
     </div>
     

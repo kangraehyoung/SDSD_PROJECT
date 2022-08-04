@@ -4,6 +4,7 @@ import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
+import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.dao.PloGroupDao;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class PloGroupService {
 
-	public int groupJoin(PloGroup plogroup) {
+	public int createGroup(PloGroup plogroup) {
 		int result = 0;
 		int result2 = 0;
 		
@@ -56,6 +57,21 @@ public class PloGroupService {
 	}
 
 
+	public int joinGroup(PloGroup plogroup, Member member) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = new PloGroupDao().join(connection, plogroup, member);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		return result;
+	}
+	
 	public List<PloGroup> getGroupContent(ContentInfo contentInfo) {
 		List<PloGroup> ploGroupList = null;
 		Connection connection = getConnection();
@@ -88,7 +104,199 @@ public class PloGroupService {
 		return ploGroup;
 	}
 
-
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

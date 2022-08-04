@@ -59,7 +59,7 @@ public class CreatePloGroupServlet extends HttpServlet {
 			plogroup.setSpbBorFile(originalFileName);
 			plogroup.setSpbKeyword(spbKeyword);
 			
-			result = new PloGroupService().groupJoin(plogroup);
+			result = new PloGroupService().createGroup(plogroup);
 			
 			if (result > 0) {
 				request.setAttribute("msg", "모임 등록 성공");

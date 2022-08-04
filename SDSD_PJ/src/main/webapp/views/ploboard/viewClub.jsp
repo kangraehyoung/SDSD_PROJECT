@@ -52,7 +52,7 @@
             <div class="col-6 clubInfoBox">
                 <div class="titleText">
                     <p>
-                        ${ploGroup.spbTitle }
+                        ${ploGroup.plogGroupName }
                         <!-- 좋아요 누르기 전 하트 모양 -->
                         <a href=""><i class="bi bi-heart"></i></a>
                         <!-- 좋아요 누른 후 하트 모양 -->

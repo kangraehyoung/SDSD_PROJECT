@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
+import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
@@ -23,7 +24,7 @@ public class PloGroupDao {
 //		String query = "INSERT INTO PLO_GR_BOARD VALUES(SEQ_PLO_GR_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT,  DEFAULT, DEFAULT, ?, DEFAULT, ?, ?, ?)";
 //		
 //		try {
-//			pstmt = connection.prepareStatement(query);
+//			pstmt = connection.prepareStatement(query); 이거뭐지??
 //			
 //
 //			pstmt.setString(1, plogroup.getPloLeader());
@@ -186,6 +187,24 @@ public class PloGroupDao {
 		return result ;
 	}
 
+	public int join(Connection connection, PloGroup plogroup, Member member) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER = ?";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, plogroup.getPlogGroupName());
+			pstm.setInt(2, member.getNo());
+			
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		return result ;
+	}
+	
 	public List<PloGroup> findNextContent(Connection connection, ContentInfo contentInfo) {
 		List<PloGroup> ploGroupList = new ArrayList<>();
 		PreparedStatement pstm = null;;
@@ -221,7 +240,7 @@ public class PloGroupDao {
 				+ "				          FROM SEARCH_PLOG_BOARD SP "
 				+ "				            JOIN MEMBER M ON (M.MEM_NUMBER = SP.SPB_WRITER_NO) "
 				+ "				    )  "
-				+ "				) WHERE (RNUM BETWEEN 1 AND 2) AND SPB_BOR_STATUS = 'Y'";
+				+ "				) WHERE (RNUM BETWEEN ? AND ?) AND SPB_BOR_STATUS = 'Y'";
 		
 		
 		try {
@@ -324,9 +343,259 @@ public class PloGroupDao {
 		} finally {
 			close(pstmt);
 		}
-		
 		return result;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
