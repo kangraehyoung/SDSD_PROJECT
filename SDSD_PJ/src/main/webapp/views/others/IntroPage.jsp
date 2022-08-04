@@ -68,7 +68,7 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="${ path }/resources/imgFile/플로깅소개칼로리.png" class="d-block w-100" alt="slideImg">
+                        <img src="${ path }/resources/imgFile/ploIntroducePage_img.png" class="d-block w-100" alt="slideImg">
                     </div>
                 </div>
             </div>
