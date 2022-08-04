@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.sdsd.mvc.common.util.PageInfo;
+import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
@@ -182,6 +183,24 @@ public class PloGroupDao {
 		}
 	
 		return result ;
+	}
+
+	public int join(Connection connection, PloGroup plogroup, Member member) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER = ?";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, plogroup.getPlogGroupName());
+			pstm.setInt(2, member.getNo());
+			
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		return result;
 	}
 
 

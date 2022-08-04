@@ -87,7 +87,7 @@
                     <i class="bi bi-people-fill"></i><span>51</span>
                 </div>
             </div>
-        </c:forEach>
+        	</c:forEach>
         </div>
     </div>
     
