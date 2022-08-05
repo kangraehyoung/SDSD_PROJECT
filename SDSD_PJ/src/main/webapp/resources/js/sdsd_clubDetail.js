@@ -9,7 +9,6 @@ jQuery(document).ready(function() {
             $('.clubNotice_infoBox_01').show();
             $('.clubNotice_infoBox_02').show();
             $('.clubNotice_infoBox_03').hide();
-            // $('.uploadClubNotice_section').hide();
         }
     });
 
@@ -21,7 +20,6 @@ jQuery(document).ready(function() {
             $('.clubNotice_infoBox_01').hide();
             $('.clubNotice_infoBox_02').hide();
             $('.clubNotice_infoBox_03').show();
-            // $('.uploadClubNotice_section').show();
         }
     });
     

@@ -34,13 +34,13 @@ public class ploGroupDetailServlet extends HttpServlet {
     	
 	    	try {
 	    		ploGrNo = Integer.parseInt(request.getParameter("ploGrNo"));
-	    		System.out.println(ploGrNo);
 	    	} catch (NumberFormatException e) {
 	    		ploGrNo = 1;
 	    	}
 	    	
     	contentInfo = new ContentInfo(ploGrNo);
     	ploGroupList = new PloGroupService().getGroupContent(contentInfo);
+    	
     	
     	request.setAttribute("contentInfo", contentInfo);
     	request.setAttribute("groupboardlist", ploGroupList);
@@ -80,8 +80,6 @@ public class ploGroupDetailServlet extends HttpServlet {
     	}
     	
     	ploGroup = new PloGroupService().getGroupByNo(ploGrNo, hasRead);
-    	
-    	System.out.println(ploGroup);
     	
     	request.setAttribute("ploGroup", ploGroup);
     	request.getRequestDispatcher("/views/ploboard/viewClub.jsp").forward(request, response);

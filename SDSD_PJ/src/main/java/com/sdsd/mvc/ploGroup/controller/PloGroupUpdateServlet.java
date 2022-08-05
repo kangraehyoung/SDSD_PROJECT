@@ -32,14 +32,15 @@ public class PloGroupUpdateServlet extends HttpServlet {
 		
 		if(loginMember != null) {
 		PloGroup ploGroup = null;
-		int no = Integer.parseInt(request.getParameter("spBorNum"));
+		int no = Integer.parseInt(request.getParameter("//모임번호 넣어야함"));
+		
 		ploGroup = new PloGroupService().getGroupByNo(no, true);
-    	System.out.println(no);
+    	
     	//System.out.println(indiBoard);
     	
     	request.setAttribute("ploGroup", ploGroup);
     	//System.out.println("수정페이지로 이동");
-		request.getRequestDispatcher("/views/ploboard/updateClub.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/ploboard/clubPlogBoardUpdate.jsp").forward(request, response);
 		}
 	}
 
@@ -61,10 +62,8 @@ public class PloGroupUpdateServlet extends HttpServlet {
     	// update.jsp에는 no값이 없어 input을 hidden으로 숨기고 가져옴
     	//System.out.println(mr.getParameter("no"));
     	
-    	
-    	
     	ploGroup = new PloGroup();
-    	 int no = Integer.parseInt(mr.getParameter("spBorNum"));
+    	
     	 String writer = mr.getParameter("nickName");
 	     String content = mr.getParameter("content");
 	     String pgName = mr.getParameter("pgName");
@@ -92,7 +91,6 @@ public class PloGroupUpdateServlet extends HttpServlet {
          
          if (loginMember != null) {   
          	
-        	ploGroup.setSpBorNum(no);
  			ploGroup.setSpbWriterNum(loginMember.getNo());
  			ploGroup.setSpbWriterName(writer);
  			ploGroup.setPlogGroupName(pgName);

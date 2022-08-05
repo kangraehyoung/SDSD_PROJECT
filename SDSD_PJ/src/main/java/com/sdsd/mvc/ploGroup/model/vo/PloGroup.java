@@ -1,9 +1,5 @@
 package com.sdsd.mvc.ploGroup.model.vo;
 
-import java.util.List;
-
-import com.sdsd.mvc.indiboard.model.vo.Reply;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -59,6 +55,4 @@ public class PloGroup {
 	private String spbBorStatus; // 모임 존재 여부
 	
 	private String spbKeyword; // 키워드
-	
-	private List<Notice> Notices;
 }

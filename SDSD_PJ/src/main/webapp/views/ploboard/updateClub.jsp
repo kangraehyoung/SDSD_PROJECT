@@ -112,7 +112,7 @@
                             <textarea class="form-control" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 150px; resize: none;" name="content"></textarea>
                         </div>
                     </div>
-					<input type="hidden" value="${ploGroup.spBorNum }" name="spBorNum">
+
                     <!-- 키워드 선택 -->
                     <div class="mb-3 row">
                         <label for="clubKeyword" class="col-md-3 col-form-label">키워드 선택</label>
