@@ -319,6 +319,15 @@ public class PloGroupService {
 		}
 		return result;
 	}
+
+
+	public List<PloGroup> getSearchList(PageInfo pageInfo, String spbKeyword) {
+		List<PloGroup> ploGroupList = null;
+		Connection connection = getConnection();
+		ploGroupList = new PloGroupDao().keySearch(connection, spbKeyword);
+		close(connection);
+		return ploGroupList;
+	}
 	
 	
 	

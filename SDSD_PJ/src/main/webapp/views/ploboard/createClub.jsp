@@ -117,6 +117,7 @@
                     <div class="mb-3 row">
                         <label for="clubKeyword" class="col-md-3 col-form-label">키워드 선택</label>
                         <div class="col-md-12">
+                        	<input type="text" name="spbKeyword" placeholder="키워드를 입력해주세요">
                             <input type="checkbox" class="btn-check" id="clubKeyword1" autocomplete="off">
                             <label class="btn btn-outline-primary" for="clubKeyword1">#키워드 1</label>
 

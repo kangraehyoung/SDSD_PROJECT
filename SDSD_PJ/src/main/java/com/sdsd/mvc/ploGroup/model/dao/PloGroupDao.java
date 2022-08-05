@@ -76,7 +76,7 @@ public class PloGroupDao {
 		
 		PreparedStatement pstmt = null;
 		
-		String query = "INSERT INTO SEARCH_PLOG_BOARD VALUES(SEQ_SPBOR_NUMBER.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT, DEFAULT)";
+		String query = "INSERT INTO SEARCH_PLOG_BOARD VALUES(SEQ_SPBOR_NUMBER.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT, ?)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -88,6 +88,7 @@ public class PloGroupDao {
 			pstmt.setString(4, plogroup.getSpbTitle());
 			pstmt.setString(5, plogroup.getSpbContent());
 			pstmt.setString(6, plogroup.getSpbBorFile());
+			pstmt.setString(7, plogroup.getSpbKeyword());
 //			pstmt.setInt(4, plogroup.getPloMemNum());
 			
 			
@@ -608,6 +609,39 @@ public class PloGroupDao {
 		}
 		
 		return result;
+	}
+
+	public List<PloGroup> keySearch(Connection connection, String spbKeyword) {
+		List<PloGroup> ploGroupList = new ArrayList<>();
+		PreparedStatement pstm = null;;
+		ResultSet rs = null;
+		String query = "SELECT * "
+				+ "FROM SEARCH_PLOG_BOARD "
+				+ "WHERE SPB_BOR_KEYWORD=?";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, spbKeyword);
+			rs = pstm.executeQuery();
+			while(rs.next()) {
+				PloGroup ploGroup = new PloGroup();
+				ploGroup.setSpBorNum(rs.getInt("SPBOR_NUMBER"));
+				ploGroup.setSpbTitle(rs.getString("SPB_TITLE"));
+				ploGroup.setPlogGroupName(rs.getString("PLOG_GROUP_NAME"));
+				ploGroup.setSpbWriterName(rs.getString("SPB_WRITER_NAME"));
+				ploGroup.setSpbCreateDate(rs.getString("SPB_CREATE_DATE"));
+				ploGroup.setSpbUpdateDate(rs.getString("SPB_UPDATE_DATE"));
+				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
+				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
+				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				ploGroupList.add(ploGroup);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		return ploGroupList;
 	}
 	
 	

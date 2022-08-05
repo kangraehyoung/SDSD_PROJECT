@@ -62,6 +62,7 @@
             </div>
 
                 <div class="keywordText">
+                	<p>#${ ploGroup.spbKeyword }</p>
                     <a href="/">#키워드1</a>
                     <a href="/">#키워드2</a>
                 </div>
