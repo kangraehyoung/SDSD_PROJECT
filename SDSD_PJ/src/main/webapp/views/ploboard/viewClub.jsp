@@ -215,6 +215,7 @@
                 </nav>
                 
                 <div class="uploadClubNotice_section">
+                <c:if test="${ploGroup.spbWriterNum eq loginMember.no }">
 				    <form action="${ path }/ploboard/notice" method="post">
 				    <div class="formContainer">
 				        <div class="formWrap">
@@ -243,6 +244,7 @@
 				        </div>
 				    </div>
 				    </form>
+				    </c:if>
 				</div>
 
             </div>
