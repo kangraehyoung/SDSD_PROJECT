@@ -75,7 +75,7 @@
 
 
 
-                    <!-- 댓글 내용  c:if로 묶어서 처리하면 됨-->
+                <!-- 댓글 내용  c:if로 묶어서 처리하면 됨-->
                 <div class="commentWrap">
                         <div class="profileImgBox">
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
@@ -93,15 +93,17 @@
                             </p>
                         </div>
                     </div>
-                    
+                    <c:forEach var="reply" items="${ groupBoard.replies }">
+                    <input type="hidden" value="${ groupBoard.groupBorNo }" name="groupBorNo">
+                    <input type="hidden" value="${ groupReply.no }" name="no">
                     <div class="commentWrap">
                         <div class="profileImgBox">
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="commentBox">
                             <p>
-                                <span class="commentName">닉네임</span>
-                                댓글 들어갈 자리
+                                <span class="commentName"><c:out value="${ groupReply.repwriterId }"/></span>
+                                <c:out value="${ groupreply.repcontent }"/>
                                 <span class="commentLike">
                                     <!-- 하트 누르기 전 -->
                                     <i class="bi bi-heart"></i>
@@ -111,6 +113,7 @@
                             </p>
                         </div>
                     </div>
+                    </c:forEach>
 								
                     <!-- 좋댓공저 아이콘 -->
                     <div class="iconContainer">
