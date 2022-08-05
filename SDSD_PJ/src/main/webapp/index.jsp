@@ -132,7 +132,7 @@
     
             <div class="ms3_abox">
                 <div class="ms3_search"> <!-- 첫번째 버튼 -->
-                    <a href="#" class="ms3s">플로깅 모임 검색</a>
+                    <a href="${ path }/ploboard/ploGroupList" class="ms3s">플로깅 모임 검색</a>
                 </div>
             </div>
         </div>
