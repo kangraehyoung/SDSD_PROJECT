@@ -48,7 +48,6 @@ public class NoticeServlet extends HttpServlet {
 			}
     		request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
     	}
-	
 	}
 
 }

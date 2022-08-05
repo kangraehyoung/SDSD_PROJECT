@@ -166,12 +166,12 @@
                         
                         <c:forEach var="notice" items="${ ploGroup.notices }">
                         <input type="hidden" value="${ ploGroup.spBorNum }" name="spBorNum">
-                        <input type="hidden" value="${ notices.no }" name="no">
+                        <input type="hidden" value="${ notice.no }" name="no">
                         <tr>
-                            <th scope="row">${ notices.no }</th>
-                            <td>${ notices.noticeCreateDate }</td>
-                            <td>${ notices.noticeContent }</td>
-                            <td>${ notices.noticeWriterId }</td>
+                            <th scope="row">${ notice.no }</th>
+                            <td>${ notice.noticeCreateDate }</td>
+                            <td>${ notice.noticeContent }</td>
+                            <td><c:out value="${ notice.noticeWriterId }"/></td>
                         </tr>
                         </c:forEach>
                         <!--  <tr>
@@ -211,7 +211,7 @@
                 </nav>
                 
                 <div class="uploadClubNotice_section">
-				    <form action="${ path }/plogroup/notice" method="post">
+				    <form action="${ path }/ploboard/notice" method="post">
 				    <div class="formContainer">
 				        <div class="formWrap">
 				            <div class="mb-3 row">
