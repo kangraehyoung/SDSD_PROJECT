@@ -127,11 +127,11 @@ FAQ 페이지  CSS StyleSheet
     transition: all 0.2s ease-in-out;
 }
 .o_accordion li a::after {
-    background-image: url('/FAQ/toggle_icon_down_white.png');
+    background-image: url('/SDSD_PJ/resources/imgFile/toggle_icon_down_white.png');
 }
 
 .o_accordion li a.active::after {
-    background-image: url('/FAQ/toggle_icon_up_white.png');
+    background-image: url('/SDSD_PJ/resources/imgFile/toggle_icon_up_white.png');
 }
 
 /* **** */
