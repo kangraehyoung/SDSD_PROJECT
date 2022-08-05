@@ -504,11 +504,11 @@
 
 .viewClub_section .today {
     position: relative;
-    color: #ffffff;
+    color: rgb(50, 157, 245);
     padding: 5px 10px;
     background-color: rgb(50, 157, 245);
     border: 1px solid rgb(50, 157, 245); 
-    border-radius: 50%;
+    /* border-radius: 50%; */
     
 }
 
@@ -580,13 +580,13 @@
     color: rgba(50, 157, 245);
 }
 
-.viewClub_section .clubNotice_infoBox_03 .tableWrap {
+.viewClub_section .clubNotice_infoBox_03 .tableBox {
     background-color: #ffffff;
     width: 70%;
     margin: 0 auto;
 }
 
-.viewClub_section .clubNotice_infoBox_03 .tableWrap tr:hover {
+.viewClub_section .clubNotice_infoBox_03 .tableBox tr:hover {
     background-color: rgb(228, 243, 255);
 }
 .viewClub_section .clubNotice_infoBox_03 .page-link {
@@ -714,7 +714,7 @@
 
 /*
 ================================================
-모임 인증 페이지 CSS StyleSheet
+모임 인증 페이지 CSS StyleSheet 
 ================================================
 */
 
@@ -870,7 +870,7 @@
 
 /*
 ================================================
-모임 공지 등록 페이지 CSS StyleSheet
+모임 공지 등록 페이지 CSS StyleSheet 
 ================================================
 */
 
