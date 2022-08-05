@@ -37,26 +37,24 @@
                     <!-- 모임 이름 -->
                     <div class="mb-3 row">
                         <label for="clubName" class="col-sm-3 col-form-label">모임 이름</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" id="clubName" value="쓰레깅" name="pgName">
                         </div>
                     </div>
 
                     <!-- 최대 인원 수 -->
-                    <!-- 
                     <div class="mb-3 row">
                         <label for="clubMember" class="col-md-3 col-form-label">최대 인원 수</label>
                         <div class="col-sm-4">
                             <input type="number" class="form-control" min="3" max="100" id="clubMember" value="3" name="ploNop">
                         </div>
                     </div>
-                     -->
+                    
 
                     <!-- 주 활동 지역 -->
-                    <!-- 
                     <div class="mb-3 row">
                         <label for="clubLocation" class="col-md-3 col-form-label">주 활동 지역</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-4">
                             <select class="form-select" aria-label="Default select example" name="local">
                                 <option selected>---</option>
                                 <optgroup label="특별시 및 광역시">
@@ -82,10 +80,8 @@
                             </select>
                         </div>
                     </div>
-					 -->
 					 
                     <!-- 선호 성별 -->
-                    <!-- 
                     <div class="mb-3 row">
                         <label for="clubGender" class="col-md-3 col-form-label">선호 성별</label>
                         <div class="col-sm-7" style="transform: translateY(20%);">
@@ -99,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-					 -->
+                    
 					 <!-- 모임장이 누구인지 가져오기위한 것 -->
 					 <input type="hidden" name="nickName" value="${loginMember.nickName }">
 					 <!-- 멤버에 업데이트를 위한 모임장 넘버 -->
@@ -116,7 +112,7 @@
                     <!-- 키워드 입력 -->
                     <div class="mb-3 row">
                     	<label for="clubKeyword" class="col-md-3 col-form-label">키워드 입력</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="clubKeyword" name="spbKeyword" placeholder="키워드를 입력해주세요">
                         </div>
                         
