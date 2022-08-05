@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.4" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.0.14" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.1.02" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.8" type="text/css">
@@ -51,7 +51,7 @@
         </div>
         <nav>
             <ul class="nav_list">
-                <li class="nav_item"><a href="/introduce">소개</a></li>
+                <li class="nav_item"><a href="${ path }/introduce">소개</a></li>
                 <li class="nav_item">
                     <a href="#">개인 플로깅</a>
                         <ul class="sub_item menu_01">

@@ -1,3 +1,4 @@
+<%@page import="com.sdsd.mvc.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -78,19 +79,25 @@
                 <form action="${ path }/plogroup/joinPloGroup" method="POST">
                 <input type="hidden" value="${ ploGroup.plogGroupName }" name="pgName">
                 <input type="hidden" value="${ loginMember.no }">
+                <c:if test="${ploGroup.plogGroupName ne loginMember.myPloging }">
                 <div class="buttonBox">
                     <button>모임 가입하기</button>
                 </div>
+                </c:if>
                 </form>
                 <!-- 모임 가입한 일반 USER가 보는 버튼 -->
+                <c:if test="${ploGroup.plogGroupName eq loginMember.myPloging} ">
                 <div class="buttonBox">
                     <button>모임 탈퇴하기</button>
                 </div>
+                </c:if>
                 <!-- 모임장이 보는 버튼 -->
+                <c:if test="${ploGroup.spbWriterNum eq loginMember.no }">
                 <div class="buttonBox">
                     <button id="updateBtn">모임 정보 수정</button>
                     <button class="deleteBtn" id="deleteBtn1">모임 삭제하기</button>
                 </div>
+                </c:if>
             </div>
         </div>
     </div>
@@ -142,10 +149,10 @@
 	    <!-- 공지사항 부분 -->
             <div id="ClubNotice_Info" class="clubNotice_infoBox_03">
                 <!-- 모임 리더에게만 보이는 버튼 -->
-                <%-- <div class="buttonBox">
+                <!-- <div class="buttonBox">
                     <button onclick="location.href='${ path }/plogroup/noticeinsert?spBorNom=${ploGroup.spBorNum}'">공지사항 작성</button>
-                </div> --%>
-                <div class="tableWrap">
+                </div> -->
+                <div class="tableBox">
                     <table class="table table-hover" >
                         <thead class="table-light">
                         <tr>
