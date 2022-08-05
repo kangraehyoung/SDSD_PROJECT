@@ -15,18 +15,24 @@
     <div class="plogBoardWrap">
         <div class="container-fluid contentContainer">
         <form action="${path}/groupboard/groupUpdate" method="POST" enctype="multipart/form-data">
+            <input type="hidden" value="${loginMember.myPloging }" name="groupName">
+            <input type="hidden" value="${loginMember.nickName}" name="nickName">
             <input type="hidden" value="${GroupBoard.groupBorNo }" name="no">
             <input type="hidden" value="${GroupBoard.borTitle}"  name="title">
-            <input type="hidden" value="${PloGroup.ploTitle }" name="groupName">
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">
                     <div>
-                        <img src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMzFfMjA3/MDAxNTQwOTQyNzcwMTcw.NtmoIbuWHdzf9bnzs_eJ8cr6Xf1SiZqaDa6JTqQ_bscg.xfNsHblfGcE2LAaMRe5CQV-28pOyOagCpX1T2IHOHqwg.JPEG.cosl922/output_3919720138.jpg?type=w800" class="img-fluid" alt="">
                     </div>
                     <div class="fileboxBtn">
-                        <label for="uploadImages">사진 등록</label>
-                        <input name="upfile" type="file" id="uploadImages" multiple> 
+                        <label for="uploadImages">사진 등록 1</label>
+                        <label for="uploadImages">사진 등록 2</label>
+                        <label for="uploadImages">사진 등록 3</label>
+                        <label for="uploadImages">사진 등록 4</label>
+                        <input name="upfile1" type="file" id="uploadImages" multiple> 
+                        <input name="upfile2" type="file" id="uploadImages" multiple> 
+                        <input name="upfile3" type="file" id="uploadImages" multiple> 
+                        <input name="upfile4" type="file" id="uploadImages" multiple> 
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
                 </div>
@@ -49,7 +55,7 @@
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
                     <br><br>
                     <!-- 키워드 입력 --> 
-            		<input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요">
+            		<input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control">
                     </div>
 
                     <div class="extraWrap">

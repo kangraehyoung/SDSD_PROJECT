@@ -23,7 +23,6 @@
                 <!-- 모임 이미지 -->
                 <div class="col">
                     <div>
-                        <img src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMzFfMjA3/MDAxNTQwOTQyNzcwMTcw.NtmoIbuWHdzf9bnzs_eJ8cr6Xf1SiZqaDa6JTqQ_bscg.xfNsHblfGcE2LAaMRe5CQV-28pOyOagCpX1T2IHOHqwg.JPEG.cosl922/output_3919720138.jpg?type=w800" class="img-fluid" alt="">
                     </div>
                     <div class="fileboxBtn">
                         <label for="uploadImages">사진 등록 1</label>
