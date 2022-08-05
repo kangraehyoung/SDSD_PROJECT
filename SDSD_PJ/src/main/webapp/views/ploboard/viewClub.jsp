@@ -158,7 +158,7 @@
                         <tr>
                             <th scope="col">No.</th>
                             <th scope="col">작성 일자</th>
-                            <th scope="col">제목</th>
+                            <th scope="col">공지 내용</th>
                             <th scope="col">작성자</th>
                         </tr>
                         </thead>
@@ -215,22 +215,23 @@
 				    <div class="formContainer">
 				        <div class="formWrap">
 				            <div class="mb-3 row">
-				                <label for="clubNoticeTitle" class="col-sm-4 col-form-label noticeLabel" >공지 제목</label>
-				                <div class="col-sm-6">
+				                <label for="clubNoticeTitle" class="col-sm-2 col-form-label noticeLabel" >공지 내용</label>
+				                <div class="col-sm-9">
 				                	<input type="hidden" value="${ploGroup.spBorNum}" name="noticeBorNo">
-				                    <input type="text" class="form-control" id="clubNoticeTitle" name="noticeContent">
+				                    <input type="text" class="form-control" id="clubNoticeTitle" name="noticeContent" placeholder="공지 내용을 입력해주세요.">
 				                </div>
 				            </div>
 						<%-- <%
 						PloGroup plogGroup = (PloGroup)request.getAttribute("plogGroup");
 				        System.out.println("플로깅vo : " + plogGroup);
 				        %> --%>
-				            <div class="mb-3 row">
+				        <!-- 공지내용과 제목 입력칸 합침 -->
+				            <!-- <div class="mb-3 row">
 				                <label for="clubText" class="col-sm-4 col-form-label noticeLabel">공지 내용</label>
 				                <div class="col-sm-6">
 				                    <textarea class="form-control" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 300px; resize: none;"></textarea>
 				                </div>
-				            </div>
+				            </div> -->
 				        </div>
 				        <div class="buttonBox">
 				            <input class="submitBtn" type="submit" value="등록">
