@@ -76,23 +76,7 @@
 
 
                 <!-- 댓글 내용  c:if로 묶어서 처리하면 됨-->
-                <div class="commentWrap">
-                        <div class="profileImgBox">
-                            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
-                        </div>
-                        <div class="commentBox">
-                            <p>
-                                <span class="commentName">닉네임</span>
-                                댓글 들어갈 자리
-                                <span class="commentLike">
-                                    <!-- 하트 누르기 전 -->
-                                    <i class="bi bi-heart"></i>
-                                    <!-- 하트 누른 후 -->
-                                    <i class="bi bi-heart-fill"></i>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                <form action="${ path }/groupboard/groupreplydelete" method="get">
                     <c:forEach var="groupreply" items="${ groupBoard.replies }">
                     <input type="hidden" value="${ groupBoard.groupBorNo }" name="groupBorNo">
                     <input type="hidden" value="${ groupreply.no }" name="no">
@@ -104,6 +88,7 @@
                             <p>
                                 <span class="commentName"><c:out value="${ groupreply.repwriterId }"/></span>
                                 <c:out value="${ groupreply.repcontent }"/>
+                                <button id="btnReplyDelete" type="submit">삭제</button>
                                 <span class="commentLike">
                                     <!-- 하트 누르기 전 -->
                                     <i class="bi bi-heart"></i>
@@ -114,6 +99,7 @@
                         </div>
                     </div>
                     </c:forEach>
+	                </form>
 								
                     <!-- 좋댓공저 아이콘 -->
                     <div class="iconContainer">
