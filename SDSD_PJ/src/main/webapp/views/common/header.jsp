@@ -51,7 +51,7 @@
         </div>
         <nav>
             <ul class="nav_list">
-                <li class="nav_item"><a href="/introduce">소개</a></li>
+                <li class="nav_item"><a href="${ path }/introduce">소개</a></li>
                 <li class="nav_item">
                     <a href="#">개인 플로깅</a>
                         <ul class="sub_item menu_01">
