@@ -504,11 +504,11 @@
 
 .viewClub_section .today {
     position: relative;
-    color: #ffffff;
+    color: rgb(50, 157, 245;
     padding: 5px 10px;
     background-color: rgb(50, 157, 245);
     border: 1px solid rgb(50, 157, 245); 
-    border-radius: 50%;
+    /* border-radius: 50%; */
     
 }
 
