@@ -6,6 +6,7 @@ import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.dao.PloGroupDao;
+import com.sdsd.mvc.ploGroup.model.vo.Notice;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
@@ -20,6 +21,7 @@ public class PloGroupService {
 		int result2 = 0;
 		
 		Connection connection = getConnection();
+		System.out.println("모임넘버가 이상해 : " + plogroup.getSpBorNum());
 		
 		if(plogroup.getSpBorNum() != 0) {
 			result = new PloGroupDao().updateGroup(connection, plogroup);
@@ -112,6 +114,24 @@ public class PloGroupService {
 		return ploGroup;
 	}
 
+
+	public int deleteGroup(int spBorNum) {
+		int result =0;
+		Connection connection =getConnection();
+		
+		result = new PloGroupDao().updateStatus(connection, spBorNum, "N");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
+
 	
 	
 	
@@ -244,6 +264,45 @@ public class PloGroupService {
 	
 	
 	
+	public int saveNotice(Notice notice) {
+		int result = 0;
+		
+		Connection connection = getConnection();
+		
+		result = new PloGroupDao().insertNotice(connection, notice);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
+
+
+	public PloGroup getNoticeByNo(int ploGrNo) {
+		int result = 0;
+		PloGroup ploGroup = null;
+		
+		Connection connection = getConnection();
+		
+		ploGroup = new PloGroupDao().findGroupByNo(connection, ploGrNo);
+		
+		
+			if(result > 0) {
+				commit(connection);
+			} else {
+				rollback(connection);
+			}
+		
+		close(connection);
+		
+		return ploGroup;
+
+	}
 	
 	
 	

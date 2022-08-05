@@ -11,6 +11,7 @@ import java.util.List;
 import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.member.model.vo.Member;
+import com.sdsd.mvc.ploGroup.model.vo.Notice;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
 
@@ -312,7 +313,8 @@ public class PloGroupDao {
 				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
 				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
 				ploGroup.setSpbKeyword(rs.getString("SPB_BOR_KEYWORD"));
-
+				
+				ploGroup.setNotices(this.getNoticesByNo(connection, ploGrNo));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -324,6 +326,7 @@ public class PloGroupDao {
 		
 		return ploGroup;
 	}
+
 
 	public int updateReadCount(Connection connection, PloGroup ploGroup) {
 		int result =0;
@@ -372,6 +375,27 @@ public class PloGroupDao {
 		return result;
 	}
 
+	public int updateStatus(Connection connection, int spBorNum, String status) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String qurey = "UPDATE SEARCH_PLOG_BOARD SET SPB_BOR_STATUS=? WHERE SPBOR_NUMBER=?";
+		try {
+			pstm = connection.prepareStatement(qurey);
+			
+			pstm.setString(1, status);
+			pstm.setInt(2, spBorNum);
+			
+			result = pstm.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+	
+		return result;
+	}
+
 	
 	
 	
@@ -509,6 +533,61 @@ public class PloGroupDao {
 	
 	
 	
+	public int insertNotice(Connection connection, Notice notice) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "INSERT INTO PG_NOTICE VALUES(SEQ_NOTICE_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, notice.getNoticeBorNo());
+			pstm.setInt(2, notice.getNoticeWriterNo());
+			pstm.setString(3, notice.getNoticeContent());
+			result = pstm.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		return result;
+	}
+	
+	private List<Notice> getNoticesByNo(Connection connection, int noticeBorNo) {
+		List<Notice> notices = new ArrayList<>();
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		String query = "SELECT * "
+				+ "FROM PG_NOTICE PN "
+				+ "JOIN MEMBER M ON(M.MEM_NUMBER = PN.NOTICE_WRITER_NUMBER) "
+				+ "WHERE PN.NOTICE_STATUS = 'Y' AND PN.NOTICE_BOR_NUMBER=? "
+				+ "ORDER BY PN.NOTICE_NUMBER DESC";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, noticeBorNo);
+			rs = pstm.executeQuery();
+			
+			while(rs.next()) {
+				Notice notice = new Notice();
+				notice.setNo(rs.getInt("NOTICE_NUMBER"));
+				notice.setNoticeBorNo(rs.getInt("NOTICE_BOR_NUMBER"));
+				notice.setNoticeContent(rs.getString("NOTICE_CONTENT"));
+				notice.setNoticeWriterId(rs.getString("MEM_NICKNAME"));
+				notice.setNoticeCreateDate(rs.getDate("NOTICE_CREATE_DATE"));
+				notice.setNoticeModifyDate(rs.getDate("NOTICE_MODIFY_DATE"));
+				
+				notices.add(notice);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		
+		
+		return notices;
+	}
 	
 	
 	

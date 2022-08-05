@@ -1,3 +1,4 @@
+<%@page import="com.sdsd.mvc.ploGroup.model.vo.PloGroup"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -6,20 +7,25 @@
 <c:set var="path" value="${ pageContext.request.contextPath }"/>
 
 <jsp:include page="/views/common/header.jsp" />
-
+<!-- 사용 안함 -->
 <section class="uploadClubNotice_section">
     <div class="titleBox">
         <h2>모임 공지사항 등록</h2>
     </div>
+    <form action="${ path }/plogroup/notice" method="post">
     <div class="formContainer">
         <div class="formWrap">
             <div class="mb-3 row">
-                <label for="clubNoticeTitle" class="col-sm-4 col-form-label noticeLabel">공지 제목</label>
+                <label for="clubNoticeTitle" class="col-sm-4 col-form-label noticeLabel" >공지 제목</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="clubNoticeTitle">
+                	<input type="hidden" value="${ploGroup.spBorNum}" name="noticeBorNo">
+                    <input type="text" class="form-control" id="clubNoticeTitle" name="noticeContent">
                 </div>
             </div>
-
+		<%
+		PloGroup plogGroup = (PloGroup)request.getAttribute("plogGroup");
+        System.out.println("플로깅vo : " + plogGroup);
+        %>
             <div class="mb-3 row">
                 <label for="clubText" class="col-sm-4 col-form-label noticeLabel">공지 내용</label>
                 <div class="col-sm-6">
@@ -32,6 +38,7 @@
             <input class="resetBtn" type="reset" value="취소">
         </div>
     </div>
+    </form>
 </section>
 
 
