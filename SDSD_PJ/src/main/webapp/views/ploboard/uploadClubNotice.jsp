@@ -7,7 +7,7 @@
 <c:set var="path" value="${ pageContext.request.contextPath }"/>
 
 <jsp:include page="/views/common/header.jsp" />
-<!-- 사용 안함 -->
+<!-- 사용 안함 
 <section class="uploadClubNotice_section">
     <div class="titleBox">
         <h2>모임 공지사항 등록</h2>
@@ -22,10 +22,7 @@
                     <input type="text" class="form-control" id="clubNoticeTitle" name="noticeContent">
                 </div>
             </div>
-		<%
-		PloGroup plogGroup = (PloGroup)request.getAttribute("plogGroup");
-        System.out.println("플로깅vo : " + plogGroup);
-        %>
+		
             <div class="mb-3 row">
                 <label for="clubText" class="col-sm-4 col-form-label noticeLabel">공지 내용</label>
                 <div class="col-sm-6">
@@ -43,4 +40,4 @@
 
 
 
-<jsp:include page="/views/common/footer.jsp" />
+<jsp:include page="/views/common/footer.jsp" />-->
