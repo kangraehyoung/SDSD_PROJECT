@@ -536,13 +536,14 @@ public class PloGroupDao {
 	public int insertNotice(Connection connection, Notice notice) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String query = "INSERT INTO IBREPLY VALUES(SEQ_NOTICE_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
+		String query = "INSERT INTO PG_NOTICE VALUES(SEQ_NOTICE_NUMBER.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
 		
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setInt(1, notice.getNoticeBorNo());
 			pstm.setInt(2, notice.getNoticeWriterNo());
 			pstm.setString(3, notice.getNoticeContent());
+			result = pstm.executeUpdate();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -552,7 +553,7 @@ public class PloGroupDao {
 		return result;
 	}
 	
-	private List<Notice> getNoticesByNo(Connection connection, int ploGrNo) {
+	private List<Notice> getNoticesByNo(Connection connection, int noticeBorNo) {
 		List<Notice> notices = new ArrayList<>();
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
@@ -563,7 +564,7 @@ public class PloGroupDao {
 				+ "ORDER BY PN.NOTICE_NUMBER DESC";
 		try {
 			pstm = connection.prepareStatement(query);
-			pstm.setInt(1, ploGrNo);
+			pstm.setInt(1, noticeBorNo);
 			rs = pstm.executeQuery();
 			
 			while(rs.next()) {

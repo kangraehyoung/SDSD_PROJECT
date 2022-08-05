@@ -281,6 +281,28 @@ public class PloGroupService {
 		
 		return result;
 	}
+
+
+	public PloGroup getNoticeByNo(int ploGrNo) {
+		int result = 0;
+		PloGroup ploGroup = null;
+		
+		Connection connection = getConnection();
+		
+		ploGroup = new PloGroupDao().findGroupByNo(connection, ploGrNo);
+		
+		
+			if(result > 0) {
+				commit(connection);
+			} else {
+				rollback(connection);
+			}
+		
+		close(connection);
+		
+		return ploGroup;
+
+	}
 	
 	
 	

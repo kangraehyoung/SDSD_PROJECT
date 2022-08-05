@@ -143,9 +143,8 @@
             <div id="ClubNotice_Info" class="clubNotice_infoBox_03">
                 <!-- 모임 리더에게만 보이는 버튼 -->
                 <div class="buttonBox">
-                    <button onclick="location.href='${ path }/views/ploboard/uploadClubNotice.jsp'">공지사항 작성</button>
+                    <button onclick="location.href='${ path }/plogroup/noticeinsert?spBorNom=${ploGroup.spBorNum}'">공지사항 작성</button>
                 </div>
-                
                 <div class="tableWrap">
                     <table class="table table-hover" >
                         <thead class="table-light">
@@ -157,13 +156,18 @@
                         </tr>
                         </thead>
                         <tbody>
+                        
+                        <c:forEach var="notice" items="${ ploGroup.notices }">
+                        <input type="hidden" value="${ ploGroup.spBorNum }" name="spBorNum">
+                        <input type="hidden" value="${ notices.no }" name="no">
                         <tr>
-                            <th scope="row">1</th>
-                            <td>2020/08/20</td>
-                            <td>플로깅 모임 주의사항 숙지해주세요!</td>
-                            <td>모임 리더</td>
+                            <th scope="row">${ notices.no }</th>
+                            <td>${ notices.noticeCreateDate }</td>
+                            <td>${ notices.noticeContent }</td>
+                            <td>${ notices.noticeWriterId }</td>
                         </tr>
-                        <tr>
+                        </c:forEach>
+                        <!--  <tr>
                             <th scope="row">2</th>
                             <td>2020/08/20</td>
                             <td>북극곰 절대 지켜</td>
@@ -175,11 +179,11 @@
                             <td>곰은 사람을 찢고 세미프로젝트는 내 멘탈을 찢어</td>
                             <td>모임 리더</td>
                         </tr>
+                        -->
                         </tbody>
                     </table>
                 </div>
                 
-
                 <!-- page 네비게이션 -->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
@@ -201,7 +205,7 @@
 
             </div>
    </div>
-	<input type="hidden" value="${ ploGroup.spBorNum}" name="spBorNum">
+	<input type="hidden" value="${ploGroup.spBorNum}" name="spBorNum">
 </section>
 <script type="text/javascript">
 $(document).ready(() => {
