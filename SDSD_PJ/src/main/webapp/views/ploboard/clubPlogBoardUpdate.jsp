@@ -49,7 +49,7 @@
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
                     <br><br>
                     <!-- 키워드 입력 --> 
-            		<input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" >
+            		<input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요">
                     </div>
 
                     <div class="extraWrap">
