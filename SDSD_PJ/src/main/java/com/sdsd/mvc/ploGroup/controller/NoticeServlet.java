@@ -15,7 +15,7 @@ import com.sdsd.mvc.ploGroup.model.service.PloGroupService;
 import com.sdsd.mvc.ploGroup.model.vo.Notice;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
-@WebServlet("/plogroup/notice")
+@WebServlet("/ploboard/notice")
 public class NoticeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private PloGroupService service = new PloGroupService();
@@ -46,7 +46,7 @@ public class NoticeServlet extends HttpServlet {
 				request.setAttribute("msg", "공지사항 등록 실패!");
          		request.setAttribute("location", "/ploboard/findDetail?ploGrNo=" + noticeBorNo);
 			}
-    	
+    		request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
     	}
 	
 	}
