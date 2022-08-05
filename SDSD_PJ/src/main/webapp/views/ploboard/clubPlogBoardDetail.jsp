@@ -28,10 +28,16 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://ahopsi.com/wp-content/uploads/2022/03/%EC%97%90%ED%8E%A0%ED%83%91%EA%B3%BC-%EC%9C%A0%EB%A6%AC-%ED%94%BC%EB%9D%BC%EB%AF%B8%EB%93%9C%EA%B0%80-%EB%B9%9B%EB%82%98%EB%8A%94-%E2%80%98%EB%AF%B8%EB%93%9C%EB%82%98%EC%9E%87-%EC%9D%B8-%ED%8C%8C%EB%A6%AC.jpg" class="d-block w-100" alt="...">
+                                <img src="${ path }/resources/upload/board/${groupBoard.borFileList[0]}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="${ path }/resources/upload/board/${groupBoard.borFileList[1]}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="${ path }/resources/upload/board/${groupBoard.borFileList[2]}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://ahopsi.com/wp-content/uploads/2022/03/%EC%97%90%ED%8E%A0%ED%83%91%EA%B3%BC-%EC%9C%A0%EB%A6%AC-%ED%94%BC%EB%9D%BC%EB%AF%B8%EB%93%9C%EA%B0%80-%EB%B9%9B%EB%82%98%EB%8A%94-%E2%80%98%EB%AF%B8%EB%93%9C%EB%82%98%EC%9E%87-%EC%9D%B8-%ED%8C%8C%EB%A6%AC.jpg" class="d-block w-100" alt="...">
+                                <img src="${ path }/resources/upload/board/${groupBoard.borFileList[3]}" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -59,7 +65,7 @@
 
                     <!-- 인증 내용 -->
                     <div class="textWrap">
-                        <span class="clubName">모임 이름 : ${ groupBoard.groupName } </span>
+                        <span class="clubName">모임 이름 : ${loginMember.myPloging } </span>
                   <!--  <span class="clubName">모임 이름 : ${ member.myPloging } </span>  -->
                         <br>
                         <br>
@@ -125,10 +131,10 @@
 
                     <!-- 댓글 입력창 -->
                     <div class="inputCommentWrap input-group mb-3">
-                    <form action="${ path }/groupboard/groupreply" method="post">
+                    <form action="${ path }/groupBoard/groupreply" method="post">
                         <input name="repcontent" type="text" class="form-control" placeholder="댓글을 입력해주세요">
                         <button class="btn btn-outline-primary" type="submit" id="button-addon2">작성</button>
-                    	<input type="hidden" name="repboardNo" value="${ groupBoard.groupBorNo }">
+                    	<input type="hidden" name="grouprepboardNo" value="${ groupBoard.groupBorNo }">
                     	</form>
                     </div>
                 </div>

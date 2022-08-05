@@ -26,8 +26,14 @@
                         <img src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMzFfMjA3/MDAxNTQwOTQyNzcwMTcw.NtmoIbuWHdzf9bnzs_eJ8cr6Xf1SiZqaDa6JTqQ_bscg.xfNsHblfGcE2LAaMRe5CQV-28pOyOagCpX1T2IHOHqwg.JPEG.cosl922/output_3919720138.jpg?type=w800" class="img-fluid" alt="">
                     </div>
                     <div class="fileboxBtn">
-                        <label for="uploadImages">사진 등록</label>
+                        <label for="uploadImages">사진 등록 1</label>
+                        <label for="uploadImages">사진 등록 2</label>
+                        <label for="uploadImages">사진 등록 3</label>
+                        <label for="uploadImages">사진 등록 4</label>
                         <input name="upfile1" type="file" id="uploadImages" multiple> 
+                        <input name="upfile2" type="file" id="uploadImages" multiple> 
+                        <input name="upfile3" type="file" id="uploadImages" multiple> 
+                        <input name="upfile4" type="file" id="uploadImages" multiple> 
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
                 </div>

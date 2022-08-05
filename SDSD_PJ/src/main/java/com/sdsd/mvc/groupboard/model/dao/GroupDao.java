@@ -1,3 +1,4 @@
+
 package com.sdsd.mvc.groupboard.model.dao;
 
 import static com.sdsd.mvc.common.jdbc.JDBCTemplate.*;
@@ -84,6 +85,9 @@ public class GroupDao {
 			
 			while(rs.next()) {
 				GroupBoard groupBoard = new GroupBoard();
+				String[] arr = new String[3];
+				List<String> list = groupBoard.getBorFileList();
+				
 				
 				groupBoard.setRowNum(rs.getInt("RNUM"));
 				groupBoard.setGroupBorNo(rs.getInt("GROUPBOR_NUMBER"));
@@ -94,6 +98,11 @@ public class GroupDao {
 				groupBoard.setBorFile(rs.getString("GROUP_BOR_FILE"));
 				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
 				groupBoard.setBorStatus(rs.getString("GROUP_BOR_STATUS"));
+				
+				arr = groupBoard.getBorFile().split(", ");
+				list = Arrays.asList(arr);
+				
+				groupBoard.setBorFileList(list);
 				
 				groupBoardList.add(groupBoard);
 			}
@@ -161,9 +170,9 @@ public class GroupDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String query = "SELECT * "
-					+ "FROM GROUPBOARD IB "
-					+ "JOIN MEMBER M ON(IB.GROUPBOR_WRITER_NO = M.MEM_NUMBER) "
-					+ "WHERE IB.GROUP_BOR_STATUS = 'Y' AND GROUPBOR_NUMBER = ?";
+					+ "FROM GROUPBOARD GB "
+					+ "JOIN MEMBER M ON(GB.GROUPBOR_WRITER_NO = M.MEM_NUMBER) "
+					+ "WHERE GB.GROUP_BOR_STATUS = 'Y' AND GROUPBOR_NUMBER = ?";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -184,7 +193,7 @@ public class GroupDao {
 				groupBoard.setCreateDate(rs.getString("GROUP_CREATE_DATE"));
 				groupBoard.setUpdateDate(rs.getString("GROUP_UPDATE_DATE"));
 				
-//				groupBoard.setReplies(this.getRepliesByNo(connection, groupBorNo));
+				groupBoard.setReplies(this.getRepliesByNo(connection, groupBorNo));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
