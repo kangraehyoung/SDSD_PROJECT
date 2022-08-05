@@ -37,7 +37,7 @@
                     <!-- 모임 이름 -->
                     <div class="mb-3 row">
                         <label for="clubName" class="col-sm-3 col-form-label">모임 이름</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="clubName" value="쓰레깅" name="pgName">
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                     <!-- 키워드 입력 -->
                     <div class="mb-3 row">
                     	<label for="clubKeyword" class="col-md-3 col-form-label">키워드 입력</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="clubKeyword" name="spbKeyword" placeholder="키워드를 입력해주세요">
                         </div>
                         
