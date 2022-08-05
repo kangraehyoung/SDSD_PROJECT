@@ -504,7 +504,7 @@
 
 .viewClub_section .today {
     position: relative;
-    color: rgb(50, 157, 245;
+    color: rgb(50, 157, 245);
     padding: 5px 10px;
     background-color: rgb(50, 157, 245);
     border: 1px solid rgb(50, 157, 245); 
@@ -580,13 +580,13 @@
     color: rgba(50, 157, 245);
 }
 
-.viewClub_section .clubNotice_infoBox_03 .tableWrap {
+.viewClub_section .clubNotice_infoBox_03 .tableBox {
     background-color: #ffffff;
     width: 70%;
     margin: 0 auto;
 }
 
-.viewClub_section .clubNotice_infoBox_03 .tableWrap tr:hover {
+.viewClub_section .clubNotice_infoBox_03 .tableBox tr:hover {
     background-color: rgb(228, 243, 255);
 }
 .viewClub_section .clubNotice_infoBox_03 .page-link {

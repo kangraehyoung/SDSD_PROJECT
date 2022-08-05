@@ -149,10 +149,10 @@
 	    <!-- 공지사항 부분 -->
             <div id="ClubNotice_Info" class="clubNotice_infoBox_03">
                 <!-- 모임 리더에게만 보이는 버튼 -->
-                <%-- <div class="buttonBox">
+                <!-- <div class="buttonBox">
                     <button onclick="location.href='${ path }/plogroup/noticeinsert?spBorNom=${ploGroup.spBorNum}'">공지사항 작성</button>
-                </div> --%>
-                <div class="tableWrap">
+                </div> -->
+                <div class="tableBox">
                     <table class="table table-hover" >
                         <thead class="table-light">
                         <tr>
