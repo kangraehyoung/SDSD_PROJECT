@@ -93,16 +93,16 @@
                             </p>
                         </div>
                     </div>
-                    <c:forEach var="reply" items="${ groupBoard.replies }">
+                    <c:forEach var="groupreply" items="${ groupBoard.replies }">
                     <input type="hidden" value="${ groupBoard.groupBorNo }" name="groupBorNo">
-                    <input type="hidden" value="${ groupReply.no }" name="no">
+                    <input type="hidden" value="${ groupreply.no }" name="no">
                     <div class="commentWrap">
                         <div class="profileImgBox">
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="commentBox">
                             <p>
-                                <span class="commentName"><c:out value="${ groupReply.repwriterId }"/></span>
+                                <span class="commentName"><c:out value="${ groupreply.repwriterId }"/></span>
                                 <c:out value="${ groupreply.repcontent }"/>
                                 <span class="commentLike">
                                     <!-- 하트 누르기 전 -->
@@ -135,7 +135,7 @@
                     <!-- 댓글 입력창 -->
                     <div class="inputCommentWrap input-group mb-3">
                     <form action="${ path }/groupBoard/groupreply" method="post">
-                        <input name="repcontent" type="text" class="form-control" placeholder="댓글을 입력해주세요">
+                        <input name="grouprepcontent" type="text" class="form-control" placeholder="댓글을 입력해주세요">
                         <button class="btn btn-outline-primary" type="submit" id="button-addon2">작성</button>
                     	<input type="hidden" name="grouprepboardNo" value="${ groupBoard.groupBorNo }">
                     	</form>
