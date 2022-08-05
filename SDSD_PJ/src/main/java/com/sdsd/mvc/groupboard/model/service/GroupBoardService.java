@@ -13,9 +13,6 @@ import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.dao.GroupDao;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 import com.sdsd.mvc.groupboard.model.vo.GroupReply;
-import com.sdsd.mvc.indiboard.model.dao.BoardDao;
-import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
-import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
 
 public class GroupBoardService {
@@ -149,7 +146,21 @@ public class GroupBoardService {
 		return groupboardlist;
 	}
 
+	public List<GroupBoard> getSearchList(PageInfo pageInfo, String groupkeyword) {
+//		List<GRoupBoard> keysearchlist = null;
+//		Connection connection = getConnection();
+//		
+//		keysearchlist = new BoardDao().keySearch(connection, pageInfo);
+//		
+//		close(connection);
+//		return keysearchlist;
+		List<GroupBoard> groupboardlist = null;
+		Connection connection = getConnection();
+		
+		groupboardlist = new GroupDao().keySearch(connection, pageInfo, groupkeyword);
+		
+		close(connection);
+		return groupboardlist;
+	}
 
-
-	
 }

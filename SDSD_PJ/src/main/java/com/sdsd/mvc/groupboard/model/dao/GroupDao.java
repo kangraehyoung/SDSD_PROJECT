@@ -15,6 +15,7 @@ import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 import com.sdsd.mvc.groupboard.model.vo.GroupReply;
+import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 
 // 플로깅 모임 게시판 인증 
 public class GroupDao {
@@ -404,4 +405,38 @@ public class GroupDao {
 		return result;
 	}
 
+	public List<GroupBoard> keySearch(Connection connection, PageInfo pageInfo, String groupkeyword) {
+		List<GroupBoard> groupboardlist = new ArrayList<>();
+		PreparedStatement pstm = null;;
+		ResultSet rs = null;
+		String query = "SELECT * "
+				+ "FROM GROUPBOARD "
+				+ "WHERE GROUP_BOR_KEYWORD = ?";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, groupkeyword);
+			rs = pstm.executeQuery();
+			while(rs.next()) {
+				GroupBoard groupBoard = new GroupBoard();
+				
+				groupBoard.setGroupBorNo(rs.getInt("GROUPBOR_NUMBER"));
+				groupBoard.setBorTitle(rs.getString("GROUPBOR_TITLE"));
+				groupBoard.setWriterName(rs.getString("GROUPBOR_WRITER_NAME"));
+				groupBoard.setCreateDate(rs.getString("GROUP_CREATE_DATE"));
+				groupBoard.setBorFile(rs.getString("GROUP_BOR_FILE"));
+				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
+				groupBoard.setBorStatus(rs.getString("GROUP_BOR_STATUS"));
+				groupBoard.setGroupkeyword("GROUP_BOR_KEYWORD");
+				
+				groupboardlist.add(groupBoard);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		
+		return groupboardlist;
+	}
 }
