@@ -15,9 +15,6 @@ import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.service.PloGroupService;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
-/**
- * Servlet implementation class outGroupServlet
- */
 @WebServlet("/ploboard/outGroup")
 public class outGroupServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -25,7 +22,7 @@ public class outGroupServlet extends HttpServlet {
     public outGroupServlet() {
     }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int result = 0;
 		HttpSession session = request.getSession(false);
 		
@@ -34,10 +31,12 @@ public class outGroupServlet extends HttpServlet {
 		if(loginMember != null) {
     		result = new PloGroupService().deleteMember(loginMember.getNo());
     		if(result > 0) {
-    			request.setAttribute("msg", "회원 탈퇴가 완료되었습니다");
-    			request.setAttribute("location", "/logout");
+    			request.setAttribute("msg", "모임 탈퇴가 완료되었습니다. 다시 로그인해주세요.");
+    			session.invalidate();
+    			request.setAttribute("location", "/ploboard/ploGroupList");
+    			
     		} else {
-    			request.setAttribute("msg", "회원 탈퇴에 실패했습니다. 다시 시도해주세요");
+    			request.setAttribute("msg", "모임 탈퇴에 실패했습니다. 다시 시도해주세요");
     			request.setAttribute("location", "/member/myPage");
     		}
     	} else {

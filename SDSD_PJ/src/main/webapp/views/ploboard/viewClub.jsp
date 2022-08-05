@@ -86,10 +86,13 @@
                 </c:if>
                 </form>
                 <!-- 모임 가입한 일반 USER가 보는 버튼 -->
-                <c:if test="${ploGroup.plogGroupName eq loginMember.myPloging} ">
+                <h2>${ ploGroup.plogGroupName eq loginMember.myPloging && ploGroup.spbWriterNum ne loginMember.no}</h2>
+                <c:if test="${ ploGroup.plogGroupName eq loginMember.myPloging && ploGroup.spbWriterNum ne loginMember.no}">
+                <form action="${path }/ploboard/outGroup">
                 <div class="buttonBox">
-                    <button>모임 탈퇴하기</button>
+                    <button type="submit">모임 탈퇴하기</button>
                 </div>
+                </form>
                 </c:if>
                 <!-- 모임장이 보는 버튼 -->
                 <c:if test="${ploGroup.spbWriterNum eq loginMember.no }">
@@ -98,6 +101,7 @@
                     <button class="deleteBtn" id="deleteBtn1">모임 삭제하기</button>
                 </div>
                 </c:if>
+                
             </div>
         </div>
     </div>

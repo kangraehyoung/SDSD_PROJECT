@@ -592,7 +592,7 @@ public class PloGroupDao {
 	public int updateMemberStatus(Connection connection, int no, String status) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String query = "UPDATE MEMBER SET MEM_STATUS=? WHERE MEM_NUMBER=?";
+		String query = "UPDATE MEMBER SET MEM_MY_PLOGING=? WHERE MEM_NUMBER=?";
 		
 		try {
 			pstm = connection.prepareStatement(query);

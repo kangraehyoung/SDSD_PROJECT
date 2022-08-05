@@ -35,7 +35,8 @@ public class JoinPloGroupServlet extends HttpServlet {
 	    	result = new PloGroupService().joinGroup(plogroup, loginMember);
 	    	
 	    	if (result > 0) {
-				request.setAttribute("msg", "모임 가입 성공");
+				request.setAttribute("msg", "모임 가입 성공 다시 로그인해 주세요");
+				session.invalidate();
 	    		request.setAttribute("location", "/views/ploboard/createClubCelebrate.jsp");
 			} else {
 				request.setAttribute("msg", "모임 가입 실패");
