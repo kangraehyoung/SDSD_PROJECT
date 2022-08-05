@@ -4,6 +4,7 @@ import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.indiboard.model.dao.BoardDao;
 import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
+import com.sdsd.mvc.member.model.dao.MemberDao;
 import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.dao.PloGroupDao;
 import com.sdsd.mvc.ploGroup.model.vo.Notice;
@@ -302,6 +303,21 @@ public class PloGroupService {
 		
 		return ploGroup;
 
+	}
+
+
+	public int deleteMember(int no) {
+		int result = 0;
+		Connection connection = getConnection();
+		
+		result = new PloGroupDao().updateMemberStatus(connection, no, "플로깅모임없음");
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		return result;
 	}
 	
 	
