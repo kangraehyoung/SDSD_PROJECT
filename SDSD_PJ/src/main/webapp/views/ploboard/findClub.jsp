@@ -30,19 +30,19 @@
             <div class="ht_keyword">
                 <div><p>추천 키워드</p></div>
                 <div class="ht_hash">
-                    <a href="#">#강남구</a>
+                    <a href="${ path }/ploGroup/keySearch?spbKeyword=강남구">#강남구</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#경기도</a>
+                    <a href="${ path }/ploGroup/keySearch?spbKeyword=경기도">#경기도</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#20대</a>
+                    <a href="${ path }/ploGroup/keySearch?spbKeyword=20대">#20대</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#한강</a>
+                    <a href="${ path }/ploGroup/keySearch?spbKeyword=한강">#한강</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#남산</a>
+                    <a href="${ path }/ploGroup/keySearch?spbKeyword=남산">#남산</a>
                 </div>
             </div>
         </div>
@@ -54,13 +54,14 @@
         	<c:if test="${ empty loginMember }">
 	            <button id="createClub2">모임 만들기</button>
         	</c:if>
-        	
+        	<form action="${ path }/ploGroup/keySearch?spbKeyword=${ploGroup.spbKeyword}">
         	<c:if test="${not empty loginMember }">
-            	<button id="viewJoinedClub">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub" value="${ploGroup.spbKeyword}">가입한 모임 바로가기</button>
         	</c:if>
         	<c:if test="${ empty loginMember }">
-            	<button id="viewJoinedClub2">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub2" value="${ploGroup.spbKeyword}">가입한 모임 바로가기</button>
         	</c:if>
+        	</form>
         </div>
     </div>
 
@@ -80,7 +81,7 @@
                     </div>
                 </div>
                 <div class="textBox">
-                    <h3 class="mainText">모임이름</h3>
+                    <h3 class="mainText">${ ploGroup.plogGroupName }</h3>
                 </div>
                 <div class="iconBox">
                     <i class="bi bi-heart-fill"></i><span>999</span>
@@ -120,7 +121,7 @@
 			alert("로그인 시 이용 가능합니다.");
 		});
 		$("#viewJoinedClub2").on("click", () => {
-			alert("로그인 시 이용 가능합니다.");
+			location.replace("/ploGroup/keySearch?spbKeyword=");
 		});
 		$("#createClub").on("click", () => {
 			location.replace("${path}/plogroup/createPloGroup");
