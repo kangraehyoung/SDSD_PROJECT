@@ -7,7 +7,7 @@
 <c:set var="path" value="${ pageContext.request.contextPath }"/>
 
 <jsp:include page="/views/common/header.jsp" />
-
+<!-- 사용 안함 -->
 <section class="uploadClubNotice_section">
     <div class="titleBox">
         <h2>모임 공지사항 등록</h2>

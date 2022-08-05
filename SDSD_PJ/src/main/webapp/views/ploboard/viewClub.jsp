@@ -142,9 +142,9 @@
 	    <!-- 공지사항 부분 -->
             <div id="ClubNotice_Info" class="clubNotice_infoBox_03">
                 <!-- 모임 리더에게만 보이는 버튼 -->
-                <div class="buttonBox">
+                <%-- <div class="buttonBox">
                     <button onclick="location.href='${ path }/plogroup/noticeinsert?spBorNom=${ploGroup.spBorNum}'">공지사항 작성</button>
-                </div>
+                </div> --%>
                 <div class="tableWrap">
                     <table class="table table-hover" >
                         <thead class="table-light">
@@ -202,10 +202,43 @@
                         </li>
                     </ul>
                 </nav>
+                
+                <div class="uploadClubNotice_section">
+				    <form action="${ path }/plogroup/notice" method="post">
+				    <div class="formContainer">
+				        <div class="formWrap">
+				            <div class="mb-3 row">
+				                <label for="clubNoticeTitle" class="col-sm-4 col-form-label noticeLabel" >공지 제목</label>
+				                <div class="col-sm-6">
+				                	<input type="hidden" value="${ploGroup.spBorNum}" name="noticeBorNo">
+				                    <input type="text" class="form-control" id="clubNoticeTitle" name="noticeContent">
+				                </div>
+				            </div>
+						<%-- <%
+						PloGroup plogGroup = (PloGroup)request.getAttribute("plogGroup");
+				        System.out.println("플로깅vo : " + plogGroup);
+				        %> --%>
+				            <div class="mb-3 row">
+				                <label for="clubText" class="col-sm-4 col-form-label noticeLabel">공지 내용</label>
+				                <div class="col-sm-6">
+				                    <textarea class="form-control" placeholder="우리 지구 지켜..환경 오염 뿌셔" id="clubText" style="height: 300px; resize: none;"></textarea>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="buttonBox">
+				            <input class="submitBtn" type="submit" value="등록">
+				            <input class="resetBtn" type="reset" value="취소">
+				        </div>
+				    </div>
+				    </form>
+				</div>
 
             </div>
-   </div>
+            
+         
+         
 	<input type="hidden" value="${ploGroup.spBorNum}" name="spBorNum">
+	
 </section>
 <script type="text/javascript">
 $(document).ready(() => {
