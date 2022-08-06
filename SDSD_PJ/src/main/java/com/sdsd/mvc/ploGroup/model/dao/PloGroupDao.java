@@ -702,6 +702,8 @@ public class PloGroupDao {
 			rs = pstm.executeQuery();
 			while(rs.next()) {
 				PloGroup ploGroup = new PloGroup();
+				String[] arr = new String[4];
+				List<String> list = ploGroup.getSpbFileList();
 				ploGroup.setSpBorNum(rs.getInt("SPBOR_NUMBER"));
 				ploGroup.setSpbTitle(rs.getString("SPB_TITLE"));
 				ploGroup.setPlogGroupName(rs.getString("PLOG_GROUP_NAME"));
@@ -711,6 +713,9 @@ public class PloGroupDao {
 				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
 				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
 				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				arr = ploGroup.getSpbBorFile().split(", ");
+				list = Arrays.asList(arr);
+				ploGroup.setSpbFileList(list);
 				ploGroupList.add(ploGroup);
 			}
 		} catch (SQLException e) {
