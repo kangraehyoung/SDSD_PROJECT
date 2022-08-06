@@ -3,17 +3,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="path" value="${ pageContext.request.contextPath }"/>
 <jsp:include page="/views/common/header.jsp" />
-<div>
-	<div class="enrollTemrs_title"> <!-- 오븐 기준 민트색 배경 틀 -->
+
+<section class="enlollJE2">
+    <div class="enrollTemrs_title"> <!-- 오븐 기준 민트색 배경 틀 -->
         <!-- 회원가입  -->
         <h2>회원가입</h2>
 
         <!-- 약관 동의 >> 정보 입력 -->
         <ul class="StepTerms">
             <li onclick="location.href='${ path }/member/agreePage'" style="cursor: pointer; color: rgb(98, 98, 98);">1. 약관 동의</li>
-            <li><img src="${ path }/resources/imgFile/right-arrow.png" class="arrowIcon" alt="arrow Icon"></li>
             <li>
-            	<img src="${ path }/resources/imgFile/지구아이콘.png" class="earthIcon" alt="earth Icon">2.정보입력
+                <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/backhand-index-pointing-right_1f449.png" class="arrowIcon" alt="arrow Icon">
+            </li>
+            <li>
+            	2.정보입력
             </li>
         </ul>
     </div>
@@ -25,27 +28,23 @@
                         <div><p>쓰담쓰담 로그인 시 사용됩니다.</p></div>
                     </div>
                     <div class="st_input"> <!-- 필수 정보 input -->
-                        <div class="st_id"> <!-- 아이디 입력 박스 -->
-                            <div><label>아이디(이메일주소) <span>*</span></label></div>
-                            <div class="id_input">
-                                <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required size="50px" value>
+                        <div class="sti_label">
+                            <div class="stl_id"><label for="newEmail">아이디(이메일주소) <span>*</span></label></div>
+                            <div class="stl_pwd"><label for="password">비밀번호 <span>*</span></label></div>
+                            <div class="stl_pwd2"><label for="password2">비밀번호 재입력 <span>*</span></label></div>
+                        </div>
+                        <div class="sti_input">
+                            <div class="sti_id">
+                                <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required size="70px" value>
                                 <input type="button" id="checkDuplicate" value="중복검사">
                             </div>
-                        </div>
-                        <div class="st_pwd"> <!-- 비밀번호 입력 박스-->
-                            <div><label>비밀번호 <span>*</span></label></div>
-                            <div class="pwd_input">
-                                <input type="password" name="password" placeholder="9자 이상의 비밀번호를 입력하세요." required size="50px" minlength="8">
+                            <div class="sti_pwd">
+                                <input type="password" id="password" name="password" placeholder="9자 이상의 비밀번호를 입력하세요." required size="70px" minlength="8">
+                            </div>
+                            <div class="sti_pwd2">
+                                <input type="password" id="password2" name="password2" placeholder="9자 이상의 비밀번호를 입력하세요." size="70px" required minlength="8">
                             </div>
                         </div>
-                            <div class="st_pwd2"> <!--  비밀번호 재입력 박스 -->
-                            <div><label>비밀번호 재입력 <span>*</span></label></div>
-                            <div class="pwd_input2">
-                                <input type="password" name="password2" placeholder="9자 이상의 비밀번호를 입력하세요." size="50px" required minlength="8">
-                            </div>
-                            
-                        </div>
-                        	
                     </div>
                 </div>
                 <div class="second_tool_2"> <!-- 마이페이지 입력 정보 틀 -->
@@ -54,34 +53,27 @@
                         <div><p>마이페이지에 노출되는 정보입니다.</p></div>
                     </div>
                     <div class="st_input2"> <!-- 회원 정보 input -->
-                        <div class="st_name"> <!-- 이름 입력 박스 -->
-                            <div><label>이름</label></div>
+                        <div class="sti2_label">
+                            <div class="stl_name"><label for="name">이름</label></div>
+                            <div class="stl_date"><label for="date">생년월일</label></div>
+                            <div class="stl_nickName"><label for="nickName">닉네임</label></div>
+                            <div class="stl_phone"><label for="phone">전화번호</label></div>
+                            <div class="stl_area"><label for="area">활동지역</label></div>
+                            <div class="stl_gender"><label>성별</label></div>
+                        </div>
+                        <div class="sti2_input">
                             <div class="name_input">
-                                <input type="text" name="name" value>
+                                <input type="text" id="name" name="name" value>
                             </div>
-                        </div>
-                        
-                        <div class="st_birthDay"> 
-                            <div><label>생년월일</label></div>
                             <div class="date_input">
-                                <input type="date" name="birthDate" value>
-                        </div> 
-                        
-                        </div>
-                        <div class="st_nickname"> <!-- 닉네임 입력 박스 -->
-                            <div><label>닉네임</label></div>
+                                <input type="date" id="date" name="birthDate" value>
+                            </div> 
                             <div class="nickname_input">
-                                <input type="text" name="nickName" value>
+                                <input type="text" id="nickName" name="nickName" value>
                             </div>
-                        </div>
-                        <div class="st_phoneNumber"> <!-- 전화번호 입력 박스 -->
-                            <div><label>전화번호</label></div>
                             <div class="phoneNumber_input">
-                                <input type="number" name="phone" placeholder="'-'없이 입력하세요." value>
+                                <input type="text" id="phone" name="phone" placeholder="'-'없이 입력하세요." value>
                             </div>
-                        </div>
-                        <div class="st_area"> <!-- 활동지역 입력 박스 -->
-                            <div><label for="area">활동지역</label></div>
                             <div class="st_select_area">
                                 <select name="address" id="area">
                                     <option selected>---</option>
@@ -107,9 +99,6 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </div>
-                        <div class="st_gender"> <!-- 성별 입력 박스 -->
-                            <div><label>성별</label></div>
                             <div class="gender_input">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="남자" checked>
@@ -124,12 +113,13 @@
                     </div>
                 </div>
                 <div class="st_btn"><!-- 버튼 박스 -->
-                    <button>이전으로</button>
-                    <button type="submit">가입하기</button>
+                    <button class="fisrt_stbtn">이전으로</button>
+                    <button type="submit" class="second_stbtn">가입하기</button>
                 </div>
             </form>
         </div>
-    </div>
+</section>
+
 <script>
 	$(document).ready(() => {
 		
