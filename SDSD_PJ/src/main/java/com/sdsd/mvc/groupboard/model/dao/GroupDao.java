@@ -15,7 +15,6 @@ import com.sdsd.mvc.common.util.ContentInfo;
 import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 import com.sdsd.mvc.groupboard.model.vo.GroupReply;
-import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 
 // 플로깅 모임 게시판 인증 
 public class GroupDao {
@@ -186,6 +185,9 @@ public class GroupDao {
 			if(rs.next()) {
 				groupBoard = new GroupBoard();
 				
+				String[] arr = new String[3];
+				List<String> list = groupBoard.getBorFileList();
+				
 				groupBoard.setGroupBorNo(rs.getInt("GROUPBOR_NUMBER"));
 				groupBoard.setBorTitle(rs.getString("GROUPBOR_TITLE"));
 				groupBoard.setBorContent(rs.getString("GROUPBOR_CONTENT"));
@@ -194,6 +196,13 @@ public class GroupDao {
 				groupBoard.setBorFile(rs.getString("GROUP_BOR_FILE"));
 				groupBoard.setCreateDate(rs.getString("GROUP_CREATE_DATE"));
 				groupBoard.setUpdateDate(rs.getString("GROUP_UPDATE_DATE"));
+				groupBoard.setGroupkeyword(rs.getString("GROUP_BOR_KEYWORD"));
+				groupBoard.setGroupName(rs.getString("GROUP_BOR_GROUPNAME"));;
+				
+				arr= groupBoard.getBorFile().split(", ");
+				list = Arrays.asList(arr);
+				
+				groupBoard.setBorFileList(list);
 				
 				groupBoard.setReplies(this.getRepliesByNo(connection, groupBorNo));
 			}
@@ -262,7 +271,7 @@ public class GroupDao {
 			pstmt.setInt(2, groupBoard.getGroupBorNo());
 			
 			result = pstmt.executeUpdate();
-			System.out.println("몰라" + groupBoard.getReadCount());
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -420,6 +429,8 @@ public class GroupDao {
 			while(rs.next()) {
 				GroupBoard groupBoard = new GroupBoard();
 				
+				String[] arr = new String[3];
+				List<String> list = groupBoard.getBorFileList();
 				groupBoard.setGroupBorNo(rs.getInt("GROUPBOR_NUMBER"));
 				groupBoard.setBorTitle(rs.getString("GROUPBOR_TITLE"));
 				groupBoard.setWriterName(rs.getString("GROUPBOR_WRITER_NAME"));
@@ -428,6 +439,12 @@ public class GroupDao {
 				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
 				groupBoard.setBorStatus(rs.getString("GROUP_BOR_STATUS"));
 				groupBoard.setGroupkeyword("GROUP_BOR_KEYWORD");
+				groupBoard.setGroupName(rs.getString("GROUP_BOR_GROUPNAME"));
+				
+				
+				arr= groupBoard.getBorFile().split(", ");
+				list = Arrays.asList(arr);
+				groupBoard.setBorFileList(list);
 				
 				groupboardlist.add(groupBoard);
 			}
