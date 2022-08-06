@@ -34,6 +34,7 @@ public class GroupBoardService {
 		
 		groupBoardList = new GroupDao().findAll(connection, pageInfo);
 		
+		close(connection);
 		return groupBoardList;
 	}
 
@@ -57,6 +58,7 @@ public class GroupBoardService {
 			rollback(connection);
 		}
 		
+		close(connection);
 		return result;
 	}
 	
@@ -79,7 +81,30 @@ public class GroupBoardService {
 
 
 
+	public GroupBoard getBoardByNo(int groupBorNo, boolean hasRead) {
+		
+		int result = 0;
+		GroupBoard groupBoard = null;
+		
+		Connection connection = getConnection();
+		
+		groupBoard = new GroupDao().findBoardByNo(connection, groupBorNo);
+		
+		if(groupBoard != null && !hasRead) {
+			result = new GroupDao().updateReadCount(connection, groupBoard);
+			if(result > 0) {
+				commit(connection);
+			} else {
+				rollback(connection);
+			}
+		}
+		close(connection);
+		
+		return groupBoard;
+	}
+	
 	public int saveGroupReply(GroupReply groupreply) {
+		
 		int result = 0;
 		
 		Connection connection = getConnection();
@@ -96,7 +121,8 @@ public class GroupBoardService {
 		
 		return result;
 	}
-
+	
+	
 	public int groupreplydelete(int groupBorNo, int no) {
 		int result =0;
 		Connection connection =getConnection();
@@ -114,37 +140,6 @@ public class GroupBoardService {
 		return result;
 	}
 
-	public GroupBoard getGroupBoardByNo(int groupBorNo, boolean hasRead) {
-		int result = 0;
-		GroupBoard groupBoard = null;
-		
-		Connection connection = getConnection();
-		
-		groupBoard = new GroupDao().findBoardByNo(connection, groupBorNo);
-		
-		if(groupBoard != null && !hasRead) {
-			result = new GroupDao().updateReadCount(connection, groupBoard);
-			if(result > 0) {
-				commit(connection);
-			} else {
-				rollback(connection);
-			}
-		}
-		close(connection);
-			
-		return groupBoard;
-	}
-
-	public List<GroupBoard> getBoardContent(ContentInfo contentInfo) {
-		List<GroupBoard> groupboardlist = null;
-		Connection connection = getConnection();
-		
-		groupboardlist = new GroupDao().findNextContent(connection, contentInfo);
-		
-		close(connection);
-		
-		return groupboardlist;
-	}
 
 	public List<GroupBoard> getSearchList(PageInfo pageInfo, String groupkeyword) {
 //		List<GRoupBoard> keysearchlist = null;
@@ -163,4 +158,14 @@ public class GroupBoardService {
 		return groupboardlist;
 	}
 
+	public List<GroupBoard> getBoardContent(ContentInfo contentInfo) {
+		List<GroupBoard> groupboardlist = null;
+		Connection connection = getConnection();
+		
+		groupboardlist = new GroupDao().findNextContent(connection, contentInfo);
+		
+		close(connection);
+		
+		return groupboardlist;
+	}
 }
