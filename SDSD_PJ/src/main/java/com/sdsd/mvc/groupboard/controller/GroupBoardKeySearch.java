@@ -40,13 +40,14 @@ public class GroupBoardKeySearch extends HttpServlet {
 		pageInfo = new PageInfo(page, 10, listCount, 8);    
 		groupboardlist = new GroupBoardService().getSearchList(pageInfo, groupkeyword);
 		System.out.println("키워드 테스트" + groupboardlist);
+		System.out.println("키워드");
 		//System.out.println(" 1 " + listCount);
 		//System.out.println(" 2 " + pageInfo);
 		//System.out.println(" 3 " + groupboardlist);
 		
 		
 		request.setAttribute("pageInfo", pageInfo);
-		request.setAttribute("groupboardlist", groupboardlist);
+		request.setAttribute("groupBoardList", groupboardlist);
 		request.getRequestDispatcher("/views/ploboard/clubPlogBoard.jsp").forward(request, response);
 		
 		}

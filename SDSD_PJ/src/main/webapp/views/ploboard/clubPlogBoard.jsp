@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="ht_search">
-                <form class="ht_1" action="${ path }/groupboard/groupkeysearch" method="get">
+                <form class="ht_1" action="${ path }/groupboard/groupkeysearch">
                     <div class="ht_2">
                         <input type="text" name="groupkeyword">
                         <button type="submit">
