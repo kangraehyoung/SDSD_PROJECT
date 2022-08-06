@@ -429,16 +429,20 @@
     margin-left: 1%;
 }
 
+.bbb5_input .mb-3 {
+	width: 100%;
+	display: flex;
+}
+
 .bbb5_input svg {
     width: 10%;
     transform: translateY(-7px);
 }
 
-.bbb5_input>div>input {
+.bbb5_input>div>form>input {
     margin-right: -15px;
-    width: 80%;
+    width: 90%;
     height: 40px;
-    border: none;
 }
 
 .bbb5_input>div>button {
@@ -577,7 +581,11 @@
 
 .bbbp_Nickname {
     width: 10%;
-    border: none;
+}
+
+.bbbp2_keyword input {
+	border: none;
+	margin-top: 10px;
 }
 
 .bbbp3_input {
