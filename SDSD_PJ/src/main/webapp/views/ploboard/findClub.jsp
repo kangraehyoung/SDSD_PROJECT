@@ -54,12 +54,13 @@
         	<c:if test="${ empty loginMember }">
 	            <button id="createClub2">모임 만들기</button>
         	</c:if>
-        	<form action="${ path }/ploGroup/keySearch?spbKeyword=${ploGroup.spbKeyword}">
+        	<form action="${ path }/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}">
+        	<input type="hidden" name="plogGroupName" value="${loginMember.myPloging}">
         	<c:if test="${not empty loginMember }">
-            	<button id="viewJoinedClub" value="${ploGroup.spbKeyword}">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub" value="${loginMember.myPloging}">가입한 모임 바로가기</button>
         	</c:if>
         	<c:if test="${ empty loginMember }">
-            	<button id="viewJoinedClub2" value="${ploGroup.spbKeyword}">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub2" value="${ploGroup.plogGroupName}">가입한 모임 바로가기</button>
         	</c:if>
         	</form>
         </div>
@@ -97,15 +98,15 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
-                        <a class="page-link" href="${ path }/indiboard/indilist?page=${ pageInfo.prevPage }" aria-label="Previous">
+                        <a class="page-link" href="${ path }/ploboard/ploGroupList?page=${ pageInfo.prevPage }" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
                     <c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
-                    <li class="page-item"><a class="page-link" href="${ path }/indiboard/indilist?page=${ status.current }">${ status.current }</a></li>
+                    <li class="page-item"><a class="page-link" href="${ path }/ploboard/ploGroupList?page=${ status.current }">${ status.current }</a></li>
                     </c:forEach>
                     <li class="page-item">
-                        <a class="page-link" href="${ path }/indiboard/indilist?page=${ pageInfo.nextPage }" aria-label="Next">
+                        <a class="page-link" href="${ path }/ploboard/ploGroupList?page=${ pageInfo.nextPage }" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                         </a>
                     </li>

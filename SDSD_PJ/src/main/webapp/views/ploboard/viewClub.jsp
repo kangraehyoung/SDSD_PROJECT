@@ -157,6 +157,7 @@
                     <button onclick="location.href='${ path }/plogroup/noticeinsert?spBorNom=${ploGroup.spBorNum}'">공지사항 작성</button>
                 </div> -->
                 <div class="tableBox">
+                <form action="${ path }/ploboard/noticeDelete" method="get">
                     <table class="table table-hover" >
                         <thead class="table-light">
                         <tr>
@@ -167,15 +168,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        
                         <c:forEach var="notice" items="${ ploGroup.notices }">
                         <input type="hidden" value="${ ploGroup.spBorNum }" name="spBorNum">
                         <input type="hidden" value="${ notice.no }" name="no">
                         <tr>
                             <th scope="row">${ notice.no }</th>
-                            <td>${ notice.noticeCreateDate }</td>
-                            <td>${ notice.noticeContent }</td>
-                            <td><c:out value="${ notice.noticeWriterId }"/></td>
+                            	<td>${ notice.noticeCreateDate }</td>
+                            	<td>${ notice.noticeContent }</td>
+                            <td>
+                            	<c:out value="${ notice.noticeWriterId }"/>
+                            	<c:if test="${ploGroup.spbWriterNum eq loginMember.no }">
+                            		<button id="btnNoticeDelete" type="submit">삭제</button>
+                            	</c:if>
+                            </td>
                         </tr>
                         </c:forEach>
                         <!--  <tr>
@@ -193,8 +198,8 @@
                         -->
                         </tbody>
                     </table>
+                    </form>
                 </div>
-                
                 <!-- page 네비게이션 -->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">

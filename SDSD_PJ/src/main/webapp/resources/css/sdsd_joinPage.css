@@ -236,15 +236,15 @@ align-items: center;
 서호정 - 작성 
 ==============================================
 */
-.first_tool {
-    background-color:  rgba(206, 206, 206, 0.362);
+.enlollJE2 .enrollTemrs_title {
+    background-color: #CAE5FC;
     width: 100%;
     text-align: center;
     padding: 20px 0;
     margin: 0 auto;
 }
 
-.first_tool h2 {
+.enlollJE2 .enrollTemrs_title h2 {
     font-size: 1.8rem;
     font-weight: 800;
     text-decoration: underline;
@@ -253,8 +253,8 @@ align-items: center;
     margin: 0 auto 30px auto;
 }
 
-.first_tool .ft_1 {
-    width: 55%;
+.enlollJE2 .enrollTemrs_title .StepTerms {
+    width: 40%;
     height: 80px;
     display: flex;
     -webkit-box-align: center;
@@ -266,7 +266,7 @@ align-items: center;
     padding: 0;
 }
 
-.first_tool .ft_1 li {
+.enlollJE2 .enrollTemrs_title .StepTerms li {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -276,56 +276,50 @@ align-items: center;
     font-size: 1.3rem;
 }
 
-.first_tool .ft_1 li img.earthIcon {
-    width: 30px;
-    height: 30px;
-    transform: translateY(-2px);
-    margin-right: 10px;
-}
 
-.first_tool .ft_1 li img.arrowIcon {
+.enlollJE2 .enrollTemrs_title .StepTerms li img.arrowIcon {
     width: 70px;
     height: 70px;
 }
 
-.second_tool {
+
+.enlollJE2 .second_tool {
     width: 100%;
     padding: 20px 0;
     margin: 0 auto;
     text-align: center;
 }
 
-/* 입력 박스 크기 조정 - 최송희*/
-.second_tool_1, .second_tool_2 {
-	width: 60%;
-	margin: 0 auto;
-}
-
-.st_head {
-    background-color: white;
-    width: 80%;
+.enlollJE2 .second_tool .st_head {
+    background-color:  #CAE5FC;
+    width: 60%;
     margin: auto;
     text-align: left;
-    border-bottom: 1px solid silver;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.second_tool .st_head2 {
-    background-color: white;
-    width: 80%;
+.enlollJE2 .second_tool .st_head2 {
+    background-color:  #CAE5FC;
+    width: 60%;
     margin: auto;
     text-align: left;
-    border-bottom: 1px solid silver;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.second_tool_2 {
+.enlollJE2 .second_tool_1,
+.enlollJE2 .second_tool_2 {
     margin-top: 50px;
 }
 
-.second_tool h4 {
-    padding: 10px 0 0 20px;
+.enlollJE2 .second_tool h4 {
+    padding: 10px 0 20px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
-.second_tool p {
+.enlollJE2 .second_tool p {
     padding: 0 0 5px 20px;
     margin-top: -10px;
     margin-bottom: -1px;
@@ -333,85 +327,137 @@ align-items: center;
 }
 
 
-.st_input, .st_input2 {
+.enlollJE2 .second_tool .st_input, .st_input2 {
+    box-sizing: border-box;
     background-color: white;
-    width: 80%;
+    width: 60%;
     margin: auto;
+    border: 1px solid #CAE5FC;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 
-.st_input > div, .st_input2 > div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-.st_input input, .st_input2 input, #area {
+.enlollJE2 .second_tool .st_input input, .st_input2 input, #area {
     border-radius: 5px;
-    border: 1px solid silver;
+    border: 2px solid #CAE5FC;
+    height: 30px;
 }
 
-.st_input span {
+.enlollJE2 .second_tool label {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+
+.enlollJE2 .second_tool .second_tool_1 .st_input,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 {
+    display: flex;
+    margin: 0 auto;
+}
+
+.enlollJE2 .second_tool .second_tool_2 .st_input2 {
+    height: 400px;
+}
+
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_label,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_label {
+    width: 20%;
+    display: block;
+    height: 200px;
+}
+
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_label div,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_label div {
+    height: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 25px;
+}
+
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_label .stl_pwd,
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_input .sti_pwd,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_label .stl_date,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_input .date_input,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_label .stl_phone,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_input .phoneNumber_input {
+    background-color: rgba(189, 189, 189, 0.205);
+}
+
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_label .stl_gender {
+    background-color: rgba(189, 189, 189, 0.205);
+    border-bottom-left-radius: 20px;
+    margin-top: 2px;
+}
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_input .gender_input {
+    background-color: rgba(189, 189, 189, 0.205);
+    border-bottom-right-radius: 20px;
+    margin-top: 2px;
+}
+
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_label span {
     color: red;
 }
 
-.id_input {
-    padding-left: 40px;
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_input,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_input {
+    width: 80%;
+    display: block;
+    height: 200px;
 }
 
-.pwd_input {
-    padding-left: 113px;
-}
-
-.pwd_input2 {
-    padding-left: 60px;
-}
-
-.st_pwd2 {
-    padding-bottom: 20px;
-}
-
-.name_input, .gender_input {
-    padding-left: 160px;
-}
-
-.date_input, .phoneNumber_input, .st_select_area {
-    padding-left: 128px;
-}
-
-.nickname_input {
-    padding-left: 144px;
-}
-
-.gender_input {
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_input div,
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_input div {
+    height: 33%;
     display: flex;
-    padding-bottom: 20px;
-    padding-right: 10px;
+    align-items: center;
+    justify-content: start;
+    padding-left: 25px;
 }
 
-.form-check {
-    padding-right: 20px;
+.enlollJE2 .second_tool .second_tool_2 .st_input2 .sti2_input .form-check-inline .form-check-input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
 
-
-.st_btn {
-    margin-top: 30px;
-}
-
-.st_btn button {
-    width: 180px;
-    height: 40px;
-    font-weight: bold;
-    border: white;
-    background-color: rgb(158, 161, 173);;
+.enlollJE2 .second_tool .second_tool_1 .st_input .sti_input .sti_id #checkDuplicate {
+    margin-left: 30px;
+    width: 80px;
+    height: 34px;
+    background-color: rgb(72, 150, 252);
     color: white;
-    margin: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+.enlollJE2 .second_tool .st_btn {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+}
+
+.enlollJE2 .second_tool .st_btn .fisrt_stbtn {
+    width: 250px;
+    height: 34px;
+    height: 50px;
+    background-color: rgb(111, 112, 112);
+    color: white;
+    font-weight: bold;
+    border: none;
     border-radius: 10px;
 }
 
-.st_btn button:last-child {
-    background-color: rgb(73, 119, 245);;
-    border: white;
+.enlollJE2 .second_tool .st_btn .second_stbtn {
+    width: 250px;
+    height: 50px;
+    background-color: rgb(72, 150, 252);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
 }
