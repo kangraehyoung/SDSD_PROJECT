@@ -392,7 +392,7 @@
     width: 70%;
     margin: 0 auto;
     text-align: center;
-    transform: translateY(-44%);
+    transform: translateY(-38%);
 }
 
 .viewClub_section .clubNotice_buttonBox a {
@@ -475,8 +475,8 @@
     display: flex;
     flex-flow: row wrap;
     height: 500px;
-    border-top: 1px solid #333333;
-    border-right: 1px solid #333333;
+    /* border-top: 1px solid #333333;
+    border-right: 1px solid #333333; */
     background-color: #FFFFFF;
 }
 
