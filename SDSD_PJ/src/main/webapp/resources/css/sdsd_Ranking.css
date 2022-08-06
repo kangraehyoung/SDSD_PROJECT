@@ -111,7 +111,8 @@
 .Ranking .second_tool .r_body .rb_2 .rb_2_list details summary {
     cursor: pointer;
     background-color: rgba(88, 170, 236, 0.362);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-weight: bold;
+    padding: 10px 0;
     color: rgb(68, 66, 66);
 }
