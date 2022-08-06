@@ -82,7 +82,7 @@
 	                <li class="nav_item">
 	                    <a href="#">OTHERS</a>
 	                    <ul class="sub_item menu_03">
-	                        <li><a href="${ path }/views/others/Ranking.jsp">랭킹</a></li>
+	                        <li><a href="${ path }/others/ranking">랭킹</a></li>
 	                        <li><a href="${ path }/views/others/Challenge.jsp">챌린지</a></li>
 	                        <li><a href="${ path }/others/trash">쓰레기통 찾기</a></li>
 	                        <li><a href="${ path }/others/course">플로깅 코스</a></li>
