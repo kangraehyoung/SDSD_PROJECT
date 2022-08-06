@@ -21,13 +21,18 @@ public class RankingServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	Rank rank = null;
+    	
     	List<Rank> rankList = null;
+    	List<Rank> rankList1 = null;
     	
     	rankList = new rankService().getMember(rank); 
+    	rankList1 = new rankService().getMember1(rank); 
     	
     	System.out.println(rankList);
+    	System.out.println(rankList1);
     	request.setAttribute("rank", rank);
     	request.setAttribute("rankList", rankList);
+    	request.setAttribute("rankList1", rankList1);
     	request.getRequestDispatcher("/views/others/Ranking.jsp").forward(request, response);
     	
     }

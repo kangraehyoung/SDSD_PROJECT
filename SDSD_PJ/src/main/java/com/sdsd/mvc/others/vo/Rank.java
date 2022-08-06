@@ -14,4 +14,8 @@ public class Rank {
 	private String indiNickName;
 	
 	private int indiCount;
+// 플로깅 모임 인증 랭킹
+	private String ploGroupNickname;
+	
+	private int ploGroupCount;
 }

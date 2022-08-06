@@ -34,7 +34,6 @@ public class rankDao {
 				
 				rank.setIndiNickName(rs.getString("INDIBOR_WRITER_NAME"));
 				rank.setIndiCount(rs.getInt("COUNT(*)"));
-				System.out.println(rank.getIndiCount());
 				
 				rankList.add(rank);
 			}
@@ -46,6 +45,39 @@ public class rankDao {
 			close(pstm);
 		}
 		return rankList;
+	}
+
+	public List<Rank> countPloRank(Connection connection, Rank rank) {
+		List<Rank> rankList1 = new ArrayList<Rank>();
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		String query = 
+				"SELECT GROUPBOR_GROUPNAME, COUNT(*) "
+				+ "FROM GROUPBOARD "
+				+ "GROUP BY ROLLUP(GROUPBOR_GROUPNAME) "
+				+ "HAVING GROUPING(GROUPBOR_GROUPNAME)= 0";
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			
+			rs = pstm.executeQuery();
+			
+			if(rs.next()) {
+				rank = new Rank();
+				
+				rank.setPloGroupNickname((rs.getString("GROUPBOR_GROUPNAME")));
+				rank.setPloGroupCount(rs.getInt("COUNT(*)"));
+				
+				rankList1.add(rank);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		return rankList1;
 	}
 
 }

@@ -21,4 +21,14 @@ public class rankService {
 		return rankList;
 	}
 
+	public List<Rank> getMember1(Rank rank) {
+		Connection connection = getConnection();
+		List<Rank> rankList1 = null;
+		
+		rankList1 = new rankDao().countPloRank(connection, rank);
+		
+		close(connection);
+		return rankList1;
+	}
+
 }

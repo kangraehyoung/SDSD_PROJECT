@@ -32,23 +32,14 @@
             <div class="r_body">
                 <div class="rb_1">
                     <h2>개인 플로깅 활동 랭킹</h2>
-                    <form action="${path }/others/indiranking" method="post">
                     <div class="rb_1_list">
+                        <c:forEach var="indiRank" items="${ rankList }">
                         <div class="rbl1">
                             <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
-                            <div>이정후</div>
-                            <div>51회</div>
+                            <div>${ indiRank.indiNickName }</div>
+                            <div>${ indiRank.indiCount }</div>
                         </div>
-                        <div class="rbl2">
-                            <div><img src="${ path }/resources/imgFile/silvermedal.png" alt=""></div>
-                            <div>김태진</div>
-                            <div>27회</div>
-                        </div>
-                        <div class="rbl2">
-                            <div><img src="${ path }/resources/imgFile/bronzemedal.png" alt=""></div>
-                            <div>이용규</div>
-                            <div>19회</div>
-                        </div>
+                        </c:forEach>
                         <details>
                             <summary>랭킹 더보기</summary>
                             <div class="rbl3">
@@ -83,25 +74,17 @@
                             </div>
                         </details>
                     </div>
-				</form>
                 </div>
                 <div class="rb_2">
                     <h2>모임별 플로깅 활동 랭킹</h2>
                     <div class="rb_2_list">
+                        
                         <div class="rbl1">
+                        <c:forEach var="ploRank" items="${ rankList1 }">
                             <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
-                            <div>이정후</div>
-                            <div>51회</div>
-                        </div>
-                        <div class="rbl2">
-                            <div><img src="${ path }/resources/imgFile/silvermedal.png" alt=""></div>
-                            <div>김태진</div>
-                            <div>27회</div>
-                        </div>
-                        <div class="rbl2">
-                            <div><img src="${ path }/resources/imgFile/bronzemedal.png" alt=""></div>
-                            <div>이용규</div>
-                            <div>19회</div>
+                            <div>${ ploRank.ploGroupNickname }</div>
+                            <div>${ ploRank.ploGroupCount }</div>
+                 		</c:forEach>
                         </div>
                         <details>
                             <summary>랭킹 더보기</summary>
