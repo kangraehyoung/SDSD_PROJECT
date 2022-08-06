@@ -1246,7 +1246,7 @@
 
 .clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap {
     padding: 10px 0 10px 20px;
-    border-bottom: 1px solid darkgray;
+    /* border-bottom: 1px solid darkgray; */
 }
 
 .clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap p {
