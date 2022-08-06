@@ -7,15 +7,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/other/faq")
-public class FaqServlet extends HttpServlet {
+@WebServlet("/other/challenge")
+public class ChallengeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public FaqServlet() {
+	
+    public ChallengeServlet() {
     }
-    
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/others/FAQ.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/others/Challenge.jsp").forward(request, response);
 	}
 
 }
