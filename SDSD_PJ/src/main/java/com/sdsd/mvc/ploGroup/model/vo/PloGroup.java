@@ -56,6 +56,8 @@ public class PloGroup {
 	
 	private String spbBorFile; // 첨부파일
 	
+	private List<String> spbFileList;
+	
 	private String spbBorStatus; // 모임 존재 여부
 	
 	private String spbKeyword; // 키워드

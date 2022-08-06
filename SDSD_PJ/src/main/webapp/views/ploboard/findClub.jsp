@@ -72,7 +72,7 @@
             <c:forEach var="ploGroup" items="${ ploGroupList }">
             <div class="contentBox">
                 <div class="imgBox" onclick="location.href='${ path }/ploboard/findDetail?ploGrNo=${ploGroup.spBorNum }'">
-                    <img src="${path }/resources/upload/board/${ploGroup.spbBorFile}" alt="img">
+                    <img src="${path }/resources/upload/board/${ploGroup.spbFileList[0]}" alt="img">
                     <div class="hoverBox">
                         <p>리더 | ${ ploGroup.spbWriterName }</p>
                         <p>활동 지역 | </p>

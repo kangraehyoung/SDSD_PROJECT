@@ -24,8 +24,14 @@
                     </div>
                     <div class="fileUploadBox">
                         <div class="fileboxBtn">
-                            <label for="uploadImages">사진 등록</label>
-                            <input type="file" id="uploadImages" multiple name="upfile1"> 
+                            <label for="uploadImages1">사진 등록</label>
+                            <input type="file" id="uploadImages1"  name="upfile1"> 
+                            <label for="uploadImages2">사진 등록</label>
+                            <input type="file" id="uploadImages2"  name="upfile2"> 
+                            <label for="uploadImages3">사진 등록</label>
+                            <input type="file" id="uploadImages3"  name="upfile3"> 
+                            <label for="uploadImages4">사진 등록</label>
+                            <input type="file" id="uploadImages4"  name="upfile4"> 
                         </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>

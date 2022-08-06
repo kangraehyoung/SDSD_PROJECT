@@ -26,16 +26,16 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="https://img.freepik.com/premium-vector/plogging-run-and-clean-plogging-movement-or-marathon-man-and-woman-picking-up-litter-during-plogging-in-park-or-outdoor-collect-garbage-while-running-in-flat-style_7737-2044.jpg?w=2000" class="d-block w-100" alt="...">
+                        <img src="${path }/resources/upload/board/${ploGroup.spbFileList[0]}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="https://img.freepik.com/premium-vector/plogging-run-and-clean-plogging-movement-or-marathon-man-and-woman-picking-up-litter-during-plogging-in-park-or-outdoor-collect-garbage-while-running-in-flat-style_7737-2044.jpg?w=2000" class="d-block w-100" alt="...">
+                        <img src="${path }/resources/upload/board/${ploGroup.spbFileList[1]}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="https://img.freepik.com/premium-vector/plogging-run-and-clean-plogging-movement-or-marathon-man-and-woman-picking-up-litter-during-plogging-in-park-or-outdoor-collect-garbage-while-running-in-flat-style_7737-2044.jpg?w=2000" class="d-block w-100" alt="...">
+                        <img src="${path }/resources/upload/board/${ploGroup.spbFileList[2]}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://img.freepik.com/premium-vector/plogging-run-and-clean-plogging-movement-or-marathon-man-and-woman-picking-up-litter-during-plogging-in-park-or-outdoor-collect-garbage-while-running-in-flat-style_7737-2044.jpg?w=2000" class="d-block w-100" alt="...">
+                            <img src="${path }/resources/upload/board/${ploGroup.spbFileList[3]}" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
