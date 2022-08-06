@@ -143,10 +143,10 @@
                     <!-- 댓글 입력창 -->
                     <div class="inputCommentWrap ">
                     	<form action="${ path }/groupBoard/groupreply" method="post" class="row mb-3">
-                    		<div class="col-sm-10">
+                    		<div class="col-sm-9">
 		                        <input name="grouprepcontent" type="text" class="form-control" placeholder="댓글을 입력해주세요" required>
 		                    </div>
-                    		<div class="col-sm-2">
+                    		<div class="col-sm-3">
 		                        <button class="btn btn-outline-primary" type="submit" id="button-addon2">작성</button>
                     		</div>
 	                    	<input type="hidden" name="grouprepboardNo" value="${ groupBoard.groupBorNo }">
