@@ -643,6 +643,57 @@ public class PloGroupDao {
 		}
 		return ploGroupList;
 	}
+
+	public int updateNoticeStatus(Connection connection, int spBorNum, int no) {
+		int result = 0;
+		PreparedStatement pstm = null;
+		String query = "UPDATE PG_NOTICE SET NOTICE_STATUS ='N' WHERE NOTICE_NUMBER=? AND NOTICE_BOR_NUMBER=?";
+		
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setInt(1, no);
+			pstm.setInt(2, spBorNum);
+			result = pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstm);
+		}
+		return result;
+	}
+
+	public List<PloGroup> myPlogingSearch(Connection connection, String plogGroupName) {
+		List<PloGroup> ploGroupList = new ArrayList<>();
+		PreparedStatement pstm = null;;
+		ResultSet rs = null;
+		String query = "SELECT * "
+				+ "FROM SEARCH_PLOG_BOARD "
+				+ "WHERE PLOG_GROUP_NAME=?";
+		try {
+			pstm = connection.prepareStatement(query);
+			pstm.setString(1, plogGroupName);
+			rs = pstm.executeQuery();
+			while(rs.next()) {
+				PloGroup ploGroup = new PloGroup();
+				ploGroup.setSpBorNum(rs.getInt("SPBOR_NUMBER"));
+				ploGroup.setSpbTitle(rs.getString("SPB_TITLE"));
+				ploGroup.setPlogGroupName(rs.getString("PLOG_GROUP_NAME"));
+				ploGroup.setSpbWriterName(rs.getString("SPB_WRITER_NAME"));
+				ploGroup.setSpbCreateDate(rs.getString("SPB_CREATE_DATE"));
+				ploGroup.setSpbUpdateDate(rs.getString("SPB_UPDATE_DATE"));
+				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
+				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
+				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				ploGroupList.add(ploGroup);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstm);
+		}
+		return ploGroupList;
+	}
 	
 	
 	
