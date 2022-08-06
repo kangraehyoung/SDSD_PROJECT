@@ -376,7 +376,8 @@ public class BoardDao {
 			rs = pstm.executeQuery();
 			while(rs.next()) {
 				IndiBoard indiBoard = new IndiBoard();
-				
+				String[] arr = new String[3];
+				List<String> list = indiBoard.getBorFileList();
 				indiBoard.setMaBorNo(rs.getInt("INDIBOR_NUMBER"));
 				indiBoard.setBorTitle(rs.getString("INDIBOR_TITLE"));
 				indiBoard.setWriterName(rs.getString("INDIBOR_WRITER_NAME"));
@@ -385,7 +386,9 @@ public class BoardDao {
 				indiBoard.setReadCount(rs.getInt("INDI_READCOUNT"));
 				indiBoard.setBorStatus(rs.getString("INDI_BOR_STATUS"));
 				indiBoard.setIndikeyword("INDI_BOR_KEYWORD");
-				
+				arr= indiBoard.getBorFile().split(", ");
+				list = Arrays.asList(arr);
+				indiBoard.setBorFileList(list);
 				indiboardlist.add(indiBoard);
 			}
 		} catch (SQLException e) {
