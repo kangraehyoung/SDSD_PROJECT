@@ -97,7 +97,7 @@
                     <div>사직동불빠따</div>
                     <div>11회</div>
                 </div>
-                <button onclick="location.href='${ path }/ranking';">랭킹 더보기</button>
+                <button onclick="location.href='${ path }/others/ranking';">랭킹 더보기</button>
                 <!-- <div class="ms2t_6">
                     <a href="">랭킹 더보기</a>
                 </div> -->
