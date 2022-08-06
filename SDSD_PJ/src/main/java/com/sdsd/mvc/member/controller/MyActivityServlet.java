@@ -1,4 +1,4 @@
-package com.sdsd.mvc.others.controller;
+package com.sdsd.mvc.member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,15 +7,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/other/faq")
-public class FaqServlet extends HttpServlet {
+@WebServlet("/member/myActivity")
+public class MyActivityServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public FaqServlet() {
+    public MyActivityServlet() {
     }
-    
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/others/FAQ.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/member/My_Activity.jsp").forward(request, response);
 	}
 
 }

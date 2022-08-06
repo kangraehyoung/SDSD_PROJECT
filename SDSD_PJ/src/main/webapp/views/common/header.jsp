@@ -12,20 +12,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>쓰담쓰담</title>
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.3" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.1" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.1.01" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.9" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.2" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.1.02" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.6" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.15" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.1.11" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.2.02" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.5" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.8" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_My_Activity.css?v0.0.2" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_Ranking.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_My_Activity.css?v0.0.4" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_Ranking.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_Challenge.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_IntroPage.css?v0.0.1" type="text/css">
     
@@ -40,10 +40,6 @@
     <script src="${ path }/resources/js/FAQ_Accodion.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a&libraries=services"></script>
     
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header class="topMenu_Container">
@@ -62,7 +58,7 @@
 	                        <ul class="sub_item menu_01">
 	                            <c:if test="${not empty loginMember }">
 	                            <li><a href="${ path }/member/myPage">마이 페이지</a></li>
-	                            <li><a href="${ path }/views/member/My_Activity.jsp">나의 활동</a></li>
+	                            <li><a href="${ path }/member/myActivity">나의 활동</a></li>
 	                            </c:if>
 	                            <c:if test="${empty loginMember }">
 	                            <li><a href="${path }/member/login" id="logincheck">마이 페이지</a></li>
@@ -83,10 +79,10 @@
 	                    <a href="#">OTHERS</a>
 	                    <ul class="sub_item menu_03">
 	                        <li><a href="${ path }/others/ranking">랭킹</a></li>
-	                        <li><a href="${ path }/views/others/Challenge.jsp">챌린지</a></li>
+	                        <li><a href="${ path }/other/challenge">챌린지</a></li>
 	                        <li><a href="${ path }/others/trash">쓰레기통 찾기</a></li>
 	                        <li><a href="${ path }/others/course">플로깅 코스</a></li>
-	                        <li><a href="${ path }/faq">FAQ</a></li>
+	                        <li><a href="${ path }/other/faq">FAQ</a></li>
 	                    </ul>
 	                </li>
 	                <c:if test="${empty loginMember}">

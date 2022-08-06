@@ -392,7 +392,7 @@
     width: 70%;
     margin: 0 auto;
     text-align: center;
-    transform: translateY(-44%);
+    transform: translateY(-38%);
 }
 
 .viewClub_section .clubNotice_buttonBox a {
@@ -475,8 +475,8 @@
     display: flex;
     flex-flow: row wrap;
     height: 500px;
-    border-top: 1px solid #333333;
-    border-right: 1px solid #333333;
+    /* border-top: 1px solid #333333;
+    border-right: 1px solid #333333; */
     background-color: #FFFFFF;
 }
 
@@ -1007,7 +1007,7 @@
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap {
     padding: 10px 0 10px 20px;
-    border-bottom: 1px solid darkgray;
+    /* border-bottom: 1px solid darkgray; */
 }
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap p {
@@ -1066,8 +1066,10 @@
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox p .commentLike {}
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer {
+    margin-bottom: 10px;
     padding: 10px 0 10px 20px;
     border-top: 1px solid darkgray;
+   	border-bottom: 1px solid darkgray;
 }
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer .iconBox {
@@ -1244,7 +1246,7 @@
 
 .clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap {
     padding: 10px 0 10px 20px;
-    border-bottom: 1px solid darkgray;
+    /* border-bottom: 1px solid darkgray; */
 }
 
 .clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap p {

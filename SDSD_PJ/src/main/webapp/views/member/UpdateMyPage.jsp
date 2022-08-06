@@ -11,11 +11,11 @@
         <h2>개인 플로깅</h2>
         <div class="menuBox">
             <div class="menuList">
-                <span><img src="${ path }/resources/imgFile/checkIcon_mypage.png" alt="Check Icon"></span>
+                <span><img src="${ path }/resources/imgFile/checkblue_icon.png" alt="Check Icon"></span>
                 <a href="javasript:">마이 페이지</a>
             </div>
-            <div class="menuList"><a href="javasript:">나의 활동</a></div>
-            <div class="menuList"><a href="javasript:">개인 플로깅 인증</a></div>
+            <div class="menuList"><a href="${ path }/member/myActivity">나의 활동</a></div>
+            <div class="menuList"><a href="${ path }/indiboard/indiUpdate">개인 플로깅 인증</a></div>
         </div>
     </div>
 

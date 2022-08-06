@@ -38,7 +38,7 @@
     /* font-family: Helvetica,Arial,sans-serif; */
     /* font-family: 'Nanum Myeongjo', serif !important; */
     /* font-family: 'Nanum Brush Script', cursive !important; */
-    font-family: 'Yeon Sung', cursive !important;
+    /* font-family: 'Yeon Sung', cursive !important; */
     font-weight: normal;
     font-style: normal;
 }
@@ -79,7 +79,7 @@
     animation: fadein 2s;
     -moz-animation: fadein 2s;
     /* Firefox */
-    -webkit-animation: fadein 7s;
+    -webkit-animation: fadein 10s;
     /* Safari and Chrome */
     -o-animation: fadein 2s;
     /* Opera */
@@ -87,7 +87,7 @@
 
 .mi_coment p {
 	/* font-size: 1.3rem; */
-	font-family: 'Yeon Sung', cursive !important;
+	/* font-family: 'Yeon Sung', cursive !important; */
 }
 
 @keyframes fadein {
