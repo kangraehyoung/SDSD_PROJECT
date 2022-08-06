@@ -60,9 +60,9 @@
                    
                     <!-- 키워드 입력 --> 
                     <div class="mb-3 row">
-                    	<label for="clubKeyword" class="col-md-3 col-form-label">키워드 입력</label>
-                        <div class="col-sm-5">
-                            <input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요">
+                    	<label for="clubKeyword" class="col-md-1 col-form-label" style="color: rgb(50, 157, 245); font-weight: 600; text-align: right;">#</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요" style="border: none !important;">
                         </div>
             
 
