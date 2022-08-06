@@ -624,7 +624,8 @@
 
 .createClub_section .createForm_Wrap .fileUploadBox {
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin-top: 30%;
 }
 
 .createClub_section .createForm_Wrap .fileUploadBox .fileboxBtn label {
@@ -1162,7 +1163,8 @@
 }
 
 .clubPlogBoardWrite_section .plogBoardWrap .fileboxBtn {
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin-top: 30%;
     /* top: 50%;
     width: 50%;
     position: absolute; */
@@ -1279,7 +1281,7 @@
 .clubPlogBoardWrite_section .plogBoardButtonWrap {
     width: 70%;
     margin: 0 auto;
-    padding-bottom: 60px;
+    padding: 30px 0 60px 0;
 }
 
 .clubPlogBoardWrite_section .plogBoardButtonWrap button {

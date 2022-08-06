@@ -25,14 +25,18 @@
                     <div>
                     </div>
                     <div class="fileboxBtn">
-                        <label for="uploadImages">사진 등록 1</label>
-                        <label for="uploadImages">사진 등록 2</label>
-                        <label for="uploadImages">사진 등록 3</label>
-                        <label for="uploadImages">사진 등록 4</label>
-                        <input name="upfile1" type="file" id="uploadImages" multiple> 
-                        <input name="upfile2" type="file" id="uploadImages" multiple> 
-                        <input name="upfile3" type="file" id="uploadImages" multiple> 
-                        <input name="upfile4" type="file" id="uploadImages" multiple> 
+                    	<div>
+	                        <label for="uploadImages"><i class="bi bi-image"></i> 사진 등록 1</label>
+	                        <input name="upfile1" type="file" id="uploadImages"> 
+	                        <label for="uploadImages"><i class="bi bi-image-fill"></i> 사진 등록 2</label>
+	                        <input name="upfile2" type="file" id="uploadImages">
+                    	</div>
+                    	<div style="margin-top: 10px;">
+	                        <label for="uploadImages"><i class="bi bi-image-fill"></i> 사진 등록 3</label>
+	                        <input name="upfile3" type="file" id="uploadImages"> 
+	                        <label for="uploadImages"><i class="bi bi-image"></i> 사진 등록 4</label>
+	                        <input name="upfile4" type="file" id="uploadImages"> 
+                        </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
                 </div>
@@ -53,10 +57,14 @@
                     <div class="textWrap">
                         <textarea class="form-control" name="content" id="clubText" style="height: 300px; resize: none;"> ${groupBoard.borContent } </textarea>
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
-                    <br><br>
+                   
                     <!-- 키워드 입력 --> 
-            		<input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control">
-                    </div>
+                    <div class="mb-3 row">
+                    	<label for="clubKeyword" class="col-md-3 col-form-label">키워드 입력</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요">
+                        </div>
+            
 
                     <div class="extraWrap">
                         <div class="inputBox">
