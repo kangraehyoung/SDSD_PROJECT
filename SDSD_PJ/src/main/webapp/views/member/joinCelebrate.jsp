@@ -43,8 +43,9 @@
             <!-- <p>주변에 모임을 홍보해보세요!</p> -->
     
             <div class="buttonBox">
-                    <button class="gotoMain">메인페이지 바로가기 <i class="bi bi-house-door"></i></button>
-                    <button>마이페이지 바로가기 <i class="bi bi-people"></i></button>
+            		
+                    <button class="gotoMain" onclick="location.href='${path}/'">메인페이지 바로가기 <i class="bi bi-house-door"></i></button>
+                    <button onclick="location.href='${path}/member/login'">마이페이지 바로가기 <i class="bi bi-people"></i></button>
             </div>
         </div>
     </div>

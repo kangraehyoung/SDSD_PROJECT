@@ -328,6 +328,33 @@ public class PloGroupService {
 		close(connection);
 		return ploGroupList;
 	}
+
+
+	public int noticeDelete(int spBorNum, int no) {
+		int result =0;
+		Connection connection =getConnection();
+		
+		result = new PloGroupDao().updateNoticeStatus(connection, spBorNum, no);
+		
+		if(result > 0) {
+			commit(connection);
+		} else {
+			rollback(connection);
+		}
+		
+		close(connection);
+		
+		return result;
+	}
+
+
+	public List<PloGroup> getSearchMyPloging(PageInfo pageInfo, String plogGroupName) {
+		List<PloGroup> ploGroupList = null;
+		Connection connection = getConnection();
+		ploGroupList = new PloGroupDao().myPlogingSearch(connection, plogGroupName);
+		close(connection);
+		return ploGroupList;
+	}
 	
 	
 	

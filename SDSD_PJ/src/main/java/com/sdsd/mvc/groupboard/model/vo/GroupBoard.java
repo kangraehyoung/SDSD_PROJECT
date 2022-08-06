@@ -34,7 +34,7 @@ public class GroupBoard {
 	
 	private String borFile;
 	
-	private List<String> borFileList; // ?
+	private List<String> borFileList;
 	
 	private String borStatus;
 	
@@ -44,7 +44,7 @@ public class GroupBoard {
 	
 	private int groupWriterNo;
 	
-	private List<GroupReply> replies; // ?
+	private List<GroupReply> replies;
 	
 	private String groupkeyword;
 	

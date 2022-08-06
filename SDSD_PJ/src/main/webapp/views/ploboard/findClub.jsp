@@ -49,19 +49,18 @@
         
         <div class="buttonBox">
         	<c:if test="${not empty loginMember }">
-	            <button id="createClub">모임 만들기</button>
+	            <button id="createClub" onclick="location.href='${path}/plogroup/createPloGroup'">모임 만들기</button>
         	</c:if>
         	<c:if test="${ empty loginMember }">
-	            <button id="createClub2">모임 만들기</button>
+	            <button id="createClub2" onclick="location.href='${path}/member/login'">모임 만들기</button>
         	</c:if>
-        	<form action="${ path }/ploGroup/keySearch?spbKeyword=${ploGroup.spbKeyword}">
+        	<input type="hidden" name="plogGroupName" value="${loginMember.myPloging}">
         	<c:if test="${not empty loginMember }">
-            	<button id="viewJoinedClub" value="${ploGroup.spbKeyword}">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub" onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}'">가입한 모임 바로가기</button>
         	</c:if>
         	<c:if test="${ empty loginMember }">
-            	<button id="viewJoinedClub2" value="${ploGroup.spbKeyword}">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub2" onclick="location.href='${path}/member/login'">로그인 바로가기</button>
         	</c:if>
-        	</form>
         </div>
     </div>
 
@@ -97,15 +96,15 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
-                        <a class="page-link" href="${ path }/indiboard/indilist?page=${ pageInfo.prevPage }" aria-label="Previous">
+                        <a class="page-link" href="${ path }/ploboard/ploGroupList?page=${ pageInfo.prevPage }" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
                     <c:forEach begin="${ pageInfo.startPage }" end="${ pageInfo.endPage }" varStatus="status">
-                    <li class="page-item"><a class="page-link" href="${ path }/indiboard/indilist?page=${ status.current }">${ status.current }</a></li>
+                    <li class="page-item"><a class="page-link" href="${ path }/ploboard/ploGroupList?page=${ status.current }">${ status.current }</a></li>
                     </c:forEach>
                     <li class="page-item">
-                        <a class="page-link" href="${ path }/indiboard/indilist?page=${ pageInfo.nextPage }" aria-label="Next">
+                        <a class="page-link" href="${ path }/ploboard/ploGroupList?page=${ pageInfo.nextPage }" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                         </a>
                     </li>
@@ -119,13 +118,10 @@
 	$(document).ready(() => {
 		$("#createClub2").on("click", () => {
 			alert("로그인 시 이용 가능합니다.");
+			location.replace("${path}/member/login");
+			
 		});
-		$("#viewJoinedClub2").on("click", () => {
-			location.replace("/ploGroup/keySearch?spbKeyword=");
-		});
-		$("#createClub").on("click", () => {
-			location.replace("${path}/plogroup/createPloGroup");
-		});
+		
 	});
 </script>
 

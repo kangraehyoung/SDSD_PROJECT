@@ -4,10 +4,9 @@
 ================================================
 */
 
-* 타이틀 Section */
 .titleSection {
-    background-color: #FCFCEF;
-    padding: 100px 0 50px 0;
+    /* background-color: #FCFCEF; */
+    padding: 50px 0 80px 0;
 }
 
 .titleSection .mt1 {
@@ -174,7 +173,7 @@
 
 .srollDown_new a img {
     margin: 0 auto;
-    width: 10rem;
+    width: 6rem;
     -webkit-animation: sdb 2s infinite;
     animation: sdb 2s infinite;
     

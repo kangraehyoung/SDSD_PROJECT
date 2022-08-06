@@ -4,17 +4,17 @@
 <c:set var="path" value="${ pageContext.request.contextPath }"/>
 <jsp:include page="/views/common/header.jsp" />
 
-<div> <!-- 전체 틀 -->
+<section class="enlollJE2"> <!-- 전체 틀 -->
     <div class="enrollTemrs_title"> <!-- 오븐 기준 민트색 배경 틀 -->
         <!-- 회원가입  -->
         <h2>회원가입</h2>
 
         <!-- 약관 동의 >> 정보 입력 -->
         <ul class="StepTerms">
+            <li>1. 약관 동의</li>
             <li>
-                <!-- 오븐 기준 초록색 동그라미 대신 지구 아이콘으로 대체 해봤습니다.. -->
-                <img src="${ path }/resources/imgFile/지구아이콘.png" class="earthIcon" alt="earth Icon">1. 약관 동의</li>
-            <li><img src="${ path }/resources/imgFile/right-arrow.png" class="arrowIcon" alt="arrow Icon"></li>
+                <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/backhand-index-pointing-right_1f449.png" class="arrowIcon" alt="arrow Icon">
+            </li>
             <li onclick="location.href='${ path }/views/member/enrollForm.jsp'" style="cursor: pointer; color: rgb(98, 98, 98);">2.정보입력</li>
         </ul>
     </div>
@@ -106,7 +106,7 @@
     </div>
 </div>
 </form>
-
+</section>
 <script>
 //체크박스 전체 선택
 $(".checkbox_group").on("click", "#all", function () {

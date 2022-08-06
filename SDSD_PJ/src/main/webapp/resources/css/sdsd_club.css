@@ -1042,6 +1042,26 @@
     font-size: 0.9rem;
 }
 
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: gray;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox button:hover {
+	color: #ffffff;
+	border: 1px solid tomato;
+	background-color: tomato;
+}
+
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox p .commentLike {}
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer {
