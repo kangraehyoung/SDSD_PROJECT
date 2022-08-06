@@ -21,7 +21,7 @@
             <div class="mainScroll">
                 <div class="srollDown_new" style="text-align: center;">
                     <a href="#nextSection">
-                        <img src="${ path }/resources/imgFile/scrolldown.webp" alt="scrollDown icon">
+                        <img src="${ path }/resources/imgFile/scrolldown_main.png" alt="scrollDown icon">
                     </a>
                 </div>
                 <h2></h2>
@@ -29,7 +29,7 @@
         </div>
     </section>
     
-    <section class="mainSection_01">
+    <section class="mainSection_01" id="nextSection">
         <div class="ms1">
             <div class="ms1_content">
                 <div class="ms1t_1">
