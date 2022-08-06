@@ -14,7 +14,7 @@
     <title>쓰담쓰담</title>
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.1" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.0.3" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.1.01" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.6" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.3" type="text/css">
@@ -40,12 +40,16 @@
     <script src="${ path }/resources/js/FAQ_Accodion.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=334344dce2f2aee24efdae6872bcd47a&libraries=services"></script>
     
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header class="topMenu_Container">
 	    <section class="topMenu">
 	        <div class="logoBox">
-	            <a href="${path }/index.jsp">
+	            <a href="${path }/">
 	                <img src="${ path }/resources/imgFile/지구아이콘2.png" alt="logoBox" />
 	            쓰담쓰담<span>쓰레기를 담고 쓰레기를 담아!</span>
 	            </a>
