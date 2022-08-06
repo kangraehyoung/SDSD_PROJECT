@@ -26,16 +26,36 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="${path }/resources/upload/board/${ploGroup.spbFileList[0]}" class="d-block w-100" alt="...">
+	                        <c:if test="${ ploGroup.spbFileList[0] != 'null'}">
+	                        	<img src="${path }/resources/upload/board/${ploGroup.spbFileList[0]}" class="d-block w-100" alt="...">
+		                    </c:if>
+							<c:if test="${ploGroup.spbFileList[0] == 'null' }">
+		                    	<img src="${path }/resources/upload/board/xsymbol.png" alt="img">
+	                   	    </c:if>
                         </div>
                         <div class="carousel-item">
-                        <img src="${path }/resources/upload/board/${ploGroup.spbFileList[1]}" class="d-block w-100" alt="...">
+	                        <c:if test="${ ploGroup.spbFileList[1] != 'null'}">
+	                      	  <img src="${path }/resources/upload/board/${ploGroup.spbFileList[1]}" class="d-block w-100" alt="...">
+		                    </c:if>
+		                    <c:if test="${ploGroup.spbFileList[1] == 'null' }">
+		                 	   <img src="${path }/resources/upload/board/xsymbol.png" alt="img">
+	                   	    </c:if>
                         </div>
                         <div class="carousel-item">
-                        <img src="${path }/resources/upload/board/${ploGroup.spbFileList[2]}" class="d-block w-100" alt="...">
+	                        <c:if test="${ ploGroup.spbFileList[2] != 'null'}">
+	                        	<img src="${path }/resources/upload/board/${ploGroup.spbFileList[2]}" class="d-block w-100" alt="...">
+		                    </c:if>
+		                    <c:if test="${ploGroup.spbFileList[2] == 'null' }">
+		                    	<img src="${path }/resources/upload/board/xsymbol.png" alt="img">
+	                   	    </c:if>
                         </div>
                         <div class="carousel-item">
-                            <img src="${path }/resources/upload/board/${ploGroup.spbFileList[3]}" class="d-block w-100" alt="...">
+	                        <c:if test="${ ploGroup.spbFileList[3] != 'null'}">
+	                        	<img src="${path }/resources/upload/board/${ploGroup.spbFileList[3]}" class="d-block w-100" alt="...">
+		                    </c:if>
+		                    <c:if test="${ploGroup.spbFileList[3] == 'null' }">
+		                    	<img src="${path }/resources/upload/board/xsymbol.png" alt="img">
+	                   	    </c:if>
                         </div>
                     </div>
                     <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

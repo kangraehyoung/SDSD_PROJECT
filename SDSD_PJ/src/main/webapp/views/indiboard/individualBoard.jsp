@@ -72,8 +72,13 @@
         <div class="row plogBoard_Container">
 			<c:forEach var="indiboard" items="${ indiboardlist }">
             <!-- 인증 게시글 1개 당 한 div -->
-            <div class="col-md-3 boardImgBox" onclick="location.href='/'">
-                <img src="${path }/resources/upload/board/${indiboard.borFileList[0]}">
+            <div class="col-md-3 boardImgBox" onclick="location.href='${ path }/indiboard/detail?maBorNo=${indiboard.maBorNo}'">
+            	<c:if test="${indiboard.borFileList[0] != 'null'}">
+                	<img src="${path }/resources/upload/board/${indiboard.borFileList[0]}">
+                </c:if>
+            	<c:if test="${indiboard.borFileList[0] == 'null'}">
+                	<img src="${path }/resources/upload/board/xsymbol.png">
+                </c:if>
                 <div class="hoverBox">
                     <div class="hb_lc">
                         <!-- 부트스트랩 하트 -->
