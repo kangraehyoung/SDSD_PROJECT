@@ -29,7 +29,7 @@ public class rankDao {
 			
 			rs = pstm.executeQuery();
 			
-			if(rs.next()) {
+			while(rs.next()) {
 				rank = new Rank();
 				
 				rank.setIndiNickName(rs.getString("INDIBOR_WRITER_NAME"));
@@ -62,7 +62,7 @@ public class rankDao {
 			
 			rs = pstm.executeQuery();
 			
-			if(rs.next()) {
+			while(rs.next()) {
 				rank = new Rank();
 				
 				rank.setPloGroupNickname((rs.getString("GROUPBOR_GROUPNAME")));

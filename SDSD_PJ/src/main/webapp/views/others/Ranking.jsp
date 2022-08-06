@@ -78,14 +78,13 @@
                 <div class="rb_2">
                     <h2>모임별 플로깅 활동 랭킹</h2>
                     <div class="rb_2_list">
-                        
-                        <div class="rbl1">
                         <c:forEach var="ploRank" items="${ rankList1 }">
+                        <div class="rbl1">
                             <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
                             <div>${ ploRank.ploGroupNickname }</div>
                             <div>${ ploRank.ploGroupCount }</div>
-                 		</c:forEach>
                         </div>
+                 		</c:forEach>
                         <details>
                             <summary>랭킹 더보기</summary>
                             <div class="rbl3">
