@@ -28,7 +28,7 @@ public class GroupBoardKeySearch extends HttpServlet {
 		int listCount = 0;
 		PageInfo pageInfo = null;
 		List<GroupBoard> groupboardlist = null;
-		String groupketword = request.getParameter("groupkeyword");
+		String groupkeyword = request.getParameter("groupkeyword");
 		try {
 			page = Integer.parseInt(request.getParameter("page"));
 		} catch (NumberFormatException e) {
@@ -38,8 +38,8 @@ public class GroupBoardKeySearch extends HttpServlet {
 		
 		listCount = new GroupBoardService().getBoardCount();
 		pageInfo = new PageInfo(page, 10, listCount, 8);    
-		groupboardlist = new GroupBoardService().getSearchList(pageInfo, groupketword);
-		
+		groupboardlist = new GroupBoardService().getSearchList(pageInfo, groupkeyword);
+		System.out.println("키워드 테스트" + groupboardlist);
 		//System.out.println(" 1 " + listCount);
 		//System.out.println(" 2 " + pageInfo);
 		//System.out.println(" 3 " + groupboardlist);

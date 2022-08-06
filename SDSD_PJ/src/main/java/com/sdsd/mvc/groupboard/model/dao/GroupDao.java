@@ -98,7 +98,6 @@ public class GroupDao {
 				groupBoard.setBorFile(rs.getString("GROUP_BOR_FILE"));
 				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
 				groupBoard.setBorStatus(rs.getString("GROUP_BOR_STATUS"));
-				
 				arr = groupBoard.getBorFile().split(", ");
 				list = Arrays.asList(arr);
 				
@@ -421,7 +420,7 @@ public class GroupDao {
 		ResultSet rs = null;
 		String query = "SELECT * "
 				+ "FROM GROUPBOARD "
-				+ "WHERE GROUP_BOR_KEYWORD = ?";
+				+ "WHERE GROUP_BOR_KEYWORD=?";
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setString(1, groupkeyword);
@@ -438,7 +437,7 @@ public class GroupDao {
 				groupBoard.setBorFile(rs.getString("GROUP_BOR_FILE"));
 				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
 				groupBoard.setBorStatus(rs.getString("GROUP_BOR_STATUS"));
-				groupBoard.setGroupkeyword("GROUP_BOR_KEYWORD");
+				groupBoard.setGroupkeyword(rs.getString("GROUP_BOR_KEYWORD"));
 				groupBoard.setGroupName(rs.getString("GROUPBOR_GROUPNAME"));
 				
 				
