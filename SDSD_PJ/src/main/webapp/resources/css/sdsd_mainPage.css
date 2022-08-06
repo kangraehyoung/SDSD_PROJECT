@@ -38,7 +38,7 @@
     /* font-family: Helvetica,Arial,sans-serif; */
     /* font-family: 'Nanum Myeongjo', serif !important; */
     /* font-family: 'Nanum Brush Script', cursive !important; */
-    font-family: 'Yeon Sung', cursive !important;
+    /* font-family: 'Yeon Sung', cursive !important; */
     font-weight: normal;
     font-style: normal;
 }
@@ -87,7 +87,7 @@
 
 .mi_coment p {
 	/* font-size: 1.3rem; */
-	font-family: 'Yeon Sung', cursive !important;
+	/* font-family: 'Yeon Sung', cursive !important; */
 }
 
 @keyframes fadein {
