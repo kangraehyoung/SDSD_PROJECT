@@ -15,7 +15,8 @@ public class RankingServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/others/Ranking.jsp").forward(request, response);
+		
+    	request.getRequestDispatcher("/views/others/Ranking.jsp").forward(request, response);
 	}
 
 }
