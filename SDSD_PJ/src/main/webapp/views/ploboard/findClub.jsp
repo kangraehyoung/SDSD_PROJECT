@@ -49,20 +49,18 @@
         
         <div class="buttonBox">
         	<c:if test="${not empty loginMember }">
-	            <button id="createClub">모임 만들기</button>
+	            <button id="createClub" onclick="location.href='${path}/plogroup/createPloGroup'">모임 만들기</button>
         	</c:if>
         	<c:if test="${ empty loginMember }">
-	            <button id="createClub2">모임 만들기</button>
+	            <button id="createClub2" onclick="location.href='${path}/member/login'">모임 만들기</button>
         	</c:if>
-        	<form action="${ path }/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}">
         	<input type="hidden" name="plogGroupName" value="${loginMember.myPloging}">
         	<c:if test="${not empty loginMember }">
-            	<button id="viewJoinedClub" value="${loginMember.myPloging}">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub" onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}'">가입한 모임 바로가기</button>
         	</c:if>
         	<c:if test="${ empty loginMember }">
-            	<button id="viewJoinedClub2" value="${ploGroup.plogGroupName}">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub2" onclick="location.href='${path}/member/login'">로그인 바로가기</button>
         	</c:if>
-        	</form>
         </div>
     </div>
 
@@ -73,7 +71,7 @@
             <c:forEach var="ploGroup" items="${ ploGroupList }">
             <div class="contentBox">
                 <div class="imgBox" onclick="location.href='${ path }/ploboard/findDetail?ploGrNo=${ploGroup.spBorNum }'">
-                    <img src="${path }/resources/upload/board/${ploGroup.spbBorFile}" alt="img">
+                    <img src="${path }/resources/upload/board/${ploGroup.spbFileList[0]}" alt="img">
                     <div class="hoverBox">
                         <p>리더 | ${ ploGroup.spbWriterName }</p>
                         <p>활동 지역 | </p>
@@ -120,13 +118,10 @@
 	$(document).ready(() => {
 		$("#createClub2").on("click", () => {
 			alert("로그인 시 이용 가능합니다.");
+			location.replace("${path}/member/login");
+			
 		});
-		$("#viewJoinedClub2").on("click", () => {
-			location.replace("/ploGroup/keySearch?spbKeyword=");
-		});
-		$("#createClub").on("click", () => {
-			location.replace("${path}/plogroup/createPloGroup");
-		});
+		
 	});
 </script>
 

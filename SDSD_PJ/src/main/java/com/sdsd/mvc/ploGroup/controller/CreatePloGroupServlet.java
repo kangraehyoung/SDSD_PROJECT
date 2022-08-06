@@ -44,8 +44,8 @@ public class CreatePloGroupServlet extends HttpServlet {
     	String content = mr.getParameter("content");
     	String pgName = mr.getParameter("pgName");
     	String spbKeyword = mr.getParameter("spbKeyword");
-        String originalFileName = mr.getOriginalFileName("upfile1");
-        //String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
+//        String originalFileName = mr.getOriginalFileName("upfile1");
+        String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3") + ", " + mr.getOriginalFileName("upfile4");
         
         HttpSession session = request.getSession(false);
     	Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
@@ -56,11 +56,12 @@ public class CreatePloGroupServlet extends HttpServlet {
 			plogroup.setSpbWriterName(writer);
 			plogroup.setPlogGroupName(pgName);
 			plogroup.setSpbContent(content);
+			System.out.println(originalFileName);
 			plogroup.setSpbBorFile(originalFileName);
 			plogroup.setSpbKeyword(spbKeyword);
 			
 			result = new PloGroupService().createGroup(plogroup);
-			
+			System.out.println(plogroup.getSpbFileList());
 			if (result > 0) {
 				request.setAttribute("msg", "모임 등록 성공");
 	    		request.setAttribute("location", "/views/ploboard/createClubCelebrate.jsp");
