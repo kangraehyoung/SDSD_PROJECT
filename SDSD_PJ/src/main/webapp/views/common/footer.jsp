@@ -31,5 +31,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="${ path }/resources/js/sdsd_clubDetail.js?v0.0.2"></script>
     <script src="${ path }/resources/js/My_Activity.js?v0.0.1"></script>
+    <script src="${ path }/resources/js/sdsd_plogCourse.js.js?v0.0.1"></script>
 </body>
 </html> 
