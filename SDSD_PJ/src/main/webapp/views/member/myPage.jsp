@@ -19,17 +19,14 @@
     </div>
 
     <div class="personInfoBox_01">
-        <div class="contentBox">
-            <div class="profileImgBox">
-                <img src="${ path }/resources/imgFile/recycling.png" alt="">
+        <div class="row contentBox">
+            <div class="col profileImgBox">
+                <img src="${ path }/resources/imgFile/프로필이미지예시.png" alt="profileImg">
             </div>
-            <div class="profileTextBox">
+            <div class="col profileTextBox">
                 <h3>${loginMember.name }님</h3> 
                 
-                <p class="crewInfo">
-	                <img alt="groupIcon" src="${ path }/resources/imgFile/mypage_groupIcon.png">
-	                ${loginMember.myPloging }
-                </p>
+                <p class="crewInfo"><i class="bi bi-people-fill"></i> ${loginMember.myPloging }</p>
             </div>
         </div>
         <div class="btnBox">
@@ -45,6 +42,57 @@
 
     
     <div class="personInfoBox_02">
+    	<div class="infoBox">
+    		<!-- 닉네임 -->
+	    	 <div class="mb-3 row">
+	    	 	<label class="col-sm-5 col-form-label">닉네임</label>
+		    	 <div class="col-sm-5">
+		    	 	<input type="text" readonly class="form-control-plaintext" id="" value="${loginMember.nickName }">
+		    	 </div>
+	    	</div>
+    		<!-- 생년 월일 -->
+	    	 <div class="mb-3 row">
+	    	 	<label class="col-sm-5 col-form-label">생년월일</label>
+		    	 <div class="col-sm-5">
+		    	 	<input type="text" readonly class="form-control-plaintext" id="" value="${loginMember.BDay }">
+		    	 </div>
+	    	</div>
+	    	
+    		<!-- 이메일 -->
+	    	 <div class="mb-3 row">
+	    	 	<label class="col-sm-5 col-form-label">이메일</label>
+		    	 <div class="col-sm-5">
+		    	 	<input type="text" readonly class="form-control-plaintext" id="" value="${loginMember.email }">
+		    	 </div>
+	    	</div>
+	    	
+    		<!-- 전화번호 -->
+	    	 <div class="mb-3 row">
+	    	 	<label class="col-sm-5 col-form-label">전화번호</label>
+		    	 <div class="col-sm-5">
+		    	 	<input type="text" readonly class="form-control-plaintext" id="" value="${loginMember.phone }">
+		    	 </div>
+	    	</div>
+	    	
+    		<!-- 활동지역 -->
+	    	 <div class="mb-3 row">
+	    	 	<label class="col-sm-5 col-form-label">활동지역</label>
+		    	 <div class="col-sm-5">
+		    	 	<input type="text" readonly class="form-control-plaintext" id="" value="${loginMember.address }">
+		    	 </div>
+	    	</div>
+	    	
+    		<!-- 성별 -->
+	    	 <div class="mb-3 row">
+	    	 	<label class="col-sm-5 col-form-label">성별</label>
+		    	 <div class="col-sm-5">
+		    	 	<input type="text" readonly class="form-control-plaintext" id="" value="${loginMember.gender }">
+		    	 </div>
+	    	</div>
+	    	
+    	</div>
+    	
+    	<!-- 
         <table>
             <tr>
                 <th>닉네임</th>
@@ -70,7 +118,8 @@
                 <th>성별</th>
                 <td>${loginMember.gender }</td>
             </tr>
-        </table>
+        </table> -->
+        
     </div>
 
 </section>
