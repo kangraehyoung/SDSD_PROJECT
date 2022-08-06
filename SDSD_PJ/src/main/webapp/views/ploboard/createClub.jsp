@@ -19,13 +19,23 @@
                 <!-- 모임 사진 박스 -->
                 <div class="col">
                     <!-- 모임 이미지 -->
-                    <div>
+                    <!-- <div>
                         <img src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMzFfMjA3/MDAxNTQwOTQyNzcwMTcw.NtmoIbuWHdzf9bnzs_eJ8cr6Xf1SiZqaDa6JTqQ_bscg.xfNsHblfGcE2LAaMRe5CQV-28pOyOagCpX1T2IHOHqwg.JPEG.cosl922/output_3919720138.jpg?type=w800" class="img-fluid" alt="">
-                    </div>
+                    </div> -->
                     <div class="fileUploadBox">
                         <div class="fileboxBtn">
-                            <label for="uploadImages">사진 등록</label>
-                            <input type="file" id="uploadImages" multiple name="upfile1"> 
+                        	<div>
+	                            <label for="uploadImages1"><i class="bi bi-image"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages1"  name="upfile1"> 
+	                            <label for="uploadImages2"><i class="bi bi-image-fill"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages2"  name="upfile2"> 
+                        	</div>
+                            <div style="margin-top: 10px;">
+	                            <label for="uploadImages3"><i class="bi bi-image-fill"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages3"  name="upfile3"> 
+	                            <label for="uploadImages4"><i class="bi bi-image"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages4"  name="upfile4"> 
+                            </div>
                         </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>

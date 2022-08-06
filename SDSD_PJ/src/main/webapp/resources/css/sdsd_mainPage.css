@@ -3,7 +3,6 @@
 메인 페이지 CSS StyleSheet
 ================================================
 */
-
 .titleSection {
     /* background-color: #FCFCEF; */
     padding: 50px 0 80px 0;
@@ -36,7 +35,10 @@
 }
 
 .text-line text {
-    font-family: Helvetica,Arial,sans-serif;
+    /* font-family: Helvetica,Arial,sans-serif; */
+    /* font-family: 'Nanum Myeongjo', serif !important; */
+    /* font-family: 'Nanum Brush Script', cursive !important; */
+    font-family: 'Yeon Sung', cursive !important;
     font-weight: normal;
     font-style: normal;
 }
@@ -69,7 +71,7 @@
     -webkit-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
     font-weight: bold;
-    font-size: smaller;
+    font-size: 1.3rem;
     color: #00459e;
 }
 
@@ -81,6 +83,11 @@
     /* Safari and Chrome */
     -o-animation: fadein 2s;
     /* Opera */
+}
+
+.mi_coment p {
+	/* font-size: 1.3rem; */
+	font-family: 'Yeon Sung', cursive !important;
 }
 
 @keyframes fadein {
@@ -206,9 +213,10 @@
 .mainSection_01 .ms1 {
     width: 100%;
     background-color:  #CAE5FC;
-    height: 450px;
+    /* height: 450px; */
     margin: 0 auto;
     display: flex;
+    padding: 80px 0;
     align-items: center;
     justify-content: center;
 }
@@ -246,12 +254,16 @@
 
 
 .mainSection_01 .ms1 .ms1_content .ms1t_1 .mst11 {
-    font-size: 3.5em;
-    color: rgb(81, 175, 160);
+    /* font-size: 3.5em;
+    color: rgb(81, 175, 160); */
+    font-size: 2.5em;
+    color: rgb(49, 141, 218);
 }
 .mainSection_01 .ms1 .ms1_content .ms1t_1 .mst12 {
+    /* font-size: 2.5em;
+    color: rgb(90, 209, 136); */
     font-size: 2.5em;
-    color: rgb(90, 209, 136);
+    color: rgb(49, 141, 218);
 }
 
 .mainSection_01 .ms1 .ms1_content .ms1t_1 .mst13, .mst22, .mst42 {
@@ -267,18 +279,18 @@
 }
 
 .mainSection_01 .ms1 .ms1_content .ms1t_3 .mst31 {
-    font-size: 2em;
-    color: #2E8627;
+    font-size: 1.6em;
+    /* color: #2E8627; */
 }
 
 .mainSection_01 .ms1 .ms1_content .ms1t_3 .mst32 {
     font-size: 1.8em;
-    color: #4cc044;
+    /* color: #4cc044; */
 }
 
 .mainSection_01 .ms1 .ms1_content .ms1t_3 .mst33 {
     font-size: 2em;
-    color: #40e034;
+    /* color: #40e034; */
 }
 
 .mainSection_01 .ms1 .ms1_content .ms1t_4 .mst41 {
@@ -303,8 +315,8 @@
 
 .mainSection_02 .ms2 {
     width: 100%;
-
-    height: 450px;
+	padding: 80px 0;
+    /* height: 450px; */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -335,9 +347,32 @@
     width: 50px;
 }
 
-.mainSection_02 .ms2 .ms2_content .ms2t_2 {
+.mainSection_02 .ms2 .ms2_content .ms2t_2 p{
     font-size: 2em;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 랭킹 더보기 버튼 수정 - 송희  */
+.mainSection_02 .ms2 .ms2_content button {
+	width: 53%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: 600;
+    background-color: rgb(50, 157, 245);
+    padding: 5px 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mainSection_02 .ms2 .ms2_content button:hover {
+	color: rgb(50, 157, 245);
+	background-color: #ffffff;
 }
 
 .mainSection_02 .ms2 .ms2_content .ms2t_6 {
@@ -358,7 +393,7 @@
 
 .mainSection_02 .ms2 .ms2_content .ms2t_7 {
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: 400;
     color: rgb(87, 87, 87);
     margin-top: 10px;
 }
@@ -370,12 +405,12 @@
 /* mainSection 03 */
 
 .mainSection_03 .ms3 {
-    background-color:  rgba(88, 170, 236, 0.362);
+    background-color:  #CAE5FC;
     width: 100%;
-    padding: 20px 0;
+    padding: 80px 0;
     margin: 0 auto;
     text-align: center;
-    height: 450px;
+    /* height: 450px; */
 }
 
 .mainSection_03 .ms3 .ms3_textBox > div{
@@ -390,6 +425,7 @@
     font-weight: bold;
     width: 100%;
     margin: 0 auto;
+    text-shadow: -1px 0 #1f1f1f, 0 1px #1f1f1f, 1px 0 #1f1f1f, 0 -1px #1f1f1f;
 }
 
 .mainSection_03 .ms3 .ms3_textBox .ms3_1 {
@@ -461,4 +497,25 @@
     color: white;
     font-size: 1.3em;
     font-weight: bold;
+}
+
+
+/* 플로깅 모임 검색 버튼 수정 - 송희  */
+.mainSection_03 .ms3 .ms3_abox button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: 600;
+    background-color: rgb(50, 157, 245);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(50, 157, 245);
+    -webkit-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mainSection_03 .ms3 .ms3_abox button:hover {
+	color: rgb(50, 157, 245);
+	background-color: #ffffff;
 }
