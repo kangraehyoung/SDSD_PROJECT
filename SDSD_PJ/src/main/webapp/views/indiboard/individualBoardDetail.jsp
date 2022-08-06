@@ -104,7 +104,7 @@
           </div>
         </div>
 
-        <div class="bbb_3"> <!-- 댓글 -->
+        <div class="bbb_3" style="border: none;"> <!-- 댓글 -->
         <form action="${ path }/indiboard/indireplydelete" method="get">
         
    

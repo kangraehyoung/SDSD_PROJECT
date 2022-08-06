@@ -525,11 +525,12 @@
 
 .bbf1 {
     padding: 6px 25px; 
-    background-color: rgb(41, 139, 219);
-    border-radius: 5px;
+    background-color: rgb(50, 157, 245);
+    border-radius: .25em;
     color: white;
     cursor: pointer;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .bb_board_p {
