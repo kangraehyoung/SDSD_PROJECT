@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.6" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.4" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.4" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.15" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_club.css?v0.1.11" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_tc_pc.css?v0.0.2" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.2" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mypage.css?v0.0.5" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_IindividualBoard.css?v0.0.8" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_My_Activity.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_Ranking.css?v0.0.1" type="text/css">
@@ -82,7 +82,7 @@
 	                <li class="nav_item">
 	                    <a href="#">OTHERS</a>
 	                    <ul class="sub_item menu_03">
-	                        <li><a href="${ path }/views/others/Ranking.jsp">랭킹</a></li>
+	                        <li><a href="${ path }/others/ranking">랭킹</a></li>
 	                        <li><a href="${ path }/views/others/Challenge.jsp">챌린지</a></li>
 	                        <li><a href="${ path }/others/trash">쓰레기통 찾기</a></li>
 	                        <li><a href="${ path }/others/course">플로깅 코스</a></li>

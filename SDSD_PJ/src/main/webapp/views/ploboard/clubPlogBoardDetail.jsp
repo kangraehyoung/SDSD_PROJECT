@@ -86,7 +86,7 @@
 
                     <!-- 인증 내용 -->
                     <div class="textWrap">
-                        <span class="clubName">모임 이름 : ${loginMember.myPloging } </span>
+                        <span class="clubName">모임 이름 : ${groupBoard.groupName } </span>
                   <!--  <span class="clubName">모임 이름 : ${ member.myPloging } </span>  -->
                         <br>
                         <br>
