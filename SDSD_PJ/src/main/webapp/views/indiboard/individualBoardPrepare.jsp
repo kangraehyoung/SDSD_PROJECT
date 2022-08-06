@@ -14,7 +14,7 @@
             </div>
             <div class="menuList"><a href="javasript:">나의 활동</a></div>
             <div class="menuList">
-                <span><img src="${ path }/resources/imgFile/checkIcon_mypage.png" alt="Check Icon"></span>
+                <span><img src="${ path }/resources/imgFile/checkblue_icon.png" alt="Check Icon"></span>
                 <a href="javasript:" style="font-weight: bold;">개인 플로깅 인증</a>
             </div>
         </div>
