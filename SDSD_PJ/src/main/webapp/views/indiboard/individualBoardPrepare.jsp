@@ -57,6 +57,7 @@
         
           <div>
             <p>업로드할 사진을 선택해 주세요!</p>
+            <p style="font-size: 5px;">* 사진은 순서대로 3장까지 업로드 가능해요!</p>
             <label class="bbf1" for="bbf1">업로드</label>
             <label class="bbf1" for="bbf2">업로드</label>
             <label class="bbf1" for="bbf3">업로드</label>
@@ -74,14 +75,17 @@
 <!--           <div class="bbbp_nickName" value="${loginMember.nickName }" name="nickName">
             <p>${loginMember.nickName }</p>
           </div> -->
-          <input class="bbbp_nickName" name="nickName" value="${loginMember.nickName }" readonly>
+          <input class="bbbp_nickName" name="nickName" value="${loginMember.nickName }" style="border: none;" readonly>
         </div>
         <div class="bbbp_2">
           <div class="bbbp_textBox">
             <!--  <form class="was-validated">-->
               <div class="mb-3">
                 <textarea class="form-control" id="validationTextarea" name="content" placeholder="내용을 입력해 주세요!" required></textarea>
-                <input type="text" name="indikeyword" placeholder="키워드를 입력해주세요!">
+				<div class="bbbp2_keyword">
+                	<span>#</span>
+                	<input type="text" name="indikeyword" placeholder="게시글을 대표하는 키워드를 입력해주세요!" size="40px" style="border: none;">
+              	</div>
               </div>
               <div class="bbbp2_input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
