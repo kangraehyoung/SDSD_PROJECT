@@ -87,7 +87,6 @@
                 </c:if>
                 </form>
                 <!-- 모임 가입한 일반 USER가 보는 버튼 -->
-                <h2>${ ploGroup.plogGroupName eq loginMember.myPloging && ploGroup.spbWriterNum ne loginMember.no}</h2>
                 <c:if test="${ ploGroup.plogGroupName eq loginMember.myPloging && ploGroup.spbWriterNum ne loginMember.no}">
                 <form action="${path }/ploboard/outGroup">
                 <div class="buttonBox">
