@@ -130,7 +130,12 @@
                 플로깅 고수이신가요?<br>
                 그 노하우를 살려 모임의 리더가 되어보세요!
             </p>
-            <a href="/"><i class="bi bi-plus-circle-fill"></i> 모임 만들기 </a>
+            <c:if test="${not empty loginMember }">
+            	<a href="${ path }/plogroup/createPloGroup""><i class="bi bi-plus-circle-fill"></i> 모임 만들기 </a>
+            </c:if>
+            <c:if test="${empty loginMember }">
+             	<a href="${path }/member/login" id="logincheck3"><i class="bi bi-plus-circle-fill"></i> 모임 만들기 </a>
+            </c:if>
         </div>
 
         <div class="button findClubBtn">
@@ -138,9 +143,17 @@
                 플로깅을 시작해보시고 싶으신가요?<br>
                 마음에 쏙 드는 모임을 찾아보세요!
             </p>
-            <a href="/"><i class="bi bi-search"></i> 모임 검색하기</a>
+            <a href="${ path }/ploboard/ploGroupList"><i class="bi bi-search"></i> 모임 검색하기</a>
         </div>
     </div>
 </section>
+<script>
+	// 모임 생성하기 클릭시 로그인 확인
+	$(document).ready(() => {
+		$("#logincheck3").on("click", () => {
+			alert("로그인 시 이용 가능합니다.");
+		});
+	});
+</script>
 
 <jsp:include page="/views/common/footer.jsp" />
