@@ -16,7 +16,7 @@
                     <span><img src="${ path }/resources/imgFile/checkblue_icon.png" alt="Check Icon"></span>
                     <a href="javasript:" style="font-weight: bold;">나의 활동</a>
                 </div>
-                <div class="menuList"><a href="${ path }/indiboard/indiUpdate">개인 플로깅 인증</a></div>
+                <div class="menuList"><a href="${ path }/indiboard/indilist">개인 플로깅 인증</a></div>
             </div>
         </div>
         <div class="ma_Content">
