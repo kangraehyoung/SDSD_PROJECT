@@ -79,7 +79,7 @@
     animation: fadein 2s;
     -moz-animation: fadein 2s;
     /* Firefox */
-    -webkit-animation: fadein 7s;
+    -webkit-animation: fadein 10s;
     /* Safari and Chrome */
     -o-animation: fadein 2s;
     /* Opera */
