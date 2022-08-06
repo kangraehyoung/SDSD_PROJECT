@@ -68,7 +68,7 @@
 			<c:forEach var="groupBoard" items="${ groupBoardList }">
             <!-- 인증 게시글 1개 당 한 div -->
             <div class="col-md-3 boardImgBox" onclick="location.href='/'">
-                <img src="${path }/resources/upload/board/${groupBoard.borFile}">
+                <img src="${path }/resources/upload/board/${groupBoard.borFileList[0]}">
                 <div class="hoverBox">
                     <div class="hb_lc">
                         <!-- 부트스트랩 하트 -->
