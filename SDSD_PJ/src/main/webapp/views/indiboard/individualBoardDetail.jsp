@@ -68,13 +68,28 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
+            <c:if test="${indiBoard.borFileList[0] != 'null'}">
               <img src="${path }/resources/upload/board/${indiBoard.borFileList[0]}" class="d-block w-100" alt="...">
+            </c:if>
+            <c:if test="${indiBoard.borFileList[0] == 'null'}">
+              <img src="${path }/resources/upload/board/xsymbol.png" class="d-block w-100" alt="...">
+            </c:if>
             </div>
             <div class="carousel-item">
+            <c:if test="${indiBoard.borFileList[1] != 'null'}">
               <img src="${path }/resources/upload/board/${indiBoard.borFileList[1]}" class="d-block w-100" alt="...">
+            </c:if>
+            <c:if test="${indiBoard.borFileList[1] == 'null'}">
+              <img src="${path }/resources/upload/board/xsymbol.png" class="d-block w-100" alt="...">
+            </c:if>
             </div>
             <div class="carousel-item">
+             <c:if test="${indiBoard.borFileList[2] != 'null'}">
               <img src="${path }/resources/upload/board/${indiBoard.borFileList[2]}" class="d-block w-100" alt="...">
+            </c:if>
+            <c:if test="${indiBoard.borFileList[2] == 'null'}">
+              <img src="${path }/resources/upload/board/xsymbol.png" class="d-block w-100" alt="...">
+            </c:if>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
