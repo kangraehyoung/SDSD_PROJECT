@@ -197,7 +197,7 @@ public class GroupDao {
 				groupBoard.setCreateDate(rs.getString("GROUP_CREATE_DATE"));
 				groupBoard.setUpdateDate(rs.getString("GROUP_UPDATE_DATE"));
 				groupBoard.setGroupkeyword(rs.getString("GROUP_BOR_KEYWORD"));
-				groupBoard.setGroupName(rs.getString("GROUP_BOR_GROUPNAME"));;
+				groupBoard.setGroupName(rs.getString("GROUPBOR_GROUPNAME"));;
 				
 				arr= groupBoard.getBorFile().split(", ");
 				list = Arrays.asList(arr);
@@ -439,7 +439,7 @@ public class GroupDao {
 				groupBoard.setReadCount(rs.getInt("GROUP_READCOUNT"));
 				groupBoard.setBorStatus(rs.getString("GROUP_BOR_STATUS"));
 				groupBoard.setGroupkeyword("GROUP_BOR_KEYWORD");
-				groupBoard.setGroupName(rs.getString("GROUP_BOR_GROUPNAME"));
+				groupBoard.setGroupName(rs.getString("GROUPBOR_GROUPNAME"));
 				
 				
 				arr= groupBoard.getBorFile().split(", ");
