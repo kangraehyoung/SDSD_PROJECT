@@ -58,9 +58,9 @@
           <div>
             <p>업로드할 사진을 선택해 주세요!</p>
             <p style="font-size: 5px;">* 사진은 순서대로 3장까지 업로드 가능해요!</p>
-            <label class="bbf1" for="bbf1">업로드</label>
-            <label class="bbf1" for="bbf2">업로드</label>
-            <label class="bbf1" for="bbf3">업로드</label>
+            <label class="bbf1" for="bbf1">사진등록1</label>
+            <label class="bbf1" for="bbf2">사진등록2</label>
+            <label class="bbf1" for="bbf3">사진등록3</label>
             <input name="upfile1" type="file" id="bbf1" style="display: none;">
             <input name="upfile2" type="file" id="bbf2" style="display: none;">
             <input name="upfile3" type="file" id="bbf3" style="display: none;">
