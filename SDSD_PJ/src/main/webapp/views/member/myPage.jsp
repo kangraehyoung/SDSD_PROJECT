@@ -14,7 +14,7 @@
                 <a href="javasript:">마이 페이지</a>
             </div>
             <div class="menuList"><a href="${ path }/member/myActivity">나의 활동</a></div>
-            <div class="menuList"><a href="${ path }/indiboard/indiUpdate">개인 플로깅 인증</a></div>
+            <div class="menuList"><a href="${ path }/indiboard/indilist">개인 플로깅 인증</a></div>
         </div>
     </div>
 

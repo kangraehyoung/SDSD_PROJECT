@@ -12,9 +12,9 @@
             <h2>개인 플로깅</h2>
             <div class="menuBox">
                 <div class="menuList">
-                    <a href="javasript:">마이 페이지</a>
+                    <a href="${ path }/member/myPage">마이 페이지</a>
                 </div>
-                <div class="menuList"><a href="javasript:">나의 활동</a></div>
+                <div class="menuList"><a href="${ path }/member/myActivity">나의 활동</a></div>
                 <div class="menuList">
                     <span><img src="${ path }/resources/imgFile/checkblue_icon.png"></span>
                     <a href="javasript:" style="font-weight: bold;">개인 플로깅 인증</a>
