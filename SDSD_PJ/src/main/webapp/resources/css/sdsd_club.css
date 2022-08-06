@@ -1007,7 +1007,7 @@
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap {
     padding: 10px 0 10px 20px;
-    border-bottom: 1px solid darkgray;
+    /* border-bottom: 1px solid darkgray; */
 }
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .textWrap p {
@@ -1066,8 +1066,10 @@
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .commentWrap .commentBox p .commentLike {}
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer {
+    margin-bottom: 10px;
     padding: 10px 0 10px 20px;
     border-top: 1px solid darkgray;
+   	border-bottom: 1px solid darkgray;
 }
 
 .clubPlogBoardDetail_section .plogBoardWrap .contentContainer .iconContainer .iconBox {
