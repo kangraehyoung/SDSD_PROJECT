@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>쓰담쓰담</title>
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.6" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.7" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.1.02" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.3" type="text/css">
