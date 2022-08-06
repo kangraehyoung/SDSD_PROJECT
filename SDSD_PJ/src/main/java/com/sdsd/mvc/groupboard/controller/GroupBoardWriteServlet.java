@@ -55,6 +55,7 @@ public class GroupBoardWriteServlet extends HttpServlet {
     	String writer = mr.getParameter("nickName");
     	String content = mr.getParameter("content");
     	String groupkeyword = mr.getParameter("groupkeyword");
+    	String borTitle = mr.getParameter("borTitle");
 //    	String originalFileName = mr.getOriginalFileName("upfile1");
     	String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3") + ", " + mr.getOriginalFileName("upfile4");
     	
@@ -74,7 +75,6 @@ public class GroupBoardWriteServlet extends HttpServlet {
     		groupBoard.setBorFile(originalFileName);
     		groupBoard.setGroupkeyword(groupkeyword);
     		groupBoard.setGroupName(groupName); // 플로깅 모임명!!!!!!!!!!!!!!! 
-    		
     		result = new GroupBoardService().save(groupBoard);
     		if(result > 0) {
         		request.setAttribute("msg", "게시글 등록 성공");
