@@ -31,7 +31,7 @@
                     	</div>
                     	<div style="margin-top: 10px;">
 	                        <label for="uploadImages3"><i class="bi bi-image-fill"></i> 사진 등록 3</label>
-	                        <input name="upfile3" type="file" id="uploadImages"> 
+	                        <input name="upfile3" type="file" id="uploadImages3"> 
 	                        <label for="uploadImages4"><i class="bi bi-image"></i> 사진 등록 4</label>
 	                        <input name="upfile4" type="file" id="uploadImages4"> 
                         </div>
@@ -47,7 +47,7 @@
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="profileName">
-                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ groupBoard.writerName }" style="width: 50% !important;">
+                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${loginMember.nickName }" style="width: 50% !important;" readonly>
                         </div>
                     </div>
 

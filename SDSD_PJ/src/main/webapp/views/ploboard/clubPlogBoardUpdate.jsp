@@ -47,7 +47,7 @@
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="profileName">
-                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ groupBoard.writerName }" style="width: 50% !important;">
+                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${loginMember.nickName }" style="width: 50% !important;" readonly>
                         </div>
                     </div>
 
