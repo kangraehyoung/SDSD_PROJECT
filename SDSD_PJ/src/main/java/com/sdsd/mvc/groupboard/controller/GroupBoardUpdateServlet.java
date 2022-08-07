@@ -65,7 +65,8 @@ public class GroupBoardUpdateServlet extends HttpServlet {
     	groupBoard.setWriterName(mr.getParameter("writer"));
     	groupBoard.setBorContent(mr.getParameter("content"));
     	
-    	String fileName = mr.getOriginalFileName("upfile");
+    	String fileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3") + ", " + mr.getOriginalFileName("upfile4") ;
+    	System.out.println(groupBoard);
     	
     	if(fileName != null && !fileName.equals("")) {
     		File file = new File(path + "/" + mr.getParameter("fileName"));
@@ -80,7 +81,6 @@ public class GroupBoardUpdateServlet extends HttpServlet {
     	}
     	
     	//System.out.println(groupBoard.getBorFile() + "비 많이 온다..");
-    	
     	result = new GroupBoardService().save(groupBoard);
     	
     	//System.out.println("추적 추적 : " + result);

@@ -13,6 +13,8 @@ import com.sdsd.mvc.common.util.PageInfo;
 import com.sdsd.mvc.groupboard.model.dao.GroupDao;
 import com.sdsd.mvc.groupboard.model.vo.GroupBoard;
 import com.sdsd.mvc.groupboard.model.vo.GroupReply;
+import com.sdsd.mvc.indiboard.model.dao.BoardDao;
+import com.sdsd.mvc.indiboard.model.vo.IndiBoard;
 
 
 public class GroupBoardService {
@@ -77,30 +79,6 @@ public class GroupBoardService {
 		close(connection);
 		
 		return result;
-	}
-
-
-
-	public GroupBoard getBoardByNo(int groupBorNo, boolean hasRead) {
-		
-		int result = 0;
-		GroupBoard groupBoard = null;
-		
-		Connection connection = getConnection();
-		
-		groupBoard = new GroupDao().findBoardByNo(connection, groupBorNo);
-		
-		if(groupBoard != null && !hasRead) {
-			result = new GroupDao().updateReadCount(connection, groupBoard);
-			if(result > 0) {
-				commit(connection);
-			} else {
-				rollback(connection);
-			}
-		}
-		close(connection);
-		
-		return groupBoard;
 	}
 	
 	public int saveGroupReply(GroupReply groupreply) {
@@ -167,5 +145,47 @@ public class GroupBoardService {
 		close(connection);
 		
 		return groupboardlist;
+	}
+
+	public GroupBoard getGroupBoardByNo(int groupBorNo, boolean hasRead) {
+		int result = 0;
+		GroupBoard groupBoard = null;
+		
+		Connection connection = getConnection();
+		
+		groupBoard = new GroupDao().findBoardByNo(connection, groupBorNo);
+		
+		if(groupBoard != null && !hasRead) {
+			result = new GroupDao().updateReadCount(connection, groupBoard);
+			if(result > 0) {
+				commit(connection);
+			} else {
+				rollback(connection);
+			}
+		}
+		close(connection);
+		
+		return groupBoard;
+	}
+
+	public GroupBoard getBoardByNo(int groupBorNo, boolean hasRead) {
+		int result = 0;
+		GroupBoard groupBoard = null;
+		
+		Connection connection = getConnection();
+		
+		groupBoard = new GroupDao().findBoardByNo(connection, groupBorNo);
+		
+		if(groupBoard != null && !hasRead) {
+			result = new GroupDao().updateReadCount(connection, groupBoard);
+			if(result > 0) {
+				commit(connection);
+			} else {
+				rollback(connection);
+			}
+		}
+		close(connection);
+		
+		return groupBoard;
 	}
 }
