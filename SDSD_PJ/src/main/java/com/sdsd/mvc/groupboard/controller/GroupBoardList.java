@@ -34,7 +34,7 @@ public class GroupBoardList extends HttpServlet {
     	}
     	
     	listCount = new GroupBoardService().getBoardCount();
-    	pageInfo = new PageInfo(page, 10, listCount, 10);
+    	pageInfo = new PageInfo(page, 8, listCount, 8);
     	groupBoardList = new GroupBoardService().getBoardList(pageInfo);
     	
     	request.setAttribute("pageInfo", pageInfo);
