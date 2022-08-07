@@ -17,7 +17,7 @@
                 <div class="menuList"><a href="${ path }/member/myActivity">나의 활동</a></div>
                 <div class="menuList">
                     <span><img src="${ path }/resources/imgFile/checkblue_icon.png"></span>
-                    <a href="javasript:" style="font-weight: bold;">개인 플로깅 인증</a>
+                    <a href="${ path }/indiboard/indilist" style="font-weight: bold;">개인 플로깅 인증</a>
                 </div>
             </div>
         </div>
