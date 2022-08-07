@@ -45,39 +45,32 @@
 	                <li>
 	                            <a><span class="title">Q<em>.</em></span> 쓰레기통 위치가 궁금해요</a>
 	                    <div class="textBox">
-	                                <p><span class="title">A<em>.</em></span> 쓰레기통 지도를 확인해주세요!
+	                                <p><span class="title">A<em>.</em></span> 쓰레기통 찾기 페이지에서 확인 가능합니다! 
+	                                	<span onclick="location.href='${ path }/others/trash'" style="color: rgb(73, 119, 245); border-bottom:1px solid rgb(73, 119, 245);">
+	                                		<i class="bi bi-link-45deg"></i> 페이지 바로가기
+	                                	</span>
+	                               </p>
+	                    </div>
+	                </li>
+	                <li>
+	                            <a><span class="title">Q<em>.</em></span> 쓰담쓰담 랭킹은 어떤 기준으로 정해지는건가요?</a>
+	                    <div class="textBox">
+	                            <p><span class="title">A<em>.</em></span> 회원가입 후 등록한 인증 게시판의 개수를 기준으로 순위를 매기고 있습니다. 
 	                        <span class="o_accordion_text_sub"></span></p>
 	                    </div>
 	                </li>
 	                <li>
-	                            <a><span class="title">Q<em>.</em></span> 플로깅 질문 2</a>
+	                    <a><span class="title">Q<em>.</em></span> 모임이나 회원을 신고할 수 있는 방법이 있나요?</a>
 	                    <div class="textBox">
-	                            <p><span class="title">A<em>.</em></span> 3~5개월 계약 시 보증금은 300만 원이고, 6개월 이상 계약 시 보증금은 1,000~2,000만 원으로 룸 타입별로 상이합니다. 보증금 조정 및 전세 계약은 불가합니다.
+	                        <p><span class="title">A<em>.</em></span>
+	                        	우선 쓰담쓰담을 이용하시면서 불쾌한 경험을 하게 한 점 사과드립니다. <br>신고를 원하는 모임이나 회원이 있을 경우 쓰담쓰담 운영자에게 메일 보내주시면 조속히 처리하겠습니다! <br>
+	                        	<span style="color: rgb(73, 119, 245); border-bottom:1px solid rgb(73, 119, 245);">
+	                                		<i class="bi bi-envelope"></i> admin@sdsd.co.kr
+	                             </span>
 	                        <span class="o_accordion_text_sub"></span></p>
 	                    </div>
 	                </li>
-	                <li>
-	                    <a><span class="title">Q<em>.</em></span> 플로깅 질문 3</a>
-	                    <div class="textBox">
-	                        <p><span class="title">A<em>.</em></span> 게스트 초대가 가능하며, 함께 라운지 등 공용 공간을 이용하실 수 있습니다.<br>단, 코로나 19 예방을 위해 5인 집합 금지 수칙을 준수 및 방문자 정보 기록을 요청드립니다.
-	                        <span class="o_accordion_text_sub"></span></p>
-	                    </div>
-	                </li>
-	                <li>
-	                    <a><span class="title">Q<em>.</em></span> 플로깅 질문 4</a>
-	                    <div class="textBox">
-	                        <p><span class="title">A<em>.</em></span> 전입 신고 가능합니다.
-	                        <span class="o_accordion_text_sub"></span></p>
-	                    </div>
-	                </li>
-	                <li>
-	                    <a><span class="title">Q<em>.</em></span> 플로깅 질문 5</a>
-	                    <div class="textBox">
-	                        <p><span class="title">A<em>.</em></span> 소프트웨어 개발, 컨설팅 등 자택에서 사업자 등록이 가능한 업종이라면 가능하며 정확한 내용은 세무사와 확인 부탁드립니다.<br>
-	                            전입 신고와 사업자등록은 향후 신규 오픈 지점에 따라 상이해질 수 있습니다.
-	                        <span class="o_accordion_text_sub"></span></p>
-	                    </div>
-	                    </li>
+	                
 	                    </ul>
 	                </div>
 	        </div>

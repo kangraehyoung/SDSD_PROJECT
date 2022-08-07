@@ -97,6 +97,16 @@ FAQ 페이지  CSS StyleSheet
     color: #1f1f1f;
     position: relative;
 }
+
+o_accordion li .textBox p #linkText {
+	color: rgb(73, 119, 245);
+}
+
+o_accordion li .textBox p #linkText:hover {
+	background-color: rgb(73, 119, 245);
+	color: #ffffff;
+}
+
 .o_accordion li .textBox p span.title {
     font-size: 1rem;
     position: absolute;
