@@ -157,7 +157,7 @@
 						</p> 
 					</div>
 					<div class="itemBox itemBox_3">
-						<h4>율곡습지공원<i class="bi bi-arrow-right"></i>장남교</h4>
+						<h4>율곡공원<i class="bi bi-arrow-right"></i>장남교</h4>
 						<p class="courseInfo"><i class="bi bi-signpost"></i> 길이:  18.3km</p>
 						<p class="courseInfo"><i class="bi bi-reception-4"></i> 난이도 : 상</p>
 						<img src="https://blog.kakaocdn.net/dn/cN7rvX/btrg4JCtPOG/SitVFE9B1catN41pog4yXK/img.jpg" alt="" width="100%" height="200px">
