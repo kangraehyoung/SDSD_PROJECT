@@ -38,7 +38,7 @@
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
                 </div>
-				</div>
+				
                 <!-- 작성 칸 -->
                 <div class="col nameCol">
                     <!-- 닉네임 섹션 -->
@@ -74,12 +74,12 @@
 	                            <div class="form-check form-switch">
 	                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
 	                            </div>
-	                                                <div class="mb-3 row">
+	                    <div class="mb-3 row">
                     	<label for="clubKeyword" class="col-md-1 col-form-label" style="color: rgb(50, 157, 245); font-weight: 600; text-align: right;">#</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="clubKeyword" name="spbKeyword" placeholder="키워드를 입력해주세요" style="border: none !important;">
                         </div>
-	                        </div>
+	                    </div>
                     	</div>
                     
                 	</div>
@@ -87,6 +87,7 @@
        				</div>
         
         		</div>
+   			</div>
    			</div>
     <div class="row plogBoardButtonWrap">
         <div class="col"></div>
