@@ -69,21 +69,21 @@ public class PloGroupUpdateServlet extends HttpServlet {
 	     String content = mr.getParameter("content");
 	     String pgName = mr.getParameter("pgName");
 	     String spbKeyword = mr.getParameter("spbKeyword");
-         String originalFileName = mr.getOriginalFileName("upfile1");
+//         String originalFileName = mr.getOriginalFileName("upfile1");
          String address = mr.getParameter("local");
          
-//    	 String fileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
-//    	if(fileName != null && !fileName.equals("")) {
-//    		File file = new File(path + "/" + mr.getParameter("fileName"));
-//    		
-//    		if(file.exists()) {
-//    			file.delete();
-//    		}
-//    		
-//    		indiBoard.setBorFile(fileName);
-//    	} else {
-//    		indiBoard.setBorFile(fileName);
-//    	}
+    	 String fileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3") + ", " + mr.getOriginalFileName("upfile4");
+    	if(fileName != null && !fileName.equals("")) {
+    		File file = new File(path + "/" + mr.getParameter("fileName"));
+    		
+    		if(file.exists()) {
+    			file.delete();
+    		}
+    		
+    		ploGroup.setSpbBorFile(fileName);
+    	} else {
+    		ploGroup.setSpbBorFile(fileName);
+    	}
 //    	
     	//System.out.println(indiBoard.getBorFile() + "에휴 제발제발");
         HttpSession session = request.getSession(false);
@@ -98,17 +98,17 @@ public class PloGroupUpdateServlet extends HttpServlet {
  			ploGroup.setSpbWriterName(writer);
  			ploGroup.setPlogGroupName(pgName);
  			ploGroup.setSpbContent(content);
- 			ploGroup.setSpbBorFile(originalFileName);
+ 			ploGroup.setSpbBorFile(fileName);
  			ploGroup.setSpbKeyword(spbKeyword);
  			ploGroup.setAddress(address);
  			
  			result = new PloGroupService().createGroup(ploGroup);
  			
  			if (result > 0) {
- 				request.setAttribute("msg", "모임 등록 성공");
+ 				request.setAttribute("msg", "모임 수정 성공");
  	    		request.setAttribute("location", "/views/ploboard/createClubCelebrate.jsp");
  			} else {
- 				request.setAttribute("msg", "모임 등록 실패");
+ 				request.setAttribute("msg", "모임 수정 실패");
  	    		request.setAttribute("location", "/views/ploboard/createClubCelebrate.jsp");
  			}
          } else {

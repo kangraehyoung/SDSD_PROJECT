@@ -19,13 +19,20 @@
                 <!-- 모임 사진 박스 -->
                 <div class="col">
                     <!-- 모임 이미지 -->
-                    <div>
-                        <img src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMzFfMjA3/MDAxNTQwOTQyNzcwMTcw.NtmoIbuWHdzf9bnzs_eJ8cr6Xf1SiZqaDa6JTqQ_bscg.xfNsHblfGcE2LAaMRe5CQV-28pOyOagCpX1T2IHOHqwg.JPEG.cosl922/output_3919720138.jpg?type=w800" class="img-fluid" alt="">
-                    </div>
-                    <div class="fileUploadBox">
+                     <div class="fileUploadBox">
                         <div class="fileboxBtn">
-                            <label for="uploadImages">사진 등록</label>
-                            <input type="file" id="uploadImages" multiple name="upfile1"> 
+                        	<div>
+	                            <label for="uploadImages1"><i class="bi bi-image"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages1"  name="upfile1"> 
+	                            <label for="uploadImages2"><i class="bi bi-image-fill"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages2"  name="upfile2"> 
+                        	</div>
+                            <div style="margin-top: 10px;">
+	                            <label for="uploadImages3"><i class="bi bi-image-fill"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages3"  name="upfile3"> 
+	                            <label for="uploadImages4"><i class="bi bi-image"></i> 사진 등록</label>
+	                            <input type="file" id="uploadImages4"  name="upfile4"> 
+                            </div>
                         </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
@@ -116,53 +123,23 @@
                     <!-- 키워드 선택 -->
                     <div class="mb-3 row">
                         <label for="clubKeyword" class="col-md-3 col-form-label">키워드 선택</label>
-                        <div class="col-md-12">
-                            <input type="checkbox" class="btn-check" id="clubKeyword1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword1">#키워드 1</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword2">#키워드 2</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword3">#키워드 3</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword4" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword4">#키워드 4</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword5" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword5">#키워드 5</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword6" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword6">#키워드 6</label>
-                        </div>
-                        <div class="col-md-12" style="margin-top: 10px;">
-                            <input type="checkbox" class="btn-check" id="clubKeyword7" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword7">#키워드 7</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword8" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword8">#키워드 8</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword9" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword9">#키워드 9</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword10" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword10">#키워드 10</label>
-
-                            <input type="checkbox" class="btn-check" id="clubKeyword11" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="clubKeyword11">#키워드 11</label>
+                                            <div class="mb-3 row">
+                    	<label for="clubKeyword" class="col-md-1 col-form-label" style="color: rgb(50, 157, 245); font-weight: 600; text-align: right;">#</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="clubKeyword" name="spbKeyword" placeholder="키워드를 입력해주세요" style="border: none !important;">
                         </div>
                     </div>
-
+	
 
 
                 </div>
             </div>
         </div>
     </div>
-
+</div>
     <div class="buttonBox">
         <input class="submitBtn" type="submit" value="모임 수정">
-        <input class="resetBtn" type="reset" value="취소">
+        <input class="resetBtn" type="button" onclick="location.href='${ path }/ploboard/ploGroupList'" value="취소">
     </div>
 	</form>
 </section>
