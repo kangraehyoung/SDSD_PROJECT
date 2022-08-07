@@ -16,7 +16,10 @@ public class PloggingCourseServlet extends HttpServlet {
 
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	request.getRequestDispatcher("/views/others/PloggingCourse.jsp").forward(request, response);
+    	// 구 버전 - 서호정
+    	// request.getRequestDispatcher("/views/others/PloggingCourse.jsp").forward(request, response);
+    	// 리뉴얼 버전 - 최송희 
+    	request.getRequestDispatcher("/views/others/PloggingCourse_ver2.jsp").forward(request, response);
     }
 
 }

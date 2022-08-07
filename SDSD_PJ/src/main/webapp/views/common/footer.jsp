@@ -15,11 +15,11 @@
                 <h2>About Us</h2>
                 <div class="iconBox">
                     <div class="icon icon_01">
-                        <img src="${ path }/resources/imgFile/board_icon.png" alt="문의 Icon">
+                        <img src="${ path }/resources/imgFile/board_icon.png" alt="문의 Icon" style="cursor: pointer;">
                         <p><a href="">문의</a></p>
                     </div>
                     <div class="icon icon_02">
-                        <img src="${ path }/resources/imgFile/FAQ_icon.png" alt="FAQ Icon">
+                        <img src="${ path }/resources/imgFile/FAQ_icon.png" alt="FAQ Icon" onclick="location.href='${ path }/other/faq'" style="cursor: pointer;">
                         <p><a href="${ path }/other/faq">FAQ</a></p>
                     </div>
                 </div>
@@ -31,5 +31,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="${ path }/resources/js/sdsd_clubDetail.js?v0.0.2"></script>
     <script src="${ path }/resources/js/My_Activity.js?v0.0.1"></script>
+    <script src="${ path }/resources/js/sdsd_plogCourse.js.js?v0.0.1"></script>
 </body>
 </html> 

@@ -1,0 +1,204 @@
+/*
+================================================
+플로깅 코스 페이지 CSS StyleSheet
+================================================
+*/
+
+.plogCourse_section_01 {
+    margin: 0 auto;
+}
+
+.plogCourse_section_01 .titleBox {
+    background-color: #CAE5FC;
+    padding: 60px 0;
+}
+
+.plogCourse_section_01 .titleBox h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.plogCourse_section_01 .titleBox h2 img {
+    width: 40px;
+    transform: translate(-10px, -5px);
+}
+
+.plogCourseTab_row_01 {}
+
+
+/* 버튼 */
+.plogCourseTab_row_01 .btn_container {}
+.plogCourseTab_row_01 .btn_container section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.plogCourseTab_row_01 .btn_container section .btnBox{
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 18%;
+    padding: 10px 0;
+    border: 1px solid rgb(50, 157, 245);
+    border-radius: 15px;
+}
+
+.plogCourseTab_row_01 .btn_container section .btnBox:hover {
+    box-shadow: 0.4rem 0.4rem 1.2rem 0 rgba(5, 65, 184, 0.12);
+}
+
+.plogCourseTab_row_01 .btn_container section .btnBox.active {
+    background-color: rgb(50, 157, 245);
+}
+
+
+.plogCourseTab_row_01 .btn_container section .btnBox .textItem {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plogCourseTab_row_01 .btn_container section .btnBox .textItem p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #1f1f1f;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.plogCourseTab_row_01 .btn_container section .btnBox.active .textItem p  {
+    color: #ffffff;
+}
+
+/* ********** ********** ********** ********** */
+
+/* 구조 */
+.plogCourseTab_row_02 {
+    position: relative;
+    /* 24px */
+    /* top: -1.600rem; */
+}
+.plogCourseTab_row_02 .content_container {
+    display: none;
+    margin: 0 !important;
+}
+.plogCourseTab_row_02 .content_container.active {
+    display: block;
+}
+
+/* 내용 */
+.plogCourseTab_row_02 .content_container section {
+    position: relative;
+    max-width: 80%;
+    margin: 30px auto 0 auto;
+    transform: translateX(0.8%);
+    padding: 0;
+}
+
+
+/* 내용 : 이미지 */
+.plogCourseTab_row_02 .content_container section .imgBody {
+    /* 40px */
+    margin: 2.667rem 0 5rem 0;
+    /* box-shadow: 0 25px 43px -2px rgb(0 0 0 / 25%); */
+}
+.plogCourseTab_row_02 .content_container section .imgBody .imgBox {
+    /* display: flex; */
+    justify-content: space-between;
+}
+.plogCourseTab_row_02 .content_container section .imgBody .imgBox img {
+    width: 100%;
+}
+
+.plogCourseTab_row_02 .content_container section .imgBody .branchImgBox{
+    width:90.42%;
+    margin: 0 auto;
+}
+
+.plogCourseTab_row_02 .content_container section .imgBody .branchImgBox .pcBox{
+    display: flex; 
+    justify-content: space-between;
+}
+
+.plogCourseTab_row_02 .content_container section .imgBody .branchImgBox .pcBox img{
+    width: 30%; 
+    border:2px solid #ffd200;
+}
+
+.plogCourseTab_row_02 .content_container section .imgBody .imgBox_mo {
+    display: none;
+}
+
+
+
+.plogCourse_section_02 {
+    padding: 60px 0 100px 0;
+}
+
+.plogCourseTab_row_02 .contentBox {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    margin: 0 auto;
+    /* width: 70%; */
+    /* margin-top: 4rem; */
+}
+
+.plogCourseTab_row_02 .contentBox .itemBox {
+    width: 22.4rem;
+    margin: 0 1rem;
+    background: #fff;
+    border: 1px solid #ffffff;
+    letter-spacing: -0.05rem;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0.4rem 0.4rem 1.2rem 0 rgb(0 0 0 / 12%);
+}
+
+
+.plogCourseTab_row_02 .contentBox .itemBox h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.plogCourseTab_row_02 .contentBox .itemBox p {
+    font-size: 1rem;
+    letter-spacing: -0.08rem;
+    font-weight: 400;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.plogCourseTab_row_02 .contentBox .itemBox p.courseInfo {
+	margin: 0 0 10px 0;
+}
+
+.plogCourseTab_row_02 .contentBox .itemBox strong {
+    display: block;
+    letter-spacing: -0.05rem;
+    font-size: 1.2rem;
+    margin: 0 0 30px 0;
+    font-weight: 400;
+}
+
+.plogCourseTab_row_02 .contentBox .itemBox a {
+    /* bottom: 1.9rem;
+    right: 2.8rem; */
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+    /* display: inline-block; */
+}
+
+.plogCourseTab_row_02 .contentBox .itemBox a:hover {
+    color: #74b8f3;
+    border-color: #74b8f3;
+}

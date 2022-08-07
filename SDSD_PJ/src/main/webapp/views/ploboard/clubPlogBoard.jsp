@@ -32,19 +32,19 @@
             <div class="ht_keyword">
                 <div><p>추천 키워드</p></div>
                 <div class="ht_hash">
-                    <a href="#">#강남구</a>
+                    <a href="${ path }/groupboard/groupkeysearch?groupkeyword=강남구">#강남구</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#경기도</a>
+                    <a href="${ path }/groupboard/groupkeysearch?groupkeyword=경기도">#경기도</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#20대</a>
+                    <a href="${ path }/groupboard/groupkeysearch?groupkeyword=20대">#20대</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#한강</a>
+                    <a href="${ path }/groupboard/groupkeysearch?groupkeyword=한강">#한강</a>
                 </div>
                 <div class="ht_hash">
-                    <a href="#">#남산</a>
+                    <a href="${ path }/groupboard/groupkeysearch?groupkeyword=남산">#남산</a>
                 </div>
             </div>
         </div>
