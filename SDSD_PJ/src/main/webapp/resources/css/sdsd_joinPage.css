@@ -7,7 +7,7 @@ input[type=password]{
 	font-family: sans-serif !important;
 }
 input[type=password]::placeholder {
-	font-family: 'twayair';
+    font-family: 'TmoneyRoundWindExtraBold';
 }
 
 /*
