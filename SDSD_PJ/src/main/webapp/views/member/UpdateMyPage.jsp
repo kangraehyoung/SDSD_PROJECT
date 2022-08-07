@@ -68,7 +68,7 @@
 	    	 <div class="mb-3 row">
 	    	 	<label class="col-sm-5 col-form-label">전화번호</label>
 		    	 <div class="col-sm-5">
-		    	 	<input type="tel" name="phone" class="form-control" id="" placeholder="'-'없이 입력하세요.">
+		    	 	<input type="tel" name="phone" class="form-control" id="" placeholder=" - 없이 입력하세요.">
 		    	 </div>
 	    	</div>
 	    	
