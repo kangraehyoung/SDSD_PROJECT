@@ -259,3 +259,6 @@ http://localhost:8090/SDSD_PJ/views/others/Ranking.jsp <br>
 ### 프론트앤드 작업 내용
 * 플로깅 코스 구현 완료 (최송희) <br> http://localhost:8090/SDSD_PJ/others/course
 * 소개 페이지, FAQ, 아이디 및 비밀번호 찾기 CSS 수정 (최송희)
+* 폰트 깨짐 현상 수정, 쓰레기통 찾기 페이지 정렬 수정 (서호정)
+* 플로깅 모임 인증 게시판 닉네임, 키워드 css 수정 (서호정)
+* 메인 페이지 텍스트 애니메이션 깜빡임 효과 추가 (서호정)
