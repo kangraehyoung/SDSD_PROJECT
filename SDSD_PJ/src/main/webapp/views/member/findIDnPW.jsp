@@ -30,7 +30,7 @@
                             <button>인증번호받기</button>  
                         </div>
                         <div class="fi_repwd">
-                        <input name="certNumber" class="findPwd1_5" type="number" placeholder=" 인증번호를 입력해주세요.">
+                        <input name="certNumber" class="findPwd1_5" type="text" placeholder=" 인증번호를 입력해주세요.">
                         <button class="findPwd1_6" type="submit">비밀번호 재설정</button>   
                         </div>
                     </div>  
