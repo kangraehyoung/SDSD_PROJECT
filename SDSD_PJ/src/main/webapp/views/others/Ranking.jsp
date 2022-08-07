@@ -35,7 +35,7 @@
                     <div class="rb_1_list">
                         <c:forEach var="indiRank" items="${ rankList }">
                         <div class="rbl1">
-                            <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
+                            <div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
                             <div>${ indiRank.indiNickName }</div>
                             <div>${ indiRank.indiCount }</div>
                         </div>
@@ -80,7 +80,7 @@
                     <div class="rb_2_list">
                         <c:forEach var="ploRank" items="${ rankList1 }">
                         <div class="rbl1">
-                            <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
+                            <div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
                             <div>${ ploRank.ploGroupNickname }</div>
                             <div>${ ploRank.ploGroupCount }</div>
                         </div>
