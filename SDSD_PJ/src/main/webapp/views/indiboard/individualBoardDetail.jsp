@@ -26,7 +26,7 @@
             <div class="ht_search2">
                 <form class="ht_12" action="${ path }/indiboard/indikeysearch" method="get">
                     <div class="ht_22">
-                        <input type="text">
+                        <input type="text" name="indiketword">
                         <button type="submit">
                             <img src="${ path }/resources/imgFile/searchIcon_03.png" alt="search">
                         </button>
