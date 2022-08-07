@@ -409,7 +409,7 @@ public class PloGroupDao {
 	public int updateStatus(Connection connection, int spBorNum, String status) {
 		int result = 0;
 		PreparedStatement pstm = null;
-		String qurey = "UPDATE SEARCH_PLOG_BOARD SET SPB_BOR_STATUS=? WHERE SPBOR_NUMBER=?";
+		String qurey = "UPDATE SEARCH_PLOG_BOARD SET SPB_BOR_STATUS=?, PLOG_GROUP_NAME = '플로깅모임없음' WHERE SPBOR_NUMBER=? ";
 		try {
 			pstm = connection.prepareStatement(qurey);
 			
