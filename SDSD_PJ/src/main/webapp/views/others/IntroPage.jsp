@@ -84,12 +84,12 @@
             <img loading="lazy" src="https://webresource.hidoc.co.kr/design/images/logo_hidoc.png" width="" height="30" alt="신문사logo">
             <h4>지구의 날, 환경과 건강을 지키는 ‘플로깅’ 하는 법</h4>
             <p>플로깅(Plogging)은 ‘이삭을 줍는다’는 뜻의 스웨덴어 Plocka upp과 영단어 Jogging의 합성어로 달리면서 쓰레기를 줍는 친환경 조깅을 의미한다. 이번 지구의 날 플로깅에 도전해보면 어떨까? 혼자 하기도 함께 하기도 좋은 플로깅의 방법과 운동 효과를 알아보았다.</p> 
-            <strong><i class="bi bi-person"></i>하이닥 운동상담 김정현 (운동전문가)</strong>
+            <strong><i class="bi bi-person"></i>하이닥 운동상담 김정현</strong>
             <a class="o_moreBtn main-middle-btn-article1" href="https://www.hidoc.co.kr/healthstory/news/C0000690188" target="_blank">기사 전문 보기 <i class="bi bi-chevron-double-right"></i></a>
         </div>
         <div class="itemBox itemBox_2">
             <img loading="lazy" src="https://img.etnews.com/2022/etnews/images/et_logo_sp40.png" width="" height="30" alt="신문사logo" style="background-color: #0f0f32;">
-            <h4>“운동하면서 친구도 만들어요”…요즘 세대 봉사활동 '플로깅' 인기</h4>
+            <h4>“운동하면서 친구도 만들어요” 요즘 세대 '플로깅' 인기</h4>
             <p>이번 5월 플로깅데이는 참여 가능 인원을 50명으로 제한했는데, 접수 개시 5분 만에 120여개 이상 신청이 몰리며 조기 마감됐다. 등산이나 조깅처럼 격한 운동이 아니기 때문에 봉사 과정에서 담소를 나누면서 참가자 간 친분을 쌓을 수 있어 좋았다는 반응이 많았다.</p> 
             <strong><i class="bi bi-person"></i>이형두 기자</strong>
             <a class="o_moreBtn main-middle-btn-article1" href="https://www.etnews.com/20220522000047" target="_blank">기사 전문 보기 <i class="bi bi-chevron-double-right"></i></a>
