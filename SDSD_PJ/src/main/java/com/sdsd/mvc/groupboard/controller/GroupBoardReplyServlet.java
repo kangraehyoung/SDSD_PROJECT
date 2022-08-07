@@ -28,16 +28,8 @@ public class GroupBoardReplyServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		SimpleDateFormat formatter = new SimpleDateFormat("YY/MM/DD");
 		int grouprepboardNo = Integer.parseInt(request.getParameter("grouprepboardNo"));
 		String grouprepcontent = request.getParameter("grouprepcontent");
-		String repcreateDate1 = request.getParameter("repcreateDate");
-		Date repcreateDate = null;
-		try {
-			repcreateDate = formatter.parse(repcreateDate1);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		} 
 		
 		HttpSession session = request.getSession(false);
     	Member loginMember = session != null ? (Member)session.getAttribute("loginMember") : null;
@@ -49,7 +41,6 @@ public class GroupBoardReplyServlet extends HttpServlet {
 			groupreply.setRepwriterNo(loginMember.getNo());
 			groupreply.setRepwriterId(loginMember.getEmail());
 			groupreply.setRepcontent(grouprepcontent);
-			groupreply.setRepcreateDate(repcreateDate);
 			
 			int result = service.saveGroupReply(groupreply);
 			

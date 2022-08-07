@@ -19,10 +19,11 @@ public class rankDao {
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
 		String query = 
-				"SELECT INDIBOR_WRITER_NAME, COUNT(*) "
-				+ "FROM INDIBOARD "
-				+ "GROUP BY ROLLUP(INDIBOR_WRITER_NAME) "
-				+ "HAVING GROUPING(INDIBOR_WRITER_NAME)= 0";
+				"SELECT INDIBOR_WRITER_NAME, COUNT(*)  "
+				+ "FROM INDIBOARD  "
+				+ "GROUP BY ROLLUP(INDIBOR_WRITER_NAME)  "
+				+ "HAVING GROUPING(INDIBOR_WRITER_NAME)= 0 "
+				+ "ORDER BY COUNT(*) DESC ";
 		
 		try {
 			pstm = connection.prepareStatement(query);
@@ -52,10 +53,11 @@ public class rankDao {
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
 		String query = 
-				"SELECT GROUPBOR_GROUPNAME, COUNT(*) "
-				+ "FROM GROUPBOARD "
-				+ "GROUP BY ROLLUP(GROUPBOR_GROUPNAME) "
-				+ "HAVING GROUPING(GROUPBOR_GROUPNAME)= 0";
+				"SELECT GROUPBOR_GROUPNAME, COUNT(*)  "
+				+ "FROM GROUPBOARD  "
+				+ "GROUP BY ROLLUP(GROUPBOR_GROUPNAME)  "
+				+ "HAVING GROUPING(GROUPBOR_GROUPNAME)= 0 "
+				+ "ORDER BY COUNT(*) DESC ";
 		
 		try {
 			pstm = connection.prepareStatement(query);
