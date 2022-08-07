@@ -137,9 +137,10 @@
             </div>
             <div class="bbb_coment">
               <sub><c:out value="${ reply.repcontent }"/></sub>
-              
+              	
+              	<c:if test="${reply.repwriterId eq loginMember.nickName }">
               	<button id="btnReplyDelete" type="submit">삭제</button>
-              
+              	</c:if>
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
