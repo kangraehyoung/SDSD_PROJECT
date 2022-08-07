@@ -14,7 +14,7 @@
        		<h2>FAQ</h2>
        		<p>
        			회원들이 자주 묻는 질문들! 보기 좋게 모아봤어요<i class="bi bi-emoji-wink"></i><br>
-       			<span>*궁금하신 사항에 대해 원하시는 답변이 없다면 문의글 작성 부탁드립니다.</span>
+       			<span>*궁금하신 사항에 대한 답변이 없다면 문의글 작성 부탁드립니다.</span>
        		</p>
        		<button type="button" class="btn btn-primary">문의글 작성 바로가기 <i class="bi bi-pencil"></i></button>
        </div>
