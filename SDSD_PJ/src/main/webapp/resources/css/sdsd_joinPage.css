@@ -1,4 +1,15 @@
 @charset "UTF-8";
+
+/*
+폰트 적용에 따른 input:password 텍스트 깨짐 현상 해결
+*/
+input[type=password]{
+	font-family: sans-serif !important;
+}
+input[type=password]::placeholder {
+	font-family: 'twayair';
+}
+
 /*
 ==============================================
 회원가입 페이지 관련 CSS StyleSheet
