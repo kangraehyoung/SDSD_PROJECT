@@ -33,7 +33,7 @@
 .plogCourseTab_row_01 .btn_container section {
     display: flex;
     justify-content: space-evenly;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     position: relative;
 }
@@ -41,7 +41,7 @@
 .plogCourseTab_row_01 .btn_container section .btnBox{
     background-color: #ffffff;
     cursor: pointer;
-    width: 15%;
+    width: 18%;
     padding: 10px 0;
     border: 1px solid rgb(50, 157, 245);
     border-radius: 15px;

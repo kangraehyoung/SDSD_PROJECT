@@ -8,8 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.sdsd.mvc.common.util.PageInfo;
+import com.sdsd.mvc.member.model.vo.Member;
 import com.sdsd.mvc.ploGroup.model.service.PloGroupService;
 import com.sdsd.mvc.ploGroup.model.vo.PloGroup;
 
@@ -31,6 +33,13 @@ public class MyPlogingSearchServlet extends HttpServlet {
 		} catch (NumberFormatException e) {
 			page = 1;
 		}
+		HttpSession session = request.getSession(false);
+    	Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
+    	
+    	if (loginMember != null) {
+    		PloGroup plogroup = new PloGroup();
+    		plogroup.setPlogGroupName(loginMember.getMyPloging());
+    	}
 		
 		System.out.println(plogGroupName);
 		listCount = new PloGroupService().getBoardCount();
