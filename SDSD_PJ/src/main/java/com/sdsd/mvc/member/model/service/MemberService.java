@@ -13,8 +13,6 @@ public class MemberService {
 		Member member = new MemberDao().findMemberById(connection, email);
 		
 		close(connection);
-		System.out.println("member객체 password " + member.getPassword());
-		System.out.println("입력 password " + password);
 		if(member == null || !member.getPassword().equals(password)) {
 			return null;
 		} else {

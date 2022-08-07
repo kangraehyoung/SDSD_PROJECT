@@ -43,7 +43,8 @@ public class MemberDao {
 			pstm.setString(1, email);
 			
 			rs = pstm.executeQuery();
-			
+			if(rs != null) {
+			System.out.println("여기가 에러일껄");
 			if(rs.next()) {
 				member = new Member();
 				
@@ -60,7 +61,10 @@ public class MemberDao {
 				member.setBDay(rs.getString("MEM_BDAY"));
 				member.setMyPloging(rs.getString("MEM_MY_PLOGING"));
 			}
-
+			} else {
+				member = new Member();
+				member = null;
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

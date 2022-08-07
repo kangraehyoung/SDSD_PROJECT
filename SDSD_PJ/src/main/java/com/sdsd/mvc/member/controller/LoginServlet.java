@@ -34,6 +34,8 @@ public class LoginServlet extends HttpServlet {
     	
     	Member loginMember = new MemberService().login(email, password);
     	
+    	System.out.println(loginMember);
+    	
     	  if(loginMember != null) {
     	         // loginMember 객체를 세션에 저장
     	         // 세션변수에  세션영역객체를 생성한다.
