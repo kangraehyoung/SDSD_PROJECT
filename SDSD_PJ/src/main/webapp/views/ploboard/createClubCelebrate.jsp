@@ -17,7 +17,7 @@
             <div class="col-md-7 textBox">
                 <p>
                     ${loginMember.name }님!<br>
-                    모임을 생성 해주셔서 감사합니다! <span><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/winking-face_1f609.png" alt=""></span>
+                    모임을 생성 해주셔서 감사합니다! <br> 다시 로그인 해주세요! <span><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/winking-face_1f609.png" alt=""></span>
                 </p>
                 </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="buttonBox">
                 <button class="gotoMain" id="toMain">메인페이지 바로가기 <i class="bi bi-house-door"></i></button>
                <!-- <button onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}'">내 모임 바로가기 <i class="bi bi-people"></i></button>  --> 
-                <button onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}'">내 모임 바로가기 <i class="bi bi-people"></i></button>
+                <button onclick="location.href='${path }/plogroup/invali'">로그인 하러가기 <i class="bi bi-people"></i></button>
         </div>
     </div>
 

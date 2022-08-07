@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="st_btn"><!-- 버튼 박스 -->
-                    <button class="fisrt_stbtn">이전으로</button>
+                    <button class="fisrt_stbtn" onclick="location.href='${ path }/member/agreePage'">이전으로</button>
                     <button type="submit" class="second_stbtn">가입하기</button>
                 </div>
             </form>
