@@ -135,7 +135,7 @@
                             <p>
                                 <span class="likeCount">조회수 ${groupBoard.readCount } 회 </span>
                                 <span class="likeCount">좋아요 27개</span>
-                                <span class="timeInfo">작성 시간 ${ groupReply.repcreateDate }</span>
+                                <span class="timeInfo">작성 시간 : ${ groupreply.repcreateDate }</span>
                             </p>
                         </div>
                     </div>

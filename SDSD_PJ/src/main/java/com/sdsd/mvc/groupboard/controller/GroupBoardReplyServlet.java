@@ -1,6 +1,10 @@
 package com.sdsd.mvc.groupboard.controller;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Formatter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +17,8 @@ import com.sdsd.mvc.groupboard.model.service.GroupBoardService;
 import com.sdsd.mvc.groupboard.model.vo.GroupReply;
 import com.sdsd.mvc.member.model.vo.Member;
 
+import oracle.net.aso.g;
+
 @WebServlet("/groupBoard/groupreply")
 public class GroupBoardReplyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,8 +28,16 @@ public class GroupBoardReplyServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		SimpleDateFormat formatter = new SimpleDateFormat("YY/MM/DD");
 		int grouprepboardNo = Integer.parseInt(request.getParameter("grouprepboardNo"));
 		String grouprepcontent = request.getParameter("grouprepcontent");
+		String repcreateDate1 = request.getParameter("repcreateDate");
+		Date repcreateDate = null;
+		try {
+			repcreateDate = formatter.parse(repcreateDate1);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		} 
 		
 		HttpSession session = request.getSession(false);
     	Member loginMember = session != null ? (Member)session.getAttribute("loginMember") : null;
@@ -35,6 +49,7 @@ public class GroupBoardReplyServlet extends HttpServlet {
 			groupreply.setRepwriterNo(loginMember.getNo());
 			groupreply.setRepwriterId(loginMember.getEmail());
 			groupreply.setRepcontent(grouprepcontent);
+			groupreply.setRepcreateDate(repcreateDate);
 			
 			int result = service.saveGroupReply(groupreply);
 			
