@@ -122,9 +122,6 @@
     font-size: 500;
 }
 
-.joincb .buttonContainer .buttonBox {
-	margin-bottom: 30px;
-}
 
 .joincb .buttonContainer .buttonBox button{
     text-decoration: none;
@@ -137,6 +134,7 @@
     -webkit-apperance: none;
     -moz-appearance: none;
     appearance: none;
+    margin-bottom: 30px;
 }
 
 .joincb .buttonContainer .buttonBox button.gotoMain {
