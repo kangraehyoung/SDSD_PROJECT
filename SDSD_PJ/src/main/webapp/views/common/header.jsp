@@ -14,7 +14,7 @@
     <title>쓰담쓰담</title>
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_common.css?v0.0.9" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_loginPage.css?v0.0.2" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.1.02" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_mainPage.css?v0.1.04" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinPage.css?v0.0.3" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_faq.css?v0.0.6" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_joinCelebrate.css?v0.0.3" type="text/css">
