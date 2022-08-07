@@ -35,11 +35,11 @@
                         <p class="text">경기 북부</p> 
                         </div>
                     </div>
-                    <div id="plogCourseTab_Icon_05" class="btnBox">
+                    <%-- <div id="plogCourseTab_Icon_05" class="btnBox">
                         <div class="textItem">
                         <p class="text">부산</p> 
                         </div>
-                    </div>
+                    </div> --%>
                 </section>
             </div>
     
@@ -113,26 +113,25 @@
 			<section>
 				<div class="contentBox">
 					<div class="itemBox itemBox_1"> 
-						<h4>일산호수공원 산책로</h4>
-						<p class="courseInfo"><i class="bi bi-signpost"></i> 길이: 5.8 km</p>
-						<p class="courseInfo"><i class="bi bi-reception-2"></i> 난이도 : 중하</p>
-						<img src="https://img.wkorea.com/w/2018/07/style_5b52b0a698fd3-1200x800.jpg" alt="" width="100%">
-						<p>국내 최대의 인공호수, 고양세계 꽃박람회, 노래하는 분수대 등 다양한 이벤트와 시설이 설치되어 있습니다!  3 호선 정발산역 하차 2,3 번 출구로 도보 10 분 거리에 위치해있어 뚜벅이들에게도 좋은 장소입니다. 조형물, 인공시냇물, 돌계단 위 보드매니아, 주말 공연 등 다양한 볼거리로 가족단위 나들이에도 추천드립니다!</p> 
+						<h4>수원화성성곽길</h4>
+						<p class="courseInfo"><i class="bi bi-signpost"></i> 길이: 12 km</p>
+						<p class="courseInfo"><i class="bi bi-reception-3"></i> 난이도 : 중상</p>
+						<img src="https://ggtour.or.kr/cgi/upload_img/2021841370_editor_image.jpg" alt="" width="100%" height="200px">
+						<p>우리나라 성곽건축사상 가장 독보적으로 평가받고있으며 1997년 유네스코 세계문화유산 으로 지정된 수원 화성을 돌아보며 우리문화의 우수성을 느낄 수 있는 역사·사적길입니다! 곳곳에 화장실과 쓰레기통이 있어 플로깅 코스로 매우 적합한 곳입니다!</p> 
 					</div>
 					<div class="itemBox itemBox_2">
-						<h4>남산공원</h4>
-						<p class="courseInfo"><i class="bi bi-signpost"></i> 길이 : 남측 순환로 8km</p>
+						<h4>의왕 백운호수</h4>
+						<p class="courseInfo"><i class="bi bi-signpost"></i> 길이 :3.9km</p>
 						<p class="courseInfo"><i class="bi bi-reception-3"></i> 난이도 : 중상</p>
-						<img src="https://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fredbull%2F74b5d6e52be7497d9bbc4778297fed91.JPG" alt="" width="100%">
-						<p>이보다 더 서울다운 코스가 있을까요? 남산이라고 하면 야경 명소로 유명한 곳이라 러너라면 누구나 이곳을 선망합니다. 초보자 러너부터 전문 러너까지 실력에 따른 코스가 있어 '러너들의 성지'라고 불리기도 하는데요. 특히, 오르막이 많고 내리막과 반복되는 남측 순환로 코스는 초보자에게는 힘든 코스일 수 있으니 주의하세요!
-						</p> 
+						<img src="https://www.m-i.kr/news/photo/202201/889585_657467_5927.jpg" alt="" width="100%"  height="200px">
+						<p>백운호수를 돌아 이어지는 산책길로 주변 풍경을 감상하며 걷기 좋은 곳입니다! 유동인구가 많은 만큼 버려져 있는 쓰레기도 많은 곳으로 플로깅 활동을 통해 백운호수를 깨끗하게 만들어보러 가보시는 것도 좋을 것 같습니다!</p> 
 					</div>
 					<div class="itemBox itemBox_3">
-						<h4>서울숲</h4>
-						<p class="courseInfo"><i class="bi bi-signpost"></i> 길이:  3km</p>
-						<p class="courseInfo"><i class="bi bi-reception-2"></i> 난이도 : 중하</p>
-						<img src="https://img.hani.co.kr/imgdb/resize/2019/0606/00500040_20190606.JPG" alt="" width="100%">
-						<p>도심에서 진정한 자연을 맛볼 수 있습니다. 서울에서 흙 길을 찾기가 쉽지 않지만, 서울숲은 잘 정돈된 흙 길이 조성되어 있습니다. 또한 길이 평탄해 초보 러너들이 러닝을 즐기기에 좋으며, 자전거에게 방해받지 않고 달릴 수 있습니다. 정겨운 흙 내음 맡으며 싱그러운 초록의 오솔길을 달려보세요.</p> 
+						<h4>궁평항<i class="bi bi-arrow-right"></i>전곡항</h4>
+						<p class="courseInfo"><i class="bi bi-signpost"></i> 길이:  19.5km</p>
+						<p class="courseInfo"><i class="bi bi-reception-2"></i> 난이도 : 중</p>
+						<img src="https://blog.kakaocdn.net/dn/AI7xE/btqK3DlhtK8/SkJ0hrBPq57fxHmzqK9LGk/img.png" alt="" width="100%" height="200px">
+						<p>해변에는 100년이 넘게 자란 곰솔들이 숲을 이루고 있어 볼거리가 많은 코스입니다. 산책길로 새롭게 조성된 코스라 화장실, 쓰레기통 등 편의시설이 많아 플로깅하기에 최적의 장소입니다. 새로운 장소에서 플로깅을 해보고 싶으시다면 이 코스를 추천드립니다!</p> 
 					</div>
 				</div>
 			</section>
@@ -168,8 +167,8 @@
 			</section>
 		</div>
 		
-		<!-- 부산 -->
-		<div id="plogCourseTab_Info_05" class="content_container content_container_01">
+		<!-- 부산  시간 부족...못하겠음-->
+		<%-- <div id="plogCourseTab_Info_05" class="content_container content_container_01">
 			<section>
 				<div class="contentBox">
 					<div class="itemBox itemBox_1"> 
@@ -196,7 +195,7 @@
 					</div>
 				</div>
 			</section>
-		</div>
+		</div> --%>
 		
 		
 		
