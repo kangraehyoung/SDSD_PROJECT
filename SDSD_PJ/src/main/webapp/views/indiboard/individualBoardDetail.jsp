@@ -178,7 +178,7 @@
               <p>좋아요 <span>27</span>개</p>
             </div>
             <div class="bbb4_time">
-              <p>2시간 전</p>
+              <p>${indiBoard.updateDate }</p>
             </div>
           </div>
         </div>
