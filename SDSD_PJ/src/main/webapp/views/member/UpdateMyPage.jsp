@@ -30,7 +30,7 @@
             <div class="col profileTextBox">
                 <h3>${loginMember.name }님</h3> 
                 
-                <p class="crewInfo"><i class="bi bi-people-fill"></i>모임 이름 </p>
+                <p class="crewInfo"><i class="bi bi-people-fill"></i>${loginMember.myPloging } </p>
             </div>
         </div>
         <div class="btnBox">

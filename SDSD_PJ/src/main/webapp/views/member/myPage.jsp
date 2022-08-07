@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="btnBox">
-            <button onclick="location.href='${path}/views/member/UpdateMyPage.jsp'">정보 수정</button>
+            <button onclick="location.href='${path}/member/myUpdate'">정보 수정</button>
 	         <button id="btnDelete">회원 탈퇴</button>
 	         <button id="btnUpdatePwd">비밀번호 변경</button>
         </div>
