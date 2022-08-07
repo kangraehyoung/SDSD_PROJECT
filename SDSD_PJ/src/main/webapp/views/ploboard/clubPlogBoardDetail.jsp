@@ -109,7 +109,9 @@
                             <p>
                                 <span class="commentName"><c:out value="${ groupreply.repwriterId }"/></span>
                                 <c:out value="${ groupreply.repcontent }"/>
+                                <c:if test="${groupreply.repwriterId eq loginMember.nickName }">
                                 <button id="btnReplyDelete" type="submit">삭제</button>
+                                </c:if>
                                 <span class="commentLike">
                                     <!-- 하트 누르기 전 -->
                                     <i class="bi bi-heart"></i>

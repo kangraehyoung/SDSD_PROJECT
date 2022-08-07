@@ -60,7 +60,7 @@
                 <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/woman-running-light-skin-tone_1f3c3-1f3fb-200d-2640-fe0f.png" alt="">
                 <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/man-running-light-skin-tone_1f3c3-1f3fb-200d-2642-fe0f.png" alt="">
             </p>
-            <p class="titleSub">플로깅, 조깅 + 근력운동 효과</p>
+            <p class="titleSub">플로깅, 러닝 + 근력운동 효과</p>
             <p class="text">달리면서 지방을 태우는 것은 물론 쓰레기를 줍기 위해 몸을 구부릴 때 근력까지 강화할 수 있어 운동 효과가 큽니다. 이러한 여러 장점들로 인해 MZ세대에서 새로운 운동 트렌드로 자리 잡았고 각종 SNS에 인증샷을 남기며 자연스럽게 유행이 되었습니다.</p>
         </div>
 

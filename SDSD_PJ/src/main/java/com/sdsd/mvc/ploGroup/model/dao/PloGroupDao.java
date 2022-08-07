@@ -383,7 +383,7 @@ public class PloGroupDao {
 	public int updateGroup(Connection connection, PloGroup plogroup) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String query = "UPDATE SEARCH_PLOG_BOARD SET PLOG_GROUP_NAME=?, SPB_TITLE=?, SPB_CONTENT=?, SPB_BOR_ADDRESS=?, SPB_UPDATE_DATE=SYSDATE WHERE SPBOR_NUMBER=?";
+		String query = "UPDATE SEARCH_PLOG_BOARD SET PLOG_GROUP_NAME=?, SPB_TITLE=?, SPB_CONTENT=?, SPB_BOR_ADDRESS=?, SPB_UPDATE_DATE=SYSDATE, SPB_BOR_FILE=? WHERE SPBOR_NUMBER=?";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -392,7 +392,8 @@ public class PloGroupDao {
 			pstmt.setString(2, plogroup.getSpbTitle());
 			pstmt.setString(3, plogroup.getSpbContent());
 			pstmt.setString(4, plogroup.getAddress());
-			pstmt.setInt(5, plogroup.getSpBorNum());
+			pstmt.setString(5, plogroup.getSpbBorFile());
+			pstmt.setInt(6, plogroup.getSpBorNum());
 			
 			result = pstmt.executeUpdate();
 			

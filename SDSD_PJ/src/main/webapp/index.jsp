@@ -84,12 +84,12 @@
                 </div>
                 <div class="ms2t_3">
                     <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
-                    <div>공병줍기전문</div>
+                    <div>공병줍기크루</div>
                     <div>21회</div>
                 </div>
                 <div class="ms2t_4">
                     <div><img src="${ path }/resources/imgFile/silvermedal.png" alt=""></div>
-                    <div>인계동아이언조</div>
+                    <div>인계동아이언맨</div>
                     <div>16회</div>
                 </div>
                 <div class="ms2t_5">
