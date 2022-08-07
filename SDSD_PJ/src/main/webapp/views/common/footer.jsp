@@ -15,8 +15,8 @@
                 <h2>About Us</h2>
                 <div class="iconBox">
                     <div class="icon icon_01">
-                        <img src="${ path }/resources/imgFile/board_icon.png" alt="문의 Icon" style="cursor: pointer;">
-                        <p><a href="">문의</a></p>
+                        <img src="${ path }/resources/imgFile/footer_IntroIcon.png" alt="소개 Icon" onclick="location.href='${ path }/introduce'" style="cursor: pointer;" style="cursor: pointer;">
+                        <p><a href="${ path }/introduce">소개</a></p>
                     </div>
                     <div class="icon icon_02">
                         <img src="${ path }/resources/imgFile/FAQ_icon.png" alt="FAQ Icon" onclick="location.href='${ path }/other/faq'" style="cursor: pointer;">
