@@ -35,14 +35,14 @@
                         </div>
                         <div class="sti_input">
                             <div class="sti_id">
-                                <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required size="70px" value>
+                                <input type="email" name="email" id="newEmail" placeholder="이메일 형식의 아이디를 입력하세요." required size="51px" value>
                                 <input type="button" id="checkDuplicate" value="중복검사">
                             </div>
                             <div class="sti_pwd">
-                                <input type="password" id="password" name="password" placeholder="9자 이상의 비밀번호를 입력하세요." required size="70px" minlength="8">
+                                <input type="password" id="password" name="password" placeholder="9자 이상의 비밀번호를 입력하세요." required size="60px" minlength="8">
                             </div>
                             <div class="sti_pwd2">
-                                <input type="password" id="password2" name="password2" placeholder="9자 이상의 비밀번호를 입력하세요." size="70px" required minlength="8">
+                                <input type="password" id="password2" name="password2" placeholder="9자 이상의 비밀번호를 입력하세요." size="60px" required minlength="8">
                             </div>
                         </div>
                     </div>

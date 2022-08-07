@@ -13,7 +13,6 @@
             </div>
             <div class="col-md-7 textBox">
                 <p>
-                    ${loginMember.name }님!<br>
                     가입을 축하드립니다! <span><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/winking-face_1f609.png" alt=""></span>
                 </p>
                 </div>
