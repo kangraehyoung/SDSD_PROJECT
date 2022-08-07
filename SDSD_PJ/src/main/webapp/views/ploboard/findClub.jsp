@@ -79,7 +79,7 @@
                     </c:if>
                     <div class="hoverBox">
                         <p>리더 | ${ ploGroup.spbWriterName }</p>
-                        <p>활동 지역 | </p>
+                        <p>활동 지역 | ${ploGroup.address} </p>
                         <!-- a 태그가 먹히지 않으니 div imgBox onclick 스크립트를 통해 상세페이지 이동! -->
                         <a>모임 상세보기</a>
                     </div>

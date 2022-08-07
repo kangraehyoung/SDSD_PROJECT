@@ -46,6 +46,7 @@ public class CreatePloGroupServlet extends HttpServlet {
     	String spbKeyword = mr.getParameter("spbKeyword");
 //        String originalFileName = mr.getOriginalFileName("upfile1");
         String originalFileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3") + ", " + mr.getOriginalFileName("upfile4");
+        String address = mr.getParameter("local");
         
         HttpSession session = request.getSession(false);
     	Member loginMember = (session == null) ? null : (Member) session.getAttribute("loginMember");
@@ -59,6 +60,7 @@ public class CreatePloGroupServlet extends HttpServlet {
 			System.out.println(originalFileName);
 			plogroup.setSpbBorFile(originalFileName);
 			plogroup.setSpbKeyword(spbKeyword);
+			plogroup.setAddress(address);
 			
 			result = new PloGroupService().createGroup(plogroup);
 			System.out.println(plogroup.getSpbFileList());

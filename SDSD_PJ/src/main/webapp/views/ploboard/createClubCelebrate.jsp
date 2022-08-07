@@ -28,7 +28,8 @@
 
         <div class="buttonBox">
                 <button class="gotoMain" id="toMain">메인페이지 바로가기 <i class="bi bi-house-door"></i></button>
-                <button onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}'">내 모임 바로가기 <i class="bi bi-people"></i></button>
+               <!-- <button onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}'">내 모임 바로가기 <i class="bi bi-people"></i></button>  --> 
+                <button onclick="location.href='${path}/ploboard/ploGroupList'">내 모임 바로가기 <i class="bi bi-people"></i></button>
         </div>
     </div>
 
@@ -38,6 +39,7 @@ $(document).ready(() => {
 	$("#toMain").on("click", () => {
 		location.replace("${path}/main")
 	});
+	
 });
 
 </script>

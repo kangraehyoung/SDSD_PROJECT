@@ -63,4 +63,6 @@ public class PloGroup {
 	private String spbKeyword; // 키워드
 	
 	private List<Notice> notices;
+	
+	private String address;
 }

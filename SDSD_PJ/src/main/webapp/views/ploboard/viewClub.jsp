@@ -91,7 +91,7 @@
                     <ul>
                         <li><span>모임 리더 : ${ploGroup.spbWriterName }</span> </li>
                         <li><span>멤버 수 : </span> </li>
-                        <li><span>활동 지역 : </span> </li>
+                        <li><span>활동 지역 : ${ploGroup.address }</span> </li>
                         <li><span>소개 : ${ploGroup.spbContent } </span> </li>
                     </ul>
                 </div>
