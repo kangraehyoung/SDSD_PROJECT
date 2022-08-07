@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_My_Activity.css?v0.0.4" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_Ranking.css?v0.0.2" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_Challenge.css?v0.0.2" type="text/css">
-    <link rel="stylesheet" href="${ path }/resources/css/sdsd_IntroPage.css?v0.0.1" type="text/css">
+    <link rel="stylesheet" href="${ path }/resources/css/sdsd_IntroPage.css?v0.0.5" type="text/css">
     <link rel="stylesheet" href="${ path }/resources/css/sdsd_plogCourse.css?v0.0.8" type="text/css">
     
     <!-- 부트스트랩 및 라이브러리 -->
