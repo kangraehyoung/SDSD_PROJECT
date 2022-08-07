@@ -4,6 +4,17 @@
 ==============================================
 */
 
+/*
+폰트 적용에 따른 input:password 텍스트 깨짐 현상 해결
+*/
+input[type=password]{
+	font-family: sans-serif !important;
+}
+input[type=password]::placeholder {
+	font-family: 'twayair';
+}
+
+
 .loginPage {
 text-align: center;
 margin: 80px 0;
