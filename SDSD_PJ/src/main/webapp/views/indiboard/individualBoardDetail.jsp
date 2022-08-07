@@ -24,7 +24,7 @@
     <div class="contentBox">
         <div class="head_title2"> <!-- 요소 모음 div -->
             <div class="ht_search2">
-                <form class="ht_12">
+                <form class="ht_12" action="${ path }/indiboard/indikeysearch" method="get">
                     <div class="ht_22">
                         <input type="text">
                         <button type="submit">
