@@ -36,19 +36,19 @@
             <div class="ht_keyword2">
                 <div><p>추천 키워드</p></div>
                 <div class="ht_hash2">
-                    <a href="#">#강남구</a>
+                    <a href="${ path }/indiboard/indikeysearch?indiketword=강남구">#강남구</a>
                 </div>
                 <div class="ht_hash2">
-                    <a href="#">#경기도</a>
+                    <a href="${ path }/indiboard/indikeysearch?indiketword=경기도">#경기도</a>
                 </div>
                 <div class="ht_hash2">
-                    <a href="#">#20대</a>
+                    <a href="${ path }/indiboard/indikeysearch?indiketword=20대">#20대</a>
                 </div>
                 <div class="ht_hash2">
-                    <a href="#">#한강</a>
+                    <a href="${ path }/indiboard/indikeysearch?indiketword=한강">#한강</a>
                 </div>
                 <div class="ht_hash2">
-                    <a href="#">#남산</a>
+                    <a href="${ path }/indiboard/indikeysearch?indiketword=남산">#남산</a>
                 </div>
             </div>
 		</div>
