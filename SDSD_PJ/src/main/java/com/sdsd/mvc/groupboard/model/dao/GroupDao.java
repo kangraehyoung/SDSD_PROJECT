@@ -196,7 +196,7 @@ public class GroupDao {
 				groupBoard.setCreateDate(rs.getString("GROUP_CREATE_DATE"));
 				groupBoard.setUpdateDate(rs.getString("GROUP_UPDATE_DATE"));
 				groupBoard.setGroupkeyword(rs.getString("GROUP_BOR_KEYWORD"));
-				groupBoard.setGroupName(rs.getString("GROUPBOR_GROUPNAME"));;
+				groupBoard.setGroupName(rs.getString("GROUPBOR_GROUPNAME"));
 				
 				arr= groupBoard.getBorFile().split(", ");
 				list = Arrays.asList(arr);
