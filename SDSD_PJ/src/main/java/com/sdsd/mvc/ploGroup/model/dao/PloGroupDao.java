@@ -54,7 +54,8 @@ public class PloGroupDao {
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
 		String query = "SELECT COUNT(*) "
-				+ "FROM SEARCH_PLOG_BOARD ";
+				+ "FROM SEARCH_PLOG_BOARD "
+				+ "WHERE SPB_BOR_STATUS='Y'";
 		try {
 			pstm = connection.prepareStatement(query);
 			rs = pstm.executeQuery();
@@ -645,7 +646,7 @@ public class PloGroupDao {
 		ResultSet rs = null;
 		String query = "SELECT * "
 				+ "FROM SEARCH_PLOG_BOARD "
-				+ "WHERE SPB_BOR_KEYWORD=?";
+				+ "WHERE SPB_BOR_KEYWORD=? AND SPB_BOR_STATUS='Y'";
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setString(1, spbKeyword);
@@ -703,7 +704,7 @@ public class PloGroupDao {
 		ResultSet rs = null;
 		String query = "SELECT * "
 				+ "FROM SEARCH_PLOG_BOARD "
-				+ "WHERE PLOG_GROUP_NAME=?";
+				+ "WHERE PLOG_GROUP_NAME=? AND SPB_BOR_STATUS='Y' ";
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setString(1, plogGroupName);
