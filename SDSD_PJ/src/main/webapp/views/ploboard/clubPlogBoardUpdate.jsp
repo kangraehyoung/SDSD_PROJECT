@@ -10,7 +10,7 @@
 
 <section class="clubPlogBoardWrite_section">
     <div class="titleBox">
-        <h2><img src="${ path }/resources/imgFile/findTeam.png" alt="clubIcon">플로깅 모임 인증 등록</h2>
+        <h2><img src="${ path }/resources/imgFile/findTeam.png" alt="clubIcon">플로깅 모임 인증 수정</h2>
     </div>
     <div class="plogBoardWrap">
         <div class="container-fluid contentContainer">
@@ -22,8 +22,6 @@
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">
-                    <div>
-                    </div>
                     <div class="fileboxBtn">
                     	<div>
 	                        <label for="uploadImages"><i class="bi bi-image"></i> 사진 등록 1</label>
@@ -58,12 +56,12 @@
                         <textarea class="form-control" name="content" id="clubText" style="height: 300px; resize: none;"> ${groupBoard.borContent } </textarea>
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
                    
-                    <!-- 키워드 입력 --> 
-                    <div class="mb-3 row">
-                    	<label for="clubKeyword" class="col-md-1 col-form-label" style="color: rgb(50, 157, 245); font-weight: 600; text-align: right;">#</label>
-                        <div class="col-sm-9">
-                            <input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요" style="border: none !important;">
-                        </div>
+	                    <!-- 키워드 입력 --> 
+	                    <div class="mb-3 row">
+	                    	<label for="clubKeyword" class="col-md-1 col-form-label" style="color: rgb(50, 157, 245); font-weight: 600; text-align: right;">#</label>
+	                        <div class="col-sm-9">
+	                            <input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요" style="border: none !important;">
+                        	</div>
             
 
                     	<div class="extraWrap">
@@ -79,25 +77,16 @@
 	                        </div>
                     	</div>
                     
-                    
                 	</div>
-
 
        				</div>
         
-        
-        
         		</div>
-    
-    
-    
    			</div>
-    
-
     <div class="row plogBoardButtonWrap">
         <div class="col"></div>
         <div class="col boardBtnBox">
-            <button type="submit">공유하기 <i class="bi bi-send"></i></button>
+            <button type="submit">수정하기 <i class="bi bi-send"></i></button>
         </div>
         <div class="col nextBtnBox"></div>
     </div>

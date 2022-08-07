@@ -22,17 +22,19 @@
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">
-                    <div>
-                    </div>
                     <div class="fileboxBtn">
-                        <label for="uploadImages1">사진 등록 1</label>
-                        <label for="uploadImages2">사진 등록 2</label>
-                        <label for="uploadImages3">사진 등록 3</label>
-                        <label for="uploadImages4">사진 등록 4</label>
-                        <input name="upfile1" type="file" id="uploadImages1" multiple> 
-                        <input name="upfile2" type="file" id="uploadImages2" multiple> 
-                        <input name="upfile3" type="file" id="uploadImages3" multiple> 
-                        <input name="upfile4" type="file" id="uploadImages4" multiple> 
+                    	<div>
+	                        <label for="uploadImages1"><i class="bi bi-image"></i> 사진 등록 1</label>
+	                        <input name="upfile1" type="file" id="uploadImages1"> 
+	                        <label for="uploadImages2"><i class="bi bi-image-fill"></i> 사진 등록 2</label>
+	                        <input name="upfile2" type="file" id="uploadImages2"> 
+                    	</div>
+                    	<div style="margin-top: 10px;">
+	                        <label for="uploadImages3"><i class="bi bi-image-fill"></i> 사진 등록 3</label>
+	                        <input name="upfile3" type="file" id="uploadImages"> 
+	                        <label for="uploadImages4"><i class="bi bi-image"></i> 사진 등록 4</label>
+	                        <input name="upfile4" type="file" id="uploadImages4"> 
+                        </div>
                         <p class="subText">* 최대 4장 4MB 이하</p>
                     </div>
                 </div>
@@ -45,37 +47,41 @@
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="profileName">
-                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ loginMember.nickName }" style="width: 50% !important; border: none;">
+                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ groupBoard.writerName }" style="width: 50% !important;">
                         </div>
                     </div>
 
                     <!-- 인증 내용 -->
                     <div class="textWrap">
-                        <textarea class="form-control" name="content" placeholder="내용을 입력해 주세요!" id="clubText" style="height: 300px; resize: none;"></textarea>
+                        <textarea class="form-control" name="content" id="clubText" style="height: 300px; resize: none;"> ${groupBoard.borContent } </textarea>
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
-                    <!-- 키워드 입력 -->    
-                    	<div class="bbbp2_keyword">
-                			<span style="color: rgb(50, 157, 245);">#</span>
-                			<input type="text" name="groupkeyword" placeholder="게시글을 대표하는 키워드를 입력해주세요!" size="40px" style="border: none;">
-              			</div>
-                    </div>
+                   
+	                    <!-- 키워드 입력 --> 
+	                    <div class="mb-3 row">
+	                    	<label for="clubKeyword" class="col-md-1 col-form-label" style="color: rgb(50, 157, 245); font-weight: 600; text-align: right;">#</label>
+	                        <div class="col-sm-9">
+	                            <input type="text" name="groupkeyword" value="${ groupBoard.groupkeyword }" class="form-control" placeholder="키워드를 입력해주세요" style="border: none !important;">
+                        	</div>
 
                     <div class="extraWrap">
-                        <div class="inputBox">
-                            <!-- 배경색 선택 -->
-                            <label for="plogBoardColorPick">배경색 선택</label>
-                            <input type="color" class="form-control form-control-color" id="plogBoardColorPick" value="#CDE7F9" title="Choose your color">
-                            <!-- 좋아요 댓글 숨기기 선택 -->
-                            <label for="flexSwitchCheckDefault" class="switch_hidden">좋아요 / 댓글 수 숨기기</label>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                            </div>
-                        </div>
-                    </div>
+	                        <div class="inputBox">
+	                            <!-- 배경색 선택 -->
+	                            <label for="plogBoardColorPick">배경색 선택</label>
+	                            <input type="color" class="form-control form-control-color" id="plogBoardColorPick" value="#CDE7F9" title="Choose your color">
+	                            <!-- 좋아요 댓글 숨기기 선택 -->
+	                            <label for="flexSwitchCheckDefault" class="switch_hidden">좋아요 / 댓글 수 숨기기</label>
+	                            <div class="form-check form-switch">
+	                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+	                            </div>
+	                        </div>
+                    	</div>
+                
+                
                 </div>
 
 
             </div>
+            
         </div>
     </div>
     
@@ -88,6 +94,9 @@
         <div class="col nextBtnBox"></div>
     </div>
     </form>
+    </div>
+    </div>
+    
 
 </section>
 
