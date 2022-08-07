@@ -33,7 +33,7 @@ public class outGroupServlet extends HttpServlet {
     		if(result > 0) {
     			request.setAttribute("msg", "모임 탈퇴가 완료되었습니다. 다시 로그인해주세요.");
     			session.invalidate();
-    			request.setAttribute("location", "/ploboard/ploGroupList");
+    			request.setAttribute("location", "/member/login");
     			
     		} else {
     			request.setAttribute("msg", "모임 탈퇴에 실패했습니다. 다시 시도해주세요");

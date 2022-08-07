@@ -45,7 +45,7 @@
                             <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/01/111043065.2.jpg" alt="profileImg">
                         </div>
                         <div class="profileName">
-                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ loginMember.nickName }" style="width: 50% !important;">
+                            <input name="writer" type="text" id="WriterName" class="form-control md-2" value="${ loginMember.nickName }" style="width: 50% !important; border: none;">
                         </div>
                     </div>
 
@@ -53,9 +53,11 @@
                     <div class="textWrap">
                         <textarea class="form-control" name="content" placeholder="내용을 입력해 주세요!" id="clubText" style="height: 300px; resize: none;"></textarea>
                         <p><span id="counter">0</span>/<span id="maxLength">2000</span></p>
-                    <br><br>
                     <!-- 키워드 입력 -->    
-                    <input type="text" name="groupkeyword" placeholder="키워드를 입력해주세요!">
+                    	<div class="bbbp2_keyword">
+                			<span style="color: rgb(50, 157, 245);">#</span>
+                			<input type="text" name="groupkeyword" placeholder="게시글을 대표하는 키워드를 입력해주세요!" size="40px" style="border: none;">
+              			</div>
                     </div>
 
                     <div class="extraWrap">

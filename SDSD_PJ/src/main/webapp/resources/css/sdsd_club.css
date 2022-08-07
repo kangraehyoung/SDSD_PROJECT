@@ -1258,6 +1258,16 @@
     margin-bottom: 0;
 }
 
+/* 보더라인 삭제 및 게시글 태그 정렬 (서호정) */
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap .bbbp2_keyword {
+	display: flex;
+	align-items: center;
+}
+
+.clubPlogBoardWrite_section .plogBoardWrap .contentContainer .textWrap .bbbp2_keyword input {
+	margin: 0;
+}
+
 .clubPlogBoardWrite_section .extraWrap .inputBox {
     display: flex;
     margin: 10px;
