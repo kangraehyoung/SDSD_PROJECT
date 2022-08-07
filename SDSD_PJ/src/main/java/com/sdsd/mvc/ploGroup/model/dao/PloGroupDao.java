@@ -76,7 +76,7 @@ public class PloGroupDao {
 		
 		PreparedStatement pstmt = null;
 		
-		String query = "INSERT INTO SEARCH_PLOG_BOARD VALUES(SEQ_SPBOR_NUMBER.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT, ?)";
+		String query = "INSERT INTO SEARCH_PLOG_BOARD VALUES(SEQ_SPBOR_NUMBER.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, ?, DEFAULT, ?, ?)";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -89,6 +89,7 @@ public class PloGroupDao {
 			pstmt.setString(5, plogroup.getSpbContent());
 			pstmt.setString(6, plogroup.getSpbBorFile());
 			pstmt.setString(7, plogroup.getSpbKeyword());
+			pstmt.setString(8, plogroup.getAddress());
 //			pstmt.setInt(4, plogroup.getPloMemNum());
 			
 			
@@ -119,7 +120,8 @@ public class PloGroupDao {
 				+ "           SPB_UPDATE_DATE, "
 				+ "           SPB_BOR_FILE, "
 				+ "           SPB_READCOUNT, "
-				+ "           SPB_BOR_STATUS "
+				+ "           SPB_BOR_STATUS, "
+				+ "           SPB_BOR_ADDRESS "
 				+ "    FROM ( "
 				+ "            SELECT SPB.SPBOR_NUMBER, "
 				+ "                   SPB.SPB_TITLE, "
@@ -130,7 +132,8 @@ public class PloGroupDao {
 				+ "                   SPB.SPB_UPDATE_DATE, "
 				+ "                   SPB.SPB_BOR_FILE, "
 				+ "                   SPB.SPB_READCOUNT, "
-				+ "                   SPB.SPB_BOR_STATUS "
+				+ "                   SPB.SPB_BOR_STATUS, "
+				+ "                   SPB_BOR_ADDRESS "
 				+ "            FROM SEARCH_PLOG_BOARD SPB "
 				+ "            JOIN MEMBER M ON(M.MEM_NUMBER = SPB.SPB_WRITER_NO) "
 				+ "    ) "
@@ -158,6 +161,7 @@ public class PloGroupDao {
 				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
 				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
 				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				ploGroup.setAddress(rs.getString("SPB_BOR_ADDRESS"));
 				
 				System.out.println("첫번째 : " + ploGroup.getSpbBorFile());
 				arr=ploGroup.getSpbBorFile().split(", ");
@@ -236,7 +240,8 @@ public class PloGroupDao {
 				+ "                           SPB_READCOUNT, "
 				+ "                           SPB_BOR_FILE, "
 				+ "                           SPB_BOR_STATUS, "
-				+ "                           SPB_BOR_KEYWORD "
+				+ "                           SPB_BOR_KEYWORD, "
+				+ "                           SPB_BOR_ADDRESS "
 				+ "				    FROM ( "
 				+ "                         SELECT SP.SPBOR_NUMBER, "
 				+ "                               SP.SPB_WRITER_NO, "
@@ -249,7 +254,8 @@ public class PloGroupDao {
 				+ "                               SP.SPB_READCOUNT, "
 				+ "                               SP.SPB_BOR_FILE, "
 				+ "                               SP.SPB_BOR_STATUS, "
-				+ "                               SP.SPB_BOR_KEYWORD "
+				+ "                               SP.SPB_BOR_KEYWORD, "
+				+ "                               SPB_BOR_ADDRESS "
 				+ "				          FROM SEARCH_PLOG_BOARD SP "
 				+ "				            JOIN MEMBER M ON (M.MEM_NUMBER = SP.SPB_WRITER_NO) "
 				+ "				    )  "
@@ -279,7 +285,7 @@ public class PloGroupDao {
 				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
 				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
 				ploGroup.setSpbKeyword(rs.getString("SPB_BOR_KEYWORD"));
-				
+				ploGroup.setAddress(rs.getString("SPB_BOR_ADDRESS"));
 
 								
 				ploGroupList.add(ploGroup);
@@ -329,6 +335,7 @@ public class PloGroupDao {
 				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
 				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
 				ploGroup.setSpbKeyword(rs.getString("SPB_BOR_KEYWORD"));
+				ploGroup.setAddress(rs.getString("SPB_BOR_ADDRESS"));
 				
 				arr=ploGroup.getSpbBorFile().split(", ");
 				list = Arrays.asList(arr);
@@ -375,7 +382,7 @@ public class PloGroupDao {
 	public int updateGroup(Connection connection, PloGroup plogroup) {
 		int result = 0;
 		PreparedStatement pstmt = null;
-		String query = "UPDATE SEARCH_PLOG_BOARD SET PLOG_GROUP_NAME=?, SPB_TITLE=?, SPB_CONTENT=?, SPB_UPDATE_DATE=SYSDATE WHERE SPBOR_NUMBER=?";
+		String query = "UPDATE SEARCH_PLOG_BOARD SET PLOG_GROUP_NAME=?, SPB_TITLE=?, SPB_CONTENT=?, SPB_BOR_ADDRESS=?, SPB_UPDATE_DATE=SYSDATE WHERE SPBOR_NUMBER=?";
 		
 		try {
 			pstmt = connection.prepareStatement(query);
@@ -383,7 +390,8 @@ public class PloGroupDao {
 			pstmt.setString(1, plogroup.getPlogGroupName());
 			pstmt.setString(2, plogroup.getSpbTitle());
 			pstmt.setString(3, plogroup.getSpbContent());
-			pstmt.setInt(4, plogroup.getSpBorNum());
+			pstmt.setString(4, plogroup.getAddress());
+			pstmt.setInt(5, plogroup.getSpBorNum());
 			
 			result = pstmt.executeUpdate();
 			
