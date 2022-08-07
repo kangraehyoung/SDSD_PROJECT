@@ -17,8 +17,8 @@
         <form action="${path}/groupboard/groupUpdate" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="${loginMember.myPloging }" name="groupName">
             <input type="hidden" value="${loginMember.nickName}" name="nickName">
-            <input type="hidden" value="${GroupBoard.groupBorNo }" name="no">
-            <input type="hidden" value="${GroupBoard.borTitle}"  name="title">
+            <input type="hidden" value="${groupBoard.groupBorNo }" name="no"> << 여기 대문자
+            <input type="hidden" value="${groupBoard.borTitle}"  name="title">
             <div class="row">
                 <!-- 모임 이미지 -->
                 <div class="col">
