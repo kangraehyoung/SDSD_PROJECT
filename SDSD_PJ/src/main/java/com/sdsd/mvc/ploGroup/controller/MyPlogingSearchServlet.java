@@ -28,6 +28,7 @@ public class MyPlogingSearchServlet extends HttpServlet {
 		PageInfo pageInfo = null;
 		List<PloGroup> ploGroupList = null;
 		String plogGroupName = request.getParameter("plogGroupName");
+		String plogGroupAddress = request.getParameter("address"); 
 		try {
 			page = Integer.parseInt(request.getParameter("page"));
 		} catch (NumberFormatException e) {

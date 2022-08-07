@@ -56,7 +56,7 @@
         	</c:if>
         	<input type="hidden" name="plogGroupName" value="${loginMember.myPloging}">
         	<c:if test="${not empty loginMember }">
-            	<button id="viewJoinedClub" onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}?adress=${ploGroup.address }'">가입한 모임 바로가기</button>
+            	<button id="viewJoinedClub" onclick="location.href='${path}/ploGroup/myPloging?plogGroupName=${loginMember.myPloging}'">가입한 모임 바로가기</button>
         	</c:if>
         	<c:if test="${ empty loginMember }">
             	<button id="viewJoinedClub2" onclick="location.href='${path}/member/login'">로그인 바로가기</button>
