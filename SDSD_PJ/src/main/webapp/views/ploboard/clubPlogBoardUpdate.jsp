@@ -17,7 +17,7 @@
         <form action="${path}/groupboard/groupUpdate" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="${loginMember.myPloging }" name="groupName">
             <input type="hidden" value="${loginMember.nickName}" name="nickName">
-            <input type="hidden" value="${groupBoard.groupBorNo }" name="no"> << 여기 대문자
+            <input type="hidden" value="${groupBoard.groupBorNo }" name="no"> 
             <input type="hidden" value="${groupBoard.borTitle}"  name="title">
             <div class="row">
                 <!-- 모임 이미지 -->
@@ -66,24 +66,32 @@
                         </div>
             
 
-                    <div class="extraWrap">
-                        <div class="inputBox">
-                            <!-- 배경색 선택 -->
-                            <label for="plogBoardColorPick">배경색 선택</label>
-                            <input type="color" class="form-control form-control-color" id="plogBoardColorPick" value="#CDE7F9" title="Choose your color">
-                            <!-- 좋아요 댓글 숨기기 선택 -->
-                            <label for="flexSwitchCheckDefault" class="switch_hidden">좋아요 / 댓글 수 숨기기</label>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    	<div class="extraWrap">
+	                        <div class="inputBox">
+	                            <!-- 배경색 선택 -->
+	                            <label for="plogBoardColorPick">배경색 선택</label>
+	                            <input type="color" class="form-control form-control-color" id="plogBoardColorPick" value="#CDE7F9" title="Choose your color">
+	                            <!-- 좋아요 댓글 숨기기 선택 -->
+	                            <label for="flexSwitchCheckDefault" class="switch_hidden">좋아요 / 댓글 수 숨기기</label>
+	                            <div class="form-check form-switch">
+	                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+	                            </div>
+	                        </div>
+                    	</div>
+                    
+                    
+                	</div>
 
 
-            </div>
-        </div>
-    </div>
+       				</div>
+        
+        
+        
+        		</div>
+    
+    
+    
+   			</div>
     
 
     <div class="row plogBoardButtonWrap">
@@ -94,6 +102,8 @@
         <div class="col nextBtnBox"></div>
     </div>
     </form>
+   </div>
+   </div>
 
 </section>
 
