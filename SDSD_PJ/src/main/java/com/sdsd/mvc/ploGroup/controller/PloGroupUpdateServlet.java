@@ -70,7 +70,8 @@ public class PloGroupUpdateServlet extends HttpServlet {
 	     String pgName = mr.getParameter("pgName");
 	     String spbKeyword = mr.getParameter("spbKeyword");
          String originalFileName = mr.getOriginalFileName("upfile1");
-    	
+         String address = mr.getParameter("local");
+         
 //    	 String fileName = mr.getOriginalFileName("upfile1") + ", " + mr.getOriginalFileName("upfile2") + ", " + mr.getOriginalFileName("upfile3");
 //    	if(fileName != null && !fileName.equals("")) {
 //    		File file = new File(path + "/" + mr.getParameter("fileName"));
@@ -99,6 +100,7 @@ public class PloGroupUpdateServlet extends HttpServlet {
  			ploGroup.setSpbContent(content);
  			ploGroup.setSpbBorFile(originalFileName);
  			ploGroup.setSpbKeyword(spbKeyword);
+ 			ploGroup.setAddress(address);
  			
  			result = new PloGroupService().createGroup(ploGroup);
  			

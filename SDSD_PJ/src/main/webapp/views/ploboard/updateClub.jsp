@@ -53,7 +53,7 @@
                      -->
 
                     <!-- 주 활동 지역 -->
-                    <!-- 
+                    
                     <div class="mb-3 row">
                         <label for="clubLocation" class="col-md-3 col-form-label">주 활동 지역</label>
                         <div class="col-sm-8">
@@ -82,7 +82,7 @@
                             </select>
                         </div>
                     </div>
-					 -->
+					 
 					 
                     <!-- 선호 성별 -->
                     <!-- 
