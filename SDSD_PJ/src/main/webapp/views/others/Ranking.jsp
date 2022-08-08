@@ -113,7 +113,7 @@
                             <div>${ ploRank.ploGroupCount }</div>
                         </c:if>
                         <c:if test="${status.index > 2}">
-                            <div><img src="$${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
+                            <div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
                             <div>${ ploRank.ploGroupNickname }</div>
                             <div>${ ploRank.ploGroupCount }</div>
                         </c:if>
