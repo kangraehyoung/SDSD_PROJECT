@@ -53,8 +53,8 @@
                         </div>
                         
                         <c:if test="${status.index > 2}">
-                        <details>
                         	<c:if test="${status.index == 3 }">
+                        <details>
                             <summary>랭킹 더보기</summary>
                             <div class="rbl3">
                                 <div>4. </div>
@@ -103,8 +103,8 @@
                                 <div>${ indiRank.indiNickName }</div>
                             	<div>${ indiRank.indiCount }</div>
                             </div>
-                            </c:if>
                         </details>
+                            </c:if>
                         </c:if>
                         </c:forEach>
                     </div>
@@ -132,8 +132,8 @@
                         </div>
                  		
                         <c:if test="${status.index > 2}">
-                        <details>
                         <c:if test="${status.index == 3 }">
+                        <details>
                             <summary>랭킹 더보기</summary>
                             <div class="rbl3">
                                 <div>4.</div>
@@ -182,8 +182,8 @@
                                 <div>${ ploRank.ploGroupNickname }</div>
                             	<div>${ ploRank.ploGroupCount }</div>
                             </div>
-                        </c:if>
                         </details>
+                        </c:if>
                         </c:if>
                         </c:forEach>
                     </div>
