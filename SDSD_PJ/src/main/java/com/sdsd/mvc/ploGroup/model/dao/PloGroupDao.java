@@ -667,6 +667,8 @@ public class PloGroupDao {
 				ploGroup.setSpbBorFile(rs.getString("SPB_BOR_FILE"));
 				ploGroup.setSpbReadCount(rs.getInt("SPB_READCOUNT"));
 				ploGroup.setSpbBorStatus(rs.getString("SPB_BOR_STATUS"));
+				ploGroup.setAddress(rs.getString("SPB_BOR_ADDRESS"));
+				;
 				arr=ploGroup.getSpbBorFile().split(", ");
 				list = Arrays.asList(arr);
 				ploGroup.setSpbFileList(list);
