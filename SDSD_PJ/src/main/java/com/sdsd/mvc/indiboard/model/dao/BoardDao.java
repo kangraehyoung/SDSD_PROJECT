@@ -369,7 +369,7 @@ public class BoardDao {
 		ResultSet rs = null;
 		String query = "SELECT * "
 				+ "FROM INDIBOARD "
-				+ "WHERE INDI_BOR_KEYWORD = ?";
+				+ "WHERE INDI_BOR_KEYWORD = ? AND INDI_BOR_STATUS = 'Y' ";
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setString(1, indiketword);

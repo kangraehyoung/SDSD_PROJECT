@@ -420,7 +420,7 @@ public class GroupDao {
 		ResultSet rs = null;
 		String query = "SELECT * "
 				+ "FROM GROUPBOARD "
-				+ "WHERE GROUP_BOR_KEYWORD=?";
+				+ "WHERE GROUP_BOR_KEYWORD=? AND GROUP_BOR_STATUS = 'Y' ";
 		try {
 			pstm = connection.prepareStatement(query);
 			pstm.setString(1, groupkeyword);
