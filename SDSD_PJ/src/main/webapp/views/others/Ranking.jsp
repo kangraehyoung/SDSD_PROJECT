@@ -50,46 +50,63 @@
                             <div>${ indiRank.indiNickName }</div>
                             <div>${ indiRank.indiCount }</div>
                         	</c:if>
-                        	<c:if test="${status.index > 2}">
-                        	<div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
-                            <div>${ indiRank.indiNickName }</div>
-                            <div>${ indiRank.indiCount }</div>
-                            </c:if>
                         </div>
-                        </c:forEach>
+                        
+                        <c:if test="${status.index > 2}">
                         <details>
+                        	<c:if test="${status.index == 3 }">
                             <summary>랭킹 더보기</summary>
                             <div class="rbl3">
-                                <div>5.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>4. </div>
+                                <div>${ indiRank.indiNickName }</div>
+                            	<div>${ indiRank.indiCount }</div>
                             </div>
+                            </c:if>
+                            <c:if test="${status.index == 4 }">
                             <div class="rbl3">
-                                <div>6.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>5. </div>
+                                <div>${ indiRank.indiNickName }</div>
+                            	<div>${ indiRank.indiCount }</div>
                             </div>
+                            </c:if>
+                            <c:if test="${status.index == 5 }">
                             <div class="rbl3">
-                                <div>7.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>6. </div>
+                                <div>${ indiRank.indiNickName }</div>
+                            	<div>${ indiRank.indiCount }</div>
                             </div>
+                            </c:if>
+                            <c:if test="${status.index == 6 }">
                             <div class="rbl3">
-                                <div>8.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>7. </div>
+                                <div>${ indiRank.indiNickName }</div>
+                            	<div>${ indiRank.indiCount }</div>
                             </div>
+                            </c:if>
+                            <c:if test="${status.index == 7 }">
                             <div class="rbl3">
-                                <div>9.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>8. </div>
+                                <div>${ indiRank.indiNickName }</div>
+                            	<div>${ indiRank.indiCount }</div>
                             </div>
+                            </c:if>
+                            <c:if test="${status.index == 8 }">
                             <div class="rbl3">
-                                <div>10.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>9. </div>
+                                <div>${ indiRank.indiNickName }</div>
+                            	<div>${ indiRank.indiCount }</div>
                             </div>
+                            </c:if>
+                            <c:if test="${status.index == 9 }">
+                            <div class="rbl3">
+                                <div>10. </div>
+                                <div>${ indiRank.indiNickName }</div>
+                            	<div>${ indiRank.indiCount }</div>
+                            </div>
+                            </c:if>
                         </details>
+                        </c:if>
+                        </c:forEach>
                     </div>
                 </div>
                 <div class="rb_2">
@@ -112,46 +129,63 @@
                             <div>${ ploRank.ploGroupNickname }</div>
                             <div>${ ploRank.ploGroupCount }</div>
                         </c:if>
-                        <c:if test="${status.index > 2}">
-                            <div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
-                            <div>${ ploRank.ploGroupNickname }</div>
-                            <div>${ ploRank.ploGroupCount }</div>
-                        </c:if>
                         </div>
-                 		</c:forEach>
+                 		
+                        <c:if test="${status.index > 2}">
                         <details>
+                        <c:if test="${status.index == 3 }">
                             <summary>랭킹 더보기</summary>
                             <div class="rbl3">
-                                <div>5.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>4.</div>
+                                <div>${ ploRank.ploGroupNickname }</div>
+                            	<div>${ ploRank.ploGroupCount }</div>
                             </div>
+                        </c:if>
+                        <c:if test="${status.index == 4 }">
+                            <div class="rbl3">
+                                <div>5.</div>
+                                <div>${ ploRank.ploGroupNickname }</div>
+                            	<div>${ ploRank.ploGroupCount }</div>
+                            </div>
+                        </c:if>
+                        <c:if test="${status.index == 5 }">
                             <div class="rbl3">
                                 <div>6.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>${ ploRank.ploGroupNickname }</div>
+                            	<div>${ ploRank.ploGroupCount }</div>
                             </div>
+                        </c:if>
+                        <c:if test="${status.index == 6 }">
                             <div class="rbl3">
                                 <div>7.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>${ ploRank.ploGroupNickname }</div>
+                            	<div>${ ploRank.ploGroupCount }</div>
                             </div>
+                        </c:if>
+                        <c:if test="${status.index == 7 }">
                             <div class="rbl3">
                                 <div>8.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>${ ploRank.ploGroupNickname }</div>
+                            	<div>${ ploRank.ploGroupCount }</div>
                             </div>
+                        </c:if>
+                        <c:if test="${status.index == 8 }">
                             <div class="rbl3">
                                 <div>9.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>${ ploRank.ploGroupNickname }</div>
+                            	<div>${ ploRank.ploGroupCount }</div>
                             </div>
+                        </c:if>
+                        <c:if test="${status.index == 9 }">
                             <div class="rbl3">
                                 <div>10.</div>
-                                <div>이용규</div>
-                                <div>19회</div>
+                                <div>${ ploRank.ploGroupNickname }</div>
+                            	<div>${ ploRank.ploGroupCount }</div>
                             </div>
+                        </c:if>
                         </details>
+                        </c:if>
+                        </c:forEach>
                     </div>
                 </div>
             </div>
