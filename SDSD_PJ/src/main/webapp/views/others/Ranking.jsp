@@ -33,11 +33,28 @@
                 <div class="rb_1">
                     <h2>개인 플로깅 활동 랭킹</h2>
                     <div class="rb_1_list">
-                        <c:forEach var="indiRank" items="${ rankList }">
+                        <c:forEach var="indiRank" items="${ rankList }" varStatus="status">
                         <div class="rbl1">
-                            <div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
+                        	<c:if test="${status.index == 0}">
+                            <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
                             <div>${ indiRank.indiNickName }</div>
                             <div>${ indiRank.indiCount }</div>
+                        	</c:if>
+                        	<c:if test="${status.index == 1}">
+                        	<div><img src="${ path }/resources/imgFile/silvermedal.png" alt=""></div>
+                            <div>${ indiRank.indiNickName }</div>
+                            <div>${ indiRank.indiCount }</div>
+                        	</c:if>
+                        	<c:if test="${status.index == 2}">
+                        	<div><img src="${ path }/resources/imgFile/bronzemedal.png" alt=""></div>
+                            <div>${ indiRank.indiNickName }</div>
+                            <div>${ indiRank.indiCount }</div>
+                        	</c:if>
+                        	<c:if test="${status.index > 2}">
+                        	<div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
+                            <div>${ indiRank.indiNickName }</div>
+                            <div>${ indiRank.indiCount }</div>
+                            </c:if>
                         </div>
                         </c:forEach>
                         <details>
@@ -78,11 +95,28 @@
                 <div class="rb_2">
                     <h2>모임별 플로깅 활동 랭킹</h2>
                     <div class="rb_2_list">
-                        <c:forEach var="ploRank" items="${ rankList1 }">
+                        <c:forEach var="ploRank" items="${ rankList1 }" varStatus="status">
                         <div class="rbl1">
-                            <div><img src="${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
+                        <c:if test="${status.index == 0}">
+                            <div><img src="${ path }/resources/imgFile/goldmedal.png" alt=""></div>
                             <div>${ ploRank.ploGroupNickname }</div>
                             <div>${ ploRank.ploGroupCount }</div>
+                        </c:if>
+                        <c:if test="${status.index == 1}">
+                            <div><img src="${ path }/resources/imgFile/silvermedal.png" alt=""></div>
+                            <div>${ ploRank.ploGroupNickname }</div>
+                            <div>${ ploRank.ploGroupCount }</div>
+                        </c:if>
+                        <c:if test="${status.index == 2}">
+                            <div><img src="${ path }/resources/imgFile/bronzemedal.png" alt=""></div>
+                            <div>${ ploRank.ploGroupNickname }</div>
+                            <div>${ ploRank.ploGroupCount }</div>
+                        </c:if>
+                        <c:if test="${status.index > 2}">
+                            <div><img src="$${ path }/resources/upload/board/maple-leaf.png" alt=""></div>
+                            <div>${ ploRank.ploGroupNickname }</div>
+                            <div>${ ploRank.ploGroupCount }</div>
+                        </c:if>
                         </div>
                  		</c:forEach>
                         <details>
